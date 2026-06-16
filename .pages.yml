@@ -7,7 +7,7 @@ content:
   # ========== MAIN PAGES ==========
   - name: home_content
     label: "① Homepage — Content (form fields)"
-    description: "Edit the homepage headlines, hero copy, and Google title/description as form fields. Saves to content/home.json and updates the live home page automatically (both index.html and MOW.dc.html)."
+    description: "Edit homepage headlines, hero copy, Google title/description, and every photo. Saves to content/home.json and updates the live home page automatically."
     type: file
     path: content/home.json
     format: json
@@ -52,113 +52,111 @@ content:
             type: text
           - { name: cta_primary, label: "Primary button text", type: string }
           - { name: cta_secondary, label: "Secondary button text", type: string }
+      - name: images
+        label: "Photos (click any image to replace)"
+        type: object
+        fields:
+          - { name: img1, label: "Logo — white mark", type: image }
+          - { name: img2, label: "Paper plane", type: image }
+          - { name: img3, label: "Logo — gold mark (hero)", type: image }
+          - { name: img4, label: "Caspian — brand slide 1", type: image }
+          - { name: img5, label: "Caspian — brand slide 2", type: image }
+          - { name: img6, label: "Caspian — brand slide 3", type: image }
+          - { name: img7, label: "Caspian — brand slide 4", type: image }
+          - { name: img8, label: "Caspian — photo 1", type: image }
+          - { name: img9, label: "Caspian — photo 2", type: image }
+          - { name: img10, label: "Caspian — photo 3", type: image }
+          - { name: img11, label: "Caspian — photo 4", type: image }
+          - { name: img12, label: "Caspian — photo 5", type: image }
+          - { name: img13, label: "Caspian — photo 6", type: image }
+          - { name: img14, label: "Caspian — photo 7", type: image }
+          - { name: img15, label: "Caspian — photo 8", type: image }
+          - { name: img16, label: "All Model Repair — photo 1", type: image }
+          - { name: img17, label: "All Model Repair — photo 2", type: image }
+          - { name: img18, label: "All Model Repair — photo 3", type: image }
+          - { name: img19, label: "All Model Repair — photo 4", type: image }
+          - { name: img20, label: "All Model Repair — photo 5", type: image }
+          - { name: img21, label: "All Model Repair — photo 6", type: image }
+          - { name: img22, label: "All Model Repair — photo 7", type: image }
+          - { name: img23, label: "Bananos — image 1", type: image }
+          - { name: img24, label: "Bananos — image 2", type: image }
+          - { name: img25, label: "Bananos — image 3", type: image }
+          - { name: img26, label: "Bananos — banana visual", type: image }
+          - { name: img27, label: "Bananos — image 4", type: image }
+          - { name: img28, label: "Postcard image (card)", type: image }
+          - { name: img29, label: "Postcard image (popup)", type: image }
+          - { name: img30, label: "Logo — gold mark (footer)", type: image }
+          - { name: img31, label: "Logo — white mark (footer)", type: image }
+          - { name: img32, label: "Logo — gold mark (reader)", type: image }
 
   - name: homepage_html
     label: "① Homepage — Advanced HTML (index.html)"
-    description: "Full page HTML for structural/layout edits. For everyday copy use ① Homepage — Content above."
     type: file
     path: index.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: homepage_html_mirror
     label: "① Homepage — Advanced HTML (mirror: MOW.dc.html)"
-    description: "Mirror file used by internal links. Keep structure identical to index.html."
     type: file
     path: MOW.dc.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: about
     label: "② About — Peter Weltman"
-    description: "About page copy, portrait reference, title & meta description."
+    description: "About page (served at /about/)."
     type: file
-    path: About.dc.html
+    path: about/index.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: blog_index
     label: "③ News / Journal index"
-    description: "The News landing page with the article cards."
+    description: "The News landing page (served at /blog/)."
     type: file
-    path: Blog.dc.html
+    path: blog/index.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
 
-  # ========== BLOG / NEWS POSTS ==========
+  # ========== NEWS POSTS ==========
   - name: blog_i2i
     label: "News · Impossible to Ignore"
     type: file
     path: blog-impossible-to-ignore.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: blog_brand
     label: "News · Mastering Brand Creation"
     type: file
     path: blog-mastering-brand-creation.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: blog_genai
     label: "News · Generative AI Marketing"
     type: file
     path: blog-generative-ai-marketing.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: blog_aisystems
     label: "News · Integrate AI (Systems Thinking)"
     type: file
     path: blog-integrate-ai-systems-thinking.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: blog_data
-    label: "Blog data (cards + reader)"
-    description: "Powers the News cards on the homepage and the in-page article reader. Edit titles, deks & body here too."
+    label: "News data (cards + reader)"
+    description: "Powers the News cards on the homepage and the in-page article reader."
     type: file
     path: articles.js
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
 
   # ========== CASE STUDIES · ENGLISH ==========
   - name: case_petra
@@ -167,66 +165,42 @@ content:
     path: case-petra.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_avitia
     label: "Work · Avitia (EN)"
     type: file
     path: case-avitia.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_autoalign
     label: "Work · AutoAlign · Sidecar (EN)"
     type: file
     path: case-autoalign.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_hey_houston
     label: "Work · Hey Houston (EN)"
     type: file
     path: case-hey-houston.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_pedrera
     label: "Work · Pedrera (EN)"
     type: file
     path: case-pedrera.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_neara
     label: "Work · Neara (EN)"
     type: file
     path: case-neara.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
 
   # ========== CASE STUDIES · ESPAÑOL ==========
   - name: case_petra_es
@@ -235,66 +209,42 @@ content:
     path: case-petra.es.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_avitia_es
     label: "Work · Avitia (ES)"
     type: file
     path: case-avitia.es.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_autoalign_es
     label: "Work · AutoAlign · Sidecar (ES)"
     type: file
     path: case-autoalign.es.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_hey_houston_es
     label: "Work · Hey Houston (ES)"
     type: file
     path: case-hey-houston.es.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_pedrera_es
     label: "Work · Pedrera (ES)"
     type: file
     path: case-pedrera.es.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_neara_es
     label: "Work · Neara (ES)"
     type: file
     path: case-neara.es.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
 
   # ========== CASE STUDIES · فارسی ==========
   - name: case_petra_fa
@@ -303,113 +253,69 @@ content:
     path: case-petra.fa.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_avitia_fa
     label: "Work · Avitia (FA)"
     type: file
     path: case-avitia.fa.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_autoalign_fa
     label: "Work · AutoAlign · Sidecar (FA)"
     type: file
     path: case-autoalign.fa.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_hey_houston_fa
     label: "Work · Hey Houston (FA)"
     type: file
     path: case-hey-houston.fa.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_pedrera_fa
     label: "Work · Pedrera (FA)"
     type: file
     path: case-pedrera.fa.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: case_neara_fa
     label: "Work · Neara (FA)"
     type: file
     path: case-neara.fa.html
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
 
   # ========== SEO / TECHNICAL FILES ==========
   - name: seo_sitemap
     label: "SEO · sitemap.xml"
-    description: "List of every indexable URL for Google."
     type: file
     path: sitemap.xml
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: seo_robots
     label: "SEO · robots.txt"
-    description: "Crawler rules (Google + AI answer engines)."
     type: file
     path: robots.txt
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: seo_llms
     label: "SEO · llms.txt"
-    description: "Plain-language brief AI engines read to describe MOW."
     type: file
     path: llms.txt
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
   - name: seo_manifest
     label: "SEO · site.webmanifest"
-    description: "PWA / favicon manifest."
     type: file
     path: site.webmanifest
     format: raw
     fields:
-      - name: body
-        label: "File content (HTML / text)"
-        type: code
-        options:
-          language: html
+      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
