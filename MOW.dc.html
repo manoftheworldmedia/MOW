@@ -13,8 +13,9 @@
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#07211A">
 <meta property="og:url" content="https://mow.media/">
-<meta property="og:image" content="https://mow.media/favicon-512.png">
+<meta property="og:image" content="https://mow.media/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mow.media/og-image.png">
 <meta name="twitter:title" content="Man of the World (MOW) — Make bold unforgettable">
 <meta name="twitter:description" content="LA creative brand &amp; marketing agency for bold brands across AI, healthcare, climate tech & culture.">
 </head>
@@ -34,7 +35,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="LA creative brand &amp; marketing agency. We architect belief systems for bold brands across AI, healthcare, climate tech, and culture.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Man of the World","alternateName":["MOW","MOW Media","Man of the World Media"],"url":"https://mow.media","logo":"https://mow.media/logo.png","slogan":"Make bold unforgettable","description":"Man of the World (MOW) is a Los Angeles creative brand and marketing agency that makes bold unforgettable by unleashing absolute conviction — unearthing a company's core truth and expressing it with clarity, authenticity, and cultural authority.","email":"peter@mow.media","telephone":"+1-424-460-0537","founder":{"@type":"Person","name":"Peter Weltman","jobTitle":"CEO & Founder"},"address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":["United States","Canada","Mexico","Guatemala","Chile","Latin America"],"knowsAbout":["Brand strategy","Generative AI marketing","Generative Engine Optimization (GEO)","Answer Engine Optimization (AEO)","Search Engine Optimization (SEO)","Healthcare and precision medicine branding","Climate and infrastructure technology branding","Executive and thought leadership branding","Brand journalism"],"sameAs":["https://www.instagram.com/manoftheworldmedia/","https://linkedin.com/company/mowm","https://www.tiktok.com/@peter.weltman"]}
+{"@context":"https://schema.org","@type":"Organization","name":"Man of the World","alternateName":["MOW","MOW Media","Man of the World Media"],"url":"https://mow.media","logo":"https://mow.media/logo.png","slogan":"Make bold unforgettable","description":"Man of the World (MOW) is a Los Angeles creative brand and marketing agency that makes bold unforgettable by unleashing absolute conviction — unearthing a company's core truth and expressing it with clarity, authenticity, and cultural authority.","email":"peter@mow.media","telephone":"+1-424-460-0537","founder":{"@type":"Person","name":"Peter Weltman","jobTitle":"CEO & Founder"},"address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":["United States","Canada","Mexico","Guatemala","Chile","Latin America"],"knowsAbout":["Brand strategy","Generative AI marketing","Generative Engine Optimization (GEO)","Answer Engine Optimization (AEO)","Search Engine Optimization (SEO)","Healthcare and precision medicine branding","Climate and infrastructure technology branding","Executive and thought leadership branding","Brand journalism"],"sameAs":["https://www.instagram.com/manoftheworld.mow/","https://linkedin.com/company/mowm","https://www.tiktok.com/@peter.weltman"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"DefinedTermSet","name":"Impossible to Ignore (i2i)","description":"MOW's visual philosophy and global brand-distinctiveness standard. Seven observable tenets that train sensitivity and make work impossible to ignore.","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Luxury in the Details","description":"The quality of attention paid to the part of the work nobody was forced to notice."},{"@type":"DefinedTerm","name":"Distinctiveness Over Conventional Beauty","description":"Standing apart with an unmistakable point of view rather than fitting a polished, safe standard."},{"@type":"DefinedTerm","name":"Intentionally Incomplete","description":"Leaving just enough out so the audience participates and fills in the story."},{"@type":"DefinedTerm","name":"Sprezzatura","description":"The art of making difficult work look effortless — agonized over in private, published as if it cost nothing."},{"@type":"DefinedTerm","name":"Absolute Conviction","description":"Owning only the conversation you want to have; confidence as a foundational posture."},{"@type":"DefinedTerm","name":"Authenticity of Experience","description":"What remains when a place keeps its own texture — the opposite of imported, globalized taste."},{"@type":"DefinedTerm","name":"Koochooloo (کوچولو)","description":"Persian for 'little one' — softness, memory, and cultural specificity; the small human note a boardroom would have edited out."}]}
@@ -54,6 +55,8 @@
   @keyframes mowMarquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
   @keyframes mowFloat { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-16px) rotate(1.5deg); } }
   @keyframes planeBob { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
+  @keyframes pcRock { 0%,100%{ transform:rotate(-1.6deg);} 25%{ transform:rotate(0.7deg);} 50%{ transform:rotate(-1deg);} 75%{ transform:rotate(1.1deg);} }
+  .mow-pccard:hover{ animation:pcRock 2.8s ease-in-out infinite; }
   @keyframes mowDrift { 0%,100% { transform:translateY(0); opacity:.5; } 50% { transform:translateY(-22px); opacity:1; } }
   @keyframes mowBlink { 0%,92%,100% { transform:scaleY(1); } 96% { transform:scaleY(0.1); } }
   .mow-car-arrow{ opacity:0; transition:opacity .35s, background .25s, color .25s; }
@@ -74,6 +77,8 @@
   }
   details[open] .mow-faqplus{ transform:rotate(45deg); }
   .mow-faqplus{ display:inline-block; transition:transform .25s; }
+  [data-burger]{ display:flex; }
+  @media (min-width:880px){ [data-burger]{ display:none; } }
   [data-cform] ::placeholder{ color:#7E907A; opacity:1; }
   [data-blogscroll]{ scrollbar-width:none; -ms-overflow-style:none; }
   [data-blogscroll]::-webkit-scrollbar{ display:none; }
@@ -97,26 +102,20 @@
 <div ref="{{ rootRef }}" style="position:relative;background:#07211A;">
 
 <!-- NAV -->
-<header data-header="" style="position:fixed;top:0;left:0;right:0;z-index:120;transition:transform .45s cubic-bezier(.4,0,.2,1), background .4s, border-color .4s;background:rgba(7,33,26,0.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
-  <nav style="max-width:1340px;margin:0 auto;padding:0 clamp(20px,4vw,56px);height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-    <a href="#top" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;">
+<header data-header="" style="position:fixed;top:0;left:0;right:0;z-index:120;transition:transform .45s cubic-bezier(.4,0,.2,1), background .45s, border-color .45s, backdrop-filter .45s;background:transparent;border-bottom:1px solid transparent;">
+  <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;">
+    <a href="#top" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;">
       <img src="assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
-    <div data-nav="" style="display:none;gap:clamp(18px,2.4vw,38px);align-items:center;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
+    <div data-nav="" style="display:none;gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
       <a href="#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
       <a href="#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
       <a href="#method" data-i18n="nav_method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
-      <a href="#blog" data-i18n="nav_blog" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Blog</a>
+      <a href="#blog" data-i18n="nav_blog" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">News</a>
       <a href="About.dc.html" data-i18n="nav_about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
       <a href="#contact" data-i18n="nav_contact" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Contact</a>
     </div>
-    <div style="display:flex;align-items:center;gap:clamp(16px,2vw,26px);">
-      <div style="display:flex;align-items:center;gap:15px;">
-        <a href="https://www.instagram.com/manoftheworldmedia/" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;color:#9FB09B;transition:color .2s;" style-hover="color:#E2C173;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
-        <a href="https://www.tiktok.com/@peter.weltman" target="_blank" rel="noopener" aria-label="TikTok" style="display:flex;color:#9FB09B;transition:color .2s;" style-hover="color:#E2C173;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.7 4.7 0 0 1-1.1-3.1h-3.2v12.6a2.6 2.6 0 1 1-2-2.5V9.5a5.8 5.8 0 1 0 5.2 5.7V9.1a7.7 7.7 0 0 0 4.3 1.3V7.2a4.6 4.6 0 0 1-3.2-1.4z"></path></svg></a>
-        <a href="https://linkedin.com/company/mowm" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;color:#9FB09B;transition:color .2s;" style-hover="color:#E2C173;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM3 9h3v12H3zM9 9h2.9v1.7h.04c.4-.75 1.4-1.55 2.9-1.55 3.1 0 3.66 2 3.66 4.7V21h-3v-5.6c0-1.34-.02-3.05-1.86-3.05-1.87 0-2.16 1.45-2.16 2.95V21H9z"></path></svg></a>
-      </div>
-      <span style="width:1px;height:16px;background:rgba(196,156,78,0.32);"></span>
+    <div style="display:flex;align-items:center;gap:clamp(16px,2vw,26px);order:2;">
       <div style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;">
         <button type="button" data-langbtn="en" onClick="{{ onLangClick }}" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
         <span style="color:rgba(196,156,78,0.45);">/</span>
@@ -124,9 +123,25 @@
         <span style="color:rgba(196,156,78,0.45);">/</span>
         <button type="button" data-langbtn="es" onClick="{{ onLangClick }}" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">ES</button>
       </div>
+      <button type="button" data-burger="" onClick="{{ toggleMenu }}" aria-label="Open menu" style="flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;border:none;background:none;cursor:pointer;padding:8px;flex-shrink:0;">
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+      </button>
     </div>
   </nav>
 </header>
+
+<!-- MOBILE MENU -->
+<div data-mobilemenu="" style="position:fixed;inset:0;z-index:130;opacity:0;pointer-events:none;transition:opacity .3s ease;background:rgba(5,21,14,0.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+  <button type="button" onClick="{{ closeMenu }}" aria-label="Close menu" style="position:absolute;top:22px;right:24px;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:transparent;color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;">×</button>
+  <a href="#services" data-i18n="nav_services" onClick="{{ closeMenu }}" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Services</a>
+  <a href="#work" data-i18n="nav_work" onClick="{{ closeMenu }}" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Work</a>
+  <a href="#method" data-i18n="nav_method" onClick="{{ closeMenu }}" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
+  <a href="#blog" data-i18n="nav_blog" onClick="{{ closeMenu }}" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">News</a>
+  <a href="About.dc.html" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
+  <a href="#contact" data-i18n="nav_contact" onClick="{{ closeMenu }}" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">Contact</a>
+</div>
 
 <span id="top"></span>
 
@@ -140,17 +155,17 @@
 </div>
 
 <!-- HERO -->
-<section style="position:relative;background:#07211A;color:#EDE6D4;padding:172px clamp(20px,4vw,56px) clamp(80px,9vw,128px);overflow:hidden;">
+<section style="position:relative;background:#07211A;color:#EDE6D4;padding:clamp(112px,15vh,140px) clamp(20px,4vw,56px) clamp(40px,5vw,60px);overflow:hidden;">
   <div style="position:absolute;top:8%;right:-6%;width:min(52vw,640px);opacity:0.05;pointer-events:none;animation:mowFloat 11s ease-in-out infinite;">
     <img src="assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
   <div style="position:absolute;inset:0;background:radial-gradient( circle at 14% 18%, rgba(196,156,78,0.10), transparent 42%);pointer-events:none;"></div>
   <div style="max-width:1340px;margin:0 auto;position:relative;">
-    <p data-i18n="hero_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:#C49C4E;margin-bottom:38px;display:flex;align-items:center;gap:16px;"><span style="width: 46px; height: 1px; background: rgb(196, 156, 78); display: inline-block;"></span>Unleash Absolute Conviction</p>
-    <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(58px,11vw,182px);line-height:0.86;letter-spacing:-0.02em;color:#F6F0E1;max-width:15ch;">
+    <p data-i18n="hero_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:#C49C4E;margin-bottom:24px;display:flex;align-items:center;gap:16px;"><span style="width: 46px; height: 1px; background: rgb(196, 156, 78); display: inline-block;"></span>Unleash Absolute Conviction</p>
+    <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(46px,7.6vw,118px);line-height:0.88;letter-spacing:-0.02em;color:#F6F0E1;max-width:15ch;">
       <span data-i18n="hero_h1a">Make bold</span> <span data-i18n="hero_h1b" style="font-style:italic;font-weight:600;color:#E2C173;">unforgettable</span>
     </h1>
-    <div style="display:flex;flex-wrap:wrap;gap:54px;margin-top:54px;align-items:flex-end;justify-content:space-between;">
+    <div style="display:flex;flex-wrap:wrap;gap:32px;margin-top:32px;align-items:flex-end;justify-content:space-between;">
       <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,29px);line-height:1.45;color:#CBD6C7;max-width:560px;">We are a creative brand &amp; marketing agency for cutting-edge industries and bold brands. We unearth a company's core truth — then express it with clarity, conviction, and cultural authority.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="#work" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;transition:all .25s;" style-hover="background:#E2C173;transform:translateY(-2px);">See the work →</a>
@@ -514,10 +529,10 @@
       <a href="Blog.dc.html" style="display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#EDE6D4;padding:13px 26px;border:1px solid rgba(196,156,78,0.45);border-radius:999px;transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">All Articles →</a>
     </div>
   </div>
-  <div data-blogscroll style="display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px clamp(20px,4vw,56px) 14px;-webkit-overflow-scrolling:touch;">
-    <article class="mow-blogcard" data-article="i2i" onClick="{{ openArticle }}" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+  <div data-blogscroll="" style="display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px clamp(20px,4vw,56px) 14px;-webkit-overflow-scrolling:touch;">
+    <a class="mow-blogcard" href="blog-impossible-to-ignore.html" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/11;overflow:hidden;background:#05190F;">
-        <div data-blogart style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 64% 36%, rgba(196,156,78,0.20), transparent 60%);">
+        <div data-blogart="" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 64% 36%, rgba(196,156,78,0.20), transparent 60%);">
           <span style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:600;font-size:148px;line-height:1;color:rgba(226,193,115,0.92);letter-spacing:-0.04em;">i2i</span>
         </div>
         <span style="position:absolute;top:16px;left:16px;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 11px;border-radius:999px;">Design Philosophy</span>
@@ -529,10 +544,10 @@
         <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.6;color:#9FB09B;margin-bottom:18px;">The world doesn't need more content — it needs better-trained attention. Inside MOW's visual philosophy and its seven tenets.</p>
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read essay →</span>
       </div>
-    </article>
-    <article class="mow-blogcard" data-article="brand" onClick="{{ openArticle }}" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+    </a>
+    <a class="mow-blogcard" href="blog-mastering-brand-creation.html" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/11;overflow:hidden;background:#0A2A1E;">
-        <div data-blogart style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;">
+        <div data-blogart="" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;">
           <span style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:120px;line-height:1;color:rgba(226,193,115,0.9);">01</span>
           <span style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:500;font-size:64px;line-height:1;color:rgba(159,176,155,0.55);">–06</span>
         </div>
@@ -545,10 +560,10 @@
         <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.6;color:#9FB09B;margin-bottom:18px;">Five steps — from first principles to lasting equity — for building a brand that resonates and endures.</p>
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read guide →</span>
       </div>
-    </article>
-    <article class="mow-blogcard" data-article="genai" onClick="{{ openArticle }}" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+    </a>
+    <a class="mow-blogcard" href="blog-generative-ai-marketing.html" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/11;overflow:hidden;background:#06201A;">
-        <div data-blogart style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg, rgba(196,156,78,0.06) 0 2px, transparent 2px 16px);">
+        <div data-blogart="" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg, rgba(196,156,78,0.06) 0 2px, transparent 2px 16px);">
           <span style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:600;font-size:118px;line-height:1;color:rgba(226,193,115,0.92);">AI</span>
         </div>
         <span style="position:absolute;top:16px;left:16px;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 11px;border-radius:999px;">Generative AI</span>
@@ -560,10 +575,10 @@
         <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.6;color:#9FB09B;margin-bottom:18px;">Leverage on a strong point of view — content, personalization, and video at scale, governed by taste.</p>
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read article →</span>
       </div>
-    </article>
-    <article class="mow-blogcard" data-article="aisystems" onClick="{{ openArticle }}" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+    </a>
+    <a class="mow-blogcard" href="blog-integrate-ai-systems-thinking.html" style="scroll-snap-align:start;flex:0 0 auto;width:min(82vw,400px);cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/11;overflow:hidden;background:#0A2A1E;">
-        <div data-blogart style="position:absolute;inset:0;">
+        <div data-blogart="" style="position:absolute;inset:0;">
           <svg viewBox="0 0 320 220" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
             <g stroke="rgba(196,156,78,0.5)" stroke-width="1.4" fill="none">
               <line x1="60" y1="60" x2="160" y2="110"></line><line x1="160" y1="110" x2="260" y2="60"></line>
@@ -586,7 +601,7 @@
         <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.6;color:#9FB09B;margin-bottom:18px;">Real transformation isn't a tool you buy — it's a system you design. A systems-thinking approach to AI.</p>
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read article →</span>
       </div>
-    </article>
+    </a>
   </div>
 </section>
 
@@ -622,15 +637,15 @@
 
 <!-- POSTCARD -->
 <section id="postcard" style="background:#05190F;color:#EDE6D4;padding:clamp(92px,12vw,156px) clamp(20px,4vw,56px);position:relative;overflow:hidden;">
-  <div data-i2i-field2 style="position:absolute;inset:0;pointer-events:none;overflow:hidden;"></div>
+  <div data-i2i-field2="" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;"></div>
   <div style="max-width:1080px;margin:0 auto;position:relative;text-align:center;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>The World View Postcard</p>
-    <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(36px,5vw,72px);line-height:1.0;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:20px;">Send a postcard.</h2>
-    <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:520px;margin:0 auto;">Carry the World View with you — a friend, a future client, or yourself. A small reminder that bold is a decision.</p>
-    <div data-pc-card onClick="{{ openPostcard }}" role="button" tabindex="0" aria-label="Send this postcard" style="position:relative;width:min(100%,720px);margin:clamp(40px,5vw,64px) auto 0;cursor:pointer;transform:rotate(-1.4deg);transition:transform .55s cubic-bezier(.2,.7,.3,1), box-shadow .55s;" style-hover="transform:rotate(0deg) translateY(-10px) scale(1.012);">
+    <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(36px,5vw,72px);line-height:1.0;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:20px;">Drop a postcard.</h2>
+    <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:520px;margin:0 auto;">Deliver our note to anyone seeking luxurious details.</p>
+    <div data-pc-card="" class="mow-pccard" onClick="{{ sharePostcard }}" role="button" tabindex="0" aria-label="Send this postcard" style="position:relative;width:min(100%,720px);margin:clamp(40px,5vw,64px) auto 0;cursor:pointer;transform:rotate(-1.4deg);transition:transform .55s cubic-bezier(.2,.7,.3,1), box-shadow .55s;">
       <span style="position:absolute;top:-15px;left:50%;transform:translateX(-50%) rotate(2deg);width:138px;height:34px;background:rgba(196,156,78,0.34);border:1px solid rgba(196,156,78,0.45);backdrop-filter:blur(2px);z-index:3;"></span>
       <img src="assets/mow_postcard.png" alt="MOW World View postcard — Unleashing Absolute Conviction, Greetings from Los Angeles" style="display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 50px 90px -34px rgba(0,0,0,0.82), 0 6px 18px rgba(0,0,0,0.4);">
-      <span style="position:absolute;top:18px;right:18px;z-index:3;display:inline-flex;align-items:center;gap:8px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:10px 18px;border-radius:999px;box-shadow:0 10px 22px -8px rgba(0,0,0,0.55);">
+      <span style="position:absolute;bottom:20px;right:20px;z-index:3;display:inline-flex;align-items:center;gap:8px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:10px 18px;border-radius:999px;box-shadow:0 10px 22px -8px rgba(0,0,0,0.55);">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"></line></svg>
         Send this postcard
       </span>
@@ -639,21 +654,21 @@
 </section>
 
 <!-- POSTCARD MODAL -->
-<div data-pcmodal style="position:fixed;inset:0;z-index:200;opacity:0;pointer-events:none;transition:opacity .35s ease;display:flex;align-items:center;justify-content:center;padding:20px;">
+<div data-pcmodal="" style="position:fixed;inset:0;z-index:200;opacity:0;pointer-events:none;transition:opacity .35s ease;display:flex;align-items:center;justify-content:center;padding:20px;">
   <div onClick="{{ closePostcard }}" style="position:absolute;inset:0;background:rgba(3,14,9,0.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:pointer;"></div>
   <div style="position:relative;width:min(100%,452px);max-height:92vh;overflow-y:auto;background:#07211A;border:1px solid rgba(196,156,78,0.3);border-radius:24px;box-shadow:0 60px 120px -40px rgba(0,0,0,0.85);padding:clamp(22px,4vw,30px);">
     <button type="button" onClick="{{ closePostcard }}" aria-label="Close" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:rgba(7,33,26,0.8);color:#EDE6D4;font-size:19px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:2;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">×</button>
     <div style="position:relative;width:100%;border-radius:8px;overflow:hidden;border:1px solid rgba(196,156,78,0.25);margin-bottom:24px;box-shadow:0 18px 34px -18px rgba(0,0,0,0.7);">
       <img src="assets/mow_postcard.png" alt="MOW World View postcard" style="display:block;width:100%;height:auto;">
     </div>
-    <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(26px,4vw,34px);line-height:1;color:#F6F0E1;text-align:center;margin-bottom:12px;">Send a postcard</h3>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;line-height:1.4;color:#B7C4B2;text-align:center;max-width:340px;margin:0 auto 24px;">Carry the World View with you — send it to a friend, a future client, or yourself.</p>
+    <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(26px,4vw,34px);line-height:1;color:#F6F0E1;text-align:center;margin-bottom:12px;">Drop a Postcard</h3>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;line-height:1.4;color:#B7C4B2;text-align:center;max-width:340px;margin:0 auto 24px;">Deliver our note to anyone seeking luxurious details.</p>
     <div style="display:flex;flex-direction:column;gap:11px;">
-      <a href="sms:?&body=Get%20ready%20to%20unleash%20absolute%20conviction%20with%20MOW.%20https%3A%2F%2Fshare.google%2FdsJXyLD0XUyKpG6bP" style="display:flex;align-items:center;justify-content:center;gap:11px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:16px 26px;border-radius:999px;transition:all .2s;" style-hover="background:#E2C173;">
+      <a href="sms:?&amp;body=Get%20ready%20to%20unleash%20absolute%20conviction%20with%20MOW.%20Map%3A%20https%3A%2F%2Fshare.google%2FdsJXyLD0XUyKpG6bP%20%C2%B7%20Postcard%3A%20https%3A%2F%2Fmow.media%2Fassets%2Fmow_postcard.png" style="display:flex;align-items:center;justify-content:center;gap:11px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:16px 26px;border-radius:999px;transition:all .2s;" style-hover="background:#E2C173;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"></path></svg>
         Text the Postcard
       </a>
-      <a href="https://wa.me/?text=Get%20ready%20to%20unleash%20absolute%20conviction%20with%20MOW.%20https%3A%2F%2Fshare.google%2FdsJXyLD0XUyKpG6bP" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:11px;background:#1F8A4C;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:16px 26px;border-radius:999px;transition:all .2s;" style-hover="background:#23A359;">
+      <a href="https://wa.me/?text=Get%20ready%20to%20unleash%20absolute%20conviction%20with%20MOW.%20Map%3A%20https%3A%2F%2Fshare.google%2FdsJXyLD0XUyKpG6bP%20%C2%B7%20Postcard%3A%20https%3A%2F%2Fmow.media%2Fassets%2Fmow_postcard.png" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:11px;background:#1F8A4C;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:16px 26px;border-radius:999px;transition:all .2s;" style-hover="background:#23A359;">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.41-9.4 2.51 0 4.87.98 6.64 2.76a9.34 9.34 0 0 1 2.75 6.65c0 5.18-4.22 9.4-9.4 9.4zm8-17.4A11.32 11.32 0 0 0 12.04.78C5.83.78.78 5.83.78 12.04c0 1.99.52 3.93 1.5 5.65L.69 23.5l5.96-1.56a11.25 11.25 0 0 0 5.39 1.37h.01c6.21 0 11.26-5.05 11.26-11.26 0-3.01-1.17-5.84-3.3-7.97z"></path></svg>
         WhatsApp
       </a>
@@ -663,7 +678,7 @@
       </a>
       <button type="button" onClick="{{ onCopyLink }}" style="display:flex;align-items:center;justify-content:center;gap:11px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:15px 26px;border-radius:999px;border:1px solid rgba(196,156,78,0.45);cursor:pointer;transition:all .2s;" style-hover="border-color:#C49C4E;color:#E2C173;">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-        <span data-share-label>Copy Link</span>
+        <span data-share-label="">Copy Link</span>
       </button>
     </div>
   </div>
@@ -680,19 +695,19 @@
         <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.6;color:#B7C4B2;max-width:480px;margin-top:26px;">Brand audits, discovery sessions, and strategy sprints to align vision and ambition. From there, we design a scope that reflects your next chapter.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;min-width:0;">
-        <form data-cform onSubmit="{{ onContactSubmit }}" style="display:flex;flex-direction:column;gap:12px;">
+        <form data-cform="" onSubmit="{{ onContactSubmit }}" style="display:flex;flex-direction:column;gap:12px;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-            <input name="first" required placeholder="First name *" aria-label="First name" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
-            <input name="last" required placeholder="Last name *" aria-label="Last name" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
+            <input name="first" required="" placeholder="First name *" aria-label="First name" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
+            <input name="last" required="" placeholder="Last name *" aria-label="Last name" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
           </div>
-          <input type="email" name="email" required placeholder="Email *" aria-label="Email" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
+          <input type="email" name="email" required="" placeholder="Email *" aria-label="Email" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-            <input name="location" required placeholder="Location *" aria-label="Location" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
+            <input name="location" required="" placeholder="Location *" aria-label="Location" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
             <input type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;outline:none;transition:border-color .2s;" style-focus="border-color:#C49C4E;">
           </div>
-          <textarea name="message" required rows="4" placeholder="What do you need? *" aria-label="What do you need" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;line-height:1.5;outline:none;resize:vertical;min-height:104px;transition:border-color .2s;" style-focus="border-color:#C49C4E;"></textarea>
+          <textarea name="message" required="" rows="4" placeholder="What do you need? *" aria-label="What do you need" style="width:100%;background:rgba(237,230,212,0.05);border:1px solid rgba(196,156,78,0.32);border-radius:12px;padding:14px 16px;color:#F6F0E1;font-family:'Archivo',sans-serif;font-size:15px;line-height:1.5;outline:none;resize:vertical;min-height:104px;transition:border-color .2s;" style-focus="border-color:#C49C4E;"></textarea>
           <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;letter-spacing:0.02em;padding:17px 32px;border-radius:999px;border:none;cursor:pointer;transition:all .2s;" style-hover="background:#E2C173;transform:translateY(-2px);">Send it →</button>
-          <p data-cform-status role="status" style="display:none;font-family:'Archivo',sans-serif;font-size:13.5px;line-height:1.5;color:#E2C173;margin-top:2px;"></p>
+          <p data-cform-status="" role="status" style="display:none;font-family:'Archivo',sans-serif;font-size:13.5px;line-height:1.5;color:#E2C173;margin-top:2px;"></p>
         </form>
         <p style="font-family:'Archivo',sans-serif;font-size:13px;color:#9FB09B;text-align:center;">Prefer direct? <a href="tel:+14244600537" style="color:#E2C173;border-bottom:1px solid rgba(196,156,78,0.5);">Call (424) 460-0537</a></p>
       </div>
@@ -703,7 +718,7 @@
         <span style="font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9FB09B;">Made in Los Angeles</span>
       </div>
       <div style="display:flex;gap:26px;font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:500;color:#C0CCBC;flex-wrap:wrap;">
-        <a href="https://www.instagram.com/manoftheworldmedia/" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">Instagram</a>
+        <a href="https://www.instagram.com/manoftheworld.mow/" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">Instagram</a>
         <a href="https://linkedin.com/company/mowm" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">LinkedIn</a>
         <a href="https://www.tiktok.com/@peter.weltman" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">TikTok</a>
       </div>
@@ -713,20 +728,19 @@
 </footer>
 
 <!-- ARTICLE READER -->
-<div data-reader style="position:fixed;inset:0;z-index:200;opacity:0;pointer-events:none;transition:opacity .4s ease;">
-  <div data-reader-close onClick="{{ closeArticle }}" style="position:absolute;inset:0;background:rgba(3,14,9,0.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:pointer;"></div>
-  <div data-reader-scroll style="position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;">
+<div data-reader="" style="position:fixed;inset:0;z-index:200;opacity:0;pointer-events:none;transition:opacity .4s ease;">
+  <div data-reader-close="" onClick="{{ closeArticle }}" style="position:absolute;inset:0;background:rgba(3,14,9,0.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:pointer;"></div>
+  <div data-reader-scroll="" style="position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;">
     <div style="position:relative;max-width:780px;margin:clamp(28px,6vh,80px) auto;background:#05190F;border:1px solid rgba(196,156,78,0.28);border-radius:18px;box-shadow:0 60px 120px -40px rgba(0,0,0,0.85);min-height:60vh;">
-      <button type="button" onClick="{{ closeArticle }}" aria-label="Close article" style="position:sticky;top:18px;float:right;margin:18px 18px 0 0;z-index:3;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:rgba(7,33,26,0.8);color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">×</button>
-      <div style="padding:clamp(40px,6vw,76px) clamp(26px,5vw,72px) clamp(48px,6vw,84px);">
+      <button type="button" onClick="{{ closeArticle }}" aria-label="Close article" style="position:sticky;top:18px;float:right;margin:18px 18px 0 0;z-index:3;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:rgba(7,33,26,0.8);color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">×</button><div style="padding:clamp(40px,6vw,76px) clamp(26px,5vw,72px) clamp(48px,6vw,84px);">
         <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:26px;">
-          <span data-reader-cat style="font-family:'Archivo',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 12px;border-radius:999px;">Design Philosophy</span>
-          <span data-reader-kicker style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#9FB09B;">The New Standard</span>
+          <span data-reader-cat="" style="font-family:'Archivo',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 12px;border-radius:999px;">Design Philosophy</span>
+          <span data-reader-kicker="" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#9FB09B;">The New Standard</span>
         </div>
-        <h1 data-reader-title style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(32px,4.4vw,58px);line-height:1.03;letter-spacing:-0.015em;color:#F6F0E1;margin-bottom:22px;">Article title</h1>
-        <p data-reader-meta style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#9FB09B;margin-bottom:24px;">Jun 2026 · 8 min read</p>
-        <p data-reader-dek style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2vw,27px);line-height:1.4;color:#D8C9A8;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid rgba(196,156,78,0.22);">Article dek</p>
-        <div data-reader-body class="mow-article"></div>
+        <h1 data-reader-title="" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(32px,4.4vw,58px);line-height:1.03;letter-spacing:-0.015em;color:#F6F0E1;margin-bottom:22px;">Article title</h1>
+        <p data-reader-meta="" style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#9FB09B;margin-bottom:24px;">Jun 2026 · 8 min read</p>
+        <p data-reader-dek="" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2vw,27px);line-height:1.4;color:#D8C9A8;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid rgba(196,156,78,0.22);">Article dek</p>
+        <div data-reader-body="" class="mow-article"></div>
         <div style="margin-top:52px;padding-top:34px;border-top:1px solid rgba(196,156,78,0.22);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
           <div style="display:flex;align-items:center;gap:13px;">
             <img src="assets/mow_mark_gold.png" alt="" style="height:16px;width:auto;">
@@ -735,6 +749,7 @@
           <a href="#contact" onClick="{{ closeArticle }}" style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:12px 22px;border-radius:999px;transition:all .2s;" style-hover="background:#E2C173;">Work with MOW →</a>
         </div>
       </div>
+      
     </div>
   </div>
 </div>
@@ -747,7 +762,7 @@ class Component extends DCLogic {
 
   i18n = {
     en: {
-      nav_work:'Work', nav_services:'Services', nav_i2i:'Impossible to Ignore', nav_method:'Method', nav_blog:'Blog', nav_about:'About', nav_contact:'Contact',
+      nav_work:'Work', nav_services:'Services', nav_i2i:'Impossible to Ignore', nav_method:'Method', nav_blog:'News', nav_about:'About', nav_contact:'Contact',
       hero_eyebrow:'Unleashing Absolute Conviction', hero_h1a:'Make bold', hero_h1b:'unforgettable.',
       about_eyebrow:'Who We Are', about_title:'We architect belief systems for bold brands.',
       work_eyebrow:'Selected Work', work_title:'The work speaks. Loudly.',
@@ -758,7 +773,7 @@ class Component extends DCLogic {
       contact_eyebrow:'Start a Conversation', contact_title:'Make bold unforgettable.'
     },
     fa: {
-      nav_work:'کارها', nav_services:'خدمات', nav_i2i:'غیرقابل چشم‌پوشی', nav_method:'روش', nav_blog:'وبلاگ', nav_about:'درباره', nav_contact:'تماس',
+      nav_work:'کارها', nav_services:'خدمات', nav_i2i:'غیرقابل چشم‌پوشی', nav_method:'روش', nav_blog:'اخبار', nav_about:'درباره', nav_contact:'تماس',
       hero_eyebrow:'گشودنِ ایمانِ مطلق', hero_h1a:'جسارت را', hero_h1b:'فراموش‌نشدنی کن.',
       about_eyebrow:'ما که هستیم', about_title:'ما نظام‌های باور را برای برندهای جسور معماری می‌کنیم.',
       work_eyebrow:'کارهای منتخب', work_title:'کار، رسا سخن می‌گوید.',
@@ -769,7 +784,7 @@ class Component extends DCLogic {
       contact_eyebrow:'آغاز یک گفت‌وگو', contact_title:'جسارت را فراموش‌نشدنی کن.'
     },
     es: {
-      nav_work:'Trabajo', nav_services:'Servicios', nav_i2i:'Imposible de Ignorar', nav_method:'Método', nav_blog:'Blog', nav_about:'Acerca', nav_contact:'Contacto',
+      nav_work:'Trabajo', nav_services:'Servicios', nav_i2i:'Imposible de Ignorar', nav_method:'Método', nav_blog:'Noticias', nav_about:'Acerca', nav_contact:'Contacto',
       hero_eyebrow:'Liberando Convicción Absoluta', hero_h1a:'Haz lo audaz', hero_h1b:'inolvidable.',
       about_eyebrow:'Quiénes Somos', about_title:'Diseñamos sistemas de creencia para marcas audaces.',
       work_eyebrow:'Trabajo Seleccionado', work_title:'El trabajo habla. Fuerte.',
@@ -889,7 +904,11 @@ class Component extends DCLogic {
       const y = this.getScrollTop();
       if (y > last && y > 260) header.style.transform = 'translateY(-100%)';
       else header.style.transform = 'translateY(0)';
-      header.style.background = y > 40 ? 'rgba(5,21,14,0.88)' : 'rgba(7,33,26,0.72)';
+      const scrolled = y > 40;
+      header.style.background = scrolled ? 'rgba(5,21,14,0.92)' : 'transparent';
+      header.style.borderBottomColor = scrolled ? 'rgba(196,156,78,0.22)' : 'transparent';
+      header.style.backdropFilter = scrolled ? 'saturate(150%) blur(16px)' : 'none';
+      header.style.webkitBackdropFilter = scrolled ? 'saturate(150%) blur(16px)' : 'none';
       last = y;
     };
     this.onAnyScroll(onScroll);
@@ -1094,6 +1113,39 @@ class Component extends DCLogic {
     }
   };
 
+  toggleMenu = () => {
+    const m = this.root && this.root.querySelector('[data-mobilemenu]');
+    if (!m) return;
+    const open = m.style.opacity === '1';
+    m.style.opacity = open ? '0' : '1';
+    m.style.pointerEvents = open ? 'none' : 'auto';
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+
+  closeMenu = () => {
+    const m = this.root && this.root.querySelector('[data-mobilemenu]');
+    if (!m) return;
+    m.style.opacity = '0';
+    m.style.pointerEvents = 'none';
+    document.body.style.overflow = '';
+  };
+
+  sharePostcard = async () => {
+    const text = 'Get ready to unleash absolute conviction with MOW. Map: https://share.google/dsJXyLD0XUyKpG6bP';
+    try {
+      if (navigator.canShare && window.fetch) {
+        const res = await fetch('assets/mow_postcard.png');
+        const blob = await res.blob();
+        const file = new File([blob], 'MOW-WorldView-Postcard.png', { type: 'image/png' });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({ files: [file], title: 'Man of the World — World View', text: text });
+          return;
+        }
+      }
+    } catch (err) { if (err && err.name === 'AbortError') return; }
+    this.openPostcard();
+  };
+
   openPostcard = () => {
     const root = this.root || document;
     const m = root.querySelector('[data-pcmodal]');
@@ -1206,7 +1258,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    return { rootRef: this.rootRef, onLangClick: this.onLangClick, onSharePostcard: this.onSharePostcard, openArticle: this.openArticle, closeArticle: this.closeArticle, openPostcard: this.openPostcard, closePostcard: this.closePostcard, onContactSubmit: this.onContactSubmit, onCopyLink: this.onCopyLink };
+    return { rootRef: this.rootRef, onLangClick: this.onLangClick, onSharePostcard: this.onSharePostcard, openArticle: this.openArticle, closeArticle: this.closeArticle, openPostcard: this.openPostcard, sharePostcard: this.sharePostcard, closePostcard: this.closePostcard, onContactSubmit: this.onContactSubmit, onCopyLink: this.onCopyLink, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu };
   }
 }
 </script>
