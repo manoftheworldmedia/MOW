@@ -51,7 +51,7 @@
   a { color:inherit; text-decoration:none; }
   details summary::-webkit-details-marker { display:none; }
   details summary { list-style:none; }
-  section[id]{ scroll-margin-top:96px; }
+  section[id], footer[id], [id]{ scroll-margin-top:96px; }
   [data-cform]{ scroll-margin-top:108px; }
   @keyframes mowMarquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
   @keyframes mowFloat { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-16px) rotate(1.5deg); } }
@@ -148,7 +148,7 @@
 
 <!-- PAPER-PLANE FLIGHT -->
 <div data-fly="" aria-hidden="true" style="position:fixed;top:0;left:0;z-index:92;pointer-events:none;opacity:0;will-change:transform,opacity;">
-  <button data-fly-craft="" type="button" title="Fly back to top" style="border:none;background:none;cursor:pointer;padding:0;pointer-events:auto;display:block;will-change:transform;">
+  <button data-fly-craft="" type="button" title="Take me to the postcard" style="border:none;background:none;cursor:pointer;padding:0;pointer-events:auto;display:block;will-change:transform;">
     <span style="display:block;animation:planeBob 6s ease-in-out infinite;filter:drop-shadow(0 16px 26px rgba(0,0,0,0.45));">
       <img src="assets/plane_fly.png" alt="" style="display:block;width:clamp(92px,9.6vw,168px);height:auto;">
     </span>
@@ -262,7 +262,7 @@
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:clamp(52px,6vw,84px);">
       <div>
         <p data-i18n="work_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Selected Work</p>
-        <h2 data-i18n="work_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(38px,5.5vw,80px);line-height:0.98;letter-spacing:-0.012em;color:#F6F0E1;">Unleash absolute conviction.</h2>
+        <h2 data-i18n="work_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(38px,5.5vw,80px);line-height:0.98;letter-spacing:-0.012em;color:#F6F0E1;">Unleash absolute conviction</h2>
       </div>
       <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.62;color:#9FB09B;max-width:340px;">From a Persian café in Venice to the boldest rebrand in the banana's history — full brand creation, messaging, identity, and web.</p>
     </div>
@@ -525,7 +525,7 @@
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:clamp(44px,5vw,72px);">
       <div>
         <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>From the Journal</p>
-        <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(38px,5.5vw,80px);line-height:0.98;letter-spacing:-0.012em;color:#F6F0E1;">Field notes &amp; theory.</h2>
+        <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(38px,5.5vw,80px);line-height:0.98;letter-spacing:-0.012em;color:#F6F0E1;">Field notes &amp; theory</h2>
       </div>
       <a href="Blog.dc.html" style="display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#EDE6D4;padding:13px 26px;border:1px solid rgba(196,156,78,0.45);border-radius:999px;transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">All Articles →</a>
     </div>
@@ -641,7 +641,7 @@
   <div data-i2i-field2="" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;"></div>
   <div style="max-width:1080px;margin:0 auto;position:relative;text-align:center;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>The World View Postcard</p>
-    <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(36px,5vw,72px);line-height:1.0;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:20px;">Drop a postcard.</h2>
+    <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(36px,5vw,72px);line-height:1.0;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:20px;">Drop a postcard</h2>
     <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:520px;margin:0 auto;">Deliver our note to anyone seeking luxurious details.</p>
     <div data-pc-card="" class="mow-pccard" onClick="{{ sharePostcard }}" role="button" tabindex="0" aria-label="Send this postcard" style="position:relative;width:min(100%,720px);margin:clamp(40px,5vw,64px) auto 0;cursor:pointer;transform:rotate(-1.4deg);transition:transform .55s cubic-bezier(.2,.7,.3,1), box-shadow .55s;">
       <span style="position:absolute;top:-15px;left:50%;transform:translateX(-50%) rotate(2deg);width:138px;height:34px;background:rgba(196,156,78,0.34);border:1px solid rgba(196,156,78,0.45);backdrop-filter:blur(2px);z-index:3;"></span>
@@ -692,7 +692,7 @@
     <div style="display:grid;grid-template-columns:1fr;gap:clamp(40px,6vw,80px);align-items:start;border-bottom:1px solid rgba(196,156,78,0.2);padding-bottom:clamp(48px,6vw,74px);" data-footgrid="">
       <div style="min-width:0;">
         <p data-i18n="contact_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:28px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Start a Conversation</p>
-        <h2 data-i18n="contact_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(42px,6.5vw,104px);line-height:0.92;letter-spacing:-0.02em;color:#F6F0E1;">Make bold unforgettable.</h2>
+        <h2 data-i18n="contact_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(42px,6.5vw,104px);line-height:0.92;letter-spacing:-0.02em;color:#F6F0E1;">Make bold unforgettable</h2>
         <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.6;color:#B7C4B2;max-width:480px;margin-top:26px;">Brand audits, discovery sessions, and strategy sprints to align vision and ambition. From there, we design a scope that reflects your next chapter.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;min-width:0;">
@@ -764,36 +764,36 @@ class Component extends DCLogic {
   i18n = {
     en: {
       nav_work:'Work', nav_services:'Services', nav_i2i:'Impossible to Ignore', nav_method:'Method', nav_blog:'News', nav_about:'About', nav_contact:'Contact',
-      hero_eyebrow:'Unleashing Absolute Conviction', hero_h1a:'Make bold', hero_h1b:'unforgettable.',
-      about_eyebrow:'Who We Are', about_title:'We architect belief systems for bold brands.',
-      work_eyebrow:'Selected Work', work_title:'The work speaks. Loudly.',
-      ind_eyebrow:'What We Do', ind_title:'Brands for the frontier.',
+      hero_eyebrow:'Unleashing Absolute Conviction', hero_h1a:'Make bold', hero_h1b:'unforgettable',
+      about_eyebrow:'Who We Are', about_title:'We architect belief systems for bold brands',
+      work_eyebrow:'Selected Work', work_title:'Unleash absolute conviction',
+      ind_eyebrow:'What We Do', ind_title:'Brands for the frontier',
       i2i_eyebrow:'A Global Design Initiative', i2i_title:'Impossible to Ignore',
       method_eyebrow:'How We Work', method_title:'The MOW Method',
       faq_eyebrow:'Questions', faq_title:'Frequently asked',
-      contact_eyebrow:'Start a Conversation', contact_title:'Make bold unforgettable.'
+      contact_eyebrow:'Start a Conversation', contact_title:'Make bold unforgettable'
     },
     fa: {
       nav_work:'کارها', nav_services:'خدمات', nav_i2i:'غیرقابل چشم‌پوشی', nav_method:'روش', nav_blog:'اخبار', nav_about:'درباره', nav_contact:'تماس',
-      hero_eyebrow:'گشودنِ ایمانِ مطلق', hero_h1a:'جسارت را', hero_h1b:'فراموش‌نشدنی کن.',
-      about_eyebrow:'ما که هستیم', about_title:'ما نظام‌های باور را برای برندهای جسور معماری می‌کنیم.',
-      work_eyebrow:'کارهای منتخب', work_title:'کار، رسا سخن می‌گوید.',
-      ind_eyebrow:'آنچه می‌کنیم', ind_title:'برندهایی برای مرزهای نو.',
+      hero_eyebrow:'گشودنِ ایمانِ مطلق', hero_h1a:'جسارت را', hero_h1b:'فراموش‌نشدنی کن',
+      about_eyebrow:'ما که هستیم', about_title:'ما نظام‌های باور را برای برندهای جسور معماری می‌کنیم',
+      work_eyebrow:'کارهای منتخب', work_title:'غیرقابل چشم‌پوشی باشید',
+      ind_eyebrow:'آنچه می‌کنیم', ind_title:'برندهایی برای مرزهای نو',
       i2i_eyebrow:'یک ابتکار طراحی جهانی', i2i_title:'غیرقابل چشم‌پوشی',
       method_eyebrow:'شیوهٔ کار ما', method_title:'روشِ MOW',
       faq_eyebrow:'پرسش‌ها', faq_title:'پرسش‌های پرتکرار',
-      contact_eyebrow:'آغاز یک گفت‌وگو', contact_title:'جسارت را فراموش‌نشدنی کن.'
+      contact_eyebrow:'آغاز یک گفت‌وگو', contact_title:'جسارت را فراموش‌نشدنی کن'
     },
     es: {
       nav_work:'Trabajo', nav_services:'Servicios', nav_i2i:'Imposible de Ignorar', nav_method:'Método', nav_blog:'Noticias', nav_about:'Acerca', nav_contact:'Contacto',
-      hero_eyebrow:'Liberando Convicción Absoluta', hero_h1a:'Haz lo audaz', hero_h1b:'inolvidable.',
-      about_eyebrow:'Quiénes Somos', about_title:'Diseñamos sistemas de creencia para marcas audaces.',
-      work_eyebrow:'Trabajo Seleccionado', work_title:'El trabajo habla. Fuerte.',
-      ind_eyebrow:'Lo Que Hacemos', ind_title:'Marcas para la frontera.',
+      hero_eyebrow:'Liberando Convicción Absoluta', hero_h1a:'Haz lo audaz', hero_h1b:'inolvidable',
+      about_eyebrow:'Quiénes Somos', about_title:'Diseñamos sistemas de creencia para marcas audaces',
+      work_eyebrow:'Trabajo Seleccionado', work_title:'Desata convicción absoluta',
+      ind_eyebrow:'Lo Que Hacemos', ind_title:'Marcas para la frontera',
       i2i_eyebrow:'Una Iniciativa Global de Diseño', i2i_title:'Imposible de Ignorar',
       method_eyebrow:'Cómo Trabajamos', method_title:'El Método MOW',
       faq_eyebrow:'Preguntas', faq_title:'Preguntas frecuentes',
-      contact_eyebrow:'Inicia una Conversación', contact_title:'Haz lo audaz inolvidable.'
+      contact_eyebrow:'Inicia una Conversación', contact_title:'Haz lo audaz inolvidable'
     }
   };
 
@@ -949,6 +949,68 @@ class Component extends DCLogic {
     this._onKey = (e) => { if (e.key === 'Escape') { this.closeArticle(); this.closePostcard(); } };
     document.addEventListener('keydown', this._onKey);
     this.scrollToHash();
+    this._onClick = (e) => this.onAnchorClick(e);
+    if (this.root) this.root.addEventListener('click', this._onClick);
+    this.preloadPostcard();
+  }
+
+  onAnchorClick = (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = (a.getAttribute('href') || '').slice(1);
+    if (!id || id === 'top') { return; }
+    const root = this.root || document;
+    const el = root.querySelector('#' + (window.CSS && CSS.escape ? CSS.escape(id) : id));
+    if (!el) return;
+    e.preventDefault();
+    try { history.replaceState(null, '', '#' + id); } catch (_) {}
+    this.smoothScrollTo(el, id);
+  };
+
+  centerInView(el) {
+    if (!el) return;
+    const header = (this.root || document).querySelector('[data-header]');
+    const headH = (header ? header.offsetHeight : 79) + 16;
+    const want = () => {
+      const r = el.getBoundingClientRect();
+      const h = r.height;
+      const vh = window.innerHeight;
+      // Center the card; if it's taller than the space, pin its top under the header.
+      let y;
+      if (h < vh - headH - 24) y = window.scrollY + r.top + h / 2 - vh / 2;
+      else y = window.scrollY + r.top - headH;
+      return Math.max(0, y);
+    };
+    window.scrollTo({ top: want(), behavior: 'smooth' });
+    let tries = 0;
+    const fix = () => {
+      const y = want();
+      if (Math.abs(window.scrollY - y) > 3) {
+        window.scrollTo({ top: y, behavior: 'auto' });
+        if (++tries < 4) setTimeout(fix, 220);
+      }
+    };
+    setTimeout(fix, 620);
+  }
+
+  smoothScrollTo(el, id) {
+    const root = this.root || document;
+    let target = el;
+    if (id === 'contact') { const f = el.querySelector('[data-cform]'); if (f) target = f; }
+    const header = root.querySelector('[data-header]');
+    const offset = (header ? header.offsetHeight : 79) + 20;
+    const want = () => Math.max(0, window.scrollY + target.getBoundingClientRect().top - offset);
+    window.scrollTo({ top: want(), behavior: 'smooth' });
+    // Re-correct after layout settles (images/sections shifting during/after scroll).
+    let tries = 0;
+    const fix = () => {
+      const y = want();
+      if (Math.abs(window.scrollY - y) > 3) {
+        window.scrollTo({ top: y, behavior: 'auto' });
+        if (++tries < 4) setTimeout(fix, 220);
+      }
+    };
+    setTimeout(fix, 620);
   }
 
   scrollToHash(attempt) {
@@ -988,6 +1050,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     if (this._onKey) document.removeEventListener('keydown', this._onKey);
     if (this._onHash) window.removeEventListener('hashchange', this._onHash);
+    if (this._onClick && this.root) this.root.removeEventListener('click', this._onClick);
     document.body.style.overflow = '';
   }
 
@@ -997,7 +1060,11 @@ class Component extends DCLogic {
     const fly = root.querySelector('[data-fly]');
     const craft = fly && fly.querySelector('[data-fly-craft]');
     if (!fly || !craft) return;
-    craft.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    craft.addEventListener('click', () => {
+      const card = root.querySelector('#postcard [data-pc-card]') || root.querySelector('#postcard');
+      if (card) this.centerInView(card);
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
     const lerp = (a, b, t) => a + (b - a) * t;
@@ -1136,24 +1203,30 @@ class Component extends DCLogic {
     document.body.style.overflow = '';
   };
 
-  sharePostcard = async () => {
-    const text = 'Get ready to unleash absolute conviction with MOW.\nhttps://mow.media\nMap: https://maps.app.goo.gl/oSuaqdD4eWTMQkZJA';
+  preloadPostcard = async () => {
+    if (this._pcFile || this._pcLoading || !window.fetch) return;
+    this._pcLoading = true;
     try {
-      if (navigator.canShare && window.fetch) {
-        const res = await fetch('assets/mow_postcard.png');
-        const blob = await res.blob();
-        const file = new File([blob], 'MOW-WorldView-Postcard.png', { type: 'image/png' });
-        if (navigator.canShare({ files: [file] })) {
-          await navigator.share({ files: [file], title: 'Man of the World — World View', text: text });
-          return;
-        }
-      }
-      // No file-share support: try a plain native share (still better than nothing on mobile)
-      if (navigator.share) {
-        await navigator.share({ title: 'Man of the World — World View', text: text, url: 'https://mow.media' });
+      const res = await fetch('assets/mow_postcard.png');
+      const blob = await res.blob();
+      this._pcFile = new File([blob], 'MOW-WorldView-Postcard.png', { type: 'image/png' });
+    } catch (_) {} finally { this._pcLoading = false; }
+  };
+
+  sharePostcard = (e) => {
+    const text = 'Get ready to unleash absolute conviction with MOW.\nhttps://mow.media\nMap: https://maps.app.goo.gl/oSuaqdD4eWTMQkZJA';
+    const file = this._pcFile;
+    const isTouch = (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) || (navigator.maxTouchPoints > 0);
+    // On touch devices (phones/tablets), fire the native share sheet synchronously
+    // with the preloaded image so it truly attaches. On desktop, go straight to the
+    // modal on the first click (no native-share detour that needed a second click).
+    try {
+      if (isTouch && file && navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+        navigator.share({ files: [file], title: 'Man of the World — World View', text: text }).catch(function () {});
         return;
       }
-    } catch (err) { if (err && err.name === 'AbortError') return; }
+    } catch (_) {}
+    this.preloadPostcard();
     this.openPostcard();
   };
 
