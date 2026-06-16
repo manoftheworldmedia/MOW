@@ -4,6 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="/./support.js"></script>
+<style>[data-burger]{display:flex}@media(min-width:900px){[data-burger]{display:none}}</style>
+<script>
+/*nav*/(function(){
+  var cur='en';
+  var i18n={en:{nav_services:'Services',nav_work:'Work',nav_method:'Method',nav_blog:'News',nav_about:'About',nav_contact:'Contact'},
+  fa:{nav_services:'خدمات',nav_work:'کارها',nav_method:'روش',nav_blog:'اخبار',nav_about:'درباره',nav_contact:'تماس'},
+  es:{nav_services:'Servicios',nav_work:'Trabajo',nav_method:'Método',nav_blog:'Noticias',nav_about:'Acerca',nav_contact:'Contacto'}};
+  function apply(l){cur=l;var d=i18n[l]||i18n.en;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null){el.textContent=d[k];el.style.direction=(l==='fa')?'rtl':'ltr';}});
+    document.querySelectorAll('[data-langbtn]').forEach(function(b){var a=b.getAttribute('data-langbtn')===l;b.style.color=a?'#E2C173':'#7E907A';b.style.fontWeight=a?'600':'500';});
+    highlight();}
+  function highlight(){var p=location.pathname;document.querySelectorAll('[data-navkey]').forEach(function(a){var k=a.getAttribute('data-navkey');if((k==='about'&&p.indexOf('/about')>-1)||(k==='blog'&&p.indexOf('/blog')>-1))a.style.color='#E2C173';});}
+  function menu(){return document.querySelector('[data-mobilemenu]');}
+  function openMenu(){var m=menu();if(m){m.style.opacity='1';m.style.pointerEvents='auto';document.body.style.overflow='hidden';}}
+  function closeMenu(){var m=menu();if(m){m.style.opacity='0';m.style.pointerEvents='none';document.body.style.overflow='';}}
+  document.addEventListener('click',function(e){
+    var c=e.target;
+    var lb=c.closest&&c.closest('[data-langbtn]'); if(lb){apply(lb.getAttribute('data-langbtn'));return;}
+    if(c.closest&&c.closest('[data-burger]')){openMenu();return;}
+    if(c.closest&&c.closest('[data-menuclose]')){closeMenu();return;}
+    var m=menu(); if(m&&m.style.opacity==='1'){ if(c===m||(c.closest&&c.closest('[data-mobilemenu]')&&c.tagName==='A')) closeMenu(); }
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  var n=0;(function init(){apply(cur);if(n++<24)setTimeout(init,140);})();
+})();
+</script>
 <title>The MOW Journal — Brand Strategy, AI &amp; Impossible to Ignore | Man of the World</title>
 <link rel="canonical" href="https://mow.media/blog/">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -54,23 +80,47 @@
 
 <div ref="{{ rootRef }}" style="position:relative;background:#07211A;">
 
-<!-- NAV -->
-<header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
-  <nav style="max-width:1340px;margin:0 auto;padding:0 clamp(20px,4vw,56px);height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-    <a href="/" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;">
+<!-- NAV (unified, matches homepage) -->
+<header data-header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
+  <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;">
+    <a href="/" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;">
       <img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
-    <div data-nav style="display:none;gap:clamp(18px,2.4vw,38px);align-items:center;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
-      <a href="/#services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
-      <a href="/#work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
-      <a href="/#method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
-      <a href="/blog/" style="color:#E2C173;transition:color .2s;">News</a>
-      <a href="/about/" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
-      <a href="/#contact" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Contact</a>
+    <div data-nav style="display:none;gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
+      <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
+      <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
+      <a href="/#method" data-i18n="nav_method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
+      <a href="/blog/" data-i18n="nav_blog" data-navkey="blog" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">News</a>
+      <a href="/about/" data-i18n="nav_about" data-navkey="about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
+      <a href="/#contact" data-i18n="nav_contact" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Contact</a>
     </div>
-    <a href="/#contact" style="display:inline-flex;align-items:center;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:10px 20px;border-radius:999px;border:1px solid rgba(196,156,78,0.5);transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">Work with MOW</a>
+    <div style="display:flex;align-items:center;gap:clamp(16px,2vw,26px);order:2;">
+      <div style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;">
+        <button type="button" data-langbtn="en" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
+        <span style="color:rgba(196,156,78,0.45);">/</span>
+        <button type="button" data-langbtn="fa" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:'Vazirmatn',sans-serif;font-size:14px;">فارسی</button>
+        <span style="color:rgba(196,156,78,0.45);">/</span>
+        <button type="button" data-langbtn="es" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">ES</button>
+      </div>
+      <button type="button" data-burger aria-label="Open menu" style="flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;border:none;background:none;cursor:pointer;padding:8px;flex-shrink:0;">
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+      </button>
+    </div>
   </nav>
 </header>
+
+<!-- MOBILE MENU -->
+<div data-mobilemenu style="position:fixed;inset:0;z-index:130;opacity:0;pointer-events:none;transition:opacity .3s ease;background:rgba(5,21,14,0.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+  <button type="button" data-menuclose aria-label="Close menu" style="position:absolute;top:22px;right:24px;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:transparent;color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;">×</button>
+  <a href="/#services" data-i18n="nav_services" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Services</a>
+  <a href="/#work" data-i18n="nav_work" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Work</a>
+  <a href="/#method" data-i18n="nav_method" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
+  <a href="/blog/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">News</a>
+  <a href="/about/" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
+  <a href="/#contact" data-i18n="nav_contact" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">Contact</a>
+</div>
 
 <!-- HEADER -->
 <section style="position:relative;padding:clamp(64px,8vw,112px) clamp(20px,4vw,56px) clamp(40px,5vw,64px);overflow:hidden;">
