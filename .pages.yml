@@ -1,0 +1,367 @@
+media:
+  input: assets
+  output: /assets
+  extensions: [png, jpg, jpeg, gif, svg, webp, ico, avif]
+
+content:
+  # ========== MAIN PAGES ==========
+  - name: homepage
+    label: "① Homepage"
+    description: "The full home scroll. Edit copy, the page title & meta description. IMPORTANT — make the same change in the Homepage (mirror) entry below."
+    type: file
+    path: index.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: homepage_mirror
+    label: "① Homepage (mirror — keep identical)"
+    description: "Duplicate of the homepage used by internal links. Keep identical to ① Homepage."
+    type: file
+    path: MOW.dc.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: about
+    label: "② About — Peter Weltman"
+    description: "About page copy, portrait reference, page title & meta description."
+    type: file
+    path: About.dc.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: blog_index
+    label: "③ News / Journal index"
+    description: "The News landing page with the article cards."
+    type: file
+    path: Blog.dc.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+
+  # ========== BLOG / NEWS POSTS ==========
+  - name: blog_i2i
+    label: "News · Impossible to Ignore"
+    type: file
+    path: blog-impossible-to-ignore.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: blog_brand
+    label: "News · Mastering Brand Creation"
+    type: file
+    path: blog-mastering-brand-creation.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: blog_genai
+    label: "News · Generative AI Marketing"
+    type: file
+    path: blog-generative-ai-marketing.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: blog_aisystems
+    label: "News · Integrate AI (Systems Thinking)"
+    type: file
+    path: blog-integrate-ai-systems-thinking.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: blog_data
+    label: "Blog data (cards + reader)"
+    description: "Powers the News cards on the homepage and the in-page article reader. Edit titles, deks & body here too."
+    type: file
+    path: articles.js
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+
+  # ========== CASE STUDIES · ENGLISH ==========
+  - name: case_petra
+    label: "Work · Petra (EN)"
+    type: file
+    path: case-petra.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_avitia
+    label: "Work · Avitia (EN)"
+    type: file
+    path: case-avitia.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_autoalign
+    label: "Work · AutoAlign · Sidecar (EN)"
+    type: file
+    path: case-autoalign.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_hey_houston
+    label: "Work · Hey Houston (EN)"
+    type: file
+    path: case-hey-houston.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_pedrera
+    label: "Work · Pedrera (EN)"
+    type: file
+    path: case-pedrera.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_neara
+    label: "Work · Neara (EN)"
+    type: file
+    path: case-neara.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+
+  # ========== CASE STUDIES · ESPAÑOL ==========
+  - name: case_petra_es
+    label: "Work · Petra (ES)"
+    type: file
+    path: case-petra.es.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_avitia_es
+    label: "Work · Avitia (ES)"
+    type: file
+    path: case-avitia.es.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_autoalign_es
+    label: "Work · AutoAlign · Sidecar (ES)"
+    type: file
+    path: case-autoalign.es.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_hey_houston_es
+    label: "Work · Hey Houston (ES)"
+    type: file
+    path: case-hey-houston.es.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_pedrera_es
+    label: "Work · Pedrera (ES)"
+    type: file
+    path: case-pedrera.es.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_neara_es
+    label: "Work · Neara (ES)"
+    type: file
+    path: case-neara.es.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+
+  # ========== CASE STUDIES · فارسی ==========
+  - name: case_petra_fa
+    label: "Work · Petra (FA)"
+    type: file
+    path: case-petra.fa.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_avitia_fa
+    label: "Work · Avitia (FA)"
+    type: file
+    path: case-avitia.fa.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_autoalign_fa
+    label: "Work · AutoAlign · Sidecar (FA)"
+    type: file
+    path: case-autoalign.fa.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_hey_houston_fa
+    label: "Work · Hey Houston (FA)"
+    type: file
+    path: case-hey-houston.fa.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_pedrera_fa
+    label: "Work · Pedrera (FA)"
+    type: file
+    path: case-pedrera.fa.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: case_neara_fa
+    label: "Work · Neara (FA)"
+    type: file
+    path: case-neara.fa.html
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+
+  # ========== SEO / TECHNICAL FILES ==========
+  - name: seo_sitemap
+    label: "SEO · sitemap.xml"
+    description: "List of every indexable URL for Google."
+    type: file
+    path: sitemap.xml
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: seo_robots
+    label: "SEO · robots.txt"
+    description: "Crawler rules (Google + AI answer engines)."
+    type: file
+    path: robots.txt
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: seo_llms
+    label: "SEO · llms.txt"
+    description: "Plain-language brief AI engines read to describe MOW."
+    type: file
+    path: llms.txt
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
+  - name: seo_manifest
+    label: "SEO · site.webmanifest"
+    description: "PWA / favicon manifest."
+    type: file
+    path: site.webmanifest
+    format: raw
+    fields:
+      - name: body
+        label: "File content (HTML / text)"
+        type: code
+        options:
+          language: html
