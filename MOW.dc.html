@@ -46,12 +46,13 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
-  body { background:#07211A; color:#1A1712; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  body { background:#07211A; color:#1A1712; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; scroll-behavior:smooth; }
   ::selection { background:#C49C4E; color:#07211A; }
   a { color:inherit; text-decoration:none; }
   details summary::-webkit-details-marker { display:none; }
   details summary { list-style:none; }
-  section[id]{ scroll-margin-top:92px; }
+  section[id]{ scroll-margin-top:96px; }
+  [data-cform]{ scroll-margin-top:108px; }
   @keyframes mowMarquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
   @keyframes mowFloat { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-16px) rotate(1.5deg); } }
   @keyframes planeBob { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
@@ -155,7 +156,7 @@
 </div>
 
 <!-- HERO -->
-<section style="position:relative;background:#07211A;color:#EDE6D4;padding:clamp(112px,15vh,140px) clamp(20px,4vw,56px) clamp(40px,5vw,60px);overflow:hidden;">
+<section style="position:relative;background:#07211A;color:#EDE6D4;min-height:calc(100svh - 196px);display:flex;align-items:center;padding:92px clamp(20px,4vw,56px) 34px;overflow:hidden;">
   <div style="position:absolute;top:8%;right:-6%;width:min(52vw,640px);opacity:0.05;pointer-events:none;animation:mowFloat 11s ease-in-out infinite;">
     <img src="assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
@@ -176,8 +177,8 @@
 </section>
 
 <!-- MARQUEE -->
-<section aria-label="Selected partners and press" style="border-top:1px solid rgba(196,156,78,0.22);border-bottom:1px solid rgba(196,156,78,0.22);padding:24px 0;overflow:hidden;background:#0A2A1E;">
-  <div style="display:flex;align-items:center;gap:22px;max-width:1340px;margin:0 auto 16px;padding:0 clamp(20px,4vw,56px);">
+<section aria-label="Selected partners and press" style="border-top:1px solid rgba(196,156,78,0.22);border-bottom:1px solid rgba(196,156,78,0.22);padding:18px 0;overflow:hidden;background:#0A2A1E;">
+  <div style="display:flex;align-items:center;gap:22px;max-width:1340px;margin:0 auto 12px;padding:0 clamp(20px,4vw,56px);">
     <span style="font-family:'Archivo',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;white-space:nowrap;">Trusted by</span>
     <span style="flex:1;height:1px;background:rgba(196,156,78,0.22);"></span>
     <span style="font-family:'Archivo',sans-serif;font-size:11.5px;color:#9FB09B;white-space:nowrap;letter-spacing:0.04em;">$85M+ raised · Tier-1 coverage</span>
@@ -948,8 +949,6 @@ class Component extends DCLogic {
     this._onKey = (e) => { if (e.key === 'Escape') { this.closeArticle(); this.closePostcard(); } };
     document.addEventListener('keydown', this._onKey);
     this.scrollToHash();
-    this._onHash = () => this.scrollToHash();
-    window.addEventListener('hashchange', this._onHash);
   }
 
   scrollToHash(attempt) {
@@ -968,14 +967,21 @@ class Component extends DCLogic {
       const form = el.querySelector('[data-cform]');
       if (form) el = form;
     }
-    const y = Math.max(0, el.getBoundingClientRect().top + this.getScrollTop() - 96);
-    try { window.scrollTo({ top: y, behavior: attempt > 1 ? 'auto' : 'smooth' }); } catch (_) { window.scrollTo(0, y); }
-    // Fallback for environments where the body/doc element is the actual scroller.
-    document.documentElement.scrollTop = y;
-    document.body.scrollTop = y;
-    // Re-correct after late layout/image loads shift the target.
-    if (attempt < 3) {
-      setTimeout(() => this.scrollToHash((attempt || 0) + 2), 320);
+    const header = root.querySelector('[data-header]');
+    const offset = (header ? header.offsetHeight : 78) + 22;
+    const targetY = () => Math.max(0, el.getBoundingClientRect().top + this.getScrollTop() - offset);
+    // ONE smooth scroll on the real scroller — never write scrollTop mid-animation
+    // (that was cancelling the smooth scroll and stopping short).
+    const y = targetY();
+    try { window.scrollTo({ top: y, behavior: attempt < 2 ? 'smooth' : 'auto' }); }
+    catch (_) { window.scrollTo(0, y); }
+    // After the scroll settles (and lazy images shift layout), correct only if off.
+    if (attempt < 5) {
+      setTimeout(() => {
+        const now = this.getScrollTop();
+        const want = targetY();
+        if (Math.abs(now - want) > 4) this.scrollToHash(attempt + 2);
+      }, attempt < 2 ? 580 : 180);
     }
   }
 
