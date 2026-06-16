@@ -5,9 +5,57 @@ media:
 
 content:
   # ========== MAIN PAGES ==========
-  - name: homepage
-    label: "① Homepage"
-    description: "The full home scroll. Edit copy, the page title & meta description. IMPORTANT — make the same change in the Homepage (mirror) entry below."
+  - name: home_content
+    label: "① Homepage — Content (form fields)"
+    description: "Edit the homepage headlines, hero copy, and Google title/description as form fields. Saves to content/home.json and updates the live home page automatically (both index.html and MOW.dc.html)."
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: meta
+        label: "SEO · Google"
+        type: object
+        fields:
+          - name: title
+            label: "Meta title (browser tab + Google result)"
+            type: string
+          - name: description
+            label: "Meta description (Google snippet)"
+            type: text
+      - name: labels
+        label: "Section headlines"
+        type: object
+        fields:
+          - { name: hero_eyebrow, label: "Hero — small label above headline", type: string }
+          - { name: hero_h1a, label: "Hero — headline (white words)", type: string }
+          - { name: hero_h1b, label: "Hero — headline (gold word)", type: string }
+          - { name: about_eyebrow, label: "About — eyebrow", type: string }
+          - { name: about_title, label: "About — title", type: string }
+          - { name: ind_eyebrow, label: "Services — eyebrow", type: string }
+          - { name: ind_title, label: "Services — title", type: string }
+          - { name: work_eyebrow, label: "Work — eyebrow", type: string }
+          - { name: work_title, label: "Work — title", type: string }
+          - { name: i2i_eyebrow, label: "Impossible to Ignore — eyebrow", type: string }
+          - { name: i2i_title, label: "Impossible to Ignore — title", type: string }
+          - { name: method_eyebrow, label: "Method — eyebrow", type: string }
+          - { name: method_title, label: "Method — title", type: string }
+          - { name: faq_eyebrow, label: "FAQ — eyebrow", type: string }
+          - { name: faq_title, label: "FAQ — title", type: string }
+          - { name: contact_eyebrow, label: "Contact — eyebrow", type: string }
+          - { name: contact_title, label: "Contact — title", type: string }
+      - name: hero
+        label: "Hero block"
+        type: object
+        fields:
+          - name: subhead
+            label: "Hero paragraph"
+            type: text
+          - { name: cta_primary, label: "Primary button text", type: string }
+          - { name: cta_secondary, label: "Secondary button text", type: string }
+
+  - name: homepage_html
+    label: "① Homepage — Advanced HTML (index.html)"
+    description: "Full page HTML for structural/layout edits. For everyday copy use ① Homepage — Content above."
     type: file
     path: index.html
     format: raw
@@ -17,9 +65,9 @@ content:
         type: code
         options:
           language: html
-  - name: homepage_mirror
-    label: "① Homepage (mirror — keep identical)"
-    description: "Duplicate of the homepage used by internal links. Keep identical to ① Homepage."
+  - name: homepage_html_mirror
+    label: "① Homepage — Advanced HTML (mirror: MOW.dc.html)"
+    description: "Mirror file used by internal links. Keep structure identical to index.html."
     type: file
     path: MOW.dc.html
     format: raw
@@ -31,7 +79,7 @@ content:
           language: html
   - name: about
     label: "② About — Peter Weltman"
-    description: "About page copy, portrait reference, page title & meta description."
+    description: "About page copy, portrait reference, title & meta description."
     type: file
     path: About.dc.html
     format: raw
