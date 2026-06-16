@@ -18,6 +18,18 @@
       var v = getPath(data, el.getAttribute('data-cms'));
       if (v != null && el.textContent !== String(v)) el.textContent = v;
     }
+    applyImages();
+  }
+
+  // Swap any <img data-cms-img="images.imgN"> to the CMS-chosen source
+  function applyImages() {
+    if (!data) return;
+    var imgs = document.querySelectorAll('[data-cms-img]');
+    for (var i = 0; i < imgs.length; i++) {
+      var el = imgs[i];
+      var v = getPath(data, el.getAttribute('data-cms-img'));
+      if (v != null && el.getAttribute('src') !== String(v)) el.setAttribute('src', v);
+    }
   }
 
   function applyMeta() {
@@ -60,6 +72,7 @@
         data = j;
         applyMeta();
         applyText();
+        applyImages();
         var tries = 0;
         (function wait() {
           if (patchLabels()) return;
