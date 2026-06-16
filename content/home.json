@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Man of the World (MOW) — LA Creative Brand & Marketing Agency",
+    "description": "Man of the World (MOW) is a Los Angeles creative brand and marketing agency. We make bold unforgettable — unearthing a company's core truth and expressing it with clarity, conviction, and cultural authority across AI, healthcare, climate tech, and culture."
+  },
+  "labels": {
+    "hero_eyebrow": "Unleashing Absolute Conviction",
+    "hero_h1a": "Make bold",
+    "hero_h1b": "unforgettable",
+    "about_eyebrow": "Who We Are",
+    "about_title": "We architect belief systems for bold brands",
+    "work_eyebrow": "Selected Work",
+    "work_title": "Unleash absolute conviction",
+    "ind_eyebrow": "What We Do",
+    "ind_title": "Brands for the frontier",
+    "i2i_eyebrow": "A Global Design Initiative",
+    "i2i_title": "Impossible to Ignore",
+    "method_eyebrow": "How We Work",
+    "method_title": "The MOW Method",
+    "faq_eyebrow": "Questions",
+    "faq_title": "FAQs",
+    "contact_eyebrow": "Start a Conversation",
+    "contact_title": "Make bold unforgettable"
+  },
+  "hero": {
+    "subhead": "We are a creative brand & marketing agency for cutting-edge industries and bold brands. We unearth a company's core truth — then express it with clarity, conviction, and cultural authority.",
+    "cta_primary": "See the work →",
+    "cta_secondary": "The MOW Method"
+  }
+}

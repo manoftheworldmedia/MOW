@@ -98,6 +98,7 @@
   .mow-article li{ font-family:'Cormorant Garamond',serif; font-size:clamp(19px,1.5vw,23px); line-height:1.5; color:#D3DBCE; margin-bottom:8px; }
 </style>
 <script src="articles.js"></script>
+<script src="cms.js"></script>
 </helmet>
 
 <div ref="{{ rootRef }}" style="position:relative;background:#07211A;">
@@ -167,10 +168,10 @@
       <span data-i18n="hero_h1a">Make bold</span> <span data-i18n="hero_h1b" style="font-style:italic;font-weight:600;color:#E2C173;">unforgettable</span>
     </h1>
     <div style="display:flex;flex-wrap:wrap;gap:32px;margin-top:32px;align-items:flex-end;justify-content:space-between;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,29px);line-height:1.45;color:#CBD6C7;max-width:560px;">We are a creative brand &amp; marketing agency for cutting-edge industries and bold brands. We unearth a company's core truth — then express it with clarity, conviction, and cultural authority.</p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="#work" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;transition:all .25s;" style-hover="background:#E2C173;transform:translateY(-2px);">See the work →</a>
-        <a href="#method" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);transition:all .25s;" style-hover="border-color:#C49C4E;color:#E2C173;">The MOW Method</a>
+      <p data-cms="hero.subhead" style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,29px);line-height:1.45;color:#CBD6C7;max-width:560px;">We are a creative brand &amp; marketing agency for cutting-edge industries and bold brands. We unearth a company's core truth — then express it with clarity, conviction, and cultural authority.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="#work" data-cms="hero.cta_primary" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;transition:all .25s;" style-hover="background:#E2C173;transform:translateY(-2px);">See the work →</a>
+          <a href="#method" data-cms="hero.cta_secondary" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);transition:all .25s;" style-hover="border-color:#C49C4E;color:#E2C173;">The MOW Method</a>
       </div>
     </div>
   </div>
@@ -610,7 +611,7 @@
 <section id="faq" style="background:#EFE8D9;color:#1A1712;padding:clamp(92px,12vw,156px) clamp(20px,4vw,56px);">
   <div style="max-width:940px;margin:0 auto;">
     <p data-i18n="faq_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Questions</p>
-    <h2 data-i18n="faq_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(34px,5vw,66px);line-height:1.02;color:#11281E;margin-bottom:clamp(36px,4vw,58px);">Frequently asked</h2>
+    <h2 data-i18n="faq_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(34px,5vw,66px);line-height:1.02;color:#11281E;margin-bottom:clamp(36px,4vw,58px);">FAQs</h2>
     <div>
       <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;">
         <summary style="cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;">What makes Man of the World a top branding agency in Los Angeles?<span class="mow-faqplus" style="position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;">+</span></summary>
@@ -770,7 +771,7 @@ class Component extends DCLogic {
       ind_eyebrow:'What We Do', ind_title:'Brands for the frontier',
       i2i_eyebrow:'A Global Design Initiative', i2i_title:'Impossible to Ignore',
       method_eyebrow:'How We Work', method_title:'The MOW Method',
-      faq_eyebrow:'Questions', faq_title:'Frequently asked',
+      faq_eyebrow:'Questions', faq_title:'FAQs',
       contact_eyebrow:'Start a Conversation', contact_title:'Make bold unforgettable'
     },
     fa: {
@@ -941,6 +942,7 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
+    window.MOW = this;
     this.initCarousels();
     this.initNav();
     this.initWhimsy();
