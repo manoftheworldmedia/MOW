@@ -1,0 +1,27 @@
+{
+  "name": "Man of the World (MOW)",
+  "short_name": "MOW",
+  "description": "Los Angeles creative brand & marketing agency. We make bold unforgettable.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07211A",
+  "theme_color": "#07211A",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
