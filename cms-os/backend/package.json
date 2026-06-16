@@ -1,0 +1,14 @@
+{
+  "name": "mow-cms-os-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MOW CMS OS — Git-native CMS backend. Zero runtime dependencies.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "user:add": "node cli.js user:add",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,29 @@
+# Render.com blueprint — one-click long-running Node service.
+# Render → New → Blueprint → point at this repo (root: cms-os).
+services:
+  - type: web
+    name: mow-cms-os
+    runtime: node
+    rootDir: cms-os/backend
+    buildCommand: "echo no build needed — zero dependencies"
+    startCommand: "node server.js"
+    healthCheckPath: /api/health
+    disk:
+      name: cms-data
+      mountPath: /opt/render/project/src/cms-os/backend/data
+      sizeGB: 1
+    envVars:
+      - key: MOW_JWT_SECRET
+        generateValue: true
+      - key: MOW_ADMIN_EMAIL
+        sync: false
+      - key: MOW_ADMIN_PASSWORD
+        sync: false
+      - key: MOW_GITHUB_TOKEN
+        sync: false
+      - key: MOW_REPO_OWNER
+        value: manoftheworldmedia
+      - key: MOW_REPO_NAME
+        value: mow
+      - key: MOW_REPO_BRANCH
+        value: main
