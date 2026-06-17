@@ -150,7 +150,49 @@
     draw();
   }
 
+  // Generic running carousel: any [data-runcar] strip auto-drifts + loops + manual scroll.
+  function initRunners() {
+    document.querySelectorAll('[data-runcar]').forEach(function (host) {
+      if (host.__ran) return; host.__ran = true;
+      var inner = document.createElement('div');
+      inner.style.cssText = 'display:flex;gap:20px;width:max-content;';
+      while (host.firstChild) inner.appendChild(host.firstChild);
+      inner.innerHTML = inner.innerHTML + inner.innerHTML; // two copies for seamless loop
+      host.appendChild(inner);
+      var half = 0, visible = true, paused = false, resume = 0, pos = 0;
+      function measure() { half = inner.scrollWidth / 2; }
+      measure();
+      window.addEventListener('resize', measure);
+      setTimeout(measure, 800);
+      function hold() { paused = true; resume = Date.now() + 2600; pos = host.scrollLeft; }
+      host.addEventListener('mouseenter', function () { paused = true; });
+      host.addEventListener('mouseleave', function () { paused = false; pos = host.scrollLeft; });
+      ['pointerdown', 'touchstart', 'wheel'].forEach(function (ev) { host.addEventListener(ev, hold, { passive: true }); });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0 }).observe(host);
+      }
+      var last = null;
+      function frame(t) {
+        if (last == null) last = t;
+        var dt = t - last; last = t;
+        if (paused && resume && Date.now() > resume) { paused = false; resume = 0; pos = host.scrollLeft; }
+        if (!paused && visible && half > 0) {
+          pos += (dt / 1000) * 38;
+          if (pos >= half) pos -= half;
+          host.scrollLeft = pos;
+        } else if (half > 0) {
+          if (host.scrollLeft >= half) host.scrollLeft -= half;
+          else if (host.scrollLeft <= 0) host.scrollLeft += half;
+          pos = host.scrollLeft;
+        }
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    });
+  }
+
   function boot() {
+    initRunners();
     fetch(URL, { cache: 'no-store' })
       .then(function (r) { return r.json(); })
       .then(function (j) {

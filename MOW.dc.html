@@ -67,6 +67,8 @@
   .mow-note{ opacity:0; transform:translateY(6px); transition:opacity .5s, transform .5s; }
   .mow-tenet:hover .mow-note{ opacity:1; transform:translateY(0); }
   .mow-eye-lid{ transform-origin:center; animation:mowBlink 7s ease-in-out infinite; }
+  @keyframes navGlow { 0%,100% { box-shadow:0 0 10px rgba(124,246,176,0.45), 0 0 2px rgba(124,246,176,0.6); } 50% { box-shadow:0 0 22px rgba(124,246,176,0.85), 0 0 7px rgba(124,246,176,0.9); } }
+  [data-navcontact].is-on{ animation:navGlow 2.4s ease-in-out infinite; }
   @media (min-width:880px){
     [data-nav]{ display:flex !important; }
     [data-aboutgrid]{ grid-template-columns:0.92fr 1.08fr !important; }
@@ -110,7 +112,7 @@
     <a href="#top" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;">
       <img data-cms-img="images.img1" src="assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
-    <div data-nav="" style="display:none;gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
+    <div data-nav="" style="display:none;gap:clamp(18px,2.4vw,36px);align-items:center;order:2;flex:1 1 auto;justify-content:center;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
       <a href="#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
       <a href="#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
       <a href="#method" data-i18n="nav_method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
@@ -118,16 +120,16 @@
       <a href="/about/" data-i18n="nav_about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
       <a href="#faq" data-i18n="nav_faq" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">FAQs</a>
     </div>
-    <div style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:2;">
-      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:7px;">
-      <div style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;">
+    <div style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;">
+      <div data-navswap="" style="position:relative;display:flex;align-items:center;">
+      <div data-langwrap="" style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1);">
         <button type="button" data-langbtn="en" onClick="{{ onLangClick }}" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
         <span style="color:rgba(196,156,78,0.45);">/</span>
         <button type="button" data-langbtn="fa" onClick="{{ onLangClick }}" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:'Vazirmatn',sans-serif;font-size:14px;">فارسی</button>
         <span style="color:rgba(196,156,78,0.45);">/</span>
         <button type="button" data-langbtn="es" onClick="{{ onLangClick }}" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">ES</button>
       </div>
-      <a href="#contact" data-i18n="nav_contact" style="display:inline-flex;align-items:center;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#EDE6D4;border:1px solid rgba(196,156,78,0.5);padding:5px 15px;border-radius:999px;transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">Contact</a>
+      <a href="#contact" data-navcontact="" data-i18n="nav_contact" style="position:absolute;right:0;top:50%;opacity:0;transform:translate(8px,-50%) scale(0.92);pointer-events:none;white-space:nowrap;display:inline-flex;align-items:center;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#7CF6B0;border:1px solid rgba(124,246,176,0.6);padding:6px 17px;border-radius:999px;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1), background .25s, color .25s;" style-hover="background:#7CF6B0;color:#062b1a;border-color:#7CF6B0;box-shadow:0 0 22px rgba(124,246,176,0.85),0 0 6px rgba(124,246,176,0.9);">Contact</a>
       </div>
       <button type="button" data-burger="" onClick="{{ toggleMenu }}" aria-label="Open menu" style="flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;border:none;background:none;cursor:pointer;padding:8px;flex-shrink:0;">
         <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
@@ -427,68 +429,6 @@
   </div>
 </section>
 
-<!-- I2I -->
-<section id="i2i" data-i2i="" style="background:#05190F;color:#EDE6D4;padding:clamp(92px,12vw,168px) 0;position:relative;overflow:hidden;">
-  <div data-i2i-watermark="" style="position:absolute;top:-8%;left:50%;transform:translateX(-50%);font-family:'Bodoni Moda',serif;font-size:min(36vw,500px);font-style:italic;color:rgba(196,156,78,0.045);pointer-events:none;line-height:1;will-change:transform;">i2i</div>
-  <div data-i2i-field="" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;"></div>
-  <div style="max-width:1340px;margin:0 auto;padding:0 clamp(20px,4vw,56px);position:relative;">
-    <div style="max-width:840px;margin-bottom:clamp(50px,6vw,84px);">
-      <p data-i18n="i2i_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>A Global Design Initiative</p>
-      <h2 data-i18n="i2i_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(42px,7.5vw,116px);line-height:0.92;letter-spacing:-0.02em;color:#F6F0E1;">Impossible to Ignore</h2>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,34px);line-height:1.38;color:#D8C9A8;font-style:italic;margin-top:32px;max-width:740px;">The world does not need more content. There is a shortage of well-trained attention.</p>
-      <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.72;color:#B7C4B2;margin-top:26px;max-width:680px;">Impossible to Ignore (i2i) is MOW's visual philosophy and global brand standard. It celebrates the overlooked things made with care, the people with an unmistakable point of view, and the places carrying culture in plain sight. The deeper discipline is cultivating sensitivity — the habit of noticing what others walk past. <span style="color:#E2C173;">Hover each tenet to read the field note.</span></p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;" data-tenetgrid="">
-      <div class="mow-tenet" style="border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">01</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Luxury in the Details</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">The quality of attention paid to the part nobody was forced to notice — the lining of a jacket, the bevel of a label, the hand-stitched edge of a market awning.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — the detail you almost missed is the one you'll remember.</p>
-      </div>
-      <div class="mow-tenet" style="border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">02</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Distinctiveness Over Beauty</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">An unmistakable feature, an unfashionable street, an awkward shadow — these outperform the symmetrical and the safely pretty because they can't be confused with anyone else.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — pretty is forgotten; particular is not.</p>
-      </div>
-      <div class="mow-tenet" data-incomplete="" style="position:relative;border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">03</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Intentionally Incomplete</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">Leave just enough out so the audience fills in the omissions — a grand invitation to participate. A wink that says: you already know the answ___.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">…er. (You finished it yourself — that's the point.)</p>
-      </div>
-      <div class="mow-tenet" style="border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">04</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Sprezzatura</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">The art of making difficult work look effortless — agonized over in private, then published as if it cost nothing. Do the hard work privately, so the public version feels inevitable.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — effort that shows is just effort. Hide the seams.</p>
-      </div>
-      <div class="mow-tenet" style="border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">05</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Absolute Conviction</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">Owning only the conversation you want to have — the sitter who looks back without flinching, the designer who keeps one typeface for a decade. Conviction reads because it was in the decision.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — choose the conversation, then never apologize for it.</p>
-      </div>
-      <div class="mow-tenet" style="border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">06</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Authenticity of Experience</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">What remains when a place keeps its own texture — low green stools in Vietnam, espresso standing in Rome, the smile line of a vendor in Mexico. The opposite of globalized taste.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — keep the texture. The texture is the truth.</p>
-      </div>
-      <div class="mow-tenet" style="border:1px solid rgba(196,156,78,0.45);border-radius:18px;padding:32px;background:linear-gradient(160deg,rgba(196,156,78,0.13),rgba(237,230,212,0.02));">
-        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">07</span>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Koochooloo <span style="font-family:'Vazirmatn',sans-serif;font-weight:500;font-size:20px;">کوچولو</span></h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#C0CCBC;">Persian for "little one." Softness, memory, and cultural specificity. Distinctiveness without tenderness becomes cold — the most impossible-to-ignore work carries a small, human, lived-in note.</p>
-        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — the small human thing the boardroom wanted to cut? Keep it.</p>
-      </div>
-      <div style="border-radius:18px;padding:34px;background:#C49C4E;color:#07211A;display:flex;flex-direction:column;justify-content:space-between;min-height:230px;">
-        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.3;">"Celebrate the unnoticed things made with care that nobody bothered to look at closely enough, the people with an unmistakable point of view who remain invisible, and the places carrying culture in plain sight."&nbsp;</p>
-        <a href="https://mow.media/impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-top:24px;display:inline-flex;align-items:center;gap:8px;">Read the full essay →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- METHOD -->
 <section id="method" style="background:#F5EFE2;color:#1A1712;padding:clamp(92px,12vw,156px) clamp(20px,4vw,56px);">
   <div style="max-width:1340px;margin:0 auto;">
@@ -537,6 +477,68 @@
     </div>
   </div>
   <div data-blogscroll="" data-news-home style="display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px clamp(20px,4vw,56px) 14px;-webkit-overflow-scrolling:touch;"></div>
+</section>
+
+<!-- I2I -->
+<section id="i2i" data-i2i="" style="background:#05190F;color:#EDE6D4;padding:clamp(92px,12vw,168px) 0;position:relative;overflow:hidden;">
+  <div data-i2i-watermark="" style="position:absolute;top:-8%;left:50%;transform:translateX(-50%);font-family:'Bodoni Moda',serif;font-size:min(36vw,500px);font-style:italic;color:rgba(196,156,78,0.045);pointer-events:none;line-height:1;will-change:transform;">i2i</div>
+  <div data-i2i-field="" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;"></div>
+  <div style="max-width:1340px;margin:0 auto;padding:0 clamp(20px,4vw,56px);position:relative;">
+    <div style="max-width:840px;margin-bottom:clamp(50px,6vw,84px);">
+      <p data-i18n="i2i_eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>A Global Design Initiative</p>
+      <h2 data-i18n="i2i_title" style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(42px,7.5vw,116px);line-height:0.92;letter-spacing:-0.02em;color:#F6F0E1;">Impossible to Ignore</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,34px);line-height:1.38;color:#D8C9A8;font-style:italic;margin-top:32px;max-width:740px;">The world does not need more content. There is a shortage of well-trained attention.</p>
+      <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.72;color:#B7C4B2;margin-top:26px;max-width:680px;">Impossible to Ignore (i2i) is MOW's visual philosophy and global brand standard. It celebrates the overlooked things made with care, the people with an unmistakable point of view, and the places carrying culture in plain sight. The deeper discipline is cultivating sensitivity — the habit of noticing what others walk past. <span style="color:#E2C173;">Hover each tenet to read the field note.</span></p>
+    </div>
+    <div data-runcar style="display:flex;gap:20px;overflow-x:auto;overflow-y:hidden;padding:6px 0 14px;scroll-snap-type:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;">
+      <div class="mow-tenet" style="flex:0 0 auto;width:min(80vw,320px);border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">01</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Luxury in the Details</h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">The quality of attention paid to the part nobody was forced to notice — the lining of a jacket, the bevel of a label, the hand-stitched edge of a market awning.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — the detail you almost missed is the one you'll remember.</p>
+      </div>
+      <div class="mow-tenet" style="flex:0 0 auto;width:min(80vw,320px);border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">02</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Distinctiveness Over Beauty</h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">An unmistakable feature, an unfashionable street, an awkward shadow — these outperform the symmetrical and the safely pretty because they can't be confused with anyone else.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — pretty is forgotten; particular is not.</p>
+      </div>
+      <div class="mow-tenet" data-incomplete="" style="flex:0 0 auto;width:min(80vw,320px);position:relative;border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">03</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Intentionally Incomplete</h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">Leave just enough out so the audience fills in the omissions — a grand invitation to participate. A wink that says: you already know the answ___.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">…er. (You finished it yourself — that's the point.)</p>
+      </div>
+      <div class="mow-tenet" style="flex:0 0 auto;width:min(80vw,320px);border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">04</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Sprezzatura</h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">The art of making difficult work look effortless — agonized over in private, then published as if it cost nothing. Do the hard work privately, so the public version feels inevitable.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — effort that shows is just effort. Hide the seams.</p>
+      </div>
+      <div class="mow-tenet" style="flex:0 0 auto;width:min(80vw,320px);border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">05</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Absolute Conviction</h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">Owning only the conversation you want to have — the sitter who looks back without flinching, the designer who keeps one typeface for a decade. Conviction reads because it was in the decision.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — choose the conversation, then never apologize for it.</p>
+      </div>
+      <div class="mow-tenet" style="flex:0 0 auto;width:min(80vw,320px);border:1px solid rgba(196,156,78,0.26);border-radius:18px;padding:32px;background:rgba(237,230,212,0.025);">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">06</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Authenticity of Experience</h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#9FB09B;">What remains when a place keeps its own texture — low green stools in Vietnam, espresso standing in Rome, the smile line of a vendor in Mexico. The opposite of globalized taste.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — keep the texture. The texture is the truth.</p>
+      </div>
+      <div class="mow-tenet" style="flex:0 0 auto;width:min(80vw,320px);border:1px solid rgba(196,156,78,0.45);border-radius:18px;padding:32px;background:linear-gradient(160deg,rgba(196,156,78,0.13),rgba(237,230,212,0.02));">
+        <span style="font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.16em;color:#C49C4E;">07</span>
+        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:24px;color:#F6F0E1;margin:12px 0 12px;">Koochooloo <span style="font-family:'Vazirmatn',sans-serif;font-weight:500;font-size:20px;">کوچولو</span></h3>
+        <p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.62;color:#C0CCBC;">Persian for "little one." Softness, memory, and cultural specificity. Distinctiveness without tenderness becomes cold — the most impossible-to-ignore work carries a small, human, lived-in note.</p>
+        <p class="mow-note" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#E2C173;margin-top:14px;border-top:1px solid rgba(196,156,78,0.25);padding-top:12px;">Field note — the small human thing the boardroom wanted to cut? Keep it.</p>
+      </div>
+      <div style="flex:0 0 auto;width:min(80vw,320px);border-radius:18px;padding:34px;background:#C49C4E;color:#07211A;display:flex;flex-direction:column;justify-content:space-between;">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.3;">"Celebrate the unnoticed things made with care that nobody bothered to look at closely enough, the people with an unmistakable point of view who remain invisible, and the places carrying culture in plain sight."&nbsp;</p>
+        <a href="https://mow.media/impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/" target="_blank" rel="noopener" style="font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-top:24px;display:inline-flex;align-items:center;gap:8px;">Read the full essay →</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FAQ -->
@@ -846,6 +848,28 @@ class Component extends DCLogic {
       header.style.borderBottomColor = scrolled ? 'rgba(196,156,78,0.22)' : 'transparent';
       header.style.backdropFilter = scrolled ? 'saturate(150%) blur(16px)' : 'none';
       header.style.webkitBackdropFilter = scrolled ? 'saturate(150%) blur(16px)' : 'none';
+      // On scroll, swap the language toggle for the Contact button (in current language).
+      const lw = header.querySelector('[data-langwrap]');
+      const ct = header.querySelector('[data-navcontact]');
+      if (lw && ct) {
+        if (scrolled) {
+          lw.style.opacity = '0';
+          lw.style.transform = 'translateX(-8px)';
+          lw.style.pointerEvents = 'none';
+          ct.style.opacity = '1';
+          ct.style.transform = 'translate(0,-50%) scale(1)';
+          ct.style.pointerEvents = 'auto';
+          ct.classList.add('is-on');
+        } else {
+          lw.style.opacity = '1';
+          lw.style.transform = 'translateX(0)';
+          lw.style.pointerEvents = 'auto';
+          ct.style.opacity = '0';
+          ct.style.transform = 'translate(8px,-50%) scale(0.92)';
+          ct.style.pointerEvents = 'none';
+          ct.classList.remove('is-on');
+        }
+      }
       last = y;
     };
     this.onAnyScroll(onScroll);
