@@ -1,96 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/./support.js"></script>
-<style>[data-burger]{display:flex}@media(min-width:900px){[data-burger]{display:none}}</style>
-<script>
-/*nav*/(function(){
-  var cur='en';
-  var i18n={en:{nav_services:'Services',nav_work:'Work',nav_method:'Method',nav_blog:'News',nav_about:'About',nav_contact:'Contact'},
-  fa:{nav_services:'خدمات',nav_work:'کارها',nav_method:'روش',nav_blog:'اخبار',nav_about:'درباره',nav_contact:'تماس'},
-  es:{nav_services:'Servicios',nav_work:'Trabajo',nav_method:'Método',nav_blog:'Noticias',nav_about:'Acerca',nav_contact:'Contacto'}};
-  function apply(l){cur=l;var d=i18n[l]||i18n.en;
-    document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null){el.textContent=d[k];el.style.direction=(l==='fa')?'rtl':'ltr';}});
-    document.querySelectorAll('[data-langbtn]').forEach(function(b){var a=b.getAttribute('data-langbtn')===l;b.style.color=a?'#E2C173':'#7E907A';b.style.fontWeight=a?'600':'500';});
-    highlight();}
-  function highlight(){var p=location.pathname;document.querySelectorAll('[data-navkey]').forEach(function(a){var k=a.getAttribute('data-navkey');if((k==='about'&&p.indexOf('/about')>-1)||(k==='blog'&&p.indexOf('/blog')>-1))a.style.color='#E2C173';});}
-  function menu(){return document.querySelector('[data-mobilemenu]');}
-  function openMenu(){var m=menu();if(m){m.style.opacity='1';m.style.pointerEvents='auto';document.body.style.overflow='hidden';}}
-  function closeMenu(){var m=menu();if(m){m.style.opacity='0';m.style.pointerEvents='none';document.body.style.overflow='';}}
-  document.addEventListener('click',function(e){
-    var c=e.target;
-    var lb=c.closest&&c.closest('[data-langbtn]'); if(lb){apply(lb.getAttribute('data-langbtn'));return;}
-    if(c.closest&&c.closest('[data-burger]')){openMenu();return;}
-    if(c.closest&&c.closest('[data-menuclose]')){closeMenu();return;}
-    var m=menu(); if(m&&m.style.opacity==='1'){ if(c===m||(c.closest&&c.closest('[data-mobilemenu]')&&c.tagName==='A')) closeMenu(); }
-  });
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
-  var n=0;(function init(){apply(cur);if(n++<24)setTimeout(init,140);})();
-})();
-</script>
 <title>The MOW Journal — Brand Strategy, AI &amp; Impossible to Ignore | Man of the World</title>
+<meta name="description" content="Field notes and theory from Man of the World (MOW): brand distinctiveness, the MOW Method, generative AI marketing, and the discipline of becoming impossible to ignore.">
+<meta name="keywords" content="MOW journal, brand strategy blog, Impossible to Ignore, generative AI marketing, brand creation, AEO, GEO, Man of the World">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://mow.media/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The MOW Journal — Man of the World">
+<meta property="og:description" content="Field notes & theory on brand distinctiveness, the MOW Method, generative AI, and becoming impossible to ignore.">
+<meta property="og:url" content="https://mow.media/blog/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#07211A">
-<meta property="og:image" content="https://mow.media/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://mow.media/og-image.png">
-</head>
-<body>
-<x-dc>
-<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=Archivo:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="The MOW Journal — field notes and theory on brand distinctiveness, the MOW Method, generative AI marketing, and AI transformation from Man of the World, a Los Angeles creative brand agency.">
-<meta name="keywords" content="branding journal, brand strategy blog, Impossible to Ignore, generative AI marketing, AI transformation, GEO AEO SEO, Los Angeles branding agency">
-<meta property="og:title" content="The Journal — Man of the World (MOW)">
-<meta property="og:description" content="Field notes & theory on brand distinctiveness, the MOW Method, and AI from Man of the World.">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500;1,6..96,600&family=Archivo:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Blog","name":"The MOW Journal","url":"https://mow.media/blog","publisher":{"@type":"Organization","name":"Man of the World","url":"https://mow.media"},"blogPost":[{"@type":"BlogPosting","headline":"Impossible to Ignore Is the New Standard for Global Brand Distinctiveness","datePublished":"2026-06-01","author":{"@type":"Organization","name":"Man of the World"}},{"@type":"BlogPosting","headline":"Mastering Brand Creation: A Step-by-Step Guide for Success","datePublished":"2026-05-01","author":{"@type":"Organization","name":"Man of the World"}},{"@type":"BlogPosting","headline":"Harnessing Generative AI Marketing: Transforming Strategies for Success","datePublished":"2026-04-01","author":{"@type":"Organization","name":"Man of the World"}},{"@type":"BlogPosting","headline":"Integrate AI Into Your Organization the Right Way","datePublished":"2026-03-01","author":{"@type":"Organization","name":"Man of the World"}}]}
+{"@context":"https://schema.org","@type":"Blog","name":"The MOW Journal","url":"https://mow.media/blog/","publisher":{"@type":"Organization","name":"Man of the World","logo":{"@type":"ImageObject","url":"https://mow.media/favicon-512.png"}},"blogPost":[{"@type":"BlogPosting","headline":"Impossible to Ignore Is the New Standard for Global Brand Distinctiveness","url":"https://mow.media/blog-impossible-to-ignore.html","datePublished":"2026-06-01","articleSection":"Design Philosophy"},{"@type":"BlogPosting","headline":"Mastering Brand Creation: A Step-by-Step Guide for Success","url":"https://mow.media/blog-mastering-brand-creation.html","datePublished":"2026-05-01","articleSection":"Brand Strategy"},{"@type":"BlogPosting","headline":"Harnessing Generative AI Marketing: Transforming Strategies for Success","url":"https://mow.media/blog-generative-ai-marketing.html","datePublished":"2026-04-01","articleSection":"Generative AI"},{"@type":"BlogPosting","headline":"Integrate AI Into Your Organization the Right Way","url":"https://mow.media/blog-integrate-ai-systems-thinking.html","datePublished":"2026-03-01","articleSection":"AI Transformation"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Man of the World","item":"https://mow.media/"},{"@type":"ListItem","position":2,"name":"News"}]}
 </script>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { background:#07211A; color:#EDE6D4; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
-  ::selection { background:#C49C4E; color:#07211A; }
-  a { color:inherit; text-decoration:none; }
-  .mow-blogcard{ transition:transform .45s cubic-bezier(.2,.7,.3,1), border-color .45s; }
-  .mow-blogcard:hover{ transform:translateY(-7px); border-color:rgba(196,156,78,0.6) !important; }
-  .mow-blogcard:hover [data-blogart]{ transform:scale(1.05); }
-  [data-blogart]{ transition:transform .7s cubic-bezier(.2,.7,.3,1); }
-  .mow-article{ font-family:'Cormorant Garamond',serif; }
-  .mow-article h2{ font-family:'Bodoni Moda',serif; font-weight:600; font-size:clamp(26px,3vw,38px); line-height:1.1; letter-spacing:-0.01em; color:#F6F0E1; margin:48px 0 16px; }
-  .mow-article h3{ font-family:'Bodoni Moda',serif; font-weight:600; font-size:clamp(20px,2.2vw,26px); line-height:1.15; color:#E2C173; margin:34px 0 10px; }
-  .mow-article p{ font-family:'Cormorant Garamond',serif; font-size:clamp(19px,1.5vw,23px); line-height:1.62; color:#D3DBCE; margin:0 0 20px; }
-  .mow-article em{ color:#E9DCBE; }
-  .mow-article strong{ color:#F6F0E1; font-weight:600; }
-  .mow-article blockquote{ margin:38px 0; padding:8px 0 8px 28px; border-left:2px solid #C49C4E; font-style:italic; font-size:clamp(23px,2.4vw,31px); line-height:1.32; color:#F2E9D2; font-family:'Bodoni Moda',serif; }
-  @media (min-width:760px){ [data-nav]{ display:flex !important; } [data-bloggrid]{ grid-template-columns:repeat(2,1fr) !important; } }
-  @media (min-width:1120px){ [data-bloggrid]{ grid-template-columns:repeat(2,1fr) !important; } }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:#07211A;color:#EDE6D4;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:#C49C4E;color:#07211A;}
+  .mow-blogcard{transition:transform .45s cubic-bezier(.2,.7,.3,1), border-color .45s;}
+  .mow-blogcard:hover{transform:translateY(-7px);border-color:rgba(196,156,78,0.6)!important;}
+  .mow-blogcard:hover [data-blogart]{transform:scale(1.05);}
+  [data-blogart]{transition:transform .7s cubic-bezier(.2,.7,.3,1);}
+  .nav-links{display:none;}
+  [data-burger]{display:flex;}
+  @media(min-width:900px){.nav-links{display:flex;}[data-burger]{display:none;}}
 </style>
-<script src="/articles.js"></script>
-</helmet>
+</head>
+<body>
 
-<div ref="{{ rootRef }}" style="position:relative;background:#07211A;">
-
-<!-- NAV (unified, matches homepage) -->
-<header data-header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
   <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;">
     <a href="/" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;">
       <img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
-    <div data-nav style="display:none;gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
+    <div class="nav-links" data-nav style="gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
       <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
       <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
       <a href="/#method" data-i18n="nav_method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
-      <a href="/blog/" data-i18n="nav_blog" data-navkey="blog" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">News</a>
+      <a href="/blog/" data-i18n="nav_blog" data-navkey="blog" style="color:#E2C173;transition:color .2s;">News</a>
       <a href="/about/" data-i18n="nav_about" data-navkey="about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
       <a href="/#contact" data-i18n="nav_contact" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Contact</a>
     </div>
@@ -117,11 +82,12 @@
   <a href="/#services" data-i18n="nav_services" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Services</a>
   <a href="/#work" data-i18n="nav_work" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Work</a>
   <a href="/#method" data-i18n="nav_method" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
-  <a href="/blog/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">News</a>
+  <a href="/blog/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">News</a>
   <a href="/about/" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
   <a href="/#contact" data-i18n="nav_contact" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">Contact</a>
 </div>
 
+<main>
 <!-- HEADER -->
 <section style="position:relative;padding:clamp(64px,8vw,112px) clamp(20px,4vw,56px) clamp(40px,5vw,64px);overflow:hidden;">
   <div style="position:absolute;top:-6%;right:-6%;width:min(46vw,520px);opacity:0.05;pointer-events:none;"><img src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;"></div>
@@ -135,8 +101,8 @@
 
 <!-- GRID -->
 <section style="padding:clamp(8px,2vw,24px) clamp(20px,4vw,56px) clamp(84px,10vw,140px);">
-  <div style="max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:24px;" data-bloggrid>
-    <a class="mow-blogcard" href="/blog-impossible-to-ignore.html" style="cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+  <div style="max-width:1340px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:24px;">
+    <a class="mow-blogcard" href="/impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/" style="background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#05190F;">
         <div data-blogart style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 64% 36%, rgba(196,156,78,0.20), transparent 60%);"><span style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:600;font-size:128px;line-height:1;color:rgba(226,193,115,0.92);letter-spacing:-0.04em;">i2i</span></div>
         <span style="position:absolute;top:16px;left:16px;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 11px;border-radius:999px;">Design Philosophy</span>
@@ -148,7 +114,7 @@
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read essay →</span>
       </div>
     </a>
-    <a class="mow-blogcard" href="/blog-mastering-brand-creation.html" style="cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+    <a class="mow-blogcard" href="/mastering-brand-creation-a-step-by-step-guide-for-success/" style="background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0A2A1E;">
         <div data-blogart style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;"><span style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:104px;line-height:1;color:rgba(226,193,115,0.9);">01</span><span style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:500;font-size:56px;line-height:1;color:rgba(159,176,155,0.55);">–06</span></div>
         <span style="position:absolute;top:16px;left:16px;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 11px;border-radius:999px;">Brand Strategy</span>
@@ -160,7 +126,7 @@
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read guide →</span>
       </div>
     </a>
-    <a class="mow-blogcard" href="/blog-generative-ai-marketing.html" style="cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+    <a class="mow-blogcard" href="/harnessing-generative-ai-marketing-transforming-strategies-for-success/" style="background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#06201A;">
         <div data-blogart style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg, rgba(196,156,78,0.06) 0 2px, transparent 2px 16px);"><span style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:600;font-size:104px;line-height:1;color:rgba(226,193,115,0.92);">AI</span></div>
         <span style="position:absolute;top:16px;left:16px;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 11px;border-radius:999px;">Generative AI</span>
@@ -172,9 +138,9 @@
         <span style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read article →</span>
       </div>
     </a>
-    <a class="mow-blogcard" href="/blog-integrate-ai-systems-thinking.html" style="cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
+    <a class="mow-blogcard" href="/integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/" style="background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0A2A1E;">
-        <div data-blogart style="position:absolute;inset:0;"><svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;"><g stroke="rgba(196,156,78,0.5)" stroke-width="1.4" fill="none"><line x1="60" y1="50" x2="160" y2="90"></line><line x1="160" y1="90" x2="260" y2="50"></line><line x1="60" y1="130" x2="160" y2="90"></line><line x1="160" y1="90" x2="260" y2="130"></line></g><g fill="#E2C173"><circle cx="60" cy="50" r="7"></circle><circle cx="260" cy="50" r="7"></circle><circle cx="60" cy="130" r="7"></circle><circle cx="260" cy="130" r="7"></circle></g><circle cx="160" cy="90" r="13" fill="#C49C4E"></circle></svg></div>
+        <div data-blogart style="position:absolute;inset:0;"><svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;"><g stroke="rgba(196,156,78,0.5)" stroke-width="1.4" fill="none"><line x1="60" y1="50" x2="160" y2="92"/><line x1="160" y1="92" x2="260" y2="50"/><line x1="60" y1="134" x2="160" y2="92"/><line x1="160" y1="92" x2="260" y2="134"/></g><g fill="#E2C173"><circle cx="60" cy="50" r="6"/><circle cx="260" cy="50" r="6"/><circle cx="60" cy="134" r="6"/><circle cx="260" cy="134" r="6"/></g><circle cx="160" cy="92" r="11" fill="#C49C4E"/></svg></div>
         <span style="position:absolute;top:16px;left:16px;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 11px;border-radius:999px;">AI Transformation</span>
       </div>
       <div style="padding:24px 24px 28px;">
@@ -186,6 +152,7 @@
     </a>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer style="background:#05190F;color:#EDE6D4;padding:clamp(56px,7vw,88px) clamp(20px,4vw,56px) 44px;border-top:1px solid rgba(196,156,78,0.2);">
@@ -203,90 +170,27 @@
   </div>
 </footer>
 
-<!-- ARTICLE READER -->
-<div data-reader style="position:fixed;inset:0;z-index:200;opacity:0;pointer-events:none;transition:opacity .4s ease;">
-  <div data-reader-close onClick="{{ closeArticle }}" style="position:absolute;inset:0;background:rgba(3,14,9,0.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:pointer;"></div>
-  <div data-reader-scroll style="position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;">
-    <div style="position:relative;max-width:780px;margin:clamp(28px,6vh,80px) auto;background:#05190F;border:1px solid rgba(196,156,78,0.28);border-radius:18px;box-shadow:0 60px 120px -40px rgba(0,0,0,0.85);min-height:60vh;">
-      <button type="button" onClick="{{ closeArticle }}" aria-label="Close article" style="position:sticky;top:18px;float:right;margin:18px 18px 0 0;z-index:3;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:rgba(7,33,26,0.8);color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">×</button>
-      <div style="padding:clamp(40px,6vw,76px) clamp(26px,5vw,72px) clamp(48px,6vw,84px);">
-        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:26px;">
-          <span data-reader-cat style="font-family:'Archivo',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:5px 12px;border-radius:999px;">Design Philosophy</span>
-          <span data-reader-kicker style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#9FB09B;">The New Standard</span>
-        </div>
-        <h1 data-reader-title style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(32px,4.4vw,58px);line-height:1.03;letter-spacing:-0.015em;color:#F6F0E1;margin-bottom:22px;">Article title</h1>
-        <p data-reader-meta style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#9FB09B;margin-bottom:24px;">Jun 2026 · 8 min read</p>
-        <p data-reader-dek style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2vw,27px);line-height:1.4;color:#D8C9A8;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid rgba(196,156,78,0.22);">Article dek</p>
-        <div data-reader-body class="mow-article"></div>
-        <div style="margin-top:52px;padding-top:34px;border-top:1px solid rgba(196,156,78,0.22);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
-          <div style="display:flex;align-items:center;gap:13px;">
-            <img src="/assets/mow_mark_gold.png" alt="" style="height:16px;width:auto;">
-            <span style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#9FB09B;">Man of the World · Los Angeles</span>
-          </div>
-          <a href="/#contact" style="font-family:'Archivo',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#07211A;background:#C49C4E;padding:12px 22px;border-radius:999px;transition:all .2s;" style-hover="background:#E2C173;">Work with MOW →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  rootRef = (el) => { this.root = el; };
-  get articles() { return (typeof window !== "undefined" && window.MOW_ARTICLES) || {}; }
-
-  openArticle = (e) => {
-    const id = e.currentTarget.getAttribute('data-article');
-    const a = this.articles[id];
-    const root = this.root || document;
-    const reader = root.querySelector('[data-reader]');
-    if (!a || !reader) return;
-    reader.querySelector('[data-reader-kicker]').textContent = a.kicker;
-    reader.querySelector('[data-reader-cat]').textContent = a.cat;
-    reader.querySelector('[data-reader-meta]').textContent = a.date + ' · ' + a.read;
-    reader.querySelector('[data-reader-title]').textContent = a.title;
-    reader.querySelector('[data-reader-dek]').innerHTML = a.dek;
-    reader.querySelector('[data-reader-body]').innerHTML = a.body;
-    const scroller = reader.querySelector('[data-reader-scroll]');
-    if (scroller) scroller.scrollTop = 0;
-    reader.style.opacity = '1';
-    reader.style.pointerEvents = 'auto';
-    document.body.style.overflow = 'hidden';
-  };
-
-  closeArticle = () => {
-    const root = this.root || document;
-    const reader = root.querySelector('[data-reader]');
-    if (!reader) return;
-    reader.style.opacity = '0';
-    reader.style.pointerEvents = 'none';
-    document.body.style.overflow = '';
-  };
-
-  componentDidMount() {
-    this._onKey = (e) => { if (e.key === 'Escape') this.closeArticle(); };
-    document.addEventListener('keydown', this._onKey);
-    // open directly if ?a=<id> present
-    try {
-      const id = new URLSearchParams(location.search).get('a');
-      if (id && this.articles[id]) {
-        const card = this.root && this.root.querySelector('[data-article="' + id + '"]');
-        if (card) card.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-      }
-    } catch (_) {}
-  }
-
-  componentWillUnmount() {
-    if (this._onKey) document.removeEventListener('keydown', this._onKey);
-    document.body.style.overflow = '';
-  }
-
-  renderVals() {
-    return { rootRef: this.rootRef, openArticle: this.openArticle, closeArticle: this.closeArticle };
-  }
-}
+<script>
+/*nav*/(function(){
+  var cur='en';
+  var i18n={en:{nav_services:'Services',nav_work:'Work',nav_method:'Method',nav_blog:'News',nav_about:'About',nav_contact:'Contact'},
+  fa:{nav_services:'خدمات',nav_work:'کارها',nav_method:'روش',nav_blog:'اخبار',nav_about:'درباره',nav_contact:'تماس'},
+  es:{nav_services:'Servicios',nav_work:'Trabajo',nav_method:'Método',nav_blog:'Noticias',nav_about:'Acerca',nav_contact:'Contacto'}};
+  function apply(l){cur=l;var d=i18n[l]||i18n.en;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null){el.textContent=d[k];el.style.direction=(l==='fa')?'rtl':'ltr';}});
+    document.querySelectorAll('[data-langbtn]').forEach(function(b){var a=b.getAttribute('data-langbtn')===l;b.style.color=a?'#E2C173':'#7E907A';b.style.fontWeight=a?'600':'500';});}
+  function menu(){return document.querySelector('[data-mobilemenu]');}
+  function openMenu(){var m=menu();if(m){m.style.opacity='1';m.style.pointerEvents='auto';document.body.style.overflow='hidden';}}
+  function closeMenu(){var m=menu();if(m){m.style.opacity='0';m.style.pointerEvents='none';document.body.style.overflow='';}}
+  document.addEventListener('click',function(e){
+    var c=e.target;
+    var lb=c.closest&&c.closest('[data-langbtn]'); if(lb){apply(lb.getAttribute('data-langbtn'));return;}
+    if(c.closest&&c.closest('[data-burger]')){openMenu();return;}
+    if(c.closest&&c.closest('[data-menuclose]')){closeMenu();return;}
+    var m=menu(); if(m&&m.style.opacity==='1'){ if(c===m||(c.closest&&c.closest('[data-mobilemenu]')&&c.tagName==='A')) closeMenu(); }
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+})();
 </script>
 </body>
 </html>

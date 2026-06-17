@@ -31,7 +31,8 @@ window.MOW_ARTICLES = {
       <blockquote>Global does not mean generic. Keep the standard identical; let the proof stay local.</blockquote>
       <p>A campaign should feel coherent in New York, London, São Paulo, Dubai, and Tokyo without becoming culturally anonymous in any of them. The task is not to keep the evidence identical — it is to keep the standard identical. Different streets, different rituals, different materials, one unmistakable eye. The tenets travel; the proof is local.</p>
       <h2>Why now</h2>
-      <p>The timing is not accidental. Search is changing. AI interfaces are changing. Audiences are changing. The advantage is moving toward first-hand experience, a unique point of view, and non-commodity work that gives people something they could not get anywhere else. Impossible to Ignore is sharper than "lifestyle," more human than "luxury," more durable than anti-AI panic. It names the thing people actually feel when they encounter work, people, and places that carry conviction.</p>`
+      <p>The timing is not accidental. Search is changing. AI interfaces are changing. Audiences are changing. The advantage is moving toward first-hand experience, a unique point of view, and non-commodity work that gives people something they could not get anywhere else. Impossible to Ignore is sharper than "lifestyle," more human than "luxury," more durable than anti-AI panic. It names the thing people actually feel when they encounter work, people, and places that carry conviction.</p>
+      <p>Explore how we put this to work in <a href="https://mow.media/#work">our portfolio</a>, learn about <a href="https://mow.media/#method">the MOW Method</a>, or <a href="https://mow.media/#contact">bring us your brand</a>.</p>`
     },
     brand: {
       cat: 'Brand Strategy', date: 'May 2026', read: '7 min read', kicker: 'The MOW Method',
@@ -52,7 +53,8 @@ window.MOW_ARTICLES = {
       <h2>Step 5 — Monitor, evaluate, evolve</h2>
       <p>Track awareness, NPS, social listening, and analytics to understand how the brand performs. Stay relevant by evolving with your customers — but protect your core. Evolution that confuses your audience or dilutes the promise costs more than it earns. Consistency combined with thoughtful innovation keeps a brand trusted.</p>
       <blockquote>Brand creation is a strategic journey that rewards clarity, creativity, and commitment.</blockquote>
-      <p>Define a solid foundation, craft a distinctive identity, communicate authentically, deliver consistent experiences, and refine continuously — and you build a brand that does not just stand out, but builds lasting relationships.</p>`
+      <p>Define a solid foundation, craft a distinctive identity, communicate authentically, deliver consistent experiences, and refine continuously — and you build a brand that does not just stand out, but builds lasting relationships.</p>
+      <p>This is the heart of the <a href="https://mow.media/#method">MOW Method</a>. When you&rsquo;re ready to make yours impossible to ignore, <a href="https://mow.media/#contact">start a conversation</a> — or see it in <a href="https://mow.media/#work">our work</a>.</p>`
     },
     genai: {
       cat: 'Generative AI', date: 'Apr 2026', read: '6 min read', kicker: 'AI &amp; Marketing',
@@ -66,13 +68,14 @@ window.MOW_ARTICLES = {
       <h2>Enhancing content creation</h2>
       <p>Content is still king — and generative AI changes how it is made. Teams can maintain a steady flow of articles, posts, and updates without the usual time constraints, freeing strategists to focus on the decisions that matter. The key is direction: clear inputs, brand voice, and a human editor on quality.</p>
       <h3>Generative AI for video</h3>
-      <p>Video is moving from experiment to cornerstone. Tools like Google Flow, Runway, and Moonvalley's Marea let teams generate cinematic, brand-aligned video for campaigns and launches at speed — maintaining narrative depth while keeping pace with digital. (MOW covered this shift in our VentureBeat piece on Runway's AIFF Film Festival.)</p>
+      <p>Video is moving from experiment to cornerstone. Tools like <a href="https://blog.google/technology/ai/google-flow-ai-video-generation/" target="_blank" rel="noopener">Google Flow</a>, <a href="https://runwayml.com/" target="_blank" rel="noopener">Runway</a>, and the new <a href="https://moonvallye.ai/marea" target="_blank" rel="noopener">Marea model from Moonvalley</a> let teams generate cinematic, brand-aligned video for campaigns and launches at speed — maintaining narrative depth while keeping pace with digital. As covered in our <a href="https://venturebeat.com/ai/runways-la-film-festival-marked-an-inflection-point-for-ai-movies/" target="_blank" rel="noopener">VentureBeat article on Runway&rsquo;s AIFF Film Festival</a>, generative video is moving from experiment to cornerstone in brand marketing.</p>
       <h2>Personalization at scale</h2>
       <p>By analyzing behavior and preferences, generative AI tailors messaging to the individual — dynamic email that speaks to real interests, product recommendations grounded in history, and real-time content that adapts as a visitor engages. Personalization done with taste deepens loyalty; done carelessly, it erodes trust.</p>
       <h2>Challenges to navigate</h2>
       <p>Two disciplines matter most. <strong>Quality control:</strong> speed is worthless if the output drifts from your voice — keep a human in the loop. <strong>Ethics:</strong> data privacy, misinformation, and bias are real risks; be transparent about where and how AI is used.</p>
       <blockquote>Generative AI is a powerful tool — but the brand is still the point.</blockquote>
-      <p>Enhance creation, personalize interactions, optimize engagement — then govern it with judgment. The brands that win will treat AI as leverage on a strong point of view, not a substitute for having one.</p>`
+      <p>Enhance creation, personalize interactions, optimize engagement — then govern it with judgment. The brands that win will treat AI as leverage on a strong point of view, not a substitute for having one.</p>
+      <p>Ready to put generative AI to work on a brand worth remembering? <a href="https://mow.media/#contact">Start a conversation with MOW</a> — or read how we <a href="https://mow.media/integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/">integrate AI into organizations the right way</a>.</p>`
     },
     aisystems: {
       cat: 'AI Transformation', date: 'Mar 2026', read: '7 min read', kicker: 'Systems Thinking',
@@ -90,6 +93,7 @@ window.MOW_ARTICLES = {
       <h2>Govern from day one</h2>
       <p>Bias mitigation, security, and transparency are not features you add later — they are the foundation. Decide what the system will never do, who is accountable when it errs, and how its use is disclosed. Governance is what lets an organization move fast without breaking trust.</p>
       <blockquote>Don't ask "what can this tool do?" Ask "what should this system decide — and who is responsible for it?"</blockquote>
-      <p>Integrate AI the right way and it compounds: better decisions feed better data, which trains better models, which earn more responsibility. That is digital transformation — not a purchase, but a discipline.</p>`
+      <p>Integrate AI the right way and it compounds: better decisions feed better data, which trains better models, which earn more responsibility. That is digital transformation — not a purchase, but a discipline.</p>
+      <p>See how this thinking shaped real launches in <a href="https://mow.media/#work">our work</a>, or <a href="https://mow.media/#contact">talk to MOW</a> about your own AI integration.</p>`
     }
   };
