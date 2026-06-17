@@ -150,48 +150,58 @@ content:
       - { name: portrait, label: "Portrait photo", type: image }
       - { name: quote, label: "Pull quote", type: text }
 
-  # ═══════════ ③ NEWS ═══════════
-  - name: news_index
-    label: "③ News — landing page"
-    description: "The News / Journal index page."
+  # ═══════════ ③ NEWS / NEWSROOM ═══════════
+  - name: news
+    label: "③ News — all posts"
+    description: "Every post that appears on the homepage strip and the Newsroom. Set the Type, the published Date, a hero image, and toggle Featured (max 3 show on the homepage). Order on the Newsroom is grouped: Blog, Article, Thought Leadership, Press Release."
     type: file
-    path: blog/index.html
-    format: raw
+    path: content/news.json
+    format: json
+    list: false
     fields:
-      - { name: body, label: "Page content", type: code, options: { language: html } }
-  - name: news_data
-    label: "③ News — article cards & summaries"
-    description: "Titles, dates, categories and summaries for the News cards (home + index)."
-    type: file
-    path: articles.js
-    format: raw
-    fields:
-      - { name: body, label: "Article data", type: code, options: { language: html } }
+      - name: items
+        label: "Posts"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: "Title", type: string }
+          - name: type
+            label: "Type"
+            type: select
+            options:
+              values: ["Blog", "Article", "Thought Leadership", "Press Release"]
+          - { name: date, label: "Published date", type: date, options: { format: "yyyy-MM-dd" } }
+          - { name: summary, label: "Summary (card text)", type: text }
+          - { name: hero, label: "Hero image (optional)", type: image }
+          - { name: link, label: "Link (article page or external URL)", type: string }
+          - { name: featured, label: "Feature on homepage (max 3)", type: boolean, default: false }
+
+  # ─── Full article pages (long-form HTML; edit body + inline images here) ───
   - name: news_i2i
-    label: "News · Impossible to Ignore"
+    label: "Article body · Impossible to Ignore"
     type: file
-    path: blog-impossible-to-ignore.html
+    path: impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/index.html
     format: raw
     fields:
       - { name: body, label: "Article", type: code, options: { language: html } }
   - name: news_brand
-    label: "News · Mastering Brand Creation"
+    label: "Article body · Mastering Brand Creation"
     type: file
-    path: blog-mastering-brand-creation.html
+    path: mastering-brand-creation-a-step-by-step-guide-for-success/index.html
     format: raw
     fields:
       - { name: body, label: "Article", type: code, options: { language: html } }
   - name: news_genai
-    label: "News · Generative AI Marketing"
+    label: "Article body · Generative AI Marketing"
     type: file
-    path: blog-generative-ai-marketing.html
+    path: harnessing-generative-ai-marketing-transforming-strategies-for-success/index.html
     format: raw
     fields:
       - { name: body, label: "Article", type: code, options: { language: html } }
   - name: news_aisystems
-    label: "News · Integrate AI (Systems Thinking)"
+    label: "Article body · Integrate AI (Systems Thinking)"
     type: file
-    path: blog-integrate-ai-systems-thinking.html
+    path: integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/index.html
     format: raw
     fields:
       - { name: body, label: "Article", type: code, options: { language: html } }
