@@ -4,31 +4,30 @@ media:
   extensions: [png, jpg, jpeg, gif, svg, webp, ico, avif]
 
 content:
-  # ========== MAIN PAGES ==========
+  # ═══════════ ① HOMEPAGE (home scroll + contact) ═══════════
   - name: home_content
-    label: "① Homepage — Content (form fields)"
-    description: "Edit homepage headlines, hero copy, Google title/description, and every photo. Saves to content/home.json and updates the live home page automatically."
+    label: "① Homepage — Content"
+    description: "Every headline + hero + contact heading on the home scroll, in English / فارسی / Español, plus Google title & description and all photos. Updates the live homepage."
     type: file
     path: content/home.json
     format: json
     fields:
       - name: meta
-        label: "SEO · Google"
+        label: "SEO · Google (title + description)"
         type: object
         fields:
-          - name: title
-            label: "Meta title (browser tab + Google result)"
-            type: string
-          - name: description
-            label: "Meta description (Google snippet)"
-            type: text
-      - name: labels
-        label: "Section headlines"
+          - { name: title, label: "Meta title (browser tab + Google result)", type: string }
+          - { name: description, label: "Meta description (Google snippet)", type: text }
+      - name: en
+        label: "English"
         type: object
         fields:
-          - { name: hero_eyebrow, label: "Hero — small label above headline", type: string }
-          - { name: hero_h1a, label: "Hero — headline (white words)", type: string }
+          - { name: hero_eyebrow, label: "Hero — eyebrow", type: string }
+          - { name: hero_h1a, label: "Hero — headline (white)", type: string }
           - { name: hero_h1b, label: "Hero — headline (gold word)", type: string }
+          - { name: hero_subhead, label: "Hero — paragraph", type: text }
+          - { name: hero_cta_primary, label: "Hero — primary button", type: string }
+          - { name: hero_cta_secondary, label: "Hero — secondary button", type: string }
           - { name: about_eyebrow, label: "About — eyebrow", type: string }
           - { name: about_title, label: "About — title", type: string }
           - { name: ind_eyebrow, label: "Services — eyebrow", type: string }
@@ -43,15 +42,54 @@ content:
           - { name: faq_title, label: "FAQ — title", type: string }
           - { name: contact_eyebrow, label: "Contact — eyebrow", type: string }
           - { name: contact_title, label: "Contact — title", type: string }
-      - name: hero
-        label: "Hero block"
+      - name: fa
+        label: "فارسی (Farsi)"
         type: object
         fields:
-          - name: subhead
-            label: "Hero paragraph"
-            type: text
-          - { name: cta_primary, label: "Primary button text", type: string }
-          - { name: cta_secondary, label: "Secondary button text", type: string }
+          - { name: hero_eyebrow, label: "Hero — eyebrow", type: string }
+          - { name: hero_h1a, label: "Hero — headline (white)", type: string }
+          - { name: hero_h1b, label: "Hero — headline (gold word)", type: string }
+          - { name: hero_subhead, label: "Hero — paragraph", type: text }
+          - { name: hero_cta_primary, label: "Hero — primary button", type: string }
+          - { name: hero_cta_secondary, label: "Hero — secondary button", type: string }
+          - { name: about_eyebrow, label: "About — eyebrow", type: string }
+          - { name: about_title, label: "About — title", type: string }
+          - { name: ind_eyebrow, label: "Services — eyebrow", type: string }
+          - { name: ind_title, label: "Services — title", type: string }
+          - { name: work_eyebrow, label: "Work — eyebrow", type: string }
+          - { name: work_title, label: "Work — title", type: string }
+          - { name: i2i_eyebrow, label: "Impossible to Ignore — eyebrow", type: string }
+          - { name: i2i_title, label: "Impossible to Ignore — title", type: string }
+          - { name: method_eyebrow, label: "Method — eyebrow", type: string }
+          - { name: method_title, label: "Method — title", type: string }
+          - { name: faq_eyebrow, label: "FAQ — eyebrow", type: string }
+          - { name: faq_title, label: "FAQ — title", type: string }
+          - { name: contact_eyebrow, label: "Contact — eyebrow", type: string }
+          - { name: contact_title, label: "Contact — title", type: string }
+      - name: es
+        label: "Español (Spanish)"
+        type: object
+        fields:
+          - { name: hero_eyebrow, label: "Hero — eyebrow", type: string }
+          - { name: hero_h1a, label: "Hero — headline (white)", type: string }
+          - { name: hero_h1b, label: "Hero — headline (gold word)", type: string }
+          - { name: hero_subhead, label: "Hero — paragraph", type: text }
+          - { name: hero_cta_primary, label: "Hero — primary button", type: string }
+          - { name: hero_cta_secondary, label: "Hero — secondary button", type: string }
+          - { name: about_eyebrow, label: "About — eyebrow", type: string }
+          - { name: about_title, label: "About — title", type: string }
+          - { name: ind_eyebrow, label: "Services — eyebrow", type: string }
+          - { name: ind_title, label: "Services — title", type: string }
+          - { name: work_eyebrow, label: "Work — eyebrow", type: string }
+          - { name: work_title, label: "Work — title", type: string }
+          - { name: i2i_eyebrow, label: "Impossible to Ignore — eyebrow", type: string }
+          - { name: i2i_title, label: "Impossible to Ignore — title", type: string }
+          - { name: method_eyebrow, label: "Method — eyebrow", type: string }
+          - { name: method_title, label: "Method — title", type: string }
+          - { name: faq_eyebrow, label: "FAQ — eyebrow", type: string }
+          - { name: faq_title, label: "FAQ — title", type: string }
+          - { name: contact_eyebrow, label: "Contact — eyebrow", type: string }
+          - { name: contact_title, label: "Contact — title", type: string }
       - name: images
         label: "Photos (click any image to replace)"
         type: object
@@ -83,239 +121,77 @@ content:
           - { name: img25, label: "Bananos — image 3", type: image }
           - { name: img26, label: "Bananos — banana visual", type: image }
           - { name: img27, label: "Bananos — image 4", type: image }
-          - { name: img28, label: "Postcard image (card)", type: image }
-          - { name: img29, label: "Postcard image (popup)", type: image }
-          - { name: img30, label: "Logo — gold mark (footer)", type: image }
-          - { name: img31, label: "Logo — white mark (footer)", type: image }
-          - { name: img32, label: "Logo — gold mark (reader)", type: image }
+          - { name: img28, label: "Postcard (card)", type: image }
+          - { name: img29, label: "Postcard (popup)", type: image }
+          - { name: img30, label: "Logo — gold (footer)", type: image }
+          - { name: img31, label: "Logo — white (footer)", type: image }
+          - { name: img32, label: "Logo — gold (reader)", type: image }
 
-  - name: homepage_html
-    label: "① Homepage — Advanced HTML (index.html)"
+  # ═══════════ ② ABOUT ═══════════
+  - name: about_content
+    label: "② About — Content"
+    description: "About page copy, Peter's portrait, and Google title/description. Updates /about/ on the live site."
     type: file
-    path: index.html
-    format: raw
+    path: content/about.json
+    format: json
     fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: homepage_html_mirror
-    label: "① Homepage — Advanced HTML (mirror: MOW.dc.html)"
-    type: file
-    path: MOW.dc.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: about
-    label: "② About — Peter Weltman"
-    description: "About page (served at /about/)."
-    type: file
-    path: about/index.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: blog_index
-    label: "③ News / Journal index"
-    description: "The News landing page (served at /blog/)."
+      - name: meta
+        label: "SEO · Google (title + description)"
+        type: object
+        fields:
+          - { name: title, label: "Meta title", type: string }
+          - { name: description, label: "Meta description", type: text }
+      - { name: eyebrow, label: "Eyebrow", type: string }
+      - { name: name_lead, label: "Name — lead (e.g. 'Peter Weltman, ')", type: string }
+      - { name: name_role, label: "Name — gold role", type: string }
+      - { name: intro, label: "Intro paragraph", type: text }
+      - { name: bio, label: "Bio paragraph", type: text }
+      - { name: role_tag, label: "Role tag", type: string }
+      - { name: portrait, label: "Portrait photo", type: image }
+      - { name: quote, label: "Pull quote", type: text }
+
+  # ═══════════ ③ NEWS ═══════════
+  - name: news_index
+    label: "③ News — landing page"
+    description: "The News / Journal index page."
     type: file
     path: blog/index.html
     format: raw
     fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-
-  # ========== NEWS POSTS ==========
-  - name: blog_i2i
+      - { name: body, label: "Page content", type: code, options: { language: html } }
+  - name: news_data
+    label: "③ News — article cards & summaries"
+    description: "Titles, dates, categories and summaries for the News cards (home + index)."
+    type: file
+    path: articles.js
+    format: raw
+    fields:
+      - { name: body, label: "Article data", type: code, options: { language: html } }
+  - name: news_i2i
     label: "News · Impossible to Ignore"
     type: file
     path: blog-impossible-to-ignore.html
     format: raw
     fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: blog_brand
+      - { name: body, label: "Article", type: code, options: { language: html } }
+  - name: news_brand
     label: "News · Mastering Brand Creation"
     type: file
     path: blog-mastering-brand-creation.html
     format: raw
     fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: blog_genai
+      - { name: body, label: "Article", type: code, options: { language: html } }
+  - name: news_genai
     label: "News · Generative AI Marketing"
     type: file
     path: blog-generative-ai-marketing.html
     format: raw
     fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: blog_aisystems
+      - { name: body, label: "Article", type: code, options: { language: html } }
+  - name: news_aisystems
     label: "News · Integrate AI (Systems Thinking)"
     type: file
     path: blog-integrate-ai-systems-thinking.html
     format: raw
     fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: blog_data
-    label: "News data (cards + reader)"
-    description: "Powers the News cards on the homepage and the in-page article reader."
-    type: file
-    path: articles.js
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-
-  # ========== CASE STUDIES · ENGLISH ==========
-  - name: case_petra
-    label: "Work · Petra (EN)"
-    type: file
-    path: case-petra.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_avitia
-    label: "Work · Avitia (EN)"
-    type: file
-    path: case-avitia.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_autoalign
-    label: "Work · AutoAlign · Sidecar (EN)"
-    type: file
-    path: case-autoalign.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_hey_houston
-    label: "Work · Hey Houston (EN)"
-    type: file
-    path: case-hey-houston.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_pedrera
-    label: "Work · Pedrera (EN)"
-    type: file
-    path: case-pedrera.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_neara
-    label: "Work · Neara (EN)"
-    type: file
-    path: case-neara.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-
-  # ========== CASE STUDIES · ESPAÑOL ==========
-  - name: case_petra_es
-    label: "Work · Petra (ES)"
-    type: file
-    path: case-petra.es.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_avitia_es
-    label: "Work · Avitia (ES)"
-    type: file
-    path: case-avitia.es.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_autoalign_es
-    label: "Work · AutoAlign · Sidecar (ES)"
-    type: file
-    path: case-autoalign.es.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_hey_houston_es
-    label: "Work · Hey Houston (ES)"
-    type: file
-    path: case-hey-houston.es.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_pedrera_es
-    label: "Work · Pedrera (ES)"
-    type: file
-    path: case-pedrera.es.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_neara_es
-    label: "Work · Neara (ES)"
-    type: file
-    path: case-neara.es.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-
-  # ========== CASE STUDIES · فارسی ==========
-  - name: case_petra_fa
-    label: "Work · Petra (FA)"
-    type: file
-    path: case-petra.fa.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_avitia_fa
-    label: "Work · Avitia (FA)"
-    type: file
-    path: case-avitia.fa.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_autoalign_fa
-    label: "Work · AutoAlign · Sidecar (FA)"
-    type: file
-    path: case-autoalign.fa.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_hey_houston_fa
-    label: "Work · Hey Houston (FA)"
-    type: file
-    path: case-hey-houston.fa.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_pedrera_fa
-    label: "Work · Pedrera (FA)"
-    type: file
-    path: case-pedrera.fa.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: case_neara_fa
-    label: "Work · Neara (FA)"
-    type: file
-    path: case-neara.fa.html
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-
-  # ========== SEO / TECHNICAL FILES ==========
-  - name: seo_sitemap
-    label: "SEO · sitemap.xml"
-    type: file
-    path: sitemap.xml
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: seo_robots
-    label: "SEO · robots.txt"
-    type: file
-    path: robots.txt
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: seo_llms
-    label: "SEO · llms.txt"
-    type: file
-    path: llms.txt
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
-  - name: seo_manifest
-    label: "SEO · site.webmanifest"
-    type: file
-    path: site.webmanifest
-    format: raw
-    fields:
-      - { name: body, label: "File content (HTML / text)", type: code, options: { language: html } }
+      - { name: body, label: "Article", type: code, options: { language: html } }
