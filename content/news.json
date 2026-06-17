@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "i2i",
+      "title": "Impossible to Ignore Is the New Standard for Global Brand Distinctiveness",
+      "type": "Thought Leadership",
+      "date": "2026-06-01",
+      "summary": "The world doesn't need more content — it needs better-trained attention. Inside MOW's visual philosophy and its seven tenets.",
+      "hero": "assets/news/i2i.jpg",
+      "link": "/impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/",
+      "featured": true
+    },
+    {
+      "id": "brand",
+      "title": "Mastering Brand Creation: A Step-by-Step Guide for Success",
+      "type": "Blog",
+      "date": "2026-05-01",
+      "summary": "Five steps — from first principles to lasting equity — for building a brand that resonates and endures.",
+      "hero": "assets/news/brand.jpg",
+      "link": "/mastering-brand-creation-a-step-by-step-guide-for-success/",
+      "featured": true
+    },
+    {
+      "id": "genai",
+      "title": "Harnessing Generative AI Marketing: Transforming Strategies for Success",
+      "type": "Article",
+      "date": "2026-04-01",
+      "summary": "Leverage on a strong point of view — content, personalization, and video at scale, governed by taste.",
+      "hero": "assets/news/genai.jpg",
+      "link": "/harnessing-generative-ai-marketing-transforming-strategies-for-success/",
+      "featured": true
+    },
+    {
+      "id": "aisystems",
+      "title": "Integrate AI Into Your Organization the Right Way",
+      "type": "Thought Leadership",
+      "date": "2026-03-01",
+      "summary": "Real transformation isn't a tool you buy — it's a system you design. A systems-thinking approach to AI.",
+      "hero": "",
+      "link": "/integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/",
+      "featured": false
+    }
+  ]
+}
