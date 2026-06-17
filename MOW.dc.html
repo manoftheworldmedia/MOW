@@ -1003,16 +1003,39 @@ class Component extends DCLogic {
     const offset = (header ? header.offsetHeight : 79) + 20;
     const want = () => Math.max(0, window.scrollY + target.getBoundingClientRect().top - offset);
     window.scrollTo({ top: want(), behavior: 'smooth' });
-    // Re-correct after layout settles (images/sections shifting during/after scroll).
-    let tries = 0;
-    const fix = () => {
-      const y = want();
-      if (Math.abs(window.scrollY - y) > 3) {
-        window.scrollTo({ top: y, behavior: 'auto' });
-        if (++tries < 4) setTimeout(fix, 220);
-      }
+    this._settle(want);
+  }
+
+  // Keep correcting toward the target while lazy-loaded images below shift the
+  // layout (the #1 cause of landing "short of the beat" on the live site).
+  // Recomputes the target each tick and re-aligns until the page is stable.
+  _settle(want) {
+    if (this._settleStop) this._settleStop();
+    let stable = 0, ticks = 0, raf = 0, alive = true;
+    const onImg = () => { stable = 0; };
+    var imgs = (this.root || document).querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) imgs[i].addEventListener('load', onImg);
+    const stop = () => {
+      alive = false;
+      if (raf) cancelAnimationFrame(raf);
+      for (var j = 0; j < imgs.length; j++) imgs[j].removeEventListener('load', onImg);
+      this._settleStop = null;
     };
-    setTimeout(fix, 620);
+    this._settleStop = stop;
+    const tick = () => {
+      if (!alive) return;
+      ticks++;
+      const y = want();
+      if (Math.abs(this.getScrollTop() - y) > 2) {
+        window.scrollTo({ top: y, behavior: 'auto' });
+        stable = 0;
+      } else {
+        stable++;
+      }
+      if (stable >= 24 || ticks >= 240) { stop(); return; }
+      raf = requestAnimationFrame(tick);
+    };
+    setTimeout(() => { if (alive) raf = requestAnimationFrame(tick); }, 360);
   }
 
   scrollToHash(attempt) {
@@ -1034,19 +1057,11 @@ class Component extends DCLogic {
     const header = root.querySelector('[data-header]');
     const offset = (header ? header.offsetHeight : 78) + 22;
     const targetY = () => Math.max(0, el.getBoundingClientRect().top + this.getScrollTop() - offset);
-    // ONE smooth scroll on the real scroller — never write scrollTop mid-animation
-    // (that was cancelling the smooth scroll and stopping short).
     const y = targetY();
     try { window.scrollTo({ top: y, behavior: attempt < 2 ? 'smooth' : 'auto' }); }
     catch (_) { window.scrollTo(0, y); }
-    // After the scroll settles (and lazy images shift layout), correct only if off.
-    if (attempt < 5) {
-      setTimeout(() => {
-        const now = this.getScrollTop();
-        const want = targetY();
-        if (Math.abs(now - want) > 4) this.scrollToHash(attempt + 2);
-      }, attempt < 2 ? 580 : 180);
-    }
+    // Track the target while late images/layout shift it (prevents landing short).
+    this._settle(targetY);
   }
 
   componentWillUnmount() {
