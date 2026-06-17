@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="/./support.js"></script>
+<script>
+/*cms-about*/(function(){
+  var host=(location.hostname||'').toLowerCase();
+  if(!(host.indexOf('mow.media')>-1||host.indexOf('github.io')>-1||host==='localhost'||host==='127.0.0.1'))return;
+  var data=null;
+  function applyText(){if(!data)return;document.querySelectorAll('[data-cms]').forEach(function(el){var v=data[el.getAttribute('data-cms')];if(v!=null&&el.textContent!==String(v))el.textContent=v;});}
+  function applyImg(){if(!data)return;document.querySelectorAll('[data-cms-img]').forEach(function(el){var v=data[el.getAttribute('data-cms-img')];if(v!=null&&el.getAttribute('src')!==String(v))el.setAttribute('src',v);});}
+  function applyMeta(){if(!data||!data.meta)return;if(data.meta.title)document.title=data.meta.title;if(data.meta.description){var m=document.querySelector('meta[name="description"]');if(m)m.setAttribute('content',data.meta.description);}}
+  function boot(){fetch('/content/about.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){data=j;applyMeta();var n=0;(function t(){applyText();applyImg();if(n++<40)setTimeout(t,120);})();}).catch(function(){});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+</script>
 <style>[data-burger]{display:flex}@media(min-width:900px){[data-burger]{display:none}}</style>
 <script>
 /*nav*/(function(){
@@ -117,23 +129,23 @@
   <div style="position:absolute;top:-4%;right:-6%;width:min(48vw,560px);opacity:0.05;pointer-events:none;animation:aboutFloat 12s ease-in-out infinite;"><img src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;"></div>
   <div style="position:absolute;inset:0;background:radial-gradient(circle at 12% 16%, rgba(196,156,78,0.10), transparent 44%);pointer-events:none;"></div>
   <div style="max-width:1340px;margin:0 auto;position:relative;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:#C49C4E;margin-bottom:30px;display:flex;align-items:center;gap:16px;"><span style="width:46px;height:1px;background:#C49C4E;display:inline-block;"></span>Welcome</p>
+    <p data-cms="eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:#C49C4E;margin-bottom:30px;display:flex;align-items:center;gap:16px;"><span style="width:46px;height:1px;background:#C49C4E;display:inline-block;"></span>Welcome</p>
     <div style="display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,80px);align-items:center;" data-welcomegrid>
       <!-- text -->
       <div>
-        <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(48px,8vw,108px);line-height:0.9;letter-spacing:-0.02em;color:#F6F0E1;">Peter Weltman, <span style="font-style:italic;font-weight:600;color:#E2C173;">MOW CEO &amp; Founder</span></h1>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,29px);line-height:1.46;color:#CBD6C7;max-width:600px;margin-top:34px;">More than ten years leading global brand strategy and messaging for companies scaling at the highest level — work that has supported <em style="color:#E2C173;">$85M+ in client fundraises</em>, secured Tier&nbsp;1 media coverage, and delivered award-winning SBIR/STTR grants in the U.S.</p>
-        <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.68;color:#9FB09B;max-width:600px;margin-top:26px;">Peter has partnered with NVIDIA, P&amp;G, 3M, Carta, and SoCal Edison — leading full-scale brand creation across rebrands, M&amp;A, go-to-market, brand identity, and web. He's a global GenAI keynote speaker across the U.S. and LATAM.</p>
+        <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(48px,8vw,108px);line-height:0.9;letter-spacing:-0.02em;color:#F6F0E1;"><span data-cms="name_lead">Peter Weltman, </span><span data-cms="name_role" style="font-style:italic;font-weight:600;color:#E2C173;">MOW CEO &amp; Founder</span></h1>
+        <p data-cms="intro" style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,29px);line-height:1.46;color:#CBD6C7;max-width:600px;margin-top:34px;">More than ten years leading global brand strategy and messaging for companies scaling at the highest level — work that has supported $85M+ in client fundraises, secured Tier&nbsp;1 media coverage, and delivered award-winning SBIR/STTR grants in the U.S.</p>
+        <p data-cms="bio" style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.68;color:#9FB09B;max-width:600px;margin-top:26px;">Peter has partnered with NVIDIA, P&amp;G, 3M, Carta, and SoCal Edison — leading full-scale brand creation across rebrands, M&amp;A, go-to-market, brand identity, and web. He's a global GenAI keynote speaker across the U.S. and LATAM.</p>
         <div style="display:flex;align-items:center;gap:16px;margin-top:40px;">
           <span style="width:44px;height:1px;background:#C49C4E;display:inline-block;"></span>
-          <span style="font-family:'Archivo',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#EDE6D4;">CEO &amp; Founder, MOW</span>
+          <span data-cms="role_tag" style="font-family:'Archivo',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#EDE6D4;">CEO &amp; Founder, MOW</span>
         </div>
       </div>
       <!-- portrait -->
       <div style="display:flex;justify-content:center;">
         <figure style="position:relative;width:min(100%,440px);">
           <div style="position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:1px solid rgba(196,156,78,0.35);background:#EFEAE0;box-shadow:0 50px 90px -36px rgba(0,0,0,0.7);">
-            <img src="/assets/peter_weltman.jpg" alt="Peter Weltman, CEO & Founder of Man of the World, speaking on stage" style="width:100%;height:100%;object-fit:cover;object-position:center 26%;display:block;">
+            <img data-cms-img="portrait" src="/assets/peter_weltman.jpg" alt="Peter Weltman, CEO & Founder of Man of the World, speaking on stage" style="width:100%;height:100%;object-fit:cover;object-position:center 26%;display:block;">
             <div style="position:absolute;inset:auto 0 0 0;height:34%;background:linear-gradient(to top,rgba(7,33,26,0.5),transparent);pointer-events:none;"></div>
           </div>
           <figcaption style="font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E8268;margin-top:16px;text-align:center;">Los Angeles · Made in LA</figcaption>
@@ -160,7 +172,7 @@
     <div style="display:flex;gap:clamp(28px,4vw,64px);flex-wrap:wrap;align-items:center;font-family:'Bodoni Moda',serif;font-size:clamp(24px,2.6vw,38px);font-weight:500;color:#DDD6C4;">
       <span>NVIDIA</span><span>P&amp;G</span><span>3M</span><span>Carta</span><span>SoCal Edison</span>
     </div>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.4vw,32px);line-height:1.4;color:#D8C9A8;max-width:840px;margin-top:clamp(48px,6vw,80px);">"We don't start with competitors — we start with first principles. Every brand already carries its DNA. Our work is to unearth the core truth, then express it with clarity, conviction, and cultural authority."</p>
+    <p data-cms="quote" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.4vw,32px);line-height:1.4;color:#D8C9A8;max-width:840px;margin-top:clamp(48px,6vw,80px);">"We don't start with competitors — we start with first principles. Every brand already carries its DNA. Our work is to unearth the core truth, then express it with clarity, conviction, and cultural authority."</p>
     <div style="display:flex;align-items:center;gap:14px;margin-top:26px;">
       <img src="/assets/mow_mark_gold.png" alt="" style="height:16px;width:auto;">
       <span style="font-family:'Archivo',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#9FB09B;">Peter Weltman · CEO &amp; Founder</span>
