@@ -58,25 +58,30 @@
     if (!host) return;
     var list = items.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
     if (!list.length) return;
-    // Infinite marquee: duplicate the set, translate continuously, pause on hover.
-    host.style.overflowX = 'hidden';
-    host.style.overflowY = 'visible';
-    host.style.touchAction = 'pan-y';
+    // Native horizontal scroll (manual finger swipe) + gentle auto-advance + seamless loop.
+    host.style.overflowX = 'auto';
+    host.style.overflowY = 'hidden';
+    host.style.touchAction = 'pan-x';        // finger swipes scroll the strip; vertical passes to the page
+    host.style.webkitOverflowScrolling = 'touch';
     host.style.scrollSnapType = 'none';
     var inner = document.createElement('div');
-    inner.style.cssText = 'display:flex;gap:22px;width:max-content;will-change:transform;';
+    inner.style.cssText = 'display:flex;gap:22px;width:max-content;';
     var one = list.map(function (i) { return card(i, true); }).join('');
     inner.innerHTML = one + one; // two copies for seamless loop
     host.innerHTML = '';
     host.appendChild(inner);
 
-    var x = 0, paused = false, half = 0, visible = true;
+    var half = 0, visible = true, paused = false, resume = 0;
     function measure() { half = inner.scrollWidth / 2; }
     measure();
     window.addEventListener('resize', measure);
+    // Pause auto-advance while the user is interacting; resume shortly after.
+    function hold() { paused = true; resume = Date.now() + 2600; }
     host.addEventListener('mouseenter', function () { paused = true; });
     host.addEventListener('mouseleave', function () { paused = false; });
-    // Only animate while the strip is on-screen (saves the main thread, prevents scroll jank).
+    ['pointerdown', 'touchstart', 'wheel', 'scroll'].forEach(function (ev) {
+      host.addEventListener(ev, hold, { passive: true });
+    });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0 }).observe(host);
     }
@@ -84,10 +89,14 @@
     function frame(t) {
       if (last == null) last = t;
       var dt = t - last; last = t;
+      if (paused && resume && Date.now() > resume) { paused = false; resume = 0; }
       if (!paused && visible && half > 0) {
-        x -= (dt / 1000) * 42; // ~42px/sec drift
-        if (x <= -half) x += half;
-        inner.style.transform = 'translateX(' + x.toFixed(1) + 'px)';
+        host.scrollLeft += (dt / 1000) * 42; // ~42px/sec drift
+      }
+      // Seamless wrap in both directions (manual or auto).
+      if (half > 0) {
+        if (host.scrollLeft >= half * 2 - host.clientWidth) host.scrollLeft -= half;
+        else if (host.scrollLeft <= 0) host.scrollLeft += half;
       }
       requestAnimationFrame(frame);
     }
@@ -101,7 +110,7 @@
     var active = 'All';
 
     function draw() {
-      var list = items.slice().sort(byTypeOrder);
+      var list = items.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
       if (active !== 'All') list = list.filter(function (i) { return i.type === active; });
       if (!list.length) { host.innerHTML = '<p style="grid-column:1/-1;font-family:\'Cormorant Garamond\',serif;font-size:22px;color:#9FB09B;">Nothing here yet.</p>'; return; }
       host.innerHTML = list.map(function (i) { return card(i, false); }).join('');
