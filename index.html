@@ -644,7 +644,7 @@
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>The World View Postcard</p>
     <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(36px,5vw,72px);line-height:1.0;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:20px;">Drop a postcard</h2>
     <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:520px;margin:0 auto;">Deliver our note to anyone seeking luxurious details.</p>
-    <div data-pc-card="" class="mow-pccard" onClick="{{ sharePostcard }}" role="button" tabindex="0" aria-label="Send this postcard" style="position:relative;width:min(100%,720px);margin:clamp(40px,5vw,64px) auto 0;cursor:pointer;transform:rotate(-1.4deg);transition:transform .55s cubic-bezier(.2,.7,.3,1), box-shadow .55s;">
+    <div data-pc-card="" class="mow-pccard" onClick="{{ sharePostcard }}" onTouchStart="{{ warmPostcard }}" role="button" tabindex="0" aria-label="Send this postcard" style="position:relative;width:min(100%,720px);margin:clamp(40px,5vw,64px) auto 0;cursor:pointer;transform:rotate(-1.4deg);transition:transform .55s cubic-bezier(.2,.7,.3,1), box-shadow .55s;">
       <span style="position:absolute;top:-15px;left:50%;transform:translateX(-50%) rotate(2deg);width:138px;height:34px;background:rgba(196,156,78,0.34);border:1px solid rgba(196,156,78,0.45);backdrop-filter:blur(2px);z-index:3;"></span>
       <img data-cms-img="images.img28" src="assets/mow_postcard.png" alt="MOW World View postcard — Unleashing Absolute Conviction, Greetings from Los Angeles" style="display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 50px 90px -34px rgba(0,0,0,0.82), 0 6px 18px rgba(0,0,0,0.4);">
       <span style="position:absolute;bottom:16px;right:16px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:7px 13px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(0,0,0,0.55);">
@@ -1209,7 +1209,8 @@ class Component extends DCLogic {
     if (this._pcFile || this._pcLoading || !window.fetch) return;
     this._pcLoading = true;
     try {
-      const res = await fetch('assets/mow_postcard.png');
+      // Lightweight copy (≈470KB) so it's ready before the first tap on mobile.
+      const res = await fetch('assets/mow_postcard_share.png');
       const blob = await res.blob();
       this._pcFile = new File([blob], 'MOW-WorldView-Postcard.png', { type: 'image/png' });
     } catch (_) {} finally { this._pcLoading = false; }
@@ -1219,18 +1220,27 @@ class Component extends DCLogic {
     const text = 'Get ready to unleash absolute conviction with MOW.\nhttps://mow.media\nMap: https://maps.app.goo.gl/oSuaqdD4eWTMQkZJA';
     const file = this._pcFile;
     const isTouch = (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) || (navigator.maxTouchPoints > 0);
-    // On touch devices (phones/tablets), fire the native share sheet synchronously
-    // with the preloaded image so it truly attaches. On desktop, go straight to the
-    // modal on the first click (no native-share detour that needed a second click).
+    // On touch devices: fire the native share sheet SYNCHRONOUSLY within the tap
+    // so iOS keeps the user-gesture and truly attaches the image.
     try {
-      if (isTouch && file && navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
-        navigator.share({ files: [file], title: 'Man of the World — World View', text: text }).catch(function () {});
+      if (isTouch && navigator.share) {
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file], title: 'Man of the World — World View', text: text }).catch(function () {});
+          return;
+        }
+        // File not ready yet — still open the share sheet with the message + links
+        // (better than the sms: modal, which can never attach a file on iOS).
+        navigator.share({ title: 'Man of the World — World View', text: text }).catch(function () {});
+        this.preloadPostcard();
         return;
       }
     } catch (_) {}
     this.preloadPostcard();
     this.openPostcard();
   };
+
+  // Warm the file the instant a finger touches the card, before the click fires.
+  warmPostcard = () => { this.preloadPostcard(); };
 
   openPostcard = () => {
     const root = this.root || document;
@@ -1344,7 +1354,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    return { rootRef: this.rootRef, onLangClick: this.onLangClick, onSharePostcard: this.onSharePostcard, openArticle: this.openArticle, closeArticle: this.closeArticle, openPostcard: this.openPostcard, sharePostcard: this.sharePostcard, closePostcard: this.closePostcard, onContactSubmit: this.onContactSubmit, onCopyLink: this.onCopyLink, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu };
+    return { rootRef: this.rootRef, onLangClick: this.onLangClick, onSharePostcard: this.onSharePostcard, openArticle: this.openArticle, closeArticle: this.closeArticle, openPostcard: this.openPostcard, sharePostcard: this.sharePostcard, warmPostcard: this.warmPostcard, closePostcard: this.closePostcard, onContactSubmit: this.onContactSubmit, onCopyLink: this.onCopyLink, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu };
   }
 }
 </script>
