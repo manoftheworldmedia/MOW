@@ -66,6 +66,11 @@
   }
 
   function boot() {
+    // Only drive content on the live site — never inside the design editor /
+    // preview sandbox, so direct editing there is never clobbered.
+    var host = (location.hostname || '').toLowerCase();
+    var live = host.indexOf('mow.media') > -1 || host.indexOf('github.io') > -1 || host === 'localhost' || host === '127.0.0.1';
+    if (!live) return;
     fetch(DATA_URL, { cache: 'no-store' })
       .then(function (r) { return r.json(); })
       .then(function (j) {
