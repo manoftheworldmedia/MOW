@@ -59,7 +59,9 @@
     var list = items.slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
     if (!list.length) return;
     // Infinite marquee: duplicate the set, translate continuously, pause on hover.
-    host.style.overflow = 'hidden';
+    host.style.overflowX = 'hidden';
+    host.style.overflowY = 'visible';
+    host.style.touchAction = 'pan-y';
     host.style.scrollSnapType = 'none';
     var inner = document.createElement('div');
     inner.style.cssText = 'display:flex;gap:22px;width:max-content;will-change:transform;';
@@ -68,17 +70,21 @@
     host.innerHTML = '';
     host.appendChild(inner);
 
-    var x = 0, paused = false, half = 0;
+    var x = 0, paused = false, half = 0, visible = true;
     function measure() { half = inner.scrollWidth / 2; }
     measure();
     window.addEventListener('resize', measure);
     host.addEventListener('mouseenter', function () { paused = true; });
     host.addEventListener('mouseleave', function () { paused = false; });
+    // Only animate while the strip is on-screen (saves the main thread, prevents scroll jank).
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0 }).observe(host);
+    }
     var last = null;
     function frame(t) {
       if (last == null) last = t;
       var dt = t - last; last = t;
-      if (!paused && half > 0) {
+      if (!paused && visible && half > 0) {
         x -= (dt / 1000) * 42; // ~42px/sec drift
         if (x <= -half) x += half;
         inner.style.transform = 'translateX(' + x.toFixed(1) + 'px)';
