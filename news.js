@@ -35,7 +35,8 @@
 
   function card(item, fixedWidth) {
     var w = fixedWidth ? 'flex:0 0 auto;width:min(82vw,400px);scroll-snap-align:start;' : '';
-    return '<a class="mow-blogcard" href="' + esc(item.link || '#') + '" style="' + w + 'display:block;cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">' +
+    var ext = /^https?:/.test(item.link || '') ? ' target="_blank" rel="noopener"' : '';
+    return '<a class="mow-blogcard"' + ext + ' href="' + esc(item.link || '#') + '" style="' + w + 'display:block;cursor:pointer;background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;overflow:hidden;">' +
       '<div style="position:relative;aspect-ratio:16/11;overflow:hidden;background:#05190F;">' +
         '<div data-blogart>' + art(item) + '</div>' + badge(item.type) +
       '</div>' +
@@ -43,7 +44,7 @@
         '<div style="font-family:\'Archivo\',sans-serif;font-size:11px;letter-spacing:0.13em;text-transform:uppercase;color:#9FB09B;margin-bottom:13px;">' + esc(fmtDate(item.date)) + '</div>' +
         '<h3 style="font-family:\'Bodoni Moda\',serif;font-weight:600;font-size:24px;line-height:1.12;color:#F6F0E1;margin-bottom:12px;">' + esc(item.title) + '</h3>' +
         '<p style="font-family:\'Archivo\',sans-serif;font-size:14px;line-height:1.6;color:#9FB09B;margin-bottom:18px;">' + esc(item.summary) + '</p>' +
-        '<span style="font-family:\'Archivo\',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">Read →</span>' +
+        '<span style="font-family:\'Archivo\',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#E2C173;">' + (/^https?:/.test(item.link || '') ? 'View original \u2192' : 'Read \u2192') + '</span>' +
       '</div></a>';
   }
 
@@ -71,15 +72,20 @@
     host.innerHTML = '';
     host.appendChild(inner);
 
-    var half = 0, visible = true, paused = false, resume = 0;
+    var half = 0, visible = true, paused = false, resume = 0, pos = 0;
     function measure() { half = inner.scrollWidth / 2; }
     measure();
+    // Re-measure once images load (scrollWidth grows as heroes paint).
     window.addEventListener('resize', measure);
+    inner.querySelectorAll('img').forEach(function (im) {
+      if (!im.complete) im.addEventListener('load', measure, { once: true });
+    });
+    setTimeout(measure, 800);
     // Pause auto-advance while the user is interacting; resume shortly after.
-    function hold() { paused = true; resume = Date.now() + 2600; }
+    function hold() { paused = true; resume = Date.now() + 2600; pos = host.scrollLeft; }
     host.addEventListener('mouseenter', function () { paused = true; });
-    host.addEventListener('mouseleave', function () { paused = false; });
-    ['pointerdown', 'touchstart', 'wheel', 'scroll'].forEach(function (ev) {
+    host.addEventListener('mouseleave', function () { paused = false; pos = host.scrollLeft; });
+    ['pointerdown', 'touchstart', 'wheel'].forEach(function (ev) {
       host.addEventListener(ev, hold, { passive: true });
     });
     if ('IntersectionObserver' in window) {
@@ -89,14 +95,18 @@
     function frame(t) {
       if (last == null) last = t;
       var dt = t - last; last = t;
-      if (paused && resume && Date.now() > resume) { paused = false; resume = 0; }
+      if (paused && resume && Date.now() > resume) { paused = false; resume = 0; pos = host.scrollLeft; }
       if (!paused && visible && half > 0) {
-        host.scrollLeft += (dt / 1000) * 42; // ~42px/sec drift
-      }
-      // Seamless wrap in both directions (manual or auto).
-      if (half > 0) {
-        if (host.scrollLeft >= half * 2 - host.clientWidth) host.scrollLeft -= half;
-        else if (host.scrollLeft <= 0) host.scrollLeft += half;
+        // Accumulate in a float — scrollLeft coerces to int, so sub-pixel
+        // steps would otherwise truncate to 0 and never move.
+        pos += (dt / 1000) * 42; // ~42px/sec drift
+        if (pos >= half) pos -= half;
+        host.scrollLeft = pos;
+      } else {
+        // keep float in sync with any manual scroll
+        if (host.scrollLeft >= half && half > 0) { host.scrollLeft -= half; }
+        else if (host.scrollLeft <= 0 && half > 0) { host.scrollLeft += half; }
+        pos = host.scrollLeft;
       }
       requestAnimationFrame(frame);
     }
