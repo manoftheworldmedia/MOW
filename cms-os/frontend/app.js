@@ -26,6 +26,21 @@ function toast(msg, kind = 'info', ms = 3200) {
   setTimeout(() => t.remove(), ms);
 }
 
+// ---------------- global error surfacing ----------------
+// Auto-translate browser extensions can mutate the DOM and throw benign
+// "removeChild" errors; we swallow those and surface anything else as a toast.
+function isBenignDomError(msg) {
+  return /removeChild|insertBefore|not a child of this node/i.test(msg || '');
+}
+window.addEventListener('error', (e) => {
+  if (isBenignDomError(e.message)) { e.preventDefault?.(); return; }
+});
+window.addEventListener('unhandledrejection', (e) => {
+  const msg = e.reason?.message || String(e.reason || '');
+  if (isBenignDomError(msg)) return;
+  toast(msg || 'Something went wrong', 'error');
+});
+
 // ---------------- boot ----------------
 (async function boot() {
   if (getToken()) {
