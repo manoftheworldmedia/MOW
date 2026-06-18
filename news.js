@@ -151,18 +151,30 @@
   }
 
   // Generic running carousel: any [data-runcar] strip auto-drifts + loops + manual scroll.
+  // IMPORTANT: the i2i strip's cards belong to the homepage's React template, so we must
+  // NOT move/remove them (that triggers React's "removeChild" crash on re-render). Instead
+  // we leave the originals exactly in place and APPEND clones after them for the seamless loop.
   function initRunners() {
     document.querySelectorAll('[data-runcar]').forEach(function (host) {
       if (host.__ran) return; host.__ran = true;
-      var inner = document.createElement('div');
-      inner.style.cssText = 'display:flex;gap:20px;width:max-content;';
-      while (host.firstChild) inner.appendChild(host.firstChild);
-      inner.innerHTML = inner.innerHTML + inner.innerHTML; // two copies for seamless loop
-      host.appendChild(inner);
-      var half = 0, visible = true, paused = false, resume = 0, pos = 0;
-      function measure() { half = inner.scrollWidth / 2; }
+      host.style.overflowX = 'auto';
+      host.style.overflowY = 'hidden';
+      host.style.touchAction = 'pan-x';
+      host.style.webkitOverflowScrolling = 'touch';
+      var originals = Array.prototype.slice.call(host.children);
+      if (!originals.length) return;
+      var clones = originals.map(function (c) { var k = c.cloneNode(true); k.setAttribute('aria-hidden', 'true'); k.setAttribute('data-clone', ''); return k; });
+      clones.forEach(function (k) { host.appendChild(k); });
+      function origWidth() {
+        if (!originals.length) return 0;
+        var first = originals[0], firstClone = clones[0];
+        return firstClone.offsetLeft - first.offsetLeft;
+      }
+      var span = 0, visible = true, paused = false, resume = 0, pos = 0;
+      function measure() { span = origWidth(); }
       measure();
       window.addEventListener('resize', measure);
+      host.querySelectorAll('img').forEach(function (im) { if (!im.complete) im.addEventListener('load', measure, { once: true }); });
       setTimeout(measure, 800);
       function hold() { paused = true; resume = Date.now() + 2600; pos = host.scrollLeft; }
       host.addEventListener('mouseenter', function () { paused = true; });
@@ -176,13 +188,13 @@
         if (last == null) last = t;
         var dt = t - last; last = t;
         if (paused && resume && Date.now() > resume) { paused = false; resume = 0; pos = host.scrollLeft; }
-        if (!paused && visible && half > 0) {
+        if (!paused && visible && span > 0) {
           pos += (dt / 1000) * 38;
-          if (pos >= half) pos -= half;
+          if (pos >= span) pos -= span;
           host.scrollLeft = pos;
-        } else if (half > 0) {
-          if (host.scrollLeft >= half) host.scrollLeft -= half;
-          else if (host.scrollLeft <= 0) host.scrollLeft += half;
+        } else if (span > 0) {
+          if (host.scrollLeft >= span) host.scrollLeft -= span;
+          else if (host.scrollLeft <= 0) host.scrollLeft += span;
           pos = host.scrollLeft;
         }
         requestAnimationFrame(frame);
