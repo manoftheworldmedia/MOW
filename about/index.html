@@ -40,6 +40,20 @@
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
   var n=0;(function init(){apply(cur);if(n++<24)setTimeout(init,140);})();
+
+  var hdr=document.querySelector('[data-header]');
+  function navScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop||0;
+    var scrolled=y>40;
+    if(hdr){ hdr.style.background=scrolled?'rgba(5,21,14,0.92)':'transparent'; hdr.style.borderBottomColor=scrolled?'rgba(196,156,78,0.22)':'transparent'; hdr.style.backdropFilter=scrolled?'saturate(150%) blur(16px)':'none'; hdr.style.webkitBackdropFilter=scrolled?'saturate(150%) blur(16px)':'none'; }
+    var lw=document.querySelector('[data-langwrap]'),ct=document.querySelector('[data-navcontact]');
+    if(lw&&ct){
+      if(scrolled){ lw.style.opacity='0';lw.style.transform='translateX(-8px)';lw.style.pointerEvents='none';ct.style.opacity='1';ct.style.transform='translate(0,-50%) scale(1)';ct.style.pointerEvents='auto';ct.classList.add('is-on'); }
+      else { lw.style.opacity='1';lw.style.transform='translateX(0)';lw.style.pointerEvents='auto';ct.style.opacity='0';ct.style.transform='translate(8px,-50%) scale(0.92)';ct.style.pointerEvents='none';ct.classList.remove('is-on'); }
+    }
+  }
+  window.addEventListener('scroll',navScroll,{passive:true}); navScroll();
+
 })();
 </script>
 <title>About Peter Weltman — CEO &amp; Founder | Man of the World (MOW)</title>
@@ -71,9 +85,13 @@
   body { background:#07211A; color:#EDE6D4; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   ::selection { background:#C49C4E; color:#07211A; }
   a { color:inherit; text-decoration:none; }
+  [data-burger]{ display:flex; }
+  @keyframes navGlow { 0%,100% { box-shadow:0 0 10px rgba(124,246,176,0.45),0 0 2px rgba(124,246,176,0.6); } 50% { box-shadow:0 0 22px rgba(124,246,176,0.85),0 0 7px rgba(124,246,176,0.9); } }
+  [data-navcontact].is-on{ animation:navGlow 2.4s ease-in-out infinite; }
   @keyframes aboutFloat { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-14px) rotate(1.5deg); } }
   @media (min-width:900px){
     [data-nav]{ display:flex !important; }
+    [data-burger]{ display:none; }
     [data-welcomegrid]{ grid-template-columns:1.02fr 0.98fr !important; }
     [data-footgrid]{ grid-template-columns:1.25fr 0.75fr !important; }
   }
@@ -83,12 +101,12 @@
 <div style="position:relative;background:#07211A;">
 
 <!-- NAV (unified, matches homepage) -->
-<header data-header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
+<header data-header style="position:sticky;top:0;z-index:120;transition:background .45s,border-color .45s,backdrop-filter .45s;background:transparent;border-bottom:1px solid transparent;">
   <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;">
-    <a href="/" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;">
+    <a href="/" data-navlogo aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
-    <div data-nav style="display:none;gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
+    <div data-nav style="display:none;gap:clamp(18px,2.4vw,36px);align-items:center;order:2;flex:1 1 auto;justify-content:center;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
       <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
       <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
       <a href="/#method" data-i18n="nav_method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
@@ -96,13 +114,16 @@
       <a href="/about/" data-i18n="nav_about" data-navkey="about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
       <a href="/#contact" data-i18n="nav_contact" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Contact</a>
     </div>
-    <div style="display:flex;align-items:center;gap:clamp(16px,2vw,26px);order:2;">
-      <div style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;">
+    <div data-navright style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
+      <div data-navswap style="position:relative;display:flex;align-items:center;">
+      <div data-langwrap style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1);">
         <button type="button" data-langbtn="en" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
         <span style="color:rgba(196,156,78,0.45);">/</span>
         <button type="button" data-langbtn="fa" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:'Vazirmatn',sans-serif;font-size:14px;">فارسی</button>
         <span style="color:rgba(196,156,78,0.45);">/</span>
         <button type="button" data-langbtn="es" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">ES</button>
+      </div>
+      <a href="/#contact" data-navcontact data-i18n="nav_contact" style="position:absolute;right:0;top:50%;opacity:0;transform:translate(8px,-50%) scale(0.92);pointer-events:none;white-space:nowrap;display:inline-flex;align-items:center;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#7CF6B0;border:1px solid rgba(124,246,176,0.6);padding:6px 17px;border-radius:999px;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1), background .25s, color .25s;">Contact</a>
       </div>
       <button type="button" data-burger aria-label="Open menu" style="flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;border:none;background:none;cursor:pointer;padding:8px;flex-shrink:0;">
         <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
@@ -130,7 +151,7 @@
   <div style="position:absolute;inset:0;background:radial-gradient(circle at 12% 16%, rgba(196,156,78,0.10), transparent 44%);pointer-events:none;"></div>
   <div style="max-width:1340px;margin:0 auto;position:relative;">
     <p data-cms="eyebrow" style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:#C49C4E;margin-bottom:30px;display:flex;align-items:center;gap:16px;"><span style="width:46px;height:1px;background:#C49C4E;display:inline-block;"></span>Welcome</p>
-    <div style="display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,80px);align-items:center;" data-welcomegrid>
+    <div style="display:grid;grid-template-columns:1fr;gap:clamp(40px,5vw,80px);align-items:start;" data-welcomegrid>
       <!-- text -->
       <div>
         <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(48px,8vw,108px);line-height:0.9;letter-spacing:-0.02em;color:#F6F0E1;"><span data-cms="name_lead">Peter Weltman, </span><span data-cms="name_role" style="font-style:italic;font-weight:600;color:#E2C173;">MOW CEO &amp; Founder</span></h1>
@@ -142,7 +163,7 @@
         </div>
       </div>
       <!-- portrait -->
-      <div style="display:flex;justify-content:center;">
+      <div style="display:flex;justify-content:center;margin-top:clamp(-72px,-6vw,-16px);">
         <figure style="position:relative;width:min(100%,440px);">
           <div style="position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:1px solid rgba(196,156,78,0.35);background:#EFEAE0;box-shadow:0 50px 90px -36px rgba(0,0,0,0.7);">
             <img data-cms-img="portrait" src="/assets/peter_weltman.jpg" alt="Peter Weltman, CEO & Founder of Man of the World, speaking on stage" style="width:100%;height:100%;object-fit:cover;object-position:center 26%;display:block;">
@@ -183,47 +204,6 @@
     </div>
   </div>
 </section>
-
-<!-- FAQ (shared with homepage — edit in CMS → Homepage → FAQ) -->
-<style>#faq details[open] .mow-faqplus{transform:rotate(45deg)}#faq .mow-faqplus{display:inline-block;transition:transform .25s}</style>
-<section id="faq" style="background:#EFE8D9;color:#1A1712;padding:clamp(72px,9vw,120px) clamp(20px,4vw,56px);">
-  <div style="max-width:940px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Questions</p>
-    <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(34px,5vw,66px);line-height:1.02;color:#11281E;margin-bottom:clamp(36px,4vw,58px);">FAQs</h2>
-    <div id="mow-faq-list">
-      <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;"><summary style="cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;">What makes Man of the World a top branding agency in Los Angeles?<span class="mow-faqplus" style="position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;">+</span></summary><p style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.72;color:#4A4639;padding:0 40px 26px 0;">Man of the World is a creative branding and marketing agency based in Los Angeles, known for its journalistic approach, luxury-level craft, and deep expertise in AI, healthcare, and technology. MOW combines strategic brand messaging with high-end design for startups, enterprise clients, and cultural institutions alike.</p></details>
-      <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;"><summary style="cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;">What industries does Man of the World specialize in?<span class="mow-faqplus" style="position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;">+</span></summary><p style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.72;color:#4A4639;padding:0 40px 26px 0;">MOW specializes in emerging technologies — especially AI — healthcare and precision medicine, climate and infrastructure tech, urban and consumer tech, editorial publishing, and executive branding. Our LA studio serves clients across North and Latin America, as well as Canada.</p></details>
-      <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;"><summary style="cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;">Do you offer SEO, AEO, and GEO strategy?<span class="mow-faqplus" style="position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;">+</span></summary><p style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.72;color:#4A4639;padding:0 40px 26px 0;">Yes. MOW offers strategic SEO including keyword research and on-page optimization, plus long-form content grounded in brand voice. That includes Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) — organizing content so it's more likely to be surfaced in AI-driven answers on Google Gemini, ChatGPT, Perplexity, and Anthropic's Claude.</p></details>
-      <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;"><summary style="cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;">Can you reposition a brand after a merger, acquisition, or bankruptcy?<span class="mow-faqplus" style="position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;">+</span></summary><p style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.72;color:#4A4639;padding:0 40px 26px 0;">Absolutely. MOW thrives in difficult branding moments. As an LA agency specializing in high-stakes messaging, we've led repositioning for post-bankruptcy healthcare firms, M&amp;A storytelling, and spinoff brand launches.</p></details>
-      <details style="border-top:1px solid rgba(26,23,18,0.18);border-bottom:1px solid rgba(26,23,18,0.18);padding:8px 0;"><summary style="cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;">Does Man of the World work globally?<span class="mow-faqplus" style="position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;">+</span></summary><p style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.72;color:#4A4639;padding:0 40px 26px 0;">Yes. MOW is headquartered in Los Angeles with a presence in Mexico City, partnering with Google Cloud teams across Latin America and serving clients in the U.S. (SF, LA, Houston, New York), LATAM (Mexico, Chile, Guatemala), and Canada (Toronto, Vancouver, Montreal).</p></details>
-    </div>
-  </div>
-</section>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What makes Man of the World a top branding agency in Los Angeles?","acceptedAnswer":{"@type":"Answer","text":"Man of the World is a creative branding and marketing agency based in Los Angeles, known for its journalistic approach, luxury-level craft, and deep expertise in AI, healthcare, and technology."}}]}
-</script>
-<script>
-/*cms-faq*/(function(){
-  var host=(location.hostname||'').toLowerCase();
-  if(!(host.indexOf('mow.media')>-1||host.indexOf('github.io')>-1||host==='localhost'||host==='127.0.0.1'))return;
-  fetch('/content/home.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){
-    if(!j||!Array.isArray(j.faqs)||!j.faqs.length)return;
-    var box=document.getElementById('mow-faq-list');
-    if(box){ box.innerHTML='';
-      j.faqs.forEach(function(item,i){
-        var last=i===j.faqs.length-1;
-        var d=document.createElement('details'); d.setAttribute('style','border-top:1px solid rgba(26,23,18,0.18);'+(last?'border-bottom:1px solid rgba(26,23,18,0.18);':'')+'padding:8px 0;');
-        var s=document.createElement('summary'); s.setAttribute('style',"cursor:pointer;font-family:'Bodoni Moda',serif;font-size:clamp(19px,2vw,26px);color:#11281E;padding:22px 40px 22px 0;position:relative;");
-        s.appendChild(document.createTextNode(item.question||item.q||''));
-        var plus=document.createElement('span'); plus.className='mow-faqplus'; plus.setAttribute('style',"position:absolute;right:0;top:22px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:24px;"); plus.appendChild(document.createTextNode('+')); s.appendChild(plus);
-        var p=document.createElement('p'); p.setAttribute('style',"font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.72;color:#4A4639;padding:0 40px 26px 0;"); p.appendChild(document.createTextNode(item.answer||item.a||''));
-        d.appendChild(s); d.appendChild(p); box.appendChild(d);
-      });
-    }
-    try{var sc=document.querySelectorAll('script[type="application/ld+json"]');for(var k=0;k<sc.length;k++){if(sc[k].textContent.indexOf('"FAQPage"')>-1){sc[k].textContent=JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:j.faqs.map(function(f){return{'@type':'Question',name:f.question||f.q,acceptedAnswer:{'@type':'Answer',text:f.answer||f.a}};})});break;}}}catch(e){}
-  }).catch(function(){});
-})();
-</script>
 
 <!-- FOOTER -->
 <footer style="background:#05190F;color:#EDE6D4;padding:clamp(56px,7vw,88px) clamp(20px,4vw,56px) 44px;border-top:1px solid rgba(196,156,78,0.2);">
