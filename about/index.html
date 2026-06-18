@@ -47,7 +47,7 @@
   function navScroll(){
     var y=window.scrollY||document.documentElement.scrollTop||0;
     var scrolled=y>40;
-    if(hdr){ if(y>navLast&&y>260) hdr.style.transform='translateY(-100%)'; else hdr.style.transform='translateY(0)'; navLast=y; hdr.style.background=scrolled?'rgba(5,21,14,0.985)':'transparent'; hdr.style.borderBottomColor=scrolled?'rgba(196,156,78,0.22)':'transparent'; hdr.style.backdropFilter=scrolled?'saturate(150%) blur(16px)':'none'; hdr.style.webkitBackdropFilter=scrolled?'saturate(150%) blur(16px)':'none'; }
+    if(hdr){ if(y>navLast&&y>260) hdr.style.transform='translateY(-100%)'; else hdr.style.transform='translateY(0)'; navLast=y; hdr.style.background=scrolled?'rgba(5,21,14,0.985)':'rgba(7,33,26,0.82)'; hdr.style.borderBottomColor=scrolled?'rgba(196,156,78,0.3)':'rgba(196,156,78,0.18)'; hdr.style.backdropFilter='saturate(150%) blur(16px)'; hdr.style.webkitBackdropFilter='saturate(150%) blur(16px)'; }
     var lw=document.querySelector('[data-langwrap]'),ct=document.querySelector('[data-navcontact]');
     if(lw&&ct){
       if(scrolled){ lw.style.opacity='0';lw.style.transform='translateX(-8px)';lw.style.pointerEvents='none';ct.style.opacity='1';ct.style.transform='translate(0,-50%) scale(1)';ct.style.pointerEvents='auto';ct.classList.add('is-on'); }
@@ -103,7 +103,7 @@
 <div style="position:relative;background:#07211A;">
 
 <!-- NAV (unified, matches homepage) -->
-<header data-header style="position:sticky;top:0;z-index:120;transition:background .45s,border-color .45s,backdrop-filter .45s;background:transparent;border-bottom:1px solid transparent;">
+<header data-header style="position:sticky;top:0;z-index:120;transition:background .45s,border-color .45s,backdrop-filter .45s;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.18);">
   <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:24px;">
     <a href="/" data-navlogo aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
