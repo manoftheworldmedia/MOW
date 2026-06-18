@@ -543,6 +543,75 @@
       ]
     },
     {
+      "name": "news",
+      "label": "Newsroom",
+      "icon": "file",
+      "kind": "single",
+      "path": "content/news.json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "News & press (drag to reorder)",
+          "type": "list",
+          "min": 1,
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "type",
+                "label": "Category",
+                "type": "select",
+                "required": true,
+                "options": [
+                  "Thought Leadership",
+                  "Article",
+                  "Blog",
+                  "Press Release",
+                  "Interview",
+                  "Award",
+                  "Event"
+                ]
+              },
+              {
+                "name": "date",
+                "label": "Date",
+                "type": "date",
+                "required": true
+              },
+              {
+                "name": "summary",
+                "label": "Summary",
+                "type": "text"
+              },
+              {
+                "name": "hero",
+                "label": "Image",
+                "type": "image"
+              },
+              {
+                "name": "link",
+                "label": "Link (page or external URL)",
+                "type": "url",
+                "required": true
+              },
+              {
+                "name": "featured",
+                "label": "Featured",
+                "type": "boolean",
+                "default": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "pages",
       "label": "HTML Pages",
       "icon": "file",
