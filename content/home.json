@@ -102,5 +102,27 @@
     "img30": "assets/mow_mark_gold.png",
     "img31": "assets/mow_mark_white.png",
     "img32": "assets/mow_mark_gold.png"
-  }
+  },
+  "faqs": [
+    {
+      "question": "What makes Man of the World a top branding agency in Los Angeles?",
+      "answer": "Man of the World is a creative branding and marketing agency based in Los Angeles, known for its journalistic approach, luxury-level craft, and deep expertise in AI, healthcare, and technology. MOW combines strategic brand messaging with high-end design for startups, enterprise clients, and cultural institutions alike."
+    },
+    {
+      "question": "What industries does Man of the World specialize in?",
+      "answer": "MOW specializes in emerging technologies — especially AI — healthcare and precision medicine, climate and infrastructure tech, urban and consumer tech, editorial publishing, and executive branding. Our LA studio serves clients across North and Latin America, as well as Canada."
+    },
+    {
+      "question": "Do you offer SEO, AEO, and GEO strategy?",
+      "answer": "Yes. MOW offers strategic SEO including keyword research and on-page optimization, plus long-form content grounded in brand voice. That includes Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) — organizing content so it's more likely to be surfaced in AI-driven answers on Google Gemini, ChatGPT, Perplexity, and Anthropic's Claude."
+    },
+    {
+      "question": "Can you reposition a brand after a merger, acquisition, or bankruptcy?",
+      "answer": "Absolutely. MOW thrives in difficult branding moments. As an LA agency specializing in high-stakes messaging, we've led repositioning for post-bankruptcy healthcare firms, M&A storytelling, and spinoff brand launches."
+    },
+    {
+      "question": "Does Man of the World work globally?",
+      "answer": "Yes. MOW is headquartered in Los Angeles with a presence in Mexico City, partnering with Google Cloud teams across Latin America and serving clients in the U.S. (SF, LA, Houston, New York), LATAM (Mexico, Chile, Guatemala), and Canada (Toronto, Vancouver, Montreal)."
+    }
+  ]
 }

@@ -539,6 +539,28 @@
               "type": "image"
             }
           ]
+        },
+        {
+          "name": "faqs",
+          "label": "FAQ — Questions & Answers",
+          "type": "list",
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "question",
+                "label": "Question",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "answer",
+                "label": "Answer",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
         }
       ]
     },

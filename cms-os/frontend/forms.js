@@ -102,7 +102,7 @@ export class SchemaForm {
 
   renderListItem(field, arr, index, path, rebuild) {
     const item = arr[index];
-    const titleField = (field.of.fields || []).find((f) => ['title', 'label', 'name'].includes(f.name));
+    const titleField = (field.of.fields || []).find((f) => ['title', 'label', 'name', 'question', 'heading', 'q'].includes(f.name));
     const title = titleField ? (item[titleField.name] || '(untitled)') : `Item ${index + 1}`;
 
     const row = h('div', { class: 'list-item', draggable: 'false' });
