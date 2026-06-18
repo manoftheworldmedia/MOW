@@ -1,0 +1,6 @@
+[
+  { "label": "Man of the World — Site", "owner": "manoftheworldmedia", "repo": "mow", "branch": "main", "schemaFile": "mow-site.json", "previewUrl": "https://www.mow.media" },
+  { "label": "Bananos Inteligentes", "owner": "manoftheworldmedia", "repo": "Bananos-Inteligentes", "branch": "main", "previewUrl": "https://bananosinteligentes.com" },
+  { "label": "All Model Repair", "owner": "manoftheworldmedia", "repo": "all-model-repair", "branch": "main", "previewUrl": "https://allmodelrepair.com" },
+  { "label": "Caspian Coast Coffee", "owner": "manoftheworldmedia", "repo": "caspiancoast", "branch": "main", "previewUrl": "https://caspiancoast.com" }
+]
