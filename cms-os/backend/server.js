@@ -21,7 +21,8 @@ const router = new Router();
 
 // ---- seed on boot ----
 const seededAdmin = auth.ensureSeedAdmin();
-const seededProject = projects.ensureSeedProject();
+// Register every MOW-managed site on each boot (survives free/no-disk restarts).
+const seededProjects = projects.ensureSeedProjects();
 
 // ---- CORS + auth context middleware ----
 router.use((ctx) => {
@@ -227,7 +228,7 @@ server.listen(PORT, () => {
   console.log(`\n  MOW CMS OS backend  →  http://localhost:${PORT}`);
   console.log(`  Frontend            →  http://localhost:${PORT}/`);
   if (seededAdmin) console.log(`  Seeded admin        →  ${seededAdmin.email} / ${seededAdmin.password}  (change this!)`);
-  if (seededProject) console.log(`  Seeded project      →  ${seededProject.id}`);
+  if (seededProjects && seededProjects.length) console.log(`  Seeded projects     →  ${seededProjects.join(', ')}`);
   if (!process.env.MOW_GITHUB_TOKEN) console.log(`  ⚠  No MOW_GITHUB_TOKEN set — set it to read/write the repo.`);
   console.log('');
 });

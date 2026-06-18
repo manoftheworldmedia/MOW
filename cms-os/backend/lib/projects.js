@@ -107,3 +107,56 @@ export function ensureSeedProject() {
     previewUrl: process.env.MOW_PREVIEW_URL || 'https://www.mow.media',
   });
 }
+
+const SEED_FILE = path.join(__dirname, '..', 'data', 'seed-projects.json');
+
+/**
+ * Create a project, or refresh its descriptive fields if it already exists.
+ * Idempotent and secret-preserving: never clears an existing token / Stripe key.
+ */
+export function upsertProject(spec) {
+  const id = slug(`${spec.owner}-${spec.repo}`);
+  const db = read();
+  const existing = db.projects.find((p) => p.id === id);
+  if (!existing) return createProject(spec);
+  existing.label = spec.label || existing.label;
+  existing.branch = spec.branch || existing.branch;
+  existing.previewUrl = spec.previewUrl || existing.previewUrl;
+  existing.schemaRepoPath = spec.schemaRepoPath || existing.schemaRepoPath || '.mowcms/schemas';
+  if (spec.schemaFile) existing.schemaFile = spec.schemaFile;
+  write(db);
+  return existing;
+}
+
+/** The canonical MOW-managed sites, used when no seed file is present. */
+function defaultSeeds() {
+  return [
+    { label: 'Man of the World — Site', owner: 'manoftheworldmedia', repo: 'mow', branch: 'main', schemaFile: 'mow-site.json', previewUrl: 'https://www.mow.media' },
+    { label: 'Bananos Inteligentes', owner: 'manoftheworldmedia', repo: 'Bananos-Inteligentes', branch: 'main', previewUrl: 'https://bananosinteligentes.com' },
+    { label: 'All Model Repair', owner: 'manoftheworldmedia', repo: 'all-model-repair', branch: 'main', previewUrl: 'https://allmodelrepair.com' },
+    { label: 'Caspian Coast Coffee', owner: 'manoftheworldmedia', repo: 'caspiancoast', branch: 'main', previewUrl: 'https://caspiancoast.com' },
+  ];
+}
+
+/**
+ * Ensure every MOW-managed site is registered, on EVERY boot. This is what
+ * keeps all projects visible to the admin even on a free/no-disk host where
+ * data/projects.json does not survive restarts. Reads data/seed-projects.json
+ * if present (so new sites are added by editing one committed file), otherwise
+ * falls back to the built-in list. Upserts — existing projects (and their
+ * tokens) are left intact. Returns the ids of projects newly created.
+ */
+export function ensureSeedProjects() {
+  let seeds;
+  try { seeds = JSON.parse(fs.readFileSync(SEED_FILE, 'utf8')); } catch { seeds = null; }
+  if (!Array.isArray(seeds) || !seeds.length) seeds = defaultSeeds();
+  const created = [];
+  for (const s of seeds) {
+    if (!s || !s.owner || !s.repo) continue;
+    const id = slug(`${s.owner}-${s.repo}`);
+    const before = getProject(id);
+    upsertProject(s);
+    if (!before) created.push(id);
+  }
+  return created;
+}
