@@ -21,13 +21,14 @@ export function listProjects() {
 }
 export function getProject(id) { return read().projects.find((p) => p.id === id); }
 
-export function createProject({ label, owner, repo, branch = 'main', token, schemaFile, schemaRepoPath }) {
+export function createProject({ label, owner, repo, branch = 'main', token, schemaFile, schemaRepoPath, previewUrl }) {
   const db = read();
   const id = slug(`${owner}-${repo}`);
   if (db.projects.some((p) => p.id === id)) throw new Error('Project already exists.');
   const project = {
     id, label: label || `${owner}/${repo}`, owner, repo, branch,
     token: token || null,
+    previewUrl: previewUrl || null,        // embedded in the live-preview pane
     schemaFile: schemaFile || null,        // bundled file in shared/schemas
     schemaRepoPath: schemaRepoPath || '.mowcms/schemas', // in-repo schema dir
     createdAt: new Date().toISOString(),
@@ -100,5 +101,6 @@ export function ensureSeedProject() {
     label: 'Man of the World — Site', owner, repo,
     branch: process.env.MOW_REPO_BRANCH || 'main',
     schemaFile: 'mow-site.json',
+    previewUrl: process.env.MOW_PREVIEW_URL || 'https://www.mow.media',
   });
 }
