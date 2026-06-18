@@ -55,9 +55,9 @@
       <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
       <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
       <a href="/#method" data-i18n="nav_method" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Method</a>
-      <a href="/blog/" data-i18n="nav_blog" data-navkey="blog" style="color:#E2C173;transition:color .2s;">News</a>
-      <a href="/about/" data-i18n="nav_about" data-navkey="about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
-      <a href="/#contact" data-i18n="nav_contact" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Contact</a>
+      <a href="/blog/" data-i18n="nav_blog" style="color:#E2C173;transition:color .2s;">News</a>
+      <a href="/about/" data-i18n="nav_about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
+      <a href="/#faq" data-i18n="nav_faq" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">FAQs</a>
     </div>
     <div data-navright style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <div data-navswap style="position:relative;display:flex;align-items:center;">
@@ -87,6 +87,7 @@
   <a href="/#method" data-i18n="nav_method" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
   <a href="/blog/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">News</a>
   <a href="/about/" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
+  <a href="/#faq" data-i18n="nav_faq" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">FAQs</a>
   <a href="/#contact" data-i18n="nav_contact" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">Contact</a>
 </div>
 
@@ -132,9 +133,9 @@
 <script>
 /*nav*/(function(){
   var cur='en';
-  var i18n={en:{nav_services:'Services',nav_work:'Work',nav_method:'Method',nav_blog:'News',nav_about:'About',nav_contact:'Contact'},
-  fa:{nav_services:'خدمات',nav_work:'کارها',nav_method:'روش',nav_blog:'اخبار',nav_about:'درباره',nav_contact:'تماس'},
-  es:{nav_services:'Servicios',nav_work:'Trabajo',nav_method:'Método',nav_blog:'Noticias',nav_about:'Acerca',nav_contact:'Contacto'}};
+  var i18n={en:{nav_services:'Services',nav_work:'Work',nav_method:'Method',nav_blog:'News',nav_about:'About',nav_faq:'FAQs',nav_contact:'Contact'},
+  fa:{nav_services:'خدمات',nav_work:'کارها',nav_method:'روش',nav_blog:'اخبار',nav_about:'درباره',nav_faq:'سوالات',nav_contact:'تماس'},
+  es:{nav_services:'Servicios',nav_work:'Trabajo',nav_method:'Método',nav_blog:'Noticias',nav_about:'Acerca',nav_faq:'Preguntas',nav_contact:'Contacto'}};
   function apply(l){cur=l;var d=i18n[l]||i18n.en;
     document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null){el.textContent=d[k];el.style.direction=(l==='fa')?'rtl':'ltr';}});
     document.querySelectorAll('[data-langbtn]').forEach(function(b){var a=b.getAttribute('data-langbtn')===l;b.style.color=a?'#E2C173':'#7E907A';b.style.fontWeight=a?'600':'500';});}
