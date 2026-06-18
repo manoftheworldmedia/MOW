@@ -1,0 +1,20 @@
+# Local / single-VM deploy.  docker compose -f infra/docker-compose.yml up --build
+services:
+  cms:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      MOW_JWT_SECRET: ${MOW_JWT_SECRET:-change-me-please}
+      MOW_ADMIN_EMAIL: ${MOW_ADMIN_EMAIL:-admin@mow.media}
+      MOW_ADMIN_PASSWORD: ${MOW_ADMIN_PASSWORD:-changeme123}
+      MOW_GITHUB_TOKEN: ${MOW_GITHUB_TOKEN}
+      MOW_REPO_OWNER: ${MOW_REPO_OWNER:-manoftheworldmedia}
+      MOW_REPO_NAME: ${MOW_REPO_NAME:-mow}
+      MOW_REPO_BRANCH: ${MOW_REPO_BRANCH:-main}
+    volumes:
+      - cms-data:/app/backend/data
+volumes:
+  cms-data:

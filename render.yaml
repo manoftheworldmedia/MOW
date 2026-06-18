@@ -1,0 +1,31 @@
+# Render deploy config for the MOW CMS OS dashboard (NOT the public website).
+# This file lets Render auto-detect the service when you create a Blueprint.
+# In Render:  New ►  Blueprint  ►  connect manoftheworldmedia/mow  ►  Apply.
+# It deploys the dashboard from cms-os/backend; your GitHub Pages website is
+# unaffected (Render ignores everything except cms-os/backend).
+services:
+  - type: web
+    name: mow-cms-os
+    runtime: node
+    plan: free
+    rootDir: cms-os/backend
+    buildCommand: "echo no build needed — zero dependencies"
+    startCommand: "node server.js"
+    healthCheckPath: /api/health
+    envVars:
+      - key: MOW_JWT_SECRET        # auto-generated secure secret
+        generateValue: true
+      - key: MOW_ADMIN_EMAIL       # set in the Render dashboard
+        sync: false
+      - key: MOW_ADMIN_PASSWORD    # set in the Render dashboard
+        sync: false
+      - key: MOW_GITHUB_TOKEN      # set in the Render dashboard
+        sync: false
+      - key: MOW_REPO_OWNER
+        value: manoftheworldmedia
+      - key: MOW_REPO_NAME
+        value: mow
+      - key: MOW_REPO_BRANCH
+        value: main
+      - key: MOW_PREVIEW_URL
+        value: https://www.mow.media

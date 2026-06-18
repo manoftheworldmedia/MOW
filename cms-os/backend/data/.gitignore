@@ -1,0 +1,4 @@
+# Operational stores — never commit real users/tokens.
+users.json
+projects.json
+!.gitignore

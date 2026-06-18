@@ -1,0 +1,136 @@
+{
+  "project": "mow-site",
+  "label": "Man of the World — Marketing Site",
+  "description": "Schemas for the MOW static site. Mirrors content/home.json and the editable HTML pages, replacing the legacy .pages.yml.",
+  "schemas": [
+    {
+      "name": "home",
+      "label": "Homepage",
+      "icon": "home",
+      "kind": "single",
+      "path": "content/home.json",
+      "fields": [
+        {
+          "name": "meta",
+          "label": "SEO · Google",
+          "type": "object",
+          "ui": { "group": "SEO" },
+          "fields": [
+            { "name": "title", "label": "Meta title (browser tab + Google result)", "type": "string", "required": true, "maxLength": 70 },
+            { "name": "description", "label": "Meta description (Google snippet)", "type": "text", "required": true, "maxLength": 320 }
+          ]
+        },
+        {
+          "name": "labels",
+          "label": "Section headlines",
+          "type": "object",
+          "fields": [
+            { "name": "hero_eyebrow", "label": "Hero — small label above headline", "type": "string", "required": true },
+            { "name": "hero_h1a", "label": "Hero — headline (white words)", "type": "string", "required": true },
+            { "name": "hero_h1b", "label": "Hero — headline (gold word)", "type": "string", "required": true },
+            { "name": "about_eyebrow", "label": "About — eyebrow", "type": "string" },
+            { "name": "about_title", "label": "About — title", "type": "string" },
+            { "name": "ind_eyebrow", "label": "Services — eyebrow", "type": "string" },
+            { "name": "ind_title", "label": "Services — title", "type": "string" },
+            { "name": "work_eyebrow", "label": "Work — eyebrow", "type": "string" },
+            { "name": "work_title", "label": "Work — title", "type": "string" },
+            { "name": "i2i_eyebrow", "label": "Impossible to Ignore — eyebrow", "type": "string" },
+            { "name": "i2i_title", "label": "Impossible to Ignore — title", "type": "string" },
+            { "name": "method_eyebrow", "label": "Method — eyebrow", "type": "string" },
+            { "name": "method_title", "label": "Method — title", "type": "string" },
+            { "name": "faq_eyebrow", "label": "FAQ — eyebrow", "type": "string" },
+            { "name": "faq_title", "label": "FAQ — title", "type": "string" },
+            { "name": "contact_eyebrow", "label": "Contact — eyebrow", "type": "string" },
+            { "name": "contact_title", "label": "Contact — title", "type": "string" }
+          ]
+        },
+        {
+          "name": "hero",
+          "label": "Hero block",
+          "type": "object",
+          "fields": [
+            { "name": "subhead", "label": "Hero paragraph", "type": "text", "required": true },
+            { "name": "cta_primary", "label": "Primary button text", "type": "string" },
+            { "name": "cta_secondary", "label": "Secondary button text", "type": "string" }
+          ]
+        },
+        {
+          "name": "images",
+          "label": "Photos",
+          "type": "object",
+          "fields": [
+            { "name": "img1", "label": "Logo — white mark", "type": "image" },
+            { "name": "img2", "label": "Paper plane", "type": "image" },
+            { "name": "img3", "label": "Logo — gold mark (hero)", "type": "image" },
+            { "name": "img4", "label": "Caspian — brand slide 1", "type": "image" },
+            { "name": "img5", "label": "Caspian — brand slide 2", "type": "image" },
+            { "name": "img6", "label": "Caspian — brand slide 3", "type": "image" },
+            { "name": "img7", "label": "Caspian — brand slide 4", "type": "image" },
+            { "name": "img8", "label": "Caspian — photo 1", "type": "image" },
+            { "name": "img9", "label": "Caspian — photo 2", "type": "image" },
+            { "name": "img10", "label": "Caspian — photo 3", "type": "image" },
+            { "name": "img11", "label": "Caspian — photo 4", "type": "image" },
+            { "name": "img12", "label": "Caspian — photo 5", "type": "image" },
+            { "name": "img13", "label": "Caspian — photo 6", "type": "image" },
+            { "name": "img14", "label": "Caspian — photo 7", "type": "image" },
+            { "name": "img15", "label": "Caspian — photo 8", "type": "image" },
+            { "name": "img16", "label": "All Model Repair — photo 1", "type": "image" },
+            { "name": "img17", "label": "All Model Repair — photo 2", "type": "image" },
+            { "name": "img18", "label": "All Model Repair — photo 3", "type": "image" },
+            { "name": "img19", "label": "All Model Repair — photo 4", "type": "image" },
+            { "name": "img20", "label": "All Model Repair — photo 5", "type": "image" },
+            { "name": "img21", "label": "All Model Repair — photo 6", "type": "image" },
+            { "name": "img22", "label": "All Model Repair — photo 7", "type": "image" },
+            { "name": "img23", "label": "Bananos — image 1", "type": "image" },
+            { "name": "img24", "label": "Bananos — image 2", "type": "image" },
+            { "name": "img25", "label": "Bananos — image 3", "type": "image" },
+            { "name": "img26", "label": "Bananos — banana visual", "type": "image" },
+            { "name": "img27", "label": "Bananos — image 4", "type": "image" },
+            { "name": "img28", "label": "Postcard image (card)", "type": "image" },
+            { "name": "img29", "label": "Postcard image (popup)", "type": "image" },
+            { "name": "img30", "label": "Logo — gold mark (footer)", "type": "image" },
+            { "name": "img31", "label": "Logo — white mark (footer)", "type": "image" },
+            { "name": "img32", "label": "Logo — gold mark (reader)", "type": "image" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "label": "HTML Pages",
+      "icon": "file",
+      "kind": "collection",
+      "folder": ".",
+      "extension": "html",
+      "primaryField": "path",
+      "include": ["index.html", "about/index.html", "blog/index.html"],
+      "fields": [
+        { "name": "path", "label": "File path", "type": "string", "required": true, "ui": { "hidden": true } },
+        { "name": "body", "label": "Page HTML", "type": "code", "language": "html", "required": true }
+      ]
+    },
+    {
+      "name": "navigation",
+      "label": "Navigation Menu",
+      "icon": "menu",
+      "kind": "single",
+      "path": "content/navigation.json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Menu items (drag to reorder)",
+          "type": "list",
+          "min": 1,
+          "of": {
+            "type": "object",
+            "fields": [
+              { "name": "label", "label": "Label", "type": "string", "required": true },
+              { "name": "url", "label": "Link", "type": "url", "required": true },
+              { "name": "newTab", "label": "Open in new tab", "type": "boolean", "default": false }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

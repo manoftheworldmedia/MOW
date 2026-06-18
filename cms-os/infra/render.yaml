@@ -1,0 +1,32 @@
+# Render.com blueprint — deploys the MOW CMS OS backend as a web service.
+# In Render:  New ►  Blueprint  ►  connect this repo  ►  Apply.
+#
+# Starts on the FREE plan (no credit card). On free there's no persistent disk,
+# so the admin user + the MOW project are re-created automatically on every
+# boot from the env vars below — perfect for testing. For production with
+# multiple users/projects that must survive restarts, switch to a paid plan
+# and re-add a `disk:` block mounted at .../cms-os/backend/data (see README).
+services:
+  - type: web
+    name: mow-cms-os
+    runtime: node
+    plan: free
+    rootDir: cms-os/backend
+    buildCommand: "echo no build needed — zero dependencies"
+    startCommand: "node server.js"
+    healthCheckPath: /api/health
+    envVars:
+      - key: MOW_JWT_SECRET        # auto-generated secure secret
+        generateValue: true
+      - key: MOW_ADMIN_EMAIL       # you set this in the Render dashboard
+        sync: false
+      - key: MOW_ADMIN_PASSWORD    # you set this in the Render dashboard
+        sync: false
+      - key: MOW_GITHUB_TOKEN      # you set this in the Render dashboard
+        sync: false
+      - key: MOW_REPO_OWNER
+        value: manoftheworldmedia
+      - key: MOW_REPO_NAME
+        value: mow
+      - key: MOW_REPO_BRANCH
+        value: main
