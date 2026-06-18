@@ -1,7 +1,7 @@
 {
   "project": "STANDARD",
   "label": "MOW CMS — Standard Starter",
-  "description": "The default content model for every MOW site: multilingual homepage, blog/news, pages, navigation, and settings. Copy .mowcms/ + content/ into a new site repo and adjust the LANGS and fields as needed.",
+  "description": "The default content model for every MOW site: multilingual homepage, blog/news, pages, shop/products, navigation, and settings. Copy .mowcms/ + content/ into a new site repo and adjust the languages and fields as needed.",
   "languages": [
     "en",
     "fa",
@@ -382,6 +382,118 @@
       ]
     },
     {
+      "name": "products",
+      "label": "Shop / Products",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/products",
+      "extension": "json",
+      "primaryField": "sku",
+      "fields": [
+        {
+          "name": "sku",
+          "label": "SKU / ID (used in the URL)",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "price",
+          "label": "Price (e.g. 29.99)",
+          "type": "number",
+          "required": true,
+          "min": 0
+        },
+        {
+          "name": "currency",
+          "label": "Currency",
+          "type": "select",
+          "options": [
+            "usd",
+            "eur",
+            "gbp",
+            "cad",
+            "aud"
+          ],
+          "required": true,
+          "default": "usd"
+        },
+        {
+          "name": "image",
+          "label": "Product image",
+          "type": "image"
+        },
+        {
+          "name": "active",
+          "label": "For sale",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "navigation",
       "label": "Navigation Menu",
       "icon": "menu",
@@ -477,6 +589,25 @@
               }
             ]
           }
+        },
+        {
+          "name": "shop_enabled",
+          "label": "Enable shop",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "shop_currency",
+          "label": "Default currency",
+          "type": "select",
+          "options": [
+            "usd",
+            "eur",
+            "gbp",
+            "cad",
+            "aud"
+          ],
+          "default": "usd"
         },
         {
           "name": "en",

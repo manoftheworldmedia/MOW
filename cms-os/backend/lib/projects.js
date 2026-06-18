@@ -17,17 +17,20 @@ function read() { try { return JSON.parse(fs.readFileSync(FILE, 'utf8')); } catc
 function write(db) { fs.writeFileSync(FILE, JSON.stringify(db, null, 2)); }
 
 export function listProjects() {
-  return read().projects.map(({ token, ...rest }) => ({ ...rest, hasToken: !!token }));
+  // Never expose secrets (GitHub token, Stripe key) to the client.
+  return read().projects.map(({ token, stripeSecretKey, ...rest }) =>
+    ({ ...rest, hasToken: !!token, hasStripe: !!stripeSecretKey }));
 }
 export function getProject(id) { return read().projects.find((p) => p.id === id); }
 
-export function createProject({ label, owner, repo, branch = 'main', token, schemaFile, schemaRepoPath, previewUrl }) {
+export function createProject({ label, owner, repo, branch = 'main', token, schemaFile, schemaRepoPath, previewUrl, stripeSecretKey }) {
   const db = read();
   const id = slug(`${owner}-${repo}`);
   if (db.projects.some((p) => p.id === id)) throw new Error('Project already exists.');
   const project = {
     id, label: label || `${owner}/${repo}`, owner, repo, branch,
     token: token || null,
+    stripeSecretKey: stripeSecretKey || null,  // server-side only; enables the shop
     previewUrl: previewUrl || null,        // embedded in the live-preview pane
     schemaFile: schemaFile || null,        // bundled file in shared/schemas
     schemaRepoPath: schemaRepoPath || '.mowcms/schemas', // in-repo schema dir

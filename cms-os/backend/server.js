@@ -12,6 +12,7 @@ import * as auth from './lib/auth.js';
 import * as projects from './lib/projects.js';
 import * as store from './lib/store.js';
 import * as sync from './lib/git-sync.js';
+import * as shop from './lib/shop.js';
 import { assertValid, validateContent } from './lib/validation.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -193,6 +194,17 @@ router.post('/api/projects/:id/rollback', async (ctx) => {
   const user = requireAuth(ctx, 'editor'); const p = requireProject(ctx);
   const { path: fp, sha } = ctx.body || {};
   return { ok: true, commit: await sync.rollback(p, { filePath: fp, sha, user }) };
+});
+
+// ================= SHOP / CHECKOUT (public) =================
+// Called by a site visitor's browser (no CMS login). Integrity is enforced
+// server-side: prices are read from Git, never trusted from the client.
+router.post('/api/projects/:id/checkout', async (ctx) => {
+  const p = projects.getProject(ctx.params.id);
+  if (!p) { const e = new Error('Project not found.'); e.status = 404; throw e; }
+  const { items, successUrl, cancelUrl } = ctx.body || {};
+  const session = await shop.createCheckoutSession(p, { items, successUrl, cancelUrl });
+  return { url: session.url };
 });
 
 // ================= HEALTH =================

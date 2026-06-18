@@ -5,6 +5,7 @@
  */
 import { api, getToken, setToken } from '/api.js';
 import { SchemaForm, h } from '/forms.js';
+import { defaultsFor } from '/shared/schema-engine.js';
 
 const app = document.getElementById('app');
 const state = {
@@ -203,9 +204,13 @@ async function openCollection(schema) {
   try {
     const { items } = await api.content(state.projectId, schema.name);
     main.innerHTML = '';
-    main.appendChild(h('div', { class: 'editor-head' }, h('h2', {}, schema.label)));
+    main.appendChild(h('div', { class: 'editor-head' },
+      h('h2', {}, schema.label),
+      h('div', { style: 'flex:1' }),
+      state.user.role !== 'viewer' ? h('button', { class: 'btn btn-primary btn-sm', onclick: () => createDoc(schema) }, '+ New') : null,
+    ));
     const page = h('div', { class: 'page' });
-    if (!items.length) page.appendChild(h('div', { class: 'empty-state' }, 'No documents in this collection yet.'));
+    if (!items.length) page.appendChild(h('div', { class: 'empty-state' }, 'No documents yet — click “+ New” to add one.'));
     const cards = h('div', { class: 'cards' });
     for (const it of items) {
       cards.appendChild(h('div', { class: 'card', onclick: () => openDoc(schema, it.path) },
@@ -216,6 +221,26 @@ async function openCollection(schema) {
     page.appendChild(cards);
     main.appendChild(page);
   } catch (ex) { main.innerHTML = ''; main.appendChild(errorPane(ex)); }
+}
+
+function slugify(s) { return String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
+// Create a brand-new document in a collection. It opens an empty (defaulted)
+// editor; the file is actually created in Git on the next Publish.
+function createDoc(schema) {
+  const name = prompt(`New ${schema.label}\n\nEnter a short name/slug (letters, numbers, dashes):`);
+  if (!name) return;
+  const slug = slugify(name);
+  if (!slug) return toast('Please use letters, numbers, or dashes.', 'error');
+  const ext = schema.extension || 'json';
+  const folder = (schema.folder || '.').replace(/\/$/, '');
+  const path = folder === '.' ? `${slug}.${ext}` : `${folder}/${slug}.${ext}`;
+  const value = defaultsFor(schema);
+  if (schema.primaryField && Object.prototype.hasOwnProperty.call(value, schema.primaryField)) {
+    value[schema.primaryField] = slug;
+  }
+  renderEditor(schema, path, value, true);
+  toast('New item created — fill it in, then Publish to save it.', 'info', 4500);
 }
 
 async function openDoc(schema, path) {
@@ -487,9 +512,10 @@ async function openProjectsManager() {
   const f = { label: h('input', { type: 'text', placeholder: 'My Site' }), owner: h('input', { type: 'text', placeholder: 'org-or-user' }),
     repo: h('input', { type: 'text', placeholder: 'repo' }), branch: h('input', { type: 'text', value: 'main' }),
     token: h('input', { type: 'password', placeholder: 'GitHub token (optional if MOW_GITHUB_TOKEN set)' }),
-    previewUrl: h('input', { type: 'text', placeholder: 'https://yoursite.com (optional)' }) };
+    previewUrl: h('input', { type: 'text', placeholder: 'https://yoursite.com (optional)' }),
+    stripeSecretKey: h('input', { type: 'password', placeholder: 'Stripe secret key (optional — enables the shop)' }) };
   body.appendChild(h('h3', { style: 'font-size:13px;margin:22px 0 8px' }, 'Connect a new repository'));
-  for (const [k, label] of [['label', 'Label'], ['owner', 'Owner'], ['repo', 'Repo'], ['branch', 'Branch'], ['token', 'Token'], ['previewUrl', 'Preview URL']])
+  for (const [k, label] of [['label', 'Label'], ['owner', 'Owner'], ['repo', 'Repo'], ['branch', 'Branch'], ['token', 'Token'], ['previewUrl', 'Preview URL'], ['stripeSecretKey', 'Stripe secret key']])
     body.appendChild(h('div', { class: 'field' }, h('label', {}, label), f[k]));
 
   const modal = openModal('Projects', body, [
@@ -497,7 +523,8 @@ async function openProjectsManager() {
     { label: '+ Connect', primary: true, onClick: async () => {
         try {
           await api.createProject({ label: f.label.value, owner: f.owner.value.trim(), repo: f.repo.value.trim(),
-            branch: f.branch.value.trim() || 'main', token: f.token.value || undefined, previewUrl: f.previewUrl.value || undefined });
+            branch: f.branch.value.trim() || 'main', token: f.token.value || undefined, previewUrl: f.previewUrl.value || undefined,
+            stripeSecretKey: f.stripeSecretKey.value || undefined });
           toast('Project connected ✓', 'success');
           modal.close(); await loadProjects(); renderApp();
         } catch (ex) { toast(ex.message, 'error'); }

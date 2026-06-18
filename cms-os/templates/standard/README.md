@@ -23,8 +23,9 @@ content/pages/about.json       ← one sample page
 | **Homepage** | `content/home.json` (single) | SEO + hero + images, per language |
 | **Blog / News** | `content/news/*.json` (collection) | Add/edit/reorder posts: date, cover, featured, title/excerpt/body per language |
 | **Pages** | `content/pages/*.json` (collection) | Standalone pages: title + rich-text body per language |
+| **Shop / Products** | `content/products/*.json` (collection) | Sellable products: SKU, price, currency, image, name/description per language |
 | **Navigation** | `content/navigation.json` (single) | Drag-and-drop menu: link + label per language |
-| **Settings** | `content/settings.json` (single) | Email, phone, social links, footer tagline |
+| **Settings** | `content/settings.json` (single) | Email, phone, social links, footer, shop on/off + currency |
 
 ### Multilingual by default
 Languages are defined **once**, at the top of the generator that built
@@ -63,6 +64,41 @@ CMS-ready every time:
 
 Claude then produces the site **and** its CMS config together, so the moment you
 push to GitHub and connect the repo, it's editable in the portal.
+
+## Shop (Stripe Checkout)
+
+Any MOW site can sell products with zero extra services beyond Stripe.
+
+**How it works:** products are CMS content (`content/products/*.json`). The
+storefront keeps a cart in the browser, then hands off to **Stripe Checkout** —
+your CMS backend creates the secure session and reads the price from Git, so
+the amount charged can never be tampered with in the browser. Customers pay on
+Stripe's hosted page; you handle no card data.
+
+**Turn it on for a site (3 steps):**
+1. **Add your Stripe secret key** in the portal: *Projects → (the project) →
+   Stripe secret key* (`sk_live_…` or `sk_test_…`). It's stored server-side only,
+   never sent to the browser.
+2. **Add products** in the portal: *Shop / Products → + New* (SKU, price,
+   currency, image, name/description). Publish.
+3. **Drop the storefront script** on the site's shop page:
+   ```html
+   <script>window.MOW_SHOP = {
+     api: 'https://YOUR-PORTAL.onrender.com',
+     project: 'YOUR-PROJECT-ID'
+   };</script>
+   <script src="/assets/shop.js" defer></script>
+
+   <!-- a product -->
+   <button data-mow-add="mow-tee">Add to cart</button>
+   <!-- cart + checkout -->
+   Cart: <span data-mow-cart-count>0</span>
+   <button data-mow-checkout>Checkout</button>
+   ```
+   (`assets/shop.js` ships in this kit.) Clicking **Checkout** redirects the
+   customer to Stripe; on success/cancel they return to your site.
+
+Start with Stripe **test keys** and test cards, then swap to live keys when ready.
 
 ## Field types available
 `string · text · richtext · code · number · boolean · date · datetime · select ·

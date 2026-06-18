@@ -1,0 +1,19 @@
+{
+  "sku": "mow-tee",
+  "price": 29.99,
+  "currency": "usd",
+  "image": "assets/products/tee.jpg",
+  "active": true,
+  "en": {
+    "name": "MOW Logo Tee",
+    "description": "Soft cotton tee with the MOW mark."
+  },
+  "fa": {
+    "name": "MOW Logo Tee",
+    "description": "Soft cotton tee with the MOW mark."
+  },
+  "es": {
+    "name": "MOW Logo Tee",
+    "description": "Soft cotton tee with the MOW mark."
+  }
+}
