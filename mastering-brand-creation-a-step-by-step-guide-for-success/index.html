@@ -39,20 +39,46 @@
 </style>
 </head>
 <body>
-<header style="position:sticky;top:0;z-index:50;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
-  <nav style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,56px);height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-    <a href="/" aria-label="Man of the World" style="display:flex;align-items:center;"><img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;"></a>
-    <div class="nav-links" style="gap:clamp(18px,2.4vw,38px);align-items:center;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
-      <a href="/#services" style="color:#CBD6C7;">Services</a>
-      <a href="/#work" style="color:#CBD6C7;">Work</a>
-      <a href="/#method" style="color:#CBD6C7;">Method</a>
-      <a href="/blog/" style="color:#E2C173;">News</a>
-      <a href="/about/" style="color:#CBD6C7;">About</a>
-      <a href="/#contact" style="color:#CBD6C7;">Contact</a>
+<header data-header style="position:sticky;top:0;z-index:120;transition:background .45s,border-color .45s,backdrop-filter .45s;background:transparent;border-bottom:1px solid transparent;">
+  <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="/" data-navlogo aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;"><img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;"></a>
+    <div data-nav style="display:none;gap:clamp(18px,2.4vw,36px);align-items:center;order:2;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
+      <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;">Services</a>
+      <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;">Work</a>
+      <a href="/#method" data-i18n="nav_method" style="color:#CBD6C7;">Method</a>
+      <a href="/blog/" data-i18n="nav_blog" style="color:#CBD6C7;">News</a>
+      <a href="/about/" data-i18n="nav_about" style="color:#CBD6C7;">About</a>
+      <a href="/#faq" data-i18n="nav_faq" style="color:#CBD6C7;">FAQs</a>
     </div>
-    <a href="/#contact" style="display:inline-flex;align-items:center;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:10px 20px;border-radius:999px;border:1px solid rgba(196,156,78,0.5);">Work with MOW</a>
+    <div data-navright style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;">
+      <div data-navswap style="position:relative;display:flex;align-items:center;">
+      <div data-langwrap style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1);">
+        <button type="button" data-langbtn="en" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
+        <span style="color:rgba(196,156,78,0.45);">/</span>
+        <button type="button" data-langbtn="fa" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:'Vazirmatn',sans-serif;font-size:14px;">فارسی</button>
+        <span style="color:rgba(196,156,78,0.45);">/</span>
+        <button type="button" data-langbtn="es" style="border:none;background:none;cursor:pointer;padding:0;color:#7E907A;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">ES</button>
+      </div>
+      <a href="/#contact" data-navcontact data-i18n="nav_contact" style="position:absolute;right:0;top:50%;opacity:0;transform:translate(8px,-50%) scale(0.92);pointer-events:none;white-space:nowrap;display:inline-flex;align-items:center;font-family:'Archivo',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#7CF6B0;border:1px solid rgba(124,246,176,0.6);padding:6px 17px;border-radius:999px;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1), background .25s, color .25s;">Contact</a>
+      </div>
+      <button type="button" data-burger aria-label="Open menu" style="flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;border:none;background:none;cursor:pointer;padding:8px;flex-shrink:0;">
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+        <span style="display:block;height:1.6px;width:100%;background:#EDE6D4;border-radius:2px;"></span>
+      </button>
+    </div>
   </nav>
 </header>
+<div data-mobilemenu style="position:fixed;inset:0;z-index:130;opacity:0;pointer-events:none;transition:opacity .3s ease;background:rgba(5,21,14,0.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+  <button type="button" data-menuclose aria-label="Close menu" style="position:absolute;top:22px;right:24px;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:transparent;color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;">×</button>
+  <a href="/#services" data-i18n="nav_services" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Services</a>
+  <a href="/#work" data-i18n="nav_work" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Work</a>
+  <a href="/#method" data-i18n="nav_method" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
+  <a href="/blog/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">News</a>
+  <a href="/about/" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
+  <a href="/#faq" data-i18n="nav_faq" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">FAQs</a>
+  <a href="/#contact" data-i18n="nav_contact" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">Contact</a>
+</div>
 <main>
 <article>
 <section style="position:relative;padding:clamp(56px,7vw,104px) clamp(20px,4vw,56px) clamp(24px,3vw,40px);overflow:hidden;">
@@ -111,5 +137,6 @@
     <span style="font-family:'Archivo',sans-serif;font-size:11.5px;color:#6E8268;">© 2026 MOW Media · Man of the World</span>
   </div>
 </footer>
+<script src="/nav.js"></script>
 </body>
 </html>
