@@ -1,0 +1,20 @@
+{
+  "date": "2026-01-01",
+  "cover": "",
+  "featured": true,
+  "en": {
+    "title": "Hello, world",
+    "excerpt": "Our first post.",
+    "body": "<p>Write your article here.</p>"
+  },
+  "fa": {
+    "title": "Hello, world",
+    "excerpt": "Our first post.",
+    "body": "<p>Write your article here.</p>"
+  },
+  "es": {
+    "title": "Hello, world",
+    "excerpt": "Our first post.",
+    "body": "<p>Write your article here.</p>"
+  }
+}

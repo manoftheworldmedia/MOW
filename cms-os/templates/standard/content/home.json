@@ -1,0 +1,34 @@
+{
+  "images": {
+    "logo": "assets/logo.svg",
+    "hero": "assets/hero.jpg",
+    "og_image": "assets/og.jpg"
+  },
+  "en": {
+    "seo_title": "New MOW Site",
+    "seo_description": "A new site built by Man of the World.",
+    "hero_eyebrow": "Eyebrow",
+    "hero_title": "Make bold unforgettable",
+    "hero_subhead": "Your hero paragraph goes here.",
+    "cta_primary": "Get started",
+    "cta_secondary": "Learn more"
+  },
+  "fa": {
+    "seo_title": "New MOW Site",
+    "seo_description": "A new site built by Man of the World.",
+    "hero_eyebrow": "Eyebrow",
+    "hero_title": "Make bold unforgettable",
+    "hero_subhead": "Your hero paragraph goes here.",
+    "cta_primary": "Get started",
+    "cta_secondary": "Learn more"
+  },
+  "es": {
+    "seo_title": "New MOW Site",
+    "seo_description": "A new site built by Man of the World.",
+    "hero_eyebrow": "Eyebrow",
+    "hero_title": "Make bold unforgettable",
+    "hero_subhead": "Your hero paragraph goes here.",
+    "cta_primary": "Get started",
+    "cta_secondary": "Learn more"
+  }
+}

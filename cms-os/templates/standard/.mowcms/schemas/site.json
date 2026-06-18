@@ -1,0 +1,529 @@
+{
+  "project": "STANDARD",
+  "label": "MOW CMS — Standard Starter",
+  "description": "The default content model for every MOW site: multilingual homepage, blog/news, pages, navigation, and settings. Copy .mowcms/ + content/ into a new site repo and adjust the LANGS and fields as needed.",
+  "languages": [
+    "en",
+    "fa",
+    "es"
+  ],
+  "schemas": [
+    {
+      "name": "home",
+      "label": "Homepage",
+      "icon": "home",
+      "kind": "single",
+      "path": "content/home.json",
+      "fields": [
+        {
+          "name": "images",
+          "label": "Images",
+          "type": "object",
+          "fields": [
+            {
+              "name": "logo",
+              "label": "Logo",
+              "type": "image"
+            },
+            {
+              "name": "hero",
+              "label": "Hero image",
+              "type": "image"
+            },
+            {
+              "name": "og_image",
+              "label": "Social share image",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "SEO title (browser tab + Google)",
+              "type": "string",
+              "required": true,
+              "maxLength": 70
+            },
+            {
+              "name": "seo_description",
+              "label": "SEO description (Google snippet)",
+              "type": "text",
+              "required": true,
+              "maxLength": 320
+            },
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — small label",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — headline",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Primary button",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Secondary button",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "SEO title (browser tab + Google)",
+              "type": "string",
+              "required": true,
+              "maxLength": 70
+            },
+            {
+              "name": "seo_description",
+              "label": "SEO description (Google snippet)",
+              "type": "text",
+              "required": true,
+              "maxLength": 320
+            },
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — small label",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — headline",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Primary button",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Secondary button",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "SEO title (browser tab + Google)",
+              "type": "string",
+              "required": true,
+              "maxLength": 70
+            },
+            {
+              "name": "seo_description",
+              "label": "SEO description (Google snippet)",
+              "type": "text",
+              "required": true,
+              "maxLength": 320
+            },
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — small label",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — headline",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — paragraph",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Primary button",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Secondary button",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "news",
+      "label": "Blog / News",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/news",
+      "extension": "json",
+      "primaryField": "date",
+      "fields": [
+        {
+          "name": "date",
+          "label": "Publish date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "label": "Cover image",
+          "type": "image"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "label": "Pages",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/pages",
+      "extension": "json",
+      "primaryField": "slug",
+      "fields": [
+        {
+          "name": "slug",
+          "label": "URL slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "label": "Navigation Menu",
+      "icon": "menu",
+      "kind": "single",
+      "path": "content/navigation.json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Menu items (drag to reorder)",
+          "type": "list",
+          "min": 1,
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "url",
+                "label": "Link",
+                "type": "url",
+                "required": true
+              },
+              {
+                "name": "newTab",
+                "label": "Open in new tab",
+                "type": "boolean",
+                "default": false
+              },
+              {
+                "name": "label_en",
+                "label": "Label (English)",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "label_fa",
+                "label": "Label (فارسی (Persian))",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "label_es",
+                "label": "Label (Español)",
+                "type": "string",
+                "required": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "label": "Site Settings",
+      "icon": "menu",
+      "kind": "single",
+      "path": "content/settings.json",
+      "fields": [
+        {
+          "name": "email",
+          "label": "Contact email",
+          "type": "email"
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "string"
+        },
+        {
+          "name": "social",
+          "label": "Social links",
+          "type": "list",
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "platform",
+                "label": "Platform",
+                "type": "select",
+                "options": [
+                  "instagram",
+                  "linkedin",
+                  "x",
+                  "youtube",
+                  "tiktok",
+                  "facebook"
+                ],
+                "required": true
+              },
+              {
+                "name": "url",
+                "label": "URL",
+                "type": "url",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "footer_tagline",
+              "label": "Footer tagline",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "footer_tagline",
+              "label": "Footer tagline",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "footer_tagline",
+              "label": "Footer tagline",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

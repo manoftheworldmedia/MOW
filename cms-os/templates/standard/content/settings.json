@@ -1,0 +1,14 @@
+{
+  "email": "hello@example.com",
+  "phone": "",
+  "social": [],
+  "en": {
+    "footer_tagline": "Made by Man of the World."
+  },
+  "fa": {
+    "footer_tagline": "Made by Man of the World."
+  },
+  "es": {
+    "footer_tagline": "Made by Man of the World."
+  }
+}

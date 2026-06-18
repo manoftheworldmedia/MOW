@@ -1,0 +1,15 @@
+{
+  "slug": "about",
+  "en": {
+    "title": "About",
+    "body": "<p>About this site.</p>"
+  },
+  "fa": {
+    "title": "About",
+    "body": "<p>About this site.</p>"
+  },
+  "es": {
+    "title": "About",
+    "body": "<p>About this site.</p>"
+  }
+}
