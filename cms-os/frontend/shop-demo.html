@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="google" content="notranslate" />
+<title>MOW Shop — Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --bg:#07211A; --panel:#0C2A20; --elev:#123528; --border:#1E4636; --text:#F6F0E1;
+    --dim:#B9C4B5; --faint:#7E907A; --gold:#C49C4E; --gold2:#E2C173; --green:#5FBE8E; --red:#E5736F;
+    --font:'Archivo',system-ui,sans-serif; --display:'Bodoni Moda',Georgia,serif; }
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font)}
+  a{color:var(--gold2);text-decoration:none}
+  header{display:flex;align-items:center;gap:14px;padding:18px 28px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:5}
+  .brand{font-family:var(--display);font-size:22px;font-weight:600}
+  .brand b{color:var(--gold)}
+  .spacer{flex:1}
+  .cartbtn{display:inline-flex;align-items:center;gap:8px;background:var(--elev);border:1px solid var(--border);color:var(--text);
+    border-radius:30px;padding:8px 16px;font-size:14px;cursor:pointer}
+  .cartbtn .badge{background:var(--gold);color:var(--bg);border-radius:20px;font-weight:700;font-size:12px;padding:1px 8px}
+  .wrap{max-width:1080px;margin:0 auto;padding:34px 28px 80px}
+  h1{font-family:var(--display);font-weight:600;font-size:34px;letter-spacing:-.01em;margin:0 0 6px}
+  .lead{color:var(--dim);margin:0 0 30px;max-width:620px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .card .thumb{height:200px;background:#0a2419 center/contain no-repeat;border-bottom:1px solid var(--border)}
+  .card .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .card h3{font-family:var(--display);font-weight:600;font-size:19px;margin:0}
+  .card .desc{color:var(--dim);font-size:13px;line-height:1.5;flex:1}
+  .card .price{color:var(--gold2);font-weight:700;font-size:17px;margin-top:6px}
+  .btn{background:var(--gold);color:var(--bg);border:none;border-radius:8px;padding:10px 14px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--gold2)}
+  .btn.ghost{background:transparent;border:1px solid var(--border);color:var(--text);font-weight:500}
+  .banner{background:#123528;border:1px solid var(--gold);border-radius:12px;padding:14px 18px;margin-bottom:26px;color:var(--dim);font-size:13.5px}
+  .banner b{color:var(--gold2)}
+  /* cart drawer */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:10}
+  .overlay.open{display:block}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:380px;max-width:92vw;background:var(--panel);border-left:1px solid var(--border);
+    transform:translateX(100%);transition:.22s;z-index:11;display:flex;flex-direction:column}
+  .drawer.open{transform:none}
+  .drawer h2{font-family:var(--display);font-weight:600;margin:0;font-size:22px}
+  .drawer .head{display:flex;align-items:center;padding:20px;border-bottom:1px solid var(--border)}
+  .drawer .head .x{margin-left:auto;background:none;border:none;color:var(--dim);font-size:20px;cursor:pointer}
+  .lines{flex:1;overflow-y:auto;padding:12px 20px}
+  .line{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+  .line img{width:48px;height:48px;object-fit:contain;background:var(--elev);border-radius:8px}
+  .line .ln{flex:1;font-size:14px}
+  .line .qty{display:flex;align-items:center;gap:6px;color:var(--dim)}
+  .line .qty button{background:var(--elev);border:1px solid var(--border);color:var(--text);width:24px;height:24px;border-radius:6px;cursor:pointer}
+  .foot{padding:20px;border-top:1px solid var(--border)}
+  .total{display:flex;justify-content:space-between;font-size:16px;margin-bottom:14px}
+  .total b{font-family:var(--display)}
+  .empty{color:var(--faint);text-align:center;padding:50px 20px}
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--elev);border:1px solid var(--green);
+    border-radius:10px;padding:12px 18px;font-size:14px;display:none;z-index:20}
+  .note{color:var(--faint);font-size:12px;margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">MOW <b>Shop</b></div>
+  <div class="spacer"></div>
+  <button class="cartbtn" id="openCart">🛍 Cart <span class="badge" id="count">0</span></button>
+</header>
+
+<div class="wrap">
+  <h1>Demo Storefront</h1>
+  <p class="lead">A live demo of the MOW CMS shop. Products are managed in the portal (Shop / Products) and stored in GitHub; checkout runs through Stripe. This page is served by the portal itself — not the public website.</p>
+  <div id="status"></div>
+  <div class="grid" id="grid"><div class="empty">Loading products…</div></div>
+  <p class="note" id="cfg"></p>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <div class="head"><h2>Your Cart</h2><button class="x" id="closeCart">✕</button></div>
+  <div class="lines" id="lines"></div>
+  <div class="foot">
+    <div class="total"><span>Total</span><b id="total">$0.00</b></div>
+    <button class="btn" id="checkout" style="width:100%;justify-content:center">Checkout with Stripe</button>
+    <button class="btn ghost" id="clear" style="width:100%;margin-top:8px">Clear cart</button>
+    <p class="note">Test mode: use card 4242 4242 4242 4242, any future date & CVC.</p>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const PROJECT = params.get('project') || 'manoftheworldmedia-mow';
+const API = location.origin;
+const KEY = 'mow_demo_cart_' + PROJECT;
+let PRODUCTS = {}; let stripeReady = false;
+
+const fmt = (n, cur) => new Intl.NumberFormat('en-US',{style:'currency',currency:(cur||'usd').toUpperCase()}).format(n);
+const readCart = () => { try { return JSON.parse(localStorage.getItem(KEY))||{}; } catch { return {}; } };
+const writeCart = c => { localStorage.setItem(KEY, JSON.stringify(c)); renderCart(); };
+const count = c => Object.values(c).reduce((n,q)=>n+q,0);
+
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.style.display='block'; setTimeout(()=>t.style.display='none',1600); }
+
+async function load(){
+  try{
+    const res = await fetch(`${API}/api/projects/${PROJECT}/shop/products`);
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error||'Failed to load');
+    stripeReady = data.stripeReady;
+    PRODUCTS = Object.fromEntries(data.products.map(p=>[p.id,p]));
+    renderGrid(data.products);
+    renderStatus();
+  }catch(e){ document.getElementById('grid').innerHTML = `<div class="empty">Could not load products: ${e.message}</div>`; }
+  document.getElementById('cfg').textContent = `Project: ${PROJECT}`;
+  if(params.get('checkout')==='success'){ toast('Payment complete ✓ (test)'); localStorage.removeItem(KEY); }
+  if(params.get('checkout')==='cancel'){ toast('Checkout canceled'); }
+}
+
+function renderStatus(){
+  const s = document.getElementById('status');
+  if(stripeReady){ s.innerHTML=''; return; }
+  s.innerHTML = `<div class="banner">🔌 <b>Stripe not connected yet.</b> You can browse and build a cart now. To enable real (test) checkout, add a Stripe <b>test secret key</b> as <b>MOW_STRIPE_SECRET_KEY</b> in your Render environment (or the project's Stripe key), then reload.</div>`;
+}
+
+function renderGrid(list){
+  const g = document.getElementById('grid');
+  if(!list.length){ g.innerHTML='<div class="empty">No products yet. Add some in the portal under Shop / Products.</div>'; return; }
+  g.innerHTML='';
+  for(const p of list){
+    const card = document.createElement('div'); card.className='card';
+    card.innerHTML = `
+      <div class="thumb" style="background-image:url('${p.image||''}')"></div>
+      <div class="body">
+        <h3>${esc(p.name)}</h3>
+        <div class="desc">${esc(p.description||'')}</div>
+        <div class="price">${fmt(p.price,p.currency)}</div>
+        <button class="btn" data-add="${p.id}" style="margin-top:10px">Add to cart</button>
+      </div>`;
+    g.appendChild(card);
+  }
+}
+function esc(s){ return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function renderCart(){
+  const c = readCart();
+  document.getElementById('count').textContent = count(c);
+  const lines = document.getElementById('lines');
+  const ids = Object.keys(c);
+  if(!ids.length){ lines.innerHTML='<div class="empty">Your cart is empty.</div>'; document.getElementById('total').textContent=fmt(0,'usd'); return; }
+  let total=0, cur='usd';
+  lines.innerHTML='';
+  for(const id of ids){
+    const p = PRODUCTS[id]; if(!p) continue; cur=p.currency; total += p.price*c[id];
+    const row=document.createElement('div'); row.className='line';
+    row.innerHTML = `<img src="${p.image||''}" alt=""><div class="ln">${esc(p.name)}<br><span style="color:var(--gold2)">${fmt(p.price,p.currency)}</span></div>
+      <div class="qty"><button data-dec="${id}">−</button><span>${c[id]}</span><button data-inc="${id}">+</button></div>`;
+    lines.appendChild(row);
+  }
+  document.getElementById('total').textContent = fmt(total,cur);
+}
+
+async function checkout(){
+  const c = readCart();
+  const items = Object.keys(c).map(id=>({productId:id, qty:c[id]}));
+  if(!items.length){ toast('Cart is empty'); return; }
+  const btn=document.getElementById('checkout'); btn.disabled=true; btn.textContent='Starting checkout…';
+  try{
+    const res = await fetch(`${API}/api/projects/${PROJECT}/checkout`,{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ items, successUrl: location.origin+location.pathname+'?project='+PROJECT+'&checkout=success',
+        cancelUrl: location.origin+location.pathname+'?project='+PROJECT+'&checkout=cancel' })
+    });
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error||'Checkout failed');
+    location.href = data.url;
+  }catch(e){
+    btn.disabled=false; btn.textContent='Checkout with Stripe';
+    alert('Checkout error: '+e.message + (/not configured/i.test(e.message) ? '\n\nAdd a Stripe test key (MOW_STRIPE_SECRET_KEY) in Render to enable checkout.' : ''));
+  }
+}
+
+// events
+document.addEventListener('click', e=>{
+  const add=e.target.closest('[data-add]'); if(add){ const c=readCart(); const id=add.getAttribute('data-add'); c[id]=(c[id]||0)+1; writeCart(c); toast('Added ✓'); return; }
+  const inc=e.target.closest('[data-inc]'); if(inc){ const c=readCart(); const id=inc.getAttribute('data-inc'); c[id]=(c[id]||0)+1; writeCart(c); return; }
+  const dec=e.target.closest('[data-dec]'); if(dec){ const c=readCart(); const id=dec.getAttribute('data-dec'); c[id]=(c[id]||0)-1; if(c[id]<=0) delete c[id]; writeCart(c); return; }
+});
+const openDrawer=()=>{ document.getElementById('drawer').classList.add('open'); document.getElementById('overlay').classList.add('open'); };
+const closeDrawer=()=>{ document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); };
+document.getElementById('openCart').onclick=openDrawer;
+document.getElementById('closeCart').onclick=closeDrawer;
+document.getElementById('overlay').onclick=closeDrawer;
+document.getElementById('checkout').onclick=checkout;
+document.getElementById('clear').onclick=()=>{ localStorage.removeItem(KEY); renderCart(); };
+
+load(); renderCart();
+</script>
+</body>
+</html>

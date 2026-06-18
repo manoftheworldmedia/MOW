@@ -1,0 +1,19 @@
+{
+  "sku": "mow-cap",
+  "price": 30,
+  "currency": "usd",
+  "image": "assets/mow_mark_gold.png",
+  "active": true,
+  "en": {
+    "name": "MOW Gold Mark Cap",
+    "description": "Structured cap embroidered with the MOW mark."
+  },
+  "fa": {
+    "name": "کلاه نشان طلایی MOW",
+    "description": "کلاه نقش‌دار با گلدوزی نشان MOW."
+  },
+  "es": {
+    "name": "Gorra sello dorado MOW",
+    "description": "Gorra estructurada bordada con el sello MOW."
+  }
+}

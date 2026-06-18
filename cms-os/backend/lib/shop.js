@@ -84,6 +84,34 @@ export async function createCheckoutSession(project, { items, successUrl, cancel
   return { url: data.url, id: data.id };
 }
 
+/**
+ * Public product catalog: read content/products/*.json from Git and return
+ * display-safe records (no secrets). Used by storefronts to render the shop.
+ */
+export async function listProducts(project) {
+  const gh = clientFor(project);
+  const mediaBase = project.previewUrl ? project.previewUrl.replace(/\/$/, '') + '/' : '';
+  const entries = await gh.listDir('content/products');
+  const files = entries.filter((e) => e.type === 'file' && e.name.endsWith('.json'));
+  const products = [];
+  for (const f of files) {
+    const file = await gh.readFile(f.path);
+    if (!file) continue;
+    let p; try { p = JSON.parse(file.content); } catch { continue; }
+    if (p.active === false) continue;
+    products.push({
+      id: f.name.replace(/\.json$/, ''),
+      sku: p.sku || f.name.replace(/\.json$/, ''),
+      name: localized(p, 'name') || p.sku || '',
+      description: localized(p, 'description') || '',
+      price: Number(p.price) || 0,
+      currency: (p.currency || 'usd').toLowerCase(),
+      image: absolutize(p.image, mediaBase),
+    });
+  }
+  return products;
+}
+
 // ---- helpers ----
 function sanitizeId(id) { return String(id || '').replace(/[^a-z0-9_-]/gi, ''); }
 function clampQty(q) { const n = parseInt(q, 10); return Number.isFinite(n) ? Math.max(1, Math.min(MAX_QTY, n)) : 1; }

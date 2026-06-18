@@ -1,0 +1,19 @@
+{
+  "sku": "mow-postcard-set",
+  "price": 18,
+  "currency": "usd",
+  "image": "assets/mow_postcard.png",
+  "active": true,
+  "en": {
+    "name": "Postcard Set (5)",
+    "description": "Five collectible MOW postcards on cotton stock."
+  },
+  "fa": {
+    "name": "ست کارت‌پستال (۵ عدد)",
+    "description": "پنج کارت‌پستال کلکسیونی MOW."
+  },
+  "es": {
+    "name": "Set de postales (5)",
+    "description": "Cinco postales coleccionables de MOW."
+  }
+}

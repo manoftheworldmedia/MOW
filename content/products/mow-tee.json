@@ -1,0 +1,19 @@
+{
+  "sku": "mow-tee",
+  "price": 38,
+  "currency": "usd",
+  "image": "assets/mow_mark_white.png",
+  "active": true,
+  "en": {
+    "name": "MOW Logo Tee",
+    "description": "Heavyweight cotton tee with the gold MOW mark."
+  },
+  "fa": {
+    "name": "تی‌شرت لوگو MOW",
+    "description": "تی‌شرت نخی سنگین با نشان طلایی MOW."
+  },
+  "es": {
+    "name": "Camiseta con logo MOW",
+    "description": "Camiseta de algodón grueso con el sello dorado de MOW."
+  }
+}

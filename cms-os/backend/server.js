@@ -197,6 +197,13 @@ router.post('/api/projects/:id/rollback', async (ctx) => {
 });
 
 // ================= SHOP / CHECKOUT (public) =================
+// Public product catalog for storefronts (no secrets, active products only).
+router.get('/api/projects/:id/shop/products', async (ctx) => {
+  const p = projects.getProject(ctx.params.id);
+  if (!p) { const e = new Error('Project not found.'); e.status = 404; throw e; }
+  return { products: await shop.listProducts(p), stripeReady: !!(p.stripeSecretKey || process.env.MOW_STRIPE_SECRET_KEY) };
+});
+
 // Called by a site visitor's browser (no CMS login). Integrity is enforced
 // server-side: prices are read from Git, never trusted from the client.
 router.post('/api/projects/:id/checkout', async (ctx) => {
