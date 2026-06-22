@@ -109,7 +109,7 @@
 <!-- NAV -->
 <header data-header="" style="position:fixed;top:0;left:0;right:0;z-index:120;transition:transform .45s cubic-bezier(.4,0,.2,1), background .45s, border-color .45s, backdrop-filter .45s;background:transparent;border-bottom:1px solid transparent;">
   <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;">
-    <a href="#top" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;">
+    <a href="#top" data-navlogo="" aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <img data-cms-img="images.img1" src="assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
     <div data-nav="" style="display:none;gap:clamp(18px,2.4vw,36px);align-items:center;order:2;flex:1 1 auto;justify-content:center;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
@@ -120,7 +120,7 @@
       <a href="/about/" data-i18n="nav_about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
       <a href="#faq" data-i18n="nav_faq" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">FAQs</a>
     </div>
-    <div style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;">
+    <div data-navright="" style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <div data-navswap="" style="position:relative;display:flex;align-items:center;">
       <div data-langwrap="" style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1);">
         <button type="button" data-langbtn="en" onClick="{{ onLangClick }}" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
@@ -471,9 +471,9 @@
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:clamp(44px,5vw,72px);">
       <div>
         <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:26px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Newsroom</p>
-        <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(38px,5.5vw,80px);line-height:0.98;letter-spacing:-0.012em;color:#F6F0E1;">Field notes &amp; theory</h2>
+        <h2 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(38px,5.5vw,80px);line-height:0.98;letter-spacing:-0.012em;color:#F6F0E1;">MOW News</h2>
       </div>
-      <a href="/blog/" style="display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#EDE6D4;padding:13px 26px;border:1px solid rgba(196,156,78,0.45);border-radius:999px;transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">Go to Newsroom →</a>
+      <a href="/news/" style="display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#EDE6D4;padding:13px 26px;border:1px solid rgba(196,156,78,0.45);border-radius:999px;transition:all .2s;" style-hover="background:#C49C4E;color:#07211A;border-color:#C49C4E;">Go to Newsroom →</a>
     </div>
   </div>
   <div data-blogscroll="" data-news-home style="display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px clamp(20px,4vw,56px) 14px;-webkit-overflow-scrolling:touch;"></div>
