@@ -20,12 +20,20 @@
 
   function applyMeta() {
     if (!data || !data.meta) return;
-    if (data.meta.title) document.title = data.meta.title;
+    if (data.meta.title) {
+      document.title = data.meta.title;
+      var ogt = document.querySelector('meta[property="og:title"]');
+      if (ogt) ogt.setAttribute('content', data.meta.title);
+      var twt = document.querySelector('meta[name="twitter:title"]');
+      if (twt) twt.setAttribute('content', data.meta.title);
+    }
     if (data.meta.description) {
       var m = document.querySelector('meta[name="description"]');
       if (m) m.setAttribute('content', data.meta.description);
       var og = document.querySelector('meta[property="og:description"]');
       if (og) og.setAttribute('content', data.meta.description);
+      var twd = document.querySelector('meta[name="twitter:description"]');
+      if (twd) twd.setAttribute('content', data.meta.description);
     }
   }
 
