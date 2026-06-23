@@ -13,6 +13,7 @@ const state = {
   projects: [],
   projectId: localStorage.getItem('mow_cms_project') || null,
   schemas: [],
+  languages: { available: [], enabled: [] },
   active: null,        // { schema, path }
   form: null,
   stagedCount: 0,
@@ -88,9 +89,10 @@ async function loadProjects() {
   if (state.projectId) await loadSchemas();
 }
 async function loadSchemas() {
-  if (!state.projectId) { state.schemas = []; return; }
-  const { schemas } = await api.schemas(state.projectId);
+  if (!state.projectId) { state.schemas = []; state.languages = { available: [], enabled: [] }; return; }
+  const { schemas, languages } = await api.schemas(state.projectId);
   state.schemas = schemas;
+  state.languages = languages || { available: [], enabled: [] };
   await refreshStaged();
 }
 async function refreshStaged() {
@@ -283,6 +285,14 @@ function renderEditor(schema, path, value, isDoc = false) {
 
   const form = new SchemaForm(schema, value, {
     mediaBase: previewMediaBase(),
+    languages: (state.languages && state.languages.available) || [],
+    sourceLang: 'en',
+    sourceLangLabel: 'English',
+    onTranslate: async (toLang, sourceFields) => {
+      const { translations } = await api.translate(state.projectId, { from: 'en', to: toLang, fields: sourceFields });
+      return translations;
+    },
+    onError: (e) => toast('Translate failed: ' + e.message, 'error'),
     onChange: (val) => {
       setSaveStatus('dirty');
       previewPane.update(val);
@@ -500,6 +510,7 @@ async function openProjectsManager() {
       list.appendChild(h('div', { class: 'row', style: 'justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-soft)' },
         h('div', {}, h('strong', {}, p.label), h('div', { class: 'mono muted' }, `${p.owner}/${p.repo} · ${p.branch}`)),
         h('div', { class: 'row' },
+          h('button', { class: 'btn btn-sm', onclick: () => openLanguageToggle(p) }, 'Languages'),
           h('button', { class: 'btn btn-sm', onclick: async () => { try { await api.verifyProject(p.id); toast('Repo reachable ✓', 'success'); } catch (e) { toast(e.message, 'error'); } } }, 'Verify'),
           h('button', { class: 'btn btn-sm btn-danger', onclick: async () => { if (confirm(`Remove project ${p.label}?`)) { await api.deleteProject(p.id); modal.close(); openProjectsManager(); } } }, 'Remove')),
       ));
@@ -528,6 +539,40 @@ async function openProjectsManager() {
           toast('Project connected ✓', 'success');
           modal.close(); await loadProjects(); renderApp();
         } catch (ex) { toast(ex.message, 'error'); }
+      } },
+  ]);
+}
+
+// ---------------- admin: language toggle ----------------
+async function openLanguageToggle(p) {
+  let langs;
+  try { langs = (await api.schemas(p.id)).languages; } catch (e) { return toast(e.message, 'error'); }
+  const available = (langs && langs.available) || [];
+  if (!available.length) return toast('This site has no multilingual fields to toggle.', 'info');
+  const primary = available[0];
+  const enabled = new Set((langs.enabled && langs.enabled.length) ? langs.enabled : available);
+  const body = h('div', {});
+  body.appendChild(h('p', { class: 'muted', style: 'font-size:12px;margin:0 0 12px' },
+    'Turn languages on or off for this site. The primary language stays on. Turning one off hides it in the editor (content is kept); turning it back on restores it.'));
+  const boxes = {};
+  for (const code of available) {
+    const cb = h('input', { type: 'checkbox' });
+    cb.checked = enabled.has(code) || code === primary;
+    if (code === primary) cb.disabled = true;
+    boxes[code] = cb;
+    body.appendChild(h('label', { class: 'row', style: 'gap:10px;padding:7px 0;align-items:center' },
+      cb, h('span', { class: 'mono' }, code), code === primary ? h('span', { class: 'muted', style: 'font-size:11px' }, '(primary)') : null));
+  }
+  const modal = openModal('Languages — ' + p.label, body, [
+    { label: 'Cancel', onClick: () => modal.close() },
+    { label: 'Save', primary: true, onClick: async () => {
+        const chosen = available.filter((c) => c === primary || boxes[c].checked);
+        try {
+          await api.updateProject(p.id, { languages: chosen });
+          toast('Languages updated ✓', 'success');
+          modal.close();
+          if (p.id === state.projectId) { await loadSchemas(); renderApp(); }
+        } catch (e) { toast(e.message, 'error'); }
       } },
   ]);
 }

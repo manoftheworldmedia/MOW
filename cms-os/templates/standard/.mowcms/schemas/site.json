@@ -299,6 +299,100 @@
       ]
     },
     {
+      "name": "faqs",
+      "label": "FAQ",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/faqs",
+      "extension": "json",
+      "primaryField": "id",
+      "fields": [
+        {
+          "name": "id",
+          "label": "ID / slug",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "string"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "richtext",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "question",
+              "label": "Question",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "answer",
+              "label": "Answer",
+              "type": "richtext",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "pages",
       "label": "Pages",
       "icon": "file",

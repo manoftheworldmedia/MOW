@@ -23,7 +23,7 @@ export function listProjects() {
 }
 export function getProject(id) { return read().projects.find((p) => p.id === id); }
 
-export function createProject({ label, owner, repo, branch = 'main', token, schemaFile, schemaRepoPath, previewUrl, stripeSecretKey }) {
+export function createProject({ label, owner, repo, branch = 'main', token, schemaFile, schemaRepoPath, previewUrl, stripeSecretKey, languages }) {
   const db = read();
   const id = slug(`${owner}-${repo}`);
   if (db.projects.some((p) => p.id === id)) throw new Error('Project already exists.');
@@ -34,6 +34,7 @@ export function createProject({ label, owner, repo, branch = 'main', token, sche
     previewUrl: previewUrl || null,        // embedded in the live-preview pane
     schemaFile: schemaFile || null,        // bundled file in shared/schemas
     schemaRepoPath: schemaRepoPath || '.mowcms/schemas', // in-repo schema dir
+    languages: Array.isArray(languages) && languages.length ? languages : null, // enabled subset; null = all the schema declares
     createdAt: new Date().toISOString(),
   };
   db.projects.push(project);
@@ -46,6 +47,49 @@ export function deleteProject(id) {
   const db = read();
   db.projects = db.projects.filter((p) => p.id !== id);
   write(db);
+}
+
+/** Update editable project fields (admin). Secret-preserving. Returns safe view. */
+export function updateProject(id, patch = {}) {
+  const db = read();
+  const p = db.projects.find((x) => x.id === id);
+  if (!p) throw new Error('Project not found.');
+  const allow = ['label', 'branch', 'previewUrl', 'schemaFile', 'schemaRepoPath', 'languages', 'token', 'stripeSecretKey'];
+  for (const k of allow) {
+    if (patch[k] === undefined) continue;
+    if (k === 'languages') { p.languages = Array.isArray(patch.languages) && patch.languages.length ? patch.languages : null; }
+    else p[k] = patch[k];
+  }
+  write(db);
+  const { token, stripeSecretKey, ...safe } = p;
+  return { ...safe, hasToken: !!token, hasStripe: !!stripeSecretKey };
+}
+
+/**
+ * Produce a per-project "effective" copy of the schemas given which languages
+ * are enabled. A language is a top-level object field whose name is one of the
+ * schema's declared `languages`. Disabled languages are kept in the schema (so
+ * existing content stays valid and re-enabling is lossless) but marked hidden
+ * and stripped of `required`, so the form skips them and validation passes.
+ */
+export function applyLanguageToggle(schemas, available, enabled) {
+  if (!Array.isArray(available) || !available.length) return schemas;
+  const avail = new Set(available);
+  const on = new Set(enabled && enabled.length ? enabled : available);
+  const stripRequired = (fields) => (fields || []).map((f) => {
+    const c = { ...f };
+    delete c.required;
+    if (c.fields) c.fields = stripRequired(c.fields);
+    if (c.of && c.of.fields) c.of = { ...c.of, fields: stripRequired(c.of.fields) };
+    return c;
+  });
+  return schemas.map((s) => ({
+    ...s,
+    fields: (s.fields || []).map((f) =>
+      (f.type === 'object' && avail.has(f.name) && !on.has(f.name))
+        ? { ...f, ui: { ...(f.ui || {}), hidden: true }, fields: stripRequired(f.fields) }
+        : f),
+  }));
 }
 
 export function clientFor(project) {
@@ -61,6 +105,9 @@ export function clientFor(project) {
  * Returns { project, label, schemas: [...] }.
  */
 export async function loadSchemas(project) {
+  let schemas = null;
+  let label;
+  const available = [];
   // 1. Try in-repo schema directory.
   if (project.schemaRepoPath) {
     try {
@@ -68,23 +115,34 @@ export async function loadSchemas(project) {
       const entries = await gh.listDir(project.schemaRepoPath);
       const jsonFiles = entries.filter((e) => e.type === 'file' && e.name.endsWith('.json'));
       if (jsonFiles.length) {
-        const schemas = [];
+        const acc = [];
         for (const f of jsonFiles) {
           const file = await gh.readFile(f.path);
           if (file) {
             const parsed = JSON.parse(file.content);
-            if (Array.isArray(parsed.schemas)) schemas.push(...parsed.schemas);
-            else schemas.push(parsed);
+            if (Array.isArray(parsed.languages)) available.push(...parsed.languages);
+            if (Array.isArray(parsed.schemas)) acc.push(...parsed.schemas);
+            else acc.push(parsed);
           }
         }
-        if (schemas.length) return { project: project.id, schemas };
+        if (acc.length) schemas = acc;
       }
     } catch { /* fall through to bundled */ }
   }
   // 2. Bundled fallback.
-  const file = project.schemaFile || 'mow-site.json';
-  const raw = JSON.parse(fs.readFileSync(path.join(SCHEMA_DIR, file), 'utf8'));
-  return { project: project.id, label: raw.label, schemas: raw.schemas };
+  if (!schemas) {
+    const file = project.schemaFile || 'mow-site.json';
+    const raw = JSON.parse(fs.readFileSync(path.join(SCHEMA_DIR, file), 'utf8'));
+    schemas = raw.schemas;
+    label = raw.label;
+    if (Array.isArray(raw.languages)) available.push(...raw.languages);
+  }
+  const avail = [...new Set(available)];
+  const enabled = (Array.isArray(project.languages) && project.languages.length)
+    ? project.languages.filter((l) => avail.includes(l))
+    : avail;
+  const effective = applyLanguageToggle(schemas, avail, enabled);
+  return { project: project.id, label, schemas: effective, languages: { available: avail, enabled } };
 }
 
 export async function getSchema(project, name) {

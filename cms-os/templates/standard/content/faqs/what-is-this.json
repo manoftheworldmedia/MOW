@@ -1,0 +1,17 @@
+{
+  "id": "what-is-this",
+  "category": "general",
+  "featured": true,
+  "en": {
+    "question": "What is this site?",
+    "answer": "This is a starter site on the MOW CMS Standard — edit everything in the portal."
+  },
+  "fa": {
+    "question": "این سایت چیست؟",
+    "answer": "این یک سایت اولیه بر پایه استاندارد MOW CMS است."
+  },
+  "es": {
+    "question": "¿Qué es este sitio?",
+    "answer": "Este es un sitio inicial sobre el estándar MOW CMS — edítalo todo en el portal."
+  }
+}

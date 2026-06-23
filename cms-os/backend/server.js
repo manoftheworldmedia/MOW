@@ -13,6 +13,7 @@ import * as projects from './lib/projects.js';
 import * as store from './lib/store.js';
 import * as sync from './lib/git-sync.js';
 import * as shop from './lib/shop.js';
+import * as translate from './lib/translate.js';
 import { assertValid, validateContent } from './lib/validation.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -74,6 +75,14 @@ router.get('/api/projects', (ctx) => {
 });
 router.post('/api/projects', (ctx) => { requireAuth(ctx, 'admin'); return { project: projects.createProject(ctx.body) }; });
 router.delete('/api/projects/:id', (ctx) => { requireAuth(ctx, 'admin'); projects.deleteProject(ctx.params.id); return { ok: true }; });
+router.patch('/api/projects/:id', (ctx) => { requireAuth(ctx, 'admin'); return { project: projects.updateProject(ctx.params.id, ctx.body) }; });
+// Translate a flat map of fields EN->target via Claude (editors+). Manual, on demand.
+router.post('/api/projects/:id/translate', async (ctx) => {
+  requireAuth(ctx, 'editor'); requireProject(ctx);
+  const { from = 'en', to, fields } = ctx.body || {};
+  if (!to || !fields) { const e = new Error('Provide { to, fields }.'); e.status = 400; throw e; }
+  return { translations: await translate.translateFields(fields, from, to) };
+});
 router.get('/api/projects/:id/verify', async (ctx) => {
   requireAuth(ctx); const p = requireProject(ctx);
   return { repo: await projects.clientFor(p).verify() };

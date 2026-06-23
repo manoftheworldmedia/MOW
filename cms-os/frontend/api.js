@@ -26,9 +26,11 @@ export const api = {
   projects: () => req('GET', '/api/projects'),
   createProject: (p) => req('POST', '/api/projects', p),
   deleteProject: (id) => req('DELETE', `/api/projects/${id}`),
+  updateProject: (id, patch) => req('PATCH', `/api/projects/${id}`, patch),
   verifyProject: (id) => req('GET', `/api/projects/${id}/verify`),
 
   schemas: (pid) => req('GET', `/api/projects/${pid}/schemas`),
+  translate: (pid, payload) => req('POST', `/api/projects/${pid}/translate`, payload),
 
   content: (pid, name) => req('GET', `/api/projects/${pid}/content/${name}`),
   doc: (pid, name, path) => req('GET', `/api/projects/${pid}/content/${name}/doc${path ? `?path=${encodeURIComponent(path)}` : ''}`),

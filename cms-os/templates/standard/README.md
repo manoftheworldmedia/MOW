@@ -22,6 +22,7 @@ content/pages/about.json       ← one sample page
 |------|----------------|------------|
 | **Homepage** | `content/home.json` (single) | SEO + hero + images, per language |
 | **Blog / News** | `content/news/*.json` (collection) | Add/edit/reorder posts: date, cover, featured, title/excerpt/body per language |
+| **FAQ** | `content/faqs/*.json` (collection) | Add/edit/reorder Q&A: category, featured, question/answer per language |
 | **Pages** | `content/pages/*.json` (collection) | Standalone pages: title + rich-text body per language |
 | **Shop / Products** | `content/products/*.json` (collection) | Sellable products: SKU, price, currency, image, name/description per language |
 | **Navigation** | `content/navigation.json` (single) | Drag-and-drop menu: link + label per language |
@@ -33,6 +34,22 @@ Languages are defined **once**, at the top of the generator that built
 field is captured per language. To change a site's languages, edit the `LANGS`
 list and the per-language blocks in `site.json` (or just delete the `fa`/`es`
 blocks for a single-language site).
+
+### Language toggle (on/off per site)
+
+Each site declares its languages once (`"languages": ["en","fa","es"]` at the top
+of `site.json`). In the portal, **Projects → (a project) → Languages** lets an
+admin turn languages on or off without editing code. Turning a language off
+hides it everywhere in the editor; the underlying content is kept, so turning it
+back on is lossless. The **primary** language (first in the list) always stays on.
+
+### Auto-translate (English → other languages)
+
+In the editor, every non-primary language block shows a **"🌐 Translate from
+English"** button. Click it and the English copy for that section is translated
+into that language (you review/tweak before Publish — it never auto-overwrites on
+save). Translation uses the Claude API; set **`ANTHROPIC_API_KEY`** in the portal
+environment (Render) to enable it. Optional: `MOW_TRANSLATE_MODEL` to pick a model.
 
 ## Onboarding a new site (3 steps)
 
