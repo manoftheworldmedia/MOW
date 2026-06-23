@@ -203,11 +203,26 @@
     });
   }
 
+  // Inject the Newsroom page hero (eyebrow / title / subhead) from the CMS,
+  // per language, falling back to English then to the static HTML.
+  function applyHero(j) {
+    if (!j) return;
+    var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
+    var en = j.en || {}, loc = j[lang] || {};
+    var pick = function (k) { return (loc[k] != null && loc[k] !== '') ? loc[k] : en[k]; };
+    var setText = function (sel, v) { var el = document.querySelector(sel); if (el && v != null && v !== '') el.textContent = v; };
+    var setHtml = function (sel, v) { var el = document.querySelector(sel); if (el && v != null && v !== '') el.innerHTML = v; };
+    setText('[data-news-eyebrow]', pick('hero_eyebrow'));
+    setHtml('[data-news-title]', pick('hero_title'));
+    setText('[data-news-subhead]', pick('hero_subhead'));
+  }
+
   function boot() {
     initRunners();
     fetch(URL, { cache: 'no-store' })
       .then(function (r) { return r.json(); })
       .then(function (j) {
+        applyHero(j);
         var items = (j && j.items) || [];
         renderHome(items);
         renderRoom(items);
