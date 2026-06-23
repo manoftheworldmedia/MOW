@@ -714,6 +714,74 @@
       ]
     },
     {
+      "name": "about",
+      "label": "About Page",
+      "icon": "file",
+      "kind": "single",
+      "path": "content/about.json",
+      "fields": [
+        {
+          "name": "meta",
+          "label": "SEO",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "SEO title",
+              "type": "string",
+              "maxLength": 70
+            },
+            {
+              "name": "description",
+              "label": "SEO description",
+              "type": "text",
+              "maxLength": 320
+            }
+          ]
+        },
+        {
+          "name": "eyebrow",
+          "label": "Eyebrow",
+          "type": "string"
+        },
+        {
+          "name": "name_lead",
+          "label": "Name (lead)",
+          "type": "string"
+        },
+        {
+          "name": "name_role",
+          "label": "Name (role / accent)",
+          "type": "string"
+        },
+        {
+          "name": "role_tag",
+          "label": "Role tag",
+          "type": "string"
+        },
+        {
+          "name": "intro",
+          "label": "Intro paragraph",
+          "type": "text"
+        },
+        {
+          "name": "bio",
+          "label": "Bio",
+          "type": "richtext"
+        },
+        {
+          "name": "quote",
+          "label": "Pull quote",
+          "type": "text"
+        },
+        {
+          "name": "portrait",
+          "label": "Portrait image",
+          "type": "image"
+        }
+      ]
+    },
+    {
       "name": "pages",
       "label": "HTML Pages",
       "icon": "file",
