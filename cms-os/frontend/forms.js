@@ -26,12 +26,25 @@ export function h(tag, attrs = {}, ...children) {
 }
 
 export class SchemaForm {
-  constructor(schema, value, { onChange, mediaBase = '' } = {}) {
+  constructor(schema, value, { onChange, mediaBase = '', languages = [], sourceLang = 'en', sourceLangLabel = '', onTranslate = null, onError = null } = {}) {
     this.schema = schema;
     this.value = clone(value) || {};
     this.onChange = onChange || (() => {});
     this.mediaBase = mediaBase;
+    this.languages = Array.isArray(languages) ? languages : [];
+    this.sourceLang = sourceLang;
+    this.sourceLangLabel = sourceLangLabel || (sourceLang || '').toUpperCase();
+    this.onTranslate = onTranslate;
+    this.onError = onError;
     this.fieldEls = new Map(); // path -> wrapper element (for error highlighting)
+  }
+
+  /** Rebuild the whole form in place (after a programmatic value change). */
+  rerender() {
+    const old = this.root;
+    const fresh = this.render();
+    if (old && old.parentNode) old.parentNode.replaceChild(fresh, old);
+    this.validateAndPaint();
   }
 
   emit() { this.onChange(this.value); }
@@ -70,7 +83,26 @@ export class SchemaForm {
     if (parent[field.name] == null || typeof parent[field.name] !== 'object') parent[field.name] = {};
     const obj = parent[field.name];
     const block = h('div', { class: 'group' });
-    block.appendChild(h('div', { class: 'group-title' }, field.label || field.name));
+    const title = h('div', { class: 'group-title' }, field.label || field.name);
+    // A language group is a top-level object whose name is one of the site's languages.
+    if (this.onTranslate && this.languages.includes(field.name) && field.name !== this.sourceLang) {
+      const btn = h('button', { class: 'btn btn-sm btn-ghost translate-btn', type: 'button' }, `🌐 Translate from ${this.sourceLangLabel}`);
+      btn.addEventListener('click', async () => {
+        const source = parent[this.sourceLang] || {};
+        const orig = btn.textContent; btn.disabled = true; btn.textContent = 'Translating…';
+        try {
+          const out = await this.onTranslate(field.name, source);
+          parent[field.name] = { ...(parent[field.name] || {}), ...out };
+          this.emit();
+          this.rerender();
+        } catch (e) {
+          btn.disabled = false; btn.textContent = orig;
+          if (this.onError) this.onError(e);
+        }
+      });
+      title.appendChild(btn);
+    }
+    block.appendChild(title);
     for (const f of field.fields || []) block.appendChild(this.renderField(f, obj, `${path}.${f.name}`));
     return block;
   }
