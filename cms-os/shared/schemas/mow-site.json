@@ -577,6 +577,81 @@
       "path": "content/news.json",
       "fields": [
         {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — title (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — subhead",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — title (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — subhead",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "hero_eyebrow",
+              "label": "Hero — eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "hero_title",
+              "label": "Hero — title (HTML allowed)",
+              "type": "text"
+            },
+            {
+              "name": "hero_subhead",
+              "label": "Hero — subhead",
+              "type": "text"
+            }
+          ]
+        },
+        {
           "name": "items",
           "label": "News & press (drag to reorder)",
           "type": "list",

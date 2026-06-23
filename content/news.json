@@ -1,4 +1,19 @@
 {
+  "en": {
+    "hero_eyebrow": "Newsroom",
+    "hero_title": "Field notes <span style=\"font-style:italic;font-weight:600;color:#E2C173;\">&amp; theory.</span>",
+    "hero_subhead": "Dispatches on brand distinctiveness, the MOW Method, generative AI, and the discipline of becoming impossible to ignore."
+  },
+  "fa": {
+    "hero_eyebrow": "",
+    "hero_title": "",
+    "hero_subhead": ""
+  },
+  "es": {
+    "hero_eyebrow": "",
+    "hero_title": "",
+    "hero_subhead": ""
+  },
   "items": [
     {
       "title": "Impossible to Ignore Is the New Standard for Global Brand Distinctiveness",
