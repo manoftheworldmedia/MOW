@@ -182,6 +182,7 @@ export function upsertProject(spec) {
   existing.previewUrl = spec.previewUrl || existing.previewUrl;
   existing.schemaRepoPath = spec.schemaRepoPath || existing.schemaRepoPath || '.mowcms/schemas';
   if (spec.schemaFile) existing.schemaFile = spec.schemaFile;
+  if (spec.languages !== undefined) existing.languages = (Array.isArray(spec.languages) && spec.languages.length) ? spec.languages : null;
   write(db);
   return existing;
 }
