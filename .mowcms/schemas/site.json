@@ -1,5 +1,10 @@
 {
   "project": "mow-site",
+  "languages": [
+    "en",
+    "fa",
+    "es"
+  ],
   "label": "Man of the World — Marketing Site",
   "description": "Schemas for the MOW static site. Trilingual (en/fa/es) homepage, About page, newsroom, and case studies — all pointing at the live JSON files the pages actually read.",
   "schemas": [
