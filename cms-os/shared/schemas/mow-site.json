@@ -782,6 +782,162 @@
       ]
     },
     {
+      "name": "cases",
+      "label": "Case Studies",
+      "icon": "folder",
+      "kind": "collection",
+      "folder": "content/cases",
+      "extension": "json",
+      "primaryField": "name",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Case name (internal)",
+          "type": "string"
+        },
+        {
+          "name": "image",
+          "label": "Hero image",
+          "type": "image"
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "cat",
+              "label": "Category pill",
+              "type": "string"
+            },
+            {
+              "name": "sub",
+              "label": "Secondary pill",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body paragraphs (drag to reorder)",
+              "type": "list",
+              "of": {
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "text",
+                    "label": "Paragraph",
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "cat",
+              "label": "Category pill",
+              "type": "string"
+            },
+            {
+              "name": "sub",
+              "label": "Secondary pill",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body paragraphs (drag to reorder)",
+              "type": "list",
+              "of": {
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "text",
+                    "label": "Paragraph",
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "cat",
+              "label": "Category pill",
+              "type": "string"
+            },
+            {
+              "name": "sub",
+              "label": "Secondary pill",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body paragraphs (drag to reorder)",
+              "type": "list",
+              "of": {
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "text",
+                    "label": "Paragraph",
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "pages",
       "label": "HTML Pages",
       "icon": "file",

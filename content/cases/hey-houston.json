@@ -1,0 +1,46 @@
+{
+  "name": "Hey Houston",
+  "image": "assets/cases/hey.jpg",
+  "en": {
+    "cat": "Consumer Platform",
+    "sub": "Hip Community Events Platform",
+    "title": "Hey Houston",
+    "subtitle": "A hip, tech-forward event discovery platform",
+    "body": [
+      {
+        "text": "MOW led the full brand creation and launch of a hip, tech-forward event discovery platform — including the Hey Houston brand name, a complete messaging and identity system, and a scalable design framework across browser and mobile."
+      },
+      {
+        "text": "We also designed sophisticated consumer workflows for multiple stakeholders, creating a brand built to grow and evolve over time."
+      }
+    ]
+  },
+  "fa": {
+    "cat": "پلتفرم مصرف‌کننده",
+    "sub": "پلتفرم رویدادها",
+    "title": "Hey Houston",
+    "subtitle": "پلتفرمی امروزی و فناورانه برای کشف رویدادها",
+    "body": [
+      {
+        "text": "MOW خلق کامل برند و راه‌اندازی یک پلتفرم امروزی و فناورانه برای کشف رویدادها را رهبری کرد — شامل نام برند Hey Houston، یک سیستم کامل پیام و هویت، و یک چارچوب طراحی مقیاس‌پذیر در وب و موبایل."
+      },
+      {
+        "text": "ما همچنین جریان‌های کاربری پیچیده‌ای برای ذی‌نفعان متعدد طراحی کردیم و برندی ساختیم که برای رشد و تکامل ساخته شده است."
+      }
+    ]
+  },
+  "es": {
+    "cat": "Plataforma de consumo",
+    "sub": "Plataforma de eventos",
+    "title": "Hey Houston",
+    "subtitle": "Una plataforma de descubrimiento de eventos moderna y comunitaria",
+    "body": [
+      {
+        "text": "MOW lideró la creación de marca y el lanzamiento de una plataforma de descubrimiento de eventos moderna y tecnológica — incluyendo el nombre Hey Houston, un sistema completo de mensaje e identidad, y un marco de diseño escalable en navegador y móvil."
+      },
+      {
+        "text": "También diseñamos flujos de usuario sofisticados para múltiples actores, creando una marca construida para crecer y evolucionar con el tiempo."
+      }
+    ]
+  }
+}

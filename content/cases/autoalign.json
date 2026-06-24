@@ -1,0 +1,55 @@
+{
+  "name": "AutoAlign · Sidecar",
+  "image": "assets/cases/autoalign.jpg",
+  "en": {
+    "cat": "Generative AI · Security",
+    "sub": "Sidecar Security",
+    "title": "AutoAlign · Sidecar",
+    "subtitle": "A generative-AI security spinoff, launched globally",
+    "body": [
+      {
+        "text": "Man of the World led the global release of AutoAlign’s Sidecar Security, leveraging NVIDIA NeMo Guardrails to protect LLMs at scale."
+      },
+      {
+        "text": "MOW also ran AutoAlign’s Collision Toronto keynote, announcing the NVIDIA partnership."
+      },
+      {
+        "text": "Following the launch, MOW led the entire spinoff go-to-market in partnership with KPMG, driving industry coverage including VentureBeat and BetaKit."
+      }
+    ]
+  },
+  "fa": {
+    "cat": "هوش مصنوعی مولد · امنیت",
+    "sub": "اسپین‌آف Sidecar",
+    "title": "AutoAlign · Sidecar",
+    "subtitle": "یک اسپین‌آف امنیت هوش مصنوعی مولد، با عرضهٔ جهانی",
+    "body": [
+      {
+        "text": "من آو د ورلد عرضهٔ جهانی Sidecar Security از AutoAlign را رهبری کرد و از NVIDIA NeMo Guardrails برای محافظت از مدل‌های زبانی بزرگ در مقیاس بهره گرفت."
+      },
+      {
+        "text": "MOW همچنین کی‌نوت AutoAlign در Collision تورنتو را اجرا کرد و از مشارکت با NVIDIA رونمایی نمود."
+      },
+      {
+        "text": "پس از عرضه، MOW کل استراتژی ورود به بازارِ اسپین‌آف را در مشارکت با KPMG رهبری کرد و پوشش رسانه‌ای از جمله VentureBeat و BetaKit به دست آورد."
+      }
+    ]
+  },
+  "es": {
+    "cat": "IA Generativa · Seguridad",
+    "sub": "Spinoff Sidecar",
+    "title": "AutoAlign · Sidecar",
+    "subtitle": "Un spinoff de seguridad de IA generativa, lanzado globalmente",
+    "body": [
+      {
+        "text": "Man of the World lideró el lanzamiento global de Sidecar Security de AutoAlign, usando NVIDIA NeMo Guardrails para proteger LLMs a escala."
+      },
+      {
+        "text": "MOW también dirigió la keynote de AutoAlign en Collision Toronto, anunciando la alianza con NVIDIA."
+      },
+      {
+        "text": "Tras el lanzamiento, MOW lideró todo el go-to-market del spinoff junto con KPMG, generando cobertura en VentureBeat y BetaKit."
+      }
+    ]
+  }
+}

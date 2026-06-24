@@ -1,0 +1,55 @@
+{
+  "name": "Pedrera",
+  "image": "assets/cases/pedrera.jpg",
+  "en": {
+    "cat": "Urban · Real Estate",
+    "sub": "A $1B Urban Landmark",
+    "title": "Pedrera",
+    "subtitle": "Architecting the identity of a $1B urban landmark",
+    "body": [
+      {
+        "text": "Pedrera is a $1B+ mixed-use urban development that required a clear, unified brand position among government, private partners, and internal stakeholders."
+      },
+      {
+        "text": "MOW was brought in to clarify the project’s identity, resolve competing names and narratives, and define a cohesive positioning for one of Guatemala City’s most ambitious urban revitalization efforts. Using the MOW Method, we aligned leadership around a shared vision and mission, built a unified messaging matrix, established a clear stakeholder narrative, and introduced brand architecture concepts to orient the project long term."
+      },
+      {
+        "text": "Today, Pedrera stands on a strong strategic foundation — positioned to evolve into an iconic urban brand redefining how Guatemalans live, gather, and connect."
+      }
+    ]
+  },
+  "fa": {
+    "cat": "شهری · املاک",
+    "sub": "یک نشانهٔ شهری یک‌میلیارد‌دلاری",
+    "title": "پدررا",
+    "subtitle": "معماری هویت یک نشانهٔ شهری یک‌میلیارد‌دلاری",
+    "body": [
+      {
+        "text": "پدررا یک توسعهٔ شهری چندمنظورهٔ بیش از یک میلیارد دلاری است که به یک جایگاه برند روشن و یکپارچه میان دولت، شرکای خصوصی و ذی‌نفعان داخلی نیاز داشت."
+      },
+      {
+        "text": "MOW فراخوانده شد تا هویت پروژه را شفاف کند، نام‌ها و روایت‌های متناقض را حل کند و جایگاه‌یابی منسجمی برای یکی از جاه‌طلبانه‌ترین تلاش‌های احیای شهری گواتمالاسیتی تعریف کند. با روش MOW، رهبری را حول چشم‌انداز و مأموریتی مشترک هم‌راستا کردیم، یک ماتریس پیام یکپارچه ساختیم، روایتی روشن برای ذی‌نفعان برقرار کردیم و مفاهیم معماری برند را برای جهت‌دهی بلندمدت پروژه معرفی کردیم."
+      },
+      {
+        "text": "امروز، پدررا بر پایه‌ای استراتژیک و مستحکم ایستاده است — آماده برای تبدیل‌شدن به یک برند شهری نمادین که شیوهٔ زندگی، گردهمایی و ارتباط گواتمالایی‌ها را بازتعریف می‌کند."
+      }
+    ]
+  },
+  "es": {
+    "cat": "Urbano · Inmobiliario",
+    "sub": "Un hito urbano de $1B",
+    "title": "Pedrera",
+    "subtitle": "Diseñando la identidad de un hito urbano de $1B",
+    "body": [
+      {
+        "text": "Pedrera es un desarrollo urbano de uso mixto de más de $1B que requería una posición de marca clara y unificada entre el gobierno, los socios privados y las partes internas."
+      },
+      {
+        "text": "MOW fue convocado para clarificar la identidad del proyecto, resolver nombres y narrativas en conflicto, y definir un posicionamiento cohesivo para uno de los esfuerzos de revitalización urbana más ambiciosos de la Ciudad de Guatemala. Con el Método MOW, alineamos al liderazgo en torno a una visión y misión compartidas, construimos una matriz de mensaje unificada, establecimos una narrativa clara para las partes interesadas e introdujimos conceptos de arquitectura de marca para orientar el proyecto a largo plazo."
+      },
+      {
+        "text": "Hoy, Pedrera se asienta sobre una base estratégica sólida — lista para evolucionar hacia una marca urbana icónica que redefine cómo viven, se reúnen y se conectan los guatemaltecos."
+      }
+    ]
+  }
+}
