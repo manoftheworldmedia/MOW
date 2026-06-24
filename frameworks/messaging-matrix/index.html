@@ -125,17 +125,51 @@
   </div>
 </section>
 
-<!-- ASSET STRIP — real MOW work imagery -->
-<section aria-hidden="true" style="padding:clamp(40px,5vw,64px) 0;overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);border-bottom:1px solid rgba(196,156,78,0.14);">
-  <div style="display:flex;gap:clamp(10px,1.4vw,18px);padding:0 clamp(20px,4vw,56px);max-width:1340px;margin:0 auto;overflow-x:auto;scrollbar-width:none;">
-    <img src="/assets/caspian/j5.jpg" alt="Vintage red Mercedes beneath Persian rugs — Caspian Coast branding by MOW" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/caspian/j8.jpg" alt="Caspian Coast saffron latte — MOW brand work" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/amr/img9.png" alt="All Model Repair owner — MOW brand work" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/cases/petra.jpg" alt="Petra autonomous tunneling — MOW brand case study" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/cases/neara.jpg" alt="Neara AI climate tech — MOW brand case study" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/bananos/j5.jpg" alt="Bananos Inteligentes — MOW rebrand" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/amr/img6.jpg" alt="All Model Repair storefront — MOW neighborhood branding" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-    <img src="/assets/caspian/j4.jpg" alt="Woman Life Freedom mural — Caspian Coast by MOW" loading="lazy" style="height:clamp(100px,12vw,160px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+<!-- ASSET STRIP — two opposing marquee rows -->
+<section aria-hidden="true" style="padding:clamp(36px,4vw,52px) 0;overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);border-bottom:1px solid rgba(196,156,78,0.14);">
+  <style>
+    @keyframes mmMarqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes mmMarqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  </style>
+  <!-- Row 1: images scroll LEFT → RIGHT (reverse) -->
+  <div style="overflow:hidden;margin-bottom:14px;">
+    <div style="display:flex;width:max-content;animation:mmMarqR 38s linear infinite;will-change:transform;">
+      <div style="display:flex;gap:14px;padding-right:14px;">
+        <img src="/assets/caspian/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j8.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img9.png" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/petra.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/neara.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/bananos/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img6.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j4.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/avitia.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j2.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+      </div>
+      <div aria-hidden="true" style="display:flex;gap:14px;padding-right:14px;">
+        <img src="/assets/caspian/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j8.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img9.png" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/petra.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/neara.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/bananos/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img6.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j4.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/avitia.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j2.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+      </div>
+    </div>
+  </div>
+  <!-- Row 2: words scroll RIGHT → LEFT (standard) -->
+  <div style="overflow:hidden;">
+    <div style="display:flex;width:max-content;animation:mmMarqL 32s linear infinite;will-change:transform;align-items:center;">
+      <div style="display:flex;align-items:center;gap:clamp(28px,4vw,60px);padding-right:clamp(28px,4vw,60px);font-family:'Bodoni Moda',serif;font-size:clamp(18px,2.2vw,28px);font-weight:500;color:#DDD6C4;white-space:nowrap;">
+        <span>Messaging Matrix</span><span style="color:#C49C4E;">✦</span><span>Brand Strategy</span><span style="color:#C49C4E;">✦</span><span>Executive Communications</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Absolute Conviction</span><span style="color:#C49C4E;">✦</span><span>AI Transformation</span><span style="color:#C49C4E;">✦</span><span>GEO · AEO · SEO</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Impossible to Ignore</span><span style="color:#C49C4E;">✦</span><span>Narrative Architecture</span><span style="color:#C49C4E;">✦</span>
+      </div>
+      <div aria-hidden="true" style="display:flex;align-items:center;gap:clamp(28px,4vw,60px);padding-right:clamp(28px,4vw,60px);font-family:'Bodoni Moda',serif;font-size:clamp(18px,2.2vw,28px);font-weight:500;color:#DDD6C4;white-space:nowrap;">
+        <span>Messaging Matrix</span><span style="color:#C49C4E;">✦</span><span>Brand Strategy</span><span style="color:#C49C4E;">✦</span><span>Executive Communications</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Absolute Conviction</span><span style="color:#C49C4E;">✦</span><span>AI Transformation</span><span style="color:#C49C4E;">✦</span><span>GEO · AEO · SEO</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Impossible to Ignore</span><span style="color:#C49C4E;">✦</span><span>Narrative Architecture</span><span style="color:#C49C4E;">✦</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -201,33 +235,21 @@
   <div style="max-width:1100px;margin:0 auto;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Outcomes</p>
     <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(40px,5vw,64px);">What it creates</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:clamp(40px,5vw,64px);">
-      <div class="mm-card">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:22px;color:#11281E;margin-bottom:10px;">Alignment</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14.5px;line-height:1.6;color:#4A4639;">Leadership, marketing, sales, communications, and operations teams communicate from the same strategic foundation.</p>
-      </div>
-      <div class="mm-card">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:22px;color:#11281E;margin-bottom:10px;">Differentiation</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14.5px;line-height:1.6;color:#4A4639;">Organizations articulate what makes them distinct — and reinforce it consistently, everywhere.</p>
-      </div>
-      <div class="mm-card">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:22px;color:#11281E;margin-bottom:10px;">Scale</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14.5px;line-height:1.6;color:#4A4639;">Content, campaigns, executive communications, and media become faster to produce, easier to maintain, and more effective.</p>
-      </div>
-      <div class="mm-card">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:22px;color:#11281E;margin-bottom:10px;">Visibility</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:14.5px;line-height:1.6;color:#4A4639;">Search engines, AI assistants, journalists, investors, customers, and employees encounter a consistent narrative wherever they engage.</p>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;margin-bottom:clamp(40px,5vw,64px);">
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,20px);color:#11281E;margin-bottom:8px;">Alignment</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Leadership, marketing, sales, communications, and operations teams communicate from the same strategic foundation.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,20px);color:#11281E;margin-bottom:8px;">Differentiation</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Organizations articulate what makes them distinct — and reinforce it consistently, everywhere.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,20px);color:#11281E;margin-bottom:8px;">Scale</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Content, campaigns, executive communications, and media become faster to produce, easier to maintain, and more effective.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,20px);color:#11281E;margin-bottom:8px;">Visibility</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Search engines, AI assistants, journalists, investors, customers, and employees encounter a consistent narrative wherever they engage.</p></div>
     </div>
     <!-- WHAT IT IMPACTS inline -->
     <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.6vw,46px);line-height:1.06;letter-spacing:-0.01em;color:#11281E;margin-bottom:clamp(28px,3vw,44px);">What it impacts</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
-      <div class="mm-card"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:19px;color:#11281E;margin-bottom:8px;">Website Messaging</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">A narrative architecture that improves clarity, engagement, and conversion.</p></div>
-      <div class="mm-card"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:19px;color:#11281E;margin-bottom:8px;">Executive Communications</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Aligned leadership messaging across interviews, keynotes, investor discussions, and public appearances.</p></div>
-      <div class="mm-card"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:19px;color:#11281E;margin-bottom:8px;">Public Relations</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Stronger media engagement through clear positioning and credible proof points.</p></div>
-      <div class="mm-card"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:19px;color:#11281E;margin-bottom:8px;">Sales Enablement</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Teams equipped with messaging that communicates value consistently and effectively.</p></div>
-      <div class="mm-card"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:19px;color:#11281E;margin-bottom:8px;">Investor Relations</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Greater clarity for current and prospective investors — now and at every stage of growth.</p></div>
-      <div class="mm-card"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:19px;color:#11281E;margin-bottom:8px;">SEO, AEO &amp; GEO</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Search engines and AI systems accurately understand, summarize, and reference your organization.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;">
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,18px);color:#11281E;margin-bottom:8px;">Website Messaging</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">A narrative architecture that improves clarity, engagement, and conversion.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,18px);color:#11281E;margin-bottom:8px;">Executive Communications</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Aligned leadership messaging across interviews, keynotes, investor discussions, and public appearances.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,18px);color:#11281E;margin-bottom:8px;">Public Relations</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Stronger media engagement through clear positioning and credible proof points.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,18px);color:#11281E;margin-bottom:8px;">Sales Enablement</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Teams equipped with messaging that communicates value consistently and effectively.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,18px);color:#11281E;margin-bottom:8px;">Investor Relations</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Greater clarity for current and prospective investors — now and at every stage of growth.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,38px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.6vw,18px);color:#11281E;margin-bottom:8px;">SEO, AEO &amp; GEO</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(12.5px,0.95vw,14px);line-height:1.58;color:#4A4639;">Search engines and AI systems accurately understand, summarize, and reference your organization.</p></div>
     </div>
   </div>
 </section>
@@ -245,8 +267,8 @@
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-      <img src="/assets/caspian/j1.jpg" alt="Persian spices — Caspian Coast brand identity by MOW" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);">
-      <img src="/assets/amr/img9.png" alt="All Model Repair — neighborhood brand identity by MOW" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);margin-top:24px;">
+      <img src="/assets/blog/i2i-sprezzatura.jpg" alt="Sprezzatura — making the difficult look effortless, from the Impossible to Ignore essay by MOW" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);">
+      <img src="/assets/blog/i2i-koochooloo.jpg" alt="Koochooloo — softness, memory, and cultural specificity, from the Impossible to Ignore essay by MOW" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);margin-top:24px;">
     </div>
   </div>
 </section>
@@ -256,13 +278,13 @@
   <div style="max-width:1100px;margin:0 auto;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Who It's For</p>
     <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every organization at a turning point.</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;">
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Founders</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Clarify your story before growth introduces complexity.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Growth Companies</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Align expanding teams around a common narrative before the message fragments.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Enterprise</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Consistency across business units, leadership teams, and stakeholder groups.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Real Estate &amp; Development</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Communicate vision, value creation, and long-term impact to governments, partners, and buyers.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Governments &amp; Institutions</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Build trust through clear, consistent stakeholder communications.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Nonprofits</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Align mission, fundraising, advocacy, and public engagement around a single story.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;">
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Founders</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Clarify your story before growth introduces complexity.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Growth Companies</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align expanding teams around a common narrative before the message fragments.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Enterprise</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Consistency across business units, leadership teams, and stakeholder groups.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Real Estate &amp; Development</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Communicate vision, value creation, and long-term impact to governments, partners, and buyers.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Governments &amp; Institutions</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Build trust through clear, consistent stakeholder communications.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Nonprofits</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align mission, fundraising, advocacy, and public engagement around a single story.</p></div>
     </div>
   </div>
 </section>
