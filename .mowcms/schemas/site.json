@@ -1,7 +1,7 @@
 {
   "project": "mow-site",
   "label": "Man of the World — Marketing Site",
-  "description": "Schemas for the MOW static site. Trilingual homepage (en/fa/es), editable HTML pages, and navigation. Replaces the legacy .pages.yml.",
+  "description": "Schemas for the MOW static site. Trilingual (en/fa/es) homepage, About page, newsroom, and case studies — all pointing at the live JSON files the pages actually read.",
   "schemas": [
     {
       "name": "home",
@@ -580,6 +580,14 @@
             "type": "object",
             "fields": [
               {
+                "name": "id",
+                "label": "ID / slug",
+                "type": "string",
+                "ui": {
+                  "hidden": true
+                }
+              },
+              {
                 "name": "title",
                 "label": "Title",
                 "type": "string",
@@ -634,6 +642,237 @@
       ]
     },
     {
+      "name": "about",
+      "label": "About Page",
+      "icon": "file",
+      "kind": "single",
+      "path": "content/about.json",
+      "fields": [
+        {
+          "name": "meta",
+          "label": "SEO · Google",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Meta title",
+              "type": "string",
+              "maxLength": 70
+            },
+            {
+              "name": "description",
+              "label": "Meta description",
+              "type": "text",
+              "maxLength": 320
+            }
+          ]
+        },
+        {
+          "name": "eyebrow",
+          "label": "Eyebrow (small label)",
+          "type": "string"
+        },
+        {
+          "name": "name_lead",
+          "label": "Name — lead",
+          "type": "string"
+        },
+        {
+          "name": "name_role",
+          "label": "Name — role suffix",
+          "type": "string"
+        },
+        {
+          "name": "intro",
+          "label": "Intro paragraph",
+          "type": "text"
+        },
+        {
+          "name": "bio",
+          "label": "Bio",
+          "type": "text"
+        },
+        {
+          "name": "role_tag",
+          "label": "Role tag",
+          "type": "string"
+        },
+        {
+          "name": "portrait",
+          "label": "Portrait photo",
+          "type": "image"
+        },
+        {
+          "name": "quote",
+          "label": "Pull quote",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "cases",
+      "label": "Case Studies",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/cases",
+      "extension": "json",
+      "primaryField": "name",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Case name (list label)",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "image",
+          "label": "Cover image",
+          "type": "image"
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "cat",
+              "label": "Category",
+              "type": "string"
+            },
+            {
+              "name": "sub",
+              "label": "Subcategory / client",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body paragraphs",
+              "type": "list",
+              "of": {
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "text",
+                    "label": "Paragraph",
+                    "type": "text",
+                    "required": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "cat",
+              "label": "Category",
+              "type": "string"
+            },
+            {
+              "name": "sub",
+              "label": "Subcategory / client",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body paragraphs",
+              "type": "list",
+              "of": {
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "text",
+                    "label": "Paragraph",
+                    "type": "text",
+                    "required": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "cat",
+              "label": "Category",
+              "type": "string"
+            },
+            {
+              "name": "sub",
+              "label": "Subcategory / client",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "subtitle",
+              "label": "Subtitle",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body paragraphs",
+              "type": "list",
+              "of": {
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "text",
+                    "label": "Paragraph",
+                    "type": "text",
+                    "required": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "pages",
       "label": "HTML Pages",
       "icon": "file",
@@ -643,8 +882,7 @@
       "primaryField": "path",
       "include": [
         "index.html",
-        "about/index.html",
-        "blog/index.html"
+        "about/index.html"
       ],
       "fields": [
         {
@@ -662,156 +900,6 @@
           "type": "code",
           "language": "html",
           "required": true
-        }
-      ]
-    },
-    {
-      "name": "products",
-      "label": "Shop / Products",
-      "icon": "menu",
-      "kind": "collection",
-      "folder": "content/products",
-      "extension": "json",
-      "primaryField": "sku",
-      "fields": [
-        {
-          "name": "sku",
-          "label": "SKU / ID (used in the URL)",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "price",
-          "label": "Price (e.g. 29.99)",
-          "type": "number",
-          "required": true,
-          "min": 0
-        },
-        {
-          "name": "currency",
-          "label": "Currency",
-          "type": "select",
-          "options": [
-            "usd",
-            "eur",
-            "gbp",
-            "cad",
-            "aud"
-          ],
-          "required": true,
-          "default": "usd"
-        },
-        {
-          "name": "image",
-          "label": "Product image",
-          "type": "image"
-        },
-        {
-          "name": "active",
-          "label": "For sale",
-          "type": "boolean",
-          "default": true
-        },
-        {
-          "name": "en",
-          "label": "English",
-          "type": "object",
-          "ui": {
-            "group": "Languages"
-          },
-          "fields": [
-            {
-              "name": "name",
-              "label": "Name",
-              "type": "string",
-              "required": true
-            },
-            {
-              "name": "description",
-              "label": "Description",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "name": "fa",
-          "label": "فارسی (Persian)",
-          "type": "object",
-          "ui": {
-            "group": "Languages"
-          },
-          "fields": [
-            {
-              "name": "name",
-              "label": "Name",
-              "type": "string",
-              "required": true
-            },
-            {
-              "name": "description",
-              "label": "Description",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "name": "es",
-          "label": "Español",
-          "type": "object",
-          "ui": {
-            "group": "Languages"
-          },
-          "fields": [
-            {
-              "name": "name",
-              "label": "Name",
-              "type": "string",
-              "required": true
-            },
-            {
-              "name": "description",
-              "label": "Description",
-              "type": "text"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "navigation",
-      "label": "Navigation Menu",
-      "icon": "menu",
-      "kind": "single",
-      "path": "content/navigation.json",
-      "fields": [
-        {
-          "name": "items",
-          "label": "Menu items (drag to reorder)",
-          "type": "list",
-          "min": 1,
-          "of": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "label",
-                "label": "Label",
-                "type": "string",
-                "required": true
-              },
-              {
-                "name": "url",
-                "label": "Link",
-                "type": "url",
-                "required": true
-              },
-              {
-                "name": "newTab",
-                "label": "Open in new tab",
-                "type": "boolean",
-                "default": false
-              }
-            ]
-          }
         }
       ]
     }
