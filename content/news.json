@@ -16,7 +16,7 @@
       "type": "Blog",
       "date": "2026-05-01",
       "summary": "Five steps — from first principles to lasting equity — for building a brand that resonates and endures.",
-      "hero": "/assets/blog/brand-creation-hero.jpeg",
+      "hero": "/assets/blog/brand-creation-hero.jpg",
       "link": "/mastering-brand-creation-a-step-by-step-guide-for-success/",
       "featured": true
     },
@@ -36,7 +36,7 @@
       "type": "Thought Leadership",
       "date": "2026-03-01",
       "summary": "Real transformation isn't a tool you buy — it's a system you design. A systems-thinking approach to AI.",
-      "hero": "/assets/blog/ai-systems-hero.png",
+      "hero": "/assets/blog/ai-systems-hero.jpg",
       "link": "/integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/",
       "featured": false
     },
