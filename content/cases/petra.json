@@ -1,0 +1,55 @@
+{
+  "name": "Petra",
+  "image": "assets/cases/petra.jpg",
+  "en": {
+    "cat": "Infrastructure · Robotics",
+    "sub": "Autonomous Tunneling",
+    "title": "Petra",
+    "subtitle": "Autonomous Vehicle: Identity & Environment",
+    "body": [
+      {
+        "text": "MOW led the full brand creation and launch of a tunneling technology focused on building safer communities — including the Petra brand name, a complete messaging and identity system, and a scalable visual language."
+      },
+      {
+        "text": "The Petra brand supported a successful $33M fundraise and continues to grow and evolve over time."
+      },
+      {
+        "text": "The launch secured Tier 1 coverage across CNBC, Forbes, WIRED, and TechCrunch — positioning Petra as a category-defining infrastructure technology."
+      }
+    ]
+  },
+  "fa": {
+    "cat": "زیرساخت · رباتیک",
+    "sub": "راه‌اندازی برند",
+    "title": "پترا",
+    "subtitle": "خودروی خودران: هویت و محیط",
+    "body": [
+      {
+        "text": "MOW خلق کامل برند و راه‌اندازی یک فناوری حفاری تونل را با تمرکز بر ساختن جوامع امن‌تر رهبری کرد — شامل نام برند پترا، یک سیستم کامل پیام و هویت، و یک زبان بصری مقیاس‌پذیر."
+      },
+      {
+        "text": "برند پترا از یک جذب سرمایهٔ موفق ۳۳ میلیون دلاری پشتیبانی کرد و همچنان در حال رشد و تکامل است."
+      },
+      {
+        "text": "این راه‌اندازی پوشش رسانه‌ای ردهٔ اول در CNBC، Forbes، WIRED و TechCrunch به دست آورد و پترا را به‌عنوان یک فناوری زیرساختی دسته‌ساز معرفی کرد."
+      }
+    ]
+  },
+  "es": {
+    "cat": "Infraestructura · Robótica",
+    "sub": "Lanzamiento de marca",
+    "title": "Petra",
+    "subtitle": "Vehículo autónomo: identidad y entorno",
+    "body": [
+      {
+        "text": "MOW lideró la creación de marca y el lanzamiento de una tecnología de perforación de túneles enfocada en construir comunidades más seguras — incluyendo el nombre Petra, un sistema completo de mensaje e identidad, y un lenguaje visual escalable."
+      },
+      {
+        "text": "La marca Petra respaldó una ronda de financiación exitosa de $33M y sigue creciendo y evolucionando con el tiempo."
+      },
+      {
+        "text": "El lanzamiento obtuvo cobertura de primer nivel en CNBC, Forbes, WIRED y TechCrunch, posicionando a Petra como una tecnología de infraestructura que define su categoría."
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Avitia",
+  "image": "assets/cases/avitia.jpg",
+  "en": {
+    "cat": "Healthcare · AI",
+    "sub": "AI Cancer Rebrand",
+    "title": "Avitia",
+    "subtitle": "Relaunching an AI cancer-testing brand",
+    "body": [
+      {
+        "text": "MOW led the full brand creation and market relaunch as the company emerged from bankruptcy — including the Avitia brand name, a complete messaging and identity system, and a new website from design through deployment."
+      },
+      {
+        "text": "MOW also led government-facing communications, along with press and social, reintroducing the brand with clarity and credibility."
+      },
+      {
+        "text": "In less than a year, Avitia expanded across Canada, as well as to Thailand and the Middle East."
+      }
+    ]
+  },
+  "fa": {
+    "cat": "سلامت · هوش مصنوعی",
+    "sub": "بازآفرینی برند",
+    "title": "آویتیا",
+    "subtitle": "بازآفرینی یک برند تشخیص سرطان با هوش مصنوعی",
+    "body": [
+      {
+        "text": "MOW خلق کامل برند و بازگشت به بازار را هنگام خروج شرکت از ورشکستگی رهبری کرد — شامل نام برند آویتیا، یک سیستم کامل پیام و هویت، و یک وب‌سایت جدید از طراحی تا اجرا."
+      },
+      {
+        "text": "MOW همچنین ارتباطات دولتی را به همراه رسانه و شبکه‌های اجتماعی هدایت کرد و برند را با وضوح و اعتبار دوباره معرفی کرد."
+      },
+      {
+        "text": "در کمتر از یک سال، آویتیا در کانادا و نیز در تایلند و خاورمیانه گسترش یافت."
+      }
+    ]
+  },
+  "es": {
+    "cat": "Salud · IA",
+    "sub": "Relanzamiento de marca",
+    "title": "Avitia",
+    "subtitle": "Relanzando una marca de detección de cáncer con IA",
+    "body": [
+      {
+        "text": "MOW lideró la creación de marca y el relanzamiento al mercado mientras la empresa salía de la quiebra — incluyendo el nombre Avitia, un sistema completo de mensaje e identidad, y un nuevo sitio web del diseño al despliegue."
+      },
+      {
+        "text": "MOW también dirigió las comunicaciones con el gobierno, junto con prensa y redes sociales, reintroduciendo la marca con claridad y credibilidad."
+      },
+      {
+        "text": "En menos de un año, Avitia se expandió por Canadá, así como a Tailandia y Medio Oriente."
+      }
+    ]
+  }
+}

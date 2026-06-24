@@ -1,0 +1,55 @@
+{
+  "name": "Neara",
+  "image": "assets/cases/neara.jpg",
+  "en": {
+    "cat": "Climate Tech · AI",
+    "sub": "U.S. Market Launch",
+    "title": "Neara",
+    "subtitle": "Launching an AI climate-tech platform into a regulated market",
+    "body": [
+      {
+        "text": "MOW led the U.S. market launch of Neara, a complex AI climate-tech platform, aligning fragmented stakeholders in a highly regulated, PR-averse industry. MOW directed the launch video and narrative strategy."
+      },
+      {
+        "text": "The launch coincided with $24M in funding and a strategic partnership with Southern California Edison (NYSE: EIX) — earning coverage in The Wall Street Journal, Axios, and Smart Energy International."
+      },
+      {
+        "text": "Today, Neara carries a valuation north of $1B."
+      }
+    ]
+  },
+  "fa": {
+    "cat": "اقلیم · هوش مصنوعی",
+    "sub": "عرضه در بازار آمریکا",
+    "title": "Neara",
+    "subtitle": "عرضهٔ یک پلتفرم اقلیمی مبتنی بر هوش مصنوعی در بازاری تنظیم‌شده",
+    "body": [
+      {
+        "text": "MOW عرضهٔ Neara در بازار آمریکا را رهبری کرد؛ یک پلتفرم پیچیدهٔ اقلیمی مبتنی بر هوش مصنوعی، و ذی‌نفعان پراکنده را در صنعتی به‌شدت تنظیم‌شده و محتاط نسبت به رسانه هم‌راستا کرد. MOW ویدئوی عرضه و استراتژی روایت را کارگردانی کرد."
+      },
+      {
+        "text": "این عرضه هم‌زمان با ۲۴ میلیون دلار سرمایه و یک مشارکت راهبردی با Southern California Edison (NYSE: EIX) بود — و پوشش در The Wall Street Journal، Axios و Smart Energy International به دست آورد."
+      },
+      {
+        "text": "امروز، ارزش‌گذاری Neara بیش از یک میلیارد دلار است."
+      }
+    ]
+  },
+  "es": {
+    "cat": "Clima · IA",
+    "sub": "Lanzamiento en EE. UU.",
+    "title": "Neara",
+    "subtitle": "Lanzando una plataforma de clima con IA en un mercado regulado",
+    "body": [
+      {
+        "text": "MOW lideró el lanzamiento al mercado estadounidense de Neara, una compleja plataforma de clima con IA, alineando a actores fragmentados en una industria altamente regulada y reacia a la prensa. MOW dirigió el video de lanzamiento y la estrategia narrativa."
+      },
+      {
+        "text": "El lanzamiento coincidió con $24M en financiación y una alianza estratégica con Southern California Edison (NYSE: EIX) — obteniendo cobertura en The Wall Street Journal, Axios y Smart Energy International."
+      },
+      {
+        "text": "Hoy, Neara tiene una valuación superior a los $1B."
+      }
+    ]
+  }
+}
