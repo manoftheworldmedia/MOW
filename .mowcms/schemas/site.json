@@ -902,6 +902,124 @@
           "required": true
         }
       ]
+    },
+    {
+      "name": "articles",
+      "label": "News & Articles",
+      "icon": "file",
+      "kind": "collection",
+      "folder": "content/articles",
+      "extension": "json",
+      "primaryField": "date",
+      "fields": [
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "category",
+          "label": "Type",
+          "type": "select",
+          "options": [
+            "Thought Leadership",
+            "Blog",
+            "Article",
+            "News",
+            "Press Release"
+          ],
+          "default": "Article"
+        },
+        {
+          "name": "cover",
+          "label": "Cover image",
+          "type": "image"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "en",
+          "label": "English",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt / standfirst",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "fa",
+          "label": "فارسی (Persian)",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt / standfirst",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext"
+            }
+          ]
+        },
+        {
+          "name": "es",
+          "label": "Español",
+          "type": "object",
+          "ui": {
+            "group": "Languages"
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "excerpt",
+              "label": "Excerpt / standfirst",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "richtext"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

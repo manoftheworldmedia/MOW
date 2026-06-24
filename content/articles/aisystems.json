@@ -1,0 +1,21 @@
+{
+  "date": "2026-03-01",
+  "category": "Thought Leadership",
+  "cover": "assets/news/aisystems.jpg",
+  "featured": false,
+  "en": {
+    "title": "Integrate AI Into Your Organization the Right Way",
+    "excerpt": "Real transformation isn't a tool you buy — it's a system you design. A systems-thinking approach to AI.",
+    "body": "<h2>Tools don't transform organizations — systems do</h2>\n      <p>Most AI initiatives stall for the same reason: a company buys a tool and expects a transformation. But a tool dropped into a broken process simply produces broken outcomes faster. Real transformation begins one level up — at the system: the people, incentives, data, and decisions that surround the tool.</p>\n      <h2>Start with the decision, not the technology</h2>\n      <p>Before selecting a model or platform, name the decisions you want to improve and the outcomes you are accountable for. AI earns its place when it makes a specific decision faster, cheaper, or better — not when it is bolted on to look modern. Assess your real needs first; choose tools second.</p>\n      <h2>Design the data and the loops</h2>\n      <p>AI is only as good as the information feeding it and the feedback refining it. Map where your data lives, who owns it, and how clean it is. Then design the loops: how outputs are reviewed, how errors are caught, and how lessons travel back into the system. A model without a feedback loop is a guess that never learns.</p>\n      <h2>Bring people with you</h2>\n      <p>Transformation is an organizational-development problem as much as a technical one. Adoption depends on trust, training, and clear ownership. The teams who will use the system should help shape it — surfacing the edge cases, the exceptions, and the human judgment a dashboard would otherwise erase.</p>\n      <h2>Govern from day one</h2>\n      <p>Bias mitigation, security, and transparency are not features you add later — they are the foundation. Decide what the system will never do, who is accountable when it errs, and how its use is disclosed. Governance is what lets an organization move fast without breaking trust.</p>\n      <blockquote>Don't ask \"what can this tool do?\" Ask \"what should this system decide — and who is responsible for it?\"</blockquote>\n      <p>Integrate AI the right way and it compounds: better decisions feed better data, which trains better models, which earn more responsibility. That is digital transformation — not a purchase, but a discipline.</p>\n      <p>See how this thinking shaped real launches in <a href=\"/#work\">our work</a>, or <a href=\"/#contact\">talk to MOW</a> about your own AI integration.</p>"
+  },
+  "fa": {
+    "title": "",
+    "excerpt": "",
+    "body": ""
+  },
+  "es": {
+    "title": "",
+    "excerpt": "",
+    "body": ""
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-01",
+  "category": "Article",
+  "cover": "assets/news/genai.jpg",
+  "featured": false,
+  "en": {
+    "title": "Harnessing Generative AI Marketing: Transforming Strategies for Success",
+    "excerpt": "Leverage on a strong point of view — content, personalization, and video at scale, governed by taste.",
+    "body": "<h2>Understanding generative AI</h2>\n      <p>Generative AI refers to models that create new content — text, images, audio, video — rather than only analyzing data. Built on deep-learning architectures like transformers and GANs and trained on vast datasets, these systems can produce high-quality, audience-specific work at a scale traditional production cannot match.</p>\n      <h2>Applications in marketing</h2>\n      <p>The applications are diverse: automating content creation, generating personalized messages, designing visuals, and powering predictive analytics that forecast trends and behavior. Used well, generative AI saves time and resources while raising the quality and relevance of the output.</p>\n      <h2>Enhancing content creation</h2>\n      <p>Content is still king — and generative AI changes how it is made. Teams can maintain a steady flow of articles, posts, and updates without the usual time constraints, freeing strategists to focus on the decisions that matter. The key is direction: clear inputs, brand voice, and a human editor on quality.</p>\n      <h3>Generative AI for video</h3>\n      <p>Video is moving from experiment to cornerstone. Tools like <a href=\"https://blog.google/technology/ai/google-flow-ai-video-generation/\" target=\"_blank\" rel=\"noopener\">Google Flow</a>, <a href=\"https://runwayml.com/\" target=\"_blank\" rel=\"noopener\">Runway</a>, and the new <a href=\"https://moonvallye.ai/marea\" target=\"_blank\" rel=\"noopener\">Marea model from Moonvalley</a> let teams generate cinematic, brand-aligned video for campaigns and launches at speed — maintaining narrative depth while keeping pace with digital. As covered in our <a href=\"https://venturebeat.com/ai/runways-la-film-festival-marked-an-inflection-point-for-ai-movies/\" target=\"_blank\" rel=\"noopener\">VentureBeat article on Runway&rsquo;s AIFF Film Festival</a>, generative video is moving from experiment to cornerstone in brand marketing.</p>\n      <h2>Personalization at scale</h2>\n      <p>By analyzing behavior and preferences, generative AI tailors messaging to the individual — dynamic email that speaks to real interests, product recommendations grounded in history, and real-time content that adapts as a visitor engages. Personalization done with taste deepens loyalty; done carelessly, it erodes trust.</p>\n      <h2>Challenges to navigate</h2>\n      <p>Two disciplines matter most. <strong>Quality control:</strong> speed is worthless if the output drifts from your voice — keep a human in the loop. <strong>Ethics:</strong> data privacy, misinformation, and bias are real risks; be transparent about where and how AI is used.</p>\n      <blockquote>Generative AI is a powerful tool — but the brand is still the point.</blockquote>\n      <p>Enhance creation, personalize interactions, optimize engagement — then govern it with judgment. The brands that win will treat AI as leverage on a strong point of view, not a substitute for having one.</p>\n      <p>Ready to put generative AI to work on a brand worth remembering? <a href=\"/#contact\">Start a conversation with MOW</a> — or read how we <a href=\"/integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/\">integrate AI into organizations the right way</a>.</p>"
+  },
+  "fa": {
+    "title": "",
+    "excerpt": "",
+    "body": ""
+  },
+  "es": {
+    "title": "",
+    "excerpt": "",
+    "body": ""
+  }
+}
