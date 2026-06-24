@@ -32,8 +32,38 @@
     var lb = c.closest && c.closest('[data-langbtn]'); if (lb) { apply(lb.getAttribute('data-langbtn')); return; }
     if (c.closest && c.closest('[data-burger]')) { openMenu(); return; }
     if (c.closest && c.closest('[data-menuclose]')) { closeMenu(); return; }
+    // close method dropdown on outside click
+    var mm = document.querySelector('[data-methodmenu]');
+    if (mm && !c.closest('[data-methoddrop]')) { mm.style.opacity = '0'; mm.style.pointerEvents = 'none'; }
     var m = menu(); if (m && m.style.opacity === '1') { if (c === m || (c.closest && c.closest('[data-mobilemenu]') && c.tagName === 'A')) closeMenu(); }
   });
+
+  // Method dropdown — hover on desktop, tap-to-toggle on mobile
+  function initMethodDropdown() {
+    var wrap = document.querySelector('[data-methoddrop]');
+    var mm = document.querySelector('[data-methodmenu]');
+    if (!wrap || !mm) return;
+    var t = null;
+    function show() { clearTimeout(t); mm.style.opacity = '1'; mm.style.pointerEvents = 'auto'; }
+    function hide() { t = setTimeout(function() { mm.style.opacity = '0'; mm.style.pointerEvents = 'none'; }, 180); }
+    // hover style on item
+    var items = mm.querySelectorAll('a');
+    items.forEach(function(a) {
+      a.addEventListener('mouseenter', function() { a.style.background = 'rgba(196,156,78,0.14)'; a.style.color = '#E2C173'; });
+      a.addEventListener('mouseleave', function() { a.style.background = ''; a.style.color = '#EDE6D4'; });
+    });
+    wrap.addEventListener('mouseenter', show);
+    wrap.addEventListener('mouseleave', hide);
+    mm.addEventListener('mouseenter', show);
+    mm.addEventListener('mouseleave', hide);
+    // mobile tap toggle
+    var trigger = wrap.querySelector('a');
+    if (trigger) {
+      trigger.addEventListener('touchstart', function(e) {
+        if (mm.style.opacity === '1') { hide(); } else { e.preventDefault(); show(); }
+      }, { passive: false });
+    }
+  }
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
 
   var hdr = document.querySelector('[data-header]');
@@ -63,6 +93,6 @@
   }
   window.addEventListener('scroll', navScroll, { passive: true });
 
-  function boot() { apply(cur); navScroll(); }
+  function boot() { apply(cur); navScroll(); initMethodDropdown(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();
