@@ -26,7 +26,7 @@
       "type": "Article",
       "date": "2026-04-01",
       "summary": "Leverage on a strong point of view — content, personalization, and video at scale, governed by taste.",
-      "hero": "assets/news/genai.jpg",
+      "hero": "/assets/blog/genai-hero.png",
       "link": "/harnessing-generative-ai-marketing-transforming-strategies-for-success/",
       "featured": true
     },
@@ -46,7 +46,7 @@
       "type": "Thought Leadership",
       "date": "2026-02-23",
       "summary": "VoyageLA sits down with MOW founder Peter Weltman on building a journalistic, conviction-led branding practice in Los Angeles.",
-      "hero": "",
+      "hero": "/assets/blog/voyage-la-hero.png",
       "link": "https://voyagela.com/interview/exploring-life-business-with-peter-weltman-of-man-of-the-world-mow/",
       "featured": false
     },
@@ -56,7 +56,7 @@
       "type": "Article",
       "date": "2022-12-10",
       "summary": "A MOW byline in VentureBeat on how generative AI levels the field for lean, high-craft agencies.",
-      "hero": "",
+      "hero": "/assets/blog/genai-magic-hero.avif",
       "link": "https://venturebeat.com/ai/generative-ai-may-be-the-magic-potion-small-marketing-agencies-have-been-waiting-for/",
       "featured": false
     },
@@ -66,7 +66,7 @@
       "type": "Article",
       "date": "2024-05-09",
       "summary": "A MOW byline in VentureBeat on Runway's AIFF and the moment generative video moved from experiment to cornerstone.",
-      "hero": "",
+      "hero": "/assets/blog/runway-hero.avif",
       "link": "https://venturebeat.com/ai/runways-la-film-festival-marked-an-inflection-point-for-ai-movies",
       "featured": false
     },
@@ -76,7 +76,7 @@
       "type": "Press Release",
       "date": "2025-02-27",
       "summary": "MOW-led launch announcement for Avitia's AI-powered, point-of-care liquid-biopsy cancer-testing platform.",
-      "hero": "",
+      "hero": "/assets/blog/avitia-hero.png",
       "link": "https://www.businesswire.com/news/home/20250227741960/en/Avitia-Launches-AI-Powered-Platform-for-Rapid-Point-of-Care-Cancer-Testing",
       "featured": false
     },
@@ -86,7 +86,7 @@
       "type": "Press Release",
       "date": "2024-06-20",
       "summary": "MOW-led launch of AutoAlign's Sidecar Security, using NVIDIA NeMo Guardrails to protect large language models at scale.",
-      "hero": "",
+      "hero": "/assets/blog/nvidia-hero.png",
       "link": "https://www.businesswire.com/news/home/20240620331794/en/AutoAlign-Leverages-NVIDIA-NeMo-Guardrails-to-Protect-LLMs-at-Scale-with-Sidecar-Security",
       "featured": false
     },
@@ -96,7 +96,7 @@
       "type": "Press Release",
       "date": "2023-09-27",
       "summary": "MOW-led announcement of Neara's $24M Series B to help utilities mitigate climate risk and accelerate renewable energy.",
-      "hero": "",
+      "hero": "/assets/blog/neara-series-b-hero.png",
       "link": "https://www.businesswire.com/news/home/20230927861504/en/Neara-Closes-%2424M-Series-B-to-Mitigate-Utilities-Climate-Risks-and-Accelerate-Renewable-Energy",
       "featured": false
     },
@@ -106,7 +106,7 @@
       "type": "Press Release",
       "date": "2023-09-27",
       "summary": "MOW-led announcement of Neara's partnership with Southern California Edison to enhance wildfire risk mitigation.",
-      "hero": "",
+      "hero": "/assets/blog/neara-scedison-hero.png",
       "link": "https://www.businesswire.com/news/home/20230927480271/en/Neara-Partners-with-Southern-California-Edison-to-Enhance-Wildfire-Risk-Mitigation",
       "featured": false
     },
@@ -116,7 +116,7 @@
       "type": "Thought Leadership",
       "date": "2026-06-24",
       "summary": "The strategic communications framework that organizes your core narrative, audience-specific messages, and proof points into a single reference system.",
-      "hero": "",
+      "hero": "/assets/blog/messaging-matrix-hero.png",
       "link": "/what-is-a-messaging-matrix/",
       "featured": false
     }
