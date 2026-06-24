@@ -1,117 +1,123 @@
 {
-  "en": {
-    "hero_eyebrow": "Newsroom",
-    "hero_title": "Field notes <span style=\"font-style:italic;font-weight:600;color:#E2C173;\">&amp; theory.</span>",
-    "hero_subhead": "Dispatches on brand distinctiveness, the MOW Method, generative AI, and the discipline of becoming impossible to ignore."
-  },
-  "fa": {
-    "hero_eyebrow": "",
-    "hero_title": "",
-    "hero_subhead": ""
-  },
-  "es": {
-    "hero_eyebrow": "",
-    "hero_title": "",
-    "hero_subhead": ""
-  },
   "items": [
     {
+      "id": "i2i",
       "title": "Impossible to Ignore Is the New Standard for Global Brand Distinctiveness",
       "type": "Thought Leadership",
       "date": "2026-06-01",
       "summary": "The world doesn't need more content — it needs better-trained attention. Inside MOW's visual philosophy and its seven tenets.",
-      "hero": "/assets/news/i2i.jpg",
+      "hero": "assets/news/i2i.jpg",
       "link": "/impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/",
       "featured": true
     },
     {
+      "id": "brand",
       "title": "Mastering Brand Creation: A Step-by-Step Guide for Success",
       "type": "Blog",
       "date": "2026-05-01",
       "summary": "Five steps — from first principles to lasting equity — for building a brand that resonates and endures.",
-      "hero": "/assets/news/brand.jpg",
+      "hero": "assets/news/brand.jpg",
       "link": "/mastering-brand-creation-a-step-by-step-guide-for-success/",
       "featured": true
     },
     {
+      "id": "genai",
       "title": "Harnessing Generative AI Marketing: Transforming Strategies for Success",
       "type": "Article",
       "date": "2026-04-01",
       "summary": "Leverage on a strong point of view — content, personalization, and video at scale, governed by taste.",
-      "hero": "/assets/news/genai.jpg",
+      "hero": "assets/news/genai.jpg",
       "link": "/harnessing-generative-ai-marketing-transforming-strategies-for-success/",
       "featured": true
     },
     {
+      "id": "aisystems",
       "title": "Integrate AI Into Your Organization the Right Way",
       "type": "Thought Leadership",
       "date": "2026-03-01",
       "summary": "Real transformation isn't a tool you buy — it's a system you design. A systems-thinking approach to AI.",
-      "hero": "/assets/news/aisystems.jpg",
+      "hero": "assets/news/aisystems.jpg",
       "link": "/integrate-ai-into-your-organization-the-right-way-system-thinking-for-real-digital-transformation/",
       "featured": false
     },
     {
+      "id": "voyagela",
       "title": "Exploring Life & Business with Peter Weltman of Man of the World (MOW)",
       "type": "Thought Leadership",
       "date": "2026-02-23",
       "summary": "VoyageLA sits down with MOW founder Peter Weltman on building a journalistic, conviction-led branding practice in Los Angeles.",
-      "hero": "/assets/Peter_Weltman_Man_of_the_World_Voyage_LA_Magazine_interview_MOW_Media.png",
+      "hero": "",
       "link": "https://voyagela.com/interview/exploring-life-business-with-peter-weltman-of-man-of-the-world-mow/",
       "featured": false
     },
     {
+      "id": "vb-agencies",
       "title": "Generative AI May Be the Magic Potion Small Marketing Agencies Have Been Waiting For",
       "type": "Article",
       "date": "2022-12-10",
       "summary": "A MOW byline in VentureBeat on how generative AI levels the field for lean, high-craft agencies.",
-      "hero": "/assets/Peter_Weltman_Man_of_the_World_Generative_AI_May_Be_the_Magic_Potion_Small_Marketing_Agencies_Have_Been_Waiting_For_MOW_Media.avif",
+      "hero": "",
       "link": "https://venturebeat.com/ai/generative-ai-may-be-the-magic-potion-small-marketing-agencies-have-been-waiting-for/",
       "featured": false
     },
     {
+      "id": "vb-runway",
       "title": "Runway's LA Film Festival Marked an Inflection Point for AI Movies",
       "type": "Article",
       "date": "2024-05-09",
       "summary": "A MOW byline in VentureBeat on Runway's AIFF and the moment generative video moved from experiment to cornerstone.",
-      "hero": "/assets/Peter_Weltman_Man_of_the_World_Runway_LA_Film_Festival_Marked_an_Inflection_Point_for_AI_Movies_MOW_Media.avif",
+      "hero": "",
       "link": "https://venturebeat.com/ai/runways-la-film-festival-marked-an-inflection-point-for-ai-movies",
       "featured": false
     },
     {
+      "id": "pr-avitia",
       "title": "Avitia Launches AI-Powered Platform for Rapid Point-of-Care Cancer Testing",
       "type": "Press Release",
       "date": "2025-02-27",
       "summary": "MOW-led launch announcement for Avitia's AI-powered, point-of-care liquid-biopsy cancer-testing platform.",
-      "hero": "/assets/Avitia_Bio_AI_Cancer_Testig_Man_of_the_World_MOW_LA-2.png",
+      "hero": "",
       "link": "https://www.businesswire.com/news/home/20250227741960/en/Avitia-Launches-AI-Powered-Platform-for-Rapid-Point-of-Care-Cancer-Testing",
       "featured": false
     },
     {
+      "id": "pr-autoalign",
       "title": "AutoAlign Leverages NVIDIA NeMo Guardrails to Protect LLMs at Scale with Sidecar Security",
       "type": "Press Release",
       "date": "2024-06-20",
       "summary": "MOW-led launch of AutoAlign's Sidecar Security, using NVIDIA NeMo Guardrails to protect large language models at scale.",
-      "hero": "/assets/Logo-nvidia-transparent-PNG_Man_of_the_World_AI_Security_Announcmenet-1.png",
+      "hero": "",
       "link": "https://www.businesswire.com/news/home/20240620331794/en/AutoAlign-Leverages-NVIDIA-NeMo-Guardrails-to-Protect-LLMs-at-Scale-with-Sidecar-Security",
       "featured": false
     },
     {
+      "id": "pr-neara-seriesb",
       "title": "Neara Closes $24M Series B to Mitigate Utilities' Climate Risks and Accelerate Renewable Energy",
       "type": "Press Release",
       "date": "2023-09-27",
       "summary": "MOW-led announcement of Neara's $24M Series B to help utilities mitigate climate risk and accelerate renewable energy.",
-      "hero": "/assets/Neara_24_Million_Series_B_Man_of_the_World_AI_Grid_Safety.png",
+      "hero": "",
       "link": "https://www.businesswire.com/news/home/20230927861504/en/Neara-Closes-%2424M-Series-B-to-Mitigate-Utilities-Climate-Risks-and-Accelerate-Renewable-Energy",
       "featured": false
     },
     {
+      "id": "pr-neara-sce",
       "title": "Neara Partners with Southern California Edison to Enhance Wildfire Risk Mitigation",
       "type": "Press Release",
       "date": "2023-09-27",
       "summary": "MOW-led announcement of Neara's partnership with Southern California Edison to enhance wildfire risk mitigation.",
-      "hero": "/assets/Neara_and_SoCal_Edison_NYSE_EIX_Partnership_Anouncment_Man_of_the_World_AI_Grid_Safety.png",
+      "hero": "",
       "link": "https://www.businesswire.com/news/home/20230927480271/en/Neara-Partners-with-Southern-California-Edison-to-Enhance-Wildfire-Risk-Mitigation",
+      "featured": false
+    },
+    {
+      "id": "messaging-matrix",
+      "title": "What Is a Messaging Matrix?",
+      "type": "Thought Leadership",
+      "date": "2026-06-24",
+      "summary": "The strategic communications framework that organizes your core narrative, audience-specific messages, and proof points into a single reference system.",
+      "hero": "",
+      "link": "/what-is-a-messaging-matrix/",
       "featured": false
     }
   ]
