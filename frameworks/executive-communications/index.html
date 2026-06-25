@@ -196,8 +196,9 @@
 
 <main>
 
-<!-- HERO -->
-<section style="position:relative;background:#07211A;color:#EDE6D4;padding:clamp(80px,10vh,120px) clamp(20px,4vw,56px) clamp(48px,5vw,72px);overflow:hidden;">
+<!-- HERO + ASSET STRIP: fill the first screen, dual marquee pinned to the bottom -->
+<div style="min-height:100svh;display:flex;flex-direction:column;">
+<section style="position:relative;background:#07211A;color:#EDE6D4;flex:1 1 auto;min-height:0;padding:clamp(80px,10vh,120px) clamp(20px,4vw,56px) clamp(40px,4vw,60px);overflow:hidden;">
   <div style="position:absolute;top:-8%;right:-4%;width:min(44vw,500px);opacity:0.05;pointer-events:none;">
     <img src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
@@ -266,6 +267,8 @@
     </div>
   </div>
 </section>
+
+</div>
 
 <!-- WHAT IS IT -->
 <section id="what-it-is" style="background:#F5EFE2;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">

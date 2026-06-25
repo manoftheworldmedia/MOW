@@ -168,8 +168,9 @@
   </button>
 </div>
 
-<!-- HERO -->
-<section style="position:relative;background:#07211A;color:#EDE6D4;min-height:calc(100svh - 196px);display:flex;align-items:center;padding:92px clamp(20px,4vw,56px) 34px;overflow:hidden;">
+<!-- HERO + TRUSTED-BY: fill the first screen, marquee pinned to the bottom -->
+<div style="min-height:100svh;display:flex;flex-direction:column;">
+<section style="position:relative;background:#07211A;color:#EDE6D4;flex:1 1 auto;min-height:0;display:flex;align-items:center;padding:92px clamp(20px,4vw,56px) 34px;overflow:hidden;">
   <div style="position:absolute;top:8%;right:-6%;width:min(52vw,640px);opacity:0.05;pointer-events:none;animation:mowFloat 11s ease-in-out infinite;">
     <img data-cms-img="images.img3" src="assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
@@ -205,6 +206,8 @@
     </div>
   </div>
 </section>
+
+</div>
 
 <!-- ABOUT -->
 <section id="about" style="background:#F5EFE2;color:#1A1712;padding:clamp(92px,12vw,156px) clamp(20px,4vw,56px);">
