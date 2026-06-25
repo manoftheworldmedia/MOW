@@ -121,16 +121,6 @@
       "featured": false
     },
     {
-      "id": "exec-comms-presence",
-      "title": "Executive Communications, Presence & Thought Leadership",
-      "type": "Thought Leadership",
-      "date": "2026-06-24",
-      "summary": "The leaders who define categories build narrative systems. How MOW has shaped executive presence from CNBC to TechCrunch, Web Summit to primetime TV.",
-      "hero": "/assets/blog/messaging-matrix-hero.jpg",
-      "link": "/executive-communications-presence-thought-leadership/",
-      "featured": false
-    },
-    {
       "id": "architecture-exec-comms",
       "title": "The Architecture of Executive Communication",
       "type": "Thought Leadership",
