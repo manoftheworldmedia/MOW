@@ -588,6 +588,202 @@
       ]
     },
     {
+      "name": "menu",
+      "label": "Menu (Food & Drink)",
+      "icon": "menu",
+      "kind": "single",
+      "path": "content/menu.json",
+      "jsonld": {
+        "type": "menu",
+        "into": "menu/index.html",
+        "langs": [
+          "en",
+          "fa"
+        ]
+      },
+      "fields": [
+        {
+          "name": "establishmentType",
+          "label": "Business type (for rich results)",
+          "type": "select",
+          "options": [
+            "CafeOrCoffeeShop",
+            "Restaurant",
+            "Bakery",
+            "BarOrPub",
+            "FastFoodRestaurant",
+            "IceCreamShop",
+            "Winery",
+            "Brewery"
+          ],
+          "default": "CafeOrCoffeeShop"
+        },
+        {
+          "name": "businessName",
+          "label": "Business name",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "label": "Website URL",
+          "type": "url"
+        },
+        {
+          "name": "currency",
+          "label": "Currency",
+          "type": "select",
+          "options": [
+            "usd",
+            "eur",
+            "gbp",
+            "cad",
+            "aud"
+          ],
+          "default": "usd",
+          "required": true
+        },
+        {
+          "name": "image",
+          "label": "Menu / hero image",
+          "type": "image"
+        },
+        {
+          "name": "sections",
+          "label": "Menu sections (drag to reorder)",
+          "type": "list",
+          "min": 1,
+          "of": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "en",
+                "label": "English",
+                "type": "object",
+                "ui": {
+                  "group": "Languages"
+                },
+                "fields": [
+                  {
+                    "name": "name",
+                    "label": "Section name",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "label": "Section description",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "name": "fa",
+                "label": "فارسی (Persian)",
+                "type": "object",
+                "ui": {
+                  "group": "Languages"
+                },
+                "fields": [
+                  {
+                    "name": "name",
+                    "label": "Section name",
+                    "type": "string"
+                  },
+                  {
+                    "name": "description",
+                    "label": "Section description",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "name": "items",
+                "label": "Items (drag to reorder)",
+                "type": "list",
+                "of": {
+                  "type": "object",
+                  "fields": [
+                    {
+                      "name": "price",
+                      "label": "Price (e.g. 5.50)",
+                      "type": "number",
+                      "min": 0
+                    },
+                    {
+                      "name": "image",
+                      "label": "Photo",
+                      "type": "image"
+                    },
+                    {
+                      "name": "dietary",
+                      "label": "Dietary tags",
+                      "type": "list",
+                      "of": {
+                        "type": "select",
+                        "options": [
+                          "vegan",
+                          "vegetarian",
+                          "gluten-free",
+                          "halal",
+                          "kosher",
+                          "low-calorie",
+                          "low-fat",
+                          "low-lactose",
+                          "low-salt",
+                          "diabetic"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "object",
+                      "ui": {
+                        "group": "Languages"
+                      },
+                      "fields": [
+                        {
+                          "name": "name",
+                          "label": "Item name",
+                          "type": "string",
+                          "required": true
+                        },
+                        {
+                          "name": "description",
+                          "label": "Item description",
+                          "type": "text"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "object",
+                      "ui": {
+                        "group": "Languages"
+                      },
+                      "fields": [
+                        {
+                          "name": "name",
+                          "label": "Item name",
+                          "type": "string"
+                        },
+                        {
+                          "name": "description",
+                          "label": "Item description",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "navigation",
       "label": "Navigation Menu",
       "icon": "menu",
