@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://mow.media/news/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The MOW Journal — Man of the World">
-<meta property="og:description" content="Field notes & theory on brand distinctiveness, the MOW Method, generative AI, and becoming impossible to ignore.">
+<meta property="og:description" content="Field notes &amp; theory on brand distinctiveness, the MOW Method, generative AI, and becoming impossible to ignore.">
 <meta property="og:url" content="https://mow.media/news/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,25 +46,25 @@
 <body>
 
 <!-- NAV -->
-<header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
+<header data-header style="position:sticky;top:0;z-index:120;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.16);">
   <nav style="max-width:1340px;margin:0 auto;padding:9px clamp(20px,4vw,56px);min-height:78px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:24px;">
     <a href="/" data-navlogo aria-label="Man of the World — home" style="display:flex;align-items:center;flex-shrink:0;order:1;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <img src="/assets/mow_mark_white.png" alt="Man of the World" style="height:13px;width:auto;display:block;opacity:0.96;">
     </a>
     <div class="nav-links" data-nav style="gap:clamp(20px,2.6vw,40px);align-items:center;order:3;flex-basis:100%;justify-content:center;margin-top:4px;white-space:nowrap;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;">
-      <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
-      <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
+      <a href="/#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;">Services</a>
+      <a href="/#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;">Work</a>
       <div style="position:relative;display:inline-block;" data-methoddrop>
         <a href="/frameworks/messaging-matrix/" data-i18n="nav_method" style="color:#CBD6C7;display:flex;align-items:center;gap:5px;">Method <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
-        <div data-methodmenu style="position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(5,21,14,0.97);border:1px solid rgba(196,156,78,0.3);border-radius:12px;padding:8px;min-width:210px;opacity:0;pointer-events:none;transition:opacity .22s;backdrop-filter:blur(10px);">
+        <div data-methodmenu style="position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(5,21,14,0.97);border:1px solid rgba(196,156,78,0.3);border-radius:12px;padding:8px;min-width:210px;opacity:0;pointer-events:none;transition:opacity .22s;backdrop-filter:blur(10px);z-index:200;">
           <a href="/frameworks/messaging-matrix/" style="display:block;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:#EDE6D4;padding:11px 16px;border-radius:8px;white-space:nowrap;">Messaging Matrix</a>
+          <a href="/frameworks/executive-communications/" style="display:block;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:#EDE6D4;padding:11px 16px;border-radius:8px;white-space:nowrap;">Executives</a>
         </div>
       </div>
       <a href="/news/" data-i18n="nav_blog" style="color:#E2C173;transition:color .2s;">News</a>
-      <a href="/about/" data-i18n="nav_about" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">About</a>
-      <a href="/#faq" data-i18n="nav_faq" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">FAQs</a>
-    </div>
-    <div data-navright style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
+      <a href="/about/" data-i18n="nav_about" style="color:#CBD6C7;transition:color .2s;">About</a>
+      <a href="/#faq" data-i18n="nav_faq" style="color:#CBD6C7;transition:color .2s;">FAQs</a>
+    </div> style="display:flex;align-items:center;gap:clamp(14px,2vw,22px);order:3;transition:transform .55s cubic-bezier(.2,.7,.3,1);">
       <div data-navswap style="position:relative;display:flex;align-items:center;">
       <div data-langwrap style="display:flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;transition:opacity .5s cubic-bezier(.2,.7,.3,1), transform .5s cubic-bezier(.2,.7,.3,1);">
         <button type="button" data-langbtn="en" style="border:none;background:none;cursor:pointer;padding:0;color:#EDE6D4;transition:color .2s;font-family:inherit;font-size:inherit;letter-spacing:inherit;">EN</button>
@@ -90,6 +90,7 @@
   <a href="/#services" data-i18n="nav_services" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Services</a>
   <a href="/#work" data-i18n="nav_work" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Work</a>
   <a href="/frameworks/messaging-matrix/" data-i18n="nav_method" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
+  <a href="/frameworks/executive-communications/" style="font-family:'Bodoni Moda',serif;font-size:26px;color:#9FB09B;padding:6px 10px;">→ Executives</a>
   <a href="/news/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">News</a>
   <a href="/about/" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
   <a href="/#faq" data-i18n="nav_faq" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">FAQs</a>
@@ -103,7 +104,7 @@
   <div style="position:absolute;inset:0;background:radial-gradient(circle at 12% 16%, rgba(196,156,78,0.10), transparent 44%);pointer-events:none;"></div>
   <div style="max-width:1340px;margin:0 auto;position:relative;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:#C49C4E;margin-bottom:30px;display:flex;align-items:center;gap:16px;"><span style="width:46px;height:1px;background:#C49C4E;display:inline-block;"></span>Newsroom</p>
-    <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(48px,8vw,118px);line-height:0.9;letter-spacing:-0.02em;color:#F6F0E1;">Field notes <span style="font-style:italic;font-weight:600;color:#E2C173;">&amp; theory.</span></h1>
+    <h1 style="font-family:'Bodoni Moda','Vazirmatn',serif;font-weight:500;font-size:clamp(48px,8vw,118px);line-height:0.9;letter-spacing:-0.02em;color:#F6F0E1;">MOW <span style="font-style:italic;font-weight:600;color:#E2C173;">News</span></h1>
     <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,29px);line-height:1.45;color:#CBD6C7;max-width:620px;margin-top:30px;">Dispatches on brand distinctiveness, the MOW Method, generative AI, and the discipline of becoming impossible to ignore.</p>
   </div>
 </section>
@@ -126,9 +127,9 @@
       <span style="font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9FB09B;">Made in Los Angeles</span>
     </a>
     <div style="display:flex;gap:26px;font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:500;color:#C0CCBC;flex-wrap:wrap;">
-      <a href="https://www.instagram.com/manoftheworld.mow/" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">Instagram</a>
-      <a href="https://linkedin.com/company/mowm" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">LinkedIn</a>
-      <a href="https://www.tiktok.com/@peter.weltman" target="_blank" rel="noopener" style="transition:color .2s;" style-hover="color:#E2C173;">TikTok</a>
+      <a href="https://www.instagram.com/manoftheworld.mow/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com/company/mowm" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.tiktok.com/@peter.weltman" target="_blank" rel="noopener">TikTok</a>
     </div>
     <span style="font-family:'Archivo',sans-serif;font-size:11.5px;color:#6E8268;">© 2026 MOW Media · Man of the World</span>
   </div>
@@ -155,22 +156,25 @@
     var m=menu(); if(m&&m.style.opacity==='1'){ if(c===m||(c.closest&&c.closest('[data-mobilemenu]')&&c.tagName==='A')) closeMenu(); }
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
-
+  // Method dropdown
+  var t=null;
+  document.addEventListener('mouseover',function(e){var w=e.target.closest&&e.target.closest('[data-methoddrop]');var mm=document.querySelector('[data-methodmenu]');if(w&&mm){clearTimeout(t);mm.style.opacity='1';mm.style.pointerEvents='auto';}});
+  document.addEventListener('mouseout',function(e){var w=e.target.closest&&e.target.closest('[data-methoddrop]');var mm=document.querySelector('[data-methodmenu]');if(!e.relatedTarget||!(e.relatedTarget.closest&&e.relatedTarget.closest('[data-methoddrop]'))){if(mm){clearTimeout(t);t=setTimeout(function(){mm.style.opacity='0';mm.style.pointerEvents='none';},180);}}});
+  // Scroll behavior
   var hdr=document.querySelector('[data-header]');
-  if(hdr) hdr.style.transition='transform .45s cubic-bezier(.4,0,.2,1),background .45s,border-color .45s,backdrop-filter .45s';
   var navLast=0;
   function navScroll(){
     var y=window.scrollY||document.documentElement.scrollTop||0;
     var scrolled=y>40;
-    if(hdr){ if(y>navLast&&y>260) hdr.style.transform='translateY(-100%)'; else hdr.style.transform='translateY(0)'; navLast=y; hdr.style.background=scrolled?'rgba(5,21,14,0.985)':'transparent'; hdr.style.borderBottomColor=scrolled?'rgba(196,156,78,0.22)':'transparent'; hdr.style.backdropFilter=scrolled?'saturate(150%) blur(16px)':'none'; hdr.style.webkitBackdropFilter=scrolled?'saturate(150%) blur(16px)':'none'; }
+    if(hdr){ if(y>navLast&&y>260) hdr.style.transform='translateY(-100%)'; else hdr.style.transform='translateY(0)'; navLast=y; hdr.style.background=scrolled?'rgba(5,21,14,0.985)':'rgba(7,33,26,0.82)'; hdr.style.borderBottomColor=scrolled?'rgba(196,156,78,0.22)':'rgba(196,156,78,0.16)'; hdr.style.backdropFilter=scrolled?'saturate(150%) blur(16px)':'saturate(150%) blur(16px)'; }
     var lw=document.querySelector('[data-langwrap]'),ct=document.querySelector('[data-navcontact]');
     if(lw&&ct){
-      if(scrolled){ lw.style.opacity='0';lw.style.transform='translateX(-8px)';lw.style.pointerEvents='none';ct.style.opacity='1';ct.style.transform='translate(0,-50%) scale(1)';ct.style.pointerEvents='auto';ct.classList.add('is-on'); }
-      else { lw.style.opacity='1';lw.style.transform='translateX(0)';lw.style.pointerEvents='auto';ct.style.opacity='0';ct.style.transform='translate(8px,-50%) scale(0.92)';ct.style.pointerEvents='none';ct.classList.remove('is-on'); }
+      if(scrolled){lw.style.opacity='0';lw.style.transform='translateX(-8px)';lw.style.pointerEvents='none';ct.style.opacity='1';ct.style.transform='translate(0,-50%) scale(1)';ct.style.pointerEvents='auto';ct.classList.add('is-on');}
+      else{lw.style.opacity='1';lw.style.transform='translateX(0)';lw.style.pointerEvents='auto';ct.style.opacity='0';ct.style.transform='translate(8px,-50%) scale(0.92)';ct.style.pointerEvents='none';ct.classList.remove('is-on');}
     }
   }
   window.addEventListener('scroll',navScroll,{passive:true}); navScroll();
-
+  var n=0;(function init(){apply(cur);if(n++<24)setTimeout(init,140);})();
 })();
 </script>
 </body>
