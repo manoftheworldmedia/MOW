@@ -1,0 +1,42 @@
+{
+  "establishmentType": "CafeOrCoffeeShop",
+  "businessName": "Caspian Coast Coffee",
+  "url": "https://caspiancoast.com",
+  "currency": "usd",
+  "image": "assets/caspian/j8.jpg",
+  "sections": [
+    {
+      "en": { "name": "Coffee", "description": "Persian roots, California light." },
+      "fa": { "name": "قهوه", "description": "ریشه‌های ایرانی، نور کالیفرنیا." },
+      "items": [
+        {
+          "price": 6.0,
+          "image": "assets/caspian/j8.jpg",
+          "dietary": ["vegetarian", "gluten-free"],
+          "en": { "name": "Saffron Latte", "description": "Espresso, steamed milk, and a thread of saffron — زعفران." },
+          "fa": { "name": "لاته زعفران", "description": "اسپرسو، شیر بخارپز و زعفران." }
+        },
+        {
+          "price": 4.5,
+          "image": "",
+          "dietary": ["vegetarian"],
+          "en": { "name": "Persian Coffee", "description": "Cardamom-scented, slow-brewed." },
+          "fa": { "name": "قهوه ایرانی", "description": "با هل، دم‌کشیده." }
+        }
+      ]
+    },
+    {
+      "en": { "name": "Bakery", "description": "Warm from the oven." },
+      "fa": { "name": "نانوایی", "description": "تازه از تنور." },
+      "items": [
+        {
+          "price": 5.0,
+          "image": "assets/caspian/j10.jpg",
+          "dietary": ["vegetarian"],
+          "en": { "name": "Barbari & Butter", "description": "Fresh Persian flatbread, served warm." },
+          "fa": { "name": "بربری و کره", "description": "نان بربری تازه، گرم سرو می‌شود." }
+        }
+      ]
+    }
+  ]
+}

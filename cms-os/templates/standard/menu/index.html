@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu</title>
+<meta name="description" content="Our full food & drink menu.">
+<link rel="canonical" href="/menu/">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#07211A;color:#EDE6D4;font-family:'Archivo',system-ui,sans-serif;line-height:1.6;}
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px;}
+  h1{font-family:'Bodoni Moda',Georgia,serif;font-size:clamp(34px,6vw,56px);margin-bottom:8px;}
+  .mow-menu-section{font-family:'Bodoni Moda',Georgia,serif;color:#C49C4E;font-size:clamp(22px,3vw,30px);margin:40px 0 6px;border-bottom:1px solid rgba(196,156,78,0.3);padding-bottom:8px;}
+  .mow-menu-secdesc{opacity:.75;font-style:italic;margin-bottom:14px;}
+  .mow-menu-item{padding:12px 0;border-bottom:1px solid rgba(237,230,212,0.08);}
+  .mow-menu-itemtop{display:flex;justify-content:space-between;gap:16px;align-items:baseline;}
+  .mow-menu-name{font-weight:600;}
+  .mow-menu-price{color:#C49C4E;white-space:nowrap;}
+  .mow-menu-desc{opacity:.7;font-size:.94em;margin-top:2px;}
+</style>
+<!-- MOW:MENU-SCHEMA -->
+<script type="application/ld+json" data-mow-menu>{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Your Café","hasMenu":{"@type":"Menu","inLanguage":"en","hasMenuSection":[{"@type":"MenuSection","name":"Coffee","description":"Pulled fresh, all day.","hasMenuItem":[{"@type":"MenuItem","name":"Flat White","description":"Double espresso, steamed milk.","offers":{"@type":"Offer","price":"4.50","priceCurrency":"USD"},"suitableForDiet":"https://schema.org/VegetarianDiet"},{"@type":"MenuItem","name":"Saffron Latte","description":"Espresso, milk, a thread of saffron.","offers":{"@type":"Offer","price":"5.50","priceCurrency":"USD"},"suitableForDiet":["https://schema.org/VegetarianDiet","https://schema.org/GlutenFreeDiet"]}]},{"@type":"MenuSection","name":"Pastries","description":"Baked in-house.","hasMenuItem":[{"@type":"MenuItem","name":"Cardamom Bun","description":"Rose, pistachio, cardamom.","offers":{"@type":"Offer","price":"3.50","priceCurrency":"USD"},"suitableForDiet":"https://schema.org/VegetarianDiet"}]}]}}</script>
+<script type="application/ld+json" data-mow-menu>{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Your Café","hasMenu":{"@type":"Menu","inLanguage":"fa","hasMenuSection":[{"@type":"MenuSection","name":"قهوه","description":"Pulled fresh, all day.","hasMenuItem":[{"@type":"MenuItem","name":"فلت وایت","description":"Double espresso, steamed milk.","offers":{"@type":"Offer","price":"4.50","priceCurrency":"USD"},"suitableForDiet":"https://schema.org/VegetarianDiet"},{"@type":"MenuItem","name":"لاته زعفران","description":"Espresso, milk, a thread of saffron.","offers":{"@type":"Offer","price":"5.50","priceCurrency":"USD"},"suitableForDiet":["https://schema.org/VegetarianDiet","https://schema.org/GlutenFreeDiet"]}]},{"@type":"MenuSection","name":"شیرینی","description":"Baked in-house.","hasMenuItem":[{"@type":"MenuItem","name":"نان هل","description":"Rose, pistachio, cardamom.","offers":{"@type":"Offer","price":"3.50","priceCurrency":"USD"},"suitableForDiet":"https://schema.org/VegetarianDiet"}]}]}}</script>
+<!-- /MOW:MENU-SCHEMA -->
+</head>
+<body>
+  <div class="wrap">
+    <h1>Menu</h1>
+    <!-- Menu renders here from content/menu.json (assets/menu.js). The static
+         schema.org JSON-LD below is the canonical copy for crawlers. -->
+    <div id="mow-menu"></div>
+  </div>
+  <script src="/assets/menu.js" defer></script>
+</body>
+</html>

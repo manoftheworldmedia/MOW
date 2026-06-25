@@ -5,6 +5,7 @@
 import { clientFor, getSchema } from './projects.js';
 import { listStaged, clearStage } from './store.js';
 import { diff } from '../../shared/schema-engine.js';
+import { buildMenuJsonLdFile } from './menu-schema.js';
 
 /** Turn a validated content value into the exact file bytes for the repo. */
 export function serialize(schema, value) {
@@ -37,14 +38,40 @@ export async function publish(project, { user, message, expectedHead }) {
 
   const files = [];
   const summary = [];
+  const schemas = [];
   for (const entry of staged) {
     const schema = await getSchema(project, entry.schemaName);
     if (!schema) { const e = new Error(`Unknown schema "${entry.schemaName}".`); e.status = 400; throw e; }
     files.push({ path: entry.path, content: serialize(schema, entry.value) });
     summary.push(entry.path);
+    schemas.push(schema);
   }
 
   const gh = clientFor(project);
+
+  // Automatic schema projection (Zero-Maintenance SEO): any schema that
+  // declares a `jsonld` target gets its structured data (re)generated into a
+  // STATIC page in the SAME atomic commit — so search engines AND JS-blind AI
+  // crawlers read it straight from the HTML. Best-effort: a projection failure
+  // (e.g. the target page doesn't exist yet) never blocks a publish.
+  const emitted = new Set(files.map((f) => f.path));
+  const mediaBase = project.previewUrl ? project.previewUrl.replace(/\/$/, '') + '/' : '';
+  for (let i = 0; i < staged.length; i++) {
+    const schema = schemas[i];
+    if (!schema || !schema.jsonld) continue;
+    try {
+      const derived = await buildMenuJsonLdFile(staged[i].value, schema, {
+        readFile: (p) => gh.readFile(p),
+        mediaBase,
+        siteUrl: project.previewUrl || '',
+      });
+      if (derived && !emitted.has(derived.path)) {
+        files.push(derived);
+        summary.push(derived.path);
+        emitted.add(derived.path);
+      }
+    } catch { /* schema projection is best-effort — never block a publish */ }
+  }
   const commitMessage = buildCommitMessage(message, summary, user);
   const result = await gh.commitFiles({
     files,

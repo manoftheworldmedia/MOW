@@ -1,0 +1,42 @@
+{
+  "establishmentType": "CafeOrCoffeeShop",
+  "businessName": "Your Café",
+  "url": "",
+  "currency": "usd",
+  "image": "",
+  "sections": [
+    {
+      "en": { "name": "Coffee", "description": "Pulled fresh, all day." },
+      "fa": { "name": "قهوه", "description": "" },
+      "items": [
+        {
+          "price": 4.5,
+          "image": "",
+          "dietary": ["vegetarian"],
+          "en": { "name": "Flat White", "description": "Double espresso, steamed milk." },
+          "fa": { "name": "فلت وایت", "description": "" }
+        },
+        {
+          "price": 5.5,
+          "image": "",
+          "dietary": ["vegetarian", "gluten-free"],
+          "en": { "name": "Saffron Latte", "description": "Espresso, milk, a thread of saffron." },
+          "fa": { "name": "لاته زعفران", "description": "" }
+        }
+      ]
+    },
+    {
+      "en": { "name": "Pastries", "description": "Baked in-house." },
+      "fa": { "name": "شیرینی", "description": "" },
+      "items": [
+        {
+          "price": 3.5,
+          "image": "",
+          "dietary": ["vegetarian"],
+          "en": { "name": "Cardamom Bun", "description": "Rose, pistachio, cardamom." },
+          "fa": { "name": "نان هل", "description": "" }
+        }
+      ]
+    }
+  ]
+}
