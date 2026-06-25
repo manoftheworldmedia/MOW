@@ -200,8 +200,8 @@
 <main>
 
 <!-- HERO + ASSET STRIP: fill the first screen, dual marquee pinned to the bottom -->
-<div style="height:100svh;display:flex;flex-direction:column;overflow:hidden;">
-<section style="position:relative;background:#07211A;color:#EDE6D4;flex:1 1 auto;min-height:0;overflow:hidden;padding:clamp(80px,10vh,120px) clamp(20px,4vw,56px) clamp(40px,4vw,60px);overflow:hidden;">
+<div style="min-height:100svh;display:flex;flex-direction:column;">
+<section style="position:relative;background:#07211A;color:#EDE6D4;flex:1 1 auto;min-height:0;padding:clamp(80px,10vh,120px) clamp(20px,4vw,56px) clamp(40px,4vw,60px);overflow:hidden;">
   <div style="position:absolute;top:-8%;right:-4%;width:min(44vw,500px);opacity:0.05;pointer-events:none;">
     <img src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
@@ -225,7 +225,7 @@
 </section>
 
 <!-- ASSET STRIP — two opposing marquee rows -->
-<section aria-hidden="true" style="padding:clamp(36px,4vw,52px) 0;overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);border-bottom:1px solid rgba(196,156,78,0.14);">
+<section aria-hidden="true" style="position:sticky;bottom:0;z-index:10;padding:clamp(36px,4vw,52px) 0;overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);border-bottom:1px solid rgba(196,156,78,0.14);">
   <!-- Row 1: images scroll LEFT → RIGHT (reverse) -->
   <div style="overflow:hidden;margin-bottom:14px;">
     <div style="display:flex;width:max-content;animation:mmMarqR 38s linear infinite;will-change:transform;">
