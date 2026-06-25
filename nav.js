@@ -38,17 +38,51 @@
     var m = menu(); if (m && m.style.opacity === '1') { if (c === m || (c.closest && c.closest('[data-mobilemenu]') && c.tagName === 'A')) closeMenu(); }
   });
 
-  // Method dropdown — hover on desktop, tap-to-toggle on mobile
+  // Method dropdown — build HTML dynamically if not already present,
+  // then wire hover/tap. Works even if the page was uploaded with the old nav.
   function initMethodDropdown() {
     var wrap = document.querySelector('[data-methoddrop]');
-    var mm = document.querySelector('[data-methodmenu]');
-    if (!wrap || !mm) return;
+    // If the dropdown wrapper isn't in the HTML yet, build it around the Method link.
+    if (!wrap) {
+      var links = document.querySelectorAll('[data-nav] a, nav a');
+      for (var i = 0; i < links.length; i++) {
+        var a = links[i];
+        if (/messaging-matrix|\/method/i.test(a.getAttribute('href') || '') || /^method$/i.test((a.textContent || '').trim())) {
+          // Wrap it
+          var div = document.createElement('div');
+          div.setAttribute('data-methoddrop', '');
+          div.style.cssText = 'position:relative;display:inline-block;';
+          a.parentNode.insertBefore(div, a);
+          div.appendChild(a);
+          // Add chevron
+          a.style.display = 'flex'; a.style.alignItems = 'center'; a.style.gap = '5px';
+          a.href = '/frameworks/messaging-matrix/';
+          a.innerHTML = (a.textContent.trim() || 'Method') + ' <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style="flex-shrink:0"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+          // Build menu
+          var menu = document.createElement('div');
+          menu.setAttribute('data-methodmenu', '');
+          menu.style.cssText = 'position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(5,21,14,0.97);border:1px solid rgba(196,156,78,0.3);border-radius:12px;padding:8px;min-width:210px;opacity:0;pointer-events:none;transition:opacity .22s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:200;';
+          function mkLink(href, label) {
+            var l = document.createElement('a');
+            l.href = href; l.textContent = label;
+            l.style.cssText = 'display:block;font-family:\'Archivo\',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:#EDE6D4;padding:11px 16px;border-radius:8px;white-space:nowrap;text-decoration:none;';
+            return l;
+          }
+          menu.appendChild(mkLink('/frameworks/messaging-matrix/', 'Messaging Matrix'));
+          menu.appendChild(mkLink('/frameworks/executive-communications/', 'Executives'));
+          div.appendChild(menu);
+          wrap = div;
+          break;
+        }
+      }
+    }
+    if (!wrap) return;
+    var mm = wrap.querySelector('[data-methodmenu]') || document.querySelector('[data-methodmenu]');
+    if (!mm) return;
     var t = null;
     function show() { clearTimeout(t); mm.style.opacity = '1'; mm.style.pointerEvents = 'auto'; }
     function hide() { t = setTimeout(function() { mm.style.opacity = '0'; mm.style.pointerEvents = 'none'; }, 180); }
-    // hover style on item
-    var items = mm.querySelectorAll('a');
-    items.forEach(function(a) {
+    mm.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('mouseenter', function() { a.style.background = 'rgba(196,156,78,0.14)'; a.style.color = '#E2C173'; });
       a.addEventListener('mouseleave', function() { a.style.background = ''; a.style.color = '#EDE6D4'; });
     });
@@ -56,7 +90,6 @@
     wrap.addEventListener('mouseleave', hide);
     mm.addEventListener('mouseenter', show);
     mm.addEventListener('mouseleave', hide);
-    // mobile tap toggle
     var trigger = wrap.querySelector('a');
     if (trigger) {
       trigger.addEventListener('touchstart', function(e) {
