@@ -835,10 +835,17 @@ class Component extends DCLogic {
   }
 
   onAnyScroll(fn) {
-    // Body is the scroll container in this runtime, so a capture-phase
-    // listener on window catches scroll events from any scroller.
-    window.addEventListener('scroll', fn, { passive: true, capture: true });
-    document.addEventListener('scroll', fn, { passive: true, capture: true });
+    // Coalesce to at most one run per animation frame, and bind ONCE. Running
+    // layout-reading/style-writing handlers on every scroll event (and twice,
+    // via window+document) caused page-wide scroll jank. rAF-throttling keeps
+    // the work to a single frame-aligned pass.
+    let ticking = false;
+    const handler = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { ticking = false; fn(); });
+    };
+    window.addEventListener('scroll', handler, { passive: true });
     fn();
   }
 
@@ -979,13 +986,24 @@ class Component extends DCLogic {
       return Math.max(0, y);
     };
     window.scrollTo({ top: want(), behavior: 'smooth' });
-    let tries = 0;
+    let tries = 0, cancelled = false;
+    const onUser = () => {
+      cancelled = true;
+      window.removeEventListener('wheel', onUser);
+      window.removeEventListener('touchstart', onUser);
+      window.removeEventListener('keydown', onUser);
+    };
+    window.addEventListener('wheel', onUser, { passive: true });
+    window.addEventListener('touchstart', onUser, { passive: true });
+    window.addEventListener('keydown', onUser);
     const fix = () => {
+      if (cancelled) return;            // user took over — don't fight the scroll
       const y = want();
       if (Math.abs(window.scrollY - y) > 3) {
         window.scrollTo({ top: y, behavior: 'auto' });
         if (++tries < 4) setTimeout(fix, 220);
-      }
+        else onUser();
+      } else { onUser(); }
     };
     setTimeout(fix, 620);
   }
@@ -1007,15 +1025,25 @@ class Component extends DCLogic {
   _settle(want) {
     if (this._settleStop) this._settleStop();
     let stable = 0, ticks = 0, raf = 0, alive = true;
-    const onImg = () => { stable = 0; };
     var imgs = (this.root || document).querySelectorAll('img');
-    for (var i = 0; i < imgs.length; i++) imgs[i].addEventListener('load', onImg);
     const stop = () => {
       alive = false;
       if (raf) cancelAnimationFrame(raf);
       for (var j = 0; j < imgs.length; j++) imgs[j].removeEventListener('load', onImg);
+      window.removeEventListener('wheel', onUser);
+      window.removeEventListener('touchstart', onUser);
+      window.removeEventListener('keydown', onUser);
       this._settleStop = null;
     };
+    // Re-align when a late image shifts the layout — but YIELD to the user the
+    // instant they scroll/touch/key. The loop must never fight manual scrolling
+    // (that was the page jitter + "can't scroll down" after a nav click).
+    const onImg = () => { stable = 0; };
+    const onUser = () => stop();
+    for (var i = 0; i < imgs.length; i++) imgs[i].addEventListener('load', onImg);
+    window.addEventListener('wheel', onUser, { passive: true });
+    window.addEventListener('touchstart', onUser, { passive: true });
+    window.addEventListener('keydown', onUser);
     this._settleStop = stop;
     const tick = () => {
       if (!alive) return;
@@ -1027,7 +1055,7 @@ class Component extends DCLogic {
       } else {
         stable++;
       }
-      if (stable >= 24 || ticks >= 240) { stop(); return; }
+      if (stable >= 12 || ticks >= 120) { stop(); return; }
       raf = requestAnimationFrame(tick);
     };
     setTimeout(() => { if (alive) raf = requestAnimationFrame(tick); }, 360);
