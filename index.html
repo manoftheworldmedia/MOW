@@ -98,7 +98,10 @@
   .mow-article blockquote{ margin:38px 0; padding:8px 0 8px 28px; border-left:2px solid #C49C4E; font-style:italic; font-size:clamp(23px,2.4vw,31px); line-height:1.32; color:#F2E9D2; font-family:'Bodoni Moda',serif; }
   .mow-article ul{ margin:0 0 22px; padding-left:22px; }
   .mow-article li{ font-family:'Cormorant Garamond',serif; font-size:clamp(19px,1.5vw,23px); line-height:1.5; color:#D3DBCE; margin-bottom:8px; }
-</style>
+
+  /* METHOD nav caret - always visible */
+  [data-methoddrop]>a::after{content:'';display:inline-block;width:10px;height:6px;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23CBD6C7' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:contain;}
+  </style>
 <script src="articles.js"></script>
 <script src="cms.js"></script>
 <script src="news.js"></script>
@@ -116,7 +119,7 @@
       <a href="#services" data-i18n="nav_services" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Services</a>
       <a href="#work" data-i18n="nav_work" style="color:#CBD6C7;transition:color .2s;" style-hover="color:#E2C173;">Work</a>
       <div style="position:relative;display:inline-block;" data-methoddrop>
-        <a href="/frameworks/messaging-matrix/" style="color:#CBD6C7;transition:color .2s;display:flex;align-items:center;gap:5px;"><span data-i18n="nav_method">Method</span> <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style="flex-shrink:0"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
+        <a href="/frameworks/messaging-matrix/" style="color:#CBD6C7;transition:color .2s;display:flex;align-items:center;gap:5px;"><span data-i18n="nav_method">Method</span></a>
         <div data-methodmenu style="position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(5,21,14,0.97);border:1px solid rgba(196,156,78,0.3);border-radius:12px;padding:8px;min-width:200px;opacity:0;pointer-events:none;transition:opacity .22s cubic-bezier(.2,.7,.3,1);backdrop-filter:blur(10px);">
           <a href="/frameworks/messaging-matrix/" style="display:block;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:#EDE6D4;padding:11px 16px;border-radius:8px;white-space:nowrap;transition:background .18s,color .18s;">Messaging Matrix</a>
           <a href="/frameworks/executive-communications/" style="display:block;font-family:'Archivo',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:#EDE6D4;padding:11px 16px;border-radius:8px;white-space:nowrap;transition:background .18s,color .18s;">Executive Communications</a>
