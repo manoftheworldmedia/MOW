@@ -119,6 +119,26 @@
       "hero": "/assets/blog/messaging-matrix-hero.jpg",
       "link": "/what-is-a-messaging-matrix/",
       "featured": false
+    },
+    {
+      "id": "exec-comms-presence",
+      "title": "Executive Communications, Presence & Thought Leadership",
+      "type": "Thought Leadership",
+      "date": "2026-06-24",
+      "summary": "The leaders who define categories build narrative systems. How MOW has shaped executive presence from CNBC to TechCrunch, Web Summit to primetime TV.",
+      "hero": "/assets/blog/messaging-matrix-hero.jpg",
+      "link": "/executive-communications-presence-thought-leadership/",
+      "featured": false
+    },
+    {
+      "id": "architecture-exec-comms",
+      "title": "The Architecture of Executive Communication",
+      "type": "Thought Leadership",
+      "date": "2026-06-24",
+      "summary": "Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.",
+      "hero": "/assets/blog/exec-comms-hero.jpg",
+      "link": "/news/the-architecture-of-executive-communication/",
+      "featured": false
     }
   ]
 }
