@@ -130,9 +130,6 @@
   [data-burger]{display:flex;}
   @media(min-width:900px){[data-nav]{display:flex!important;}[data-burger]{display:none;}}
   @keyframes navGlow{0%,100%{box-shadow:0 0 10px rgba(124,246,176,0.45);}50%{box-shadow:0 0 22px rgba(124,246,176,0.85);}}
-  @keyframes mmMarqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  @keyframes mmMarqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-  @keyframes mmScrollCue{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(5px);opacity:1}}
   [data-navcontact].is-on{animation:navGlow 2.4s ease-in-out infinite;}
   .mm-step{border-top:1px solid rgba(196,156,78,0.22);padding:clamp(24px,3vw,40px) 0;transition:background .3s;}
   .mm-step:hover{background:rgba(196,156,78,0.04);}
@@ -199,9 +196,8 @@
 
 <main>
 
-<!-- HERO + ASSET STRIP: fill the first screen, dual marquee pinned to the bottom -->
-<div style="min-height:100svh;display:flex;flex-direction:column;">
-<section style="position:relative;background:#07211A;color:#EDE6D4;flex:1 1 auto;min-height:0;padding:clamp(80px,10vh,120px) clamp(20px,4vw,56px) clamp(40px,4vw,60px);overflow:hidden;">
+<!-- HERO -->
+<section style="position:relative;background:#07211A;color:#EDE6D4;padding:clamp(80px,10vh,120px) clamp(20px,4vw,56px) clamp(48px,5vw,72px);overflow:hidden;">
   <div style="position:absolute;top:-8%;right:-4%;width:min(44vw,500px);opacity:0.05;pointer-events:none;">
     <img src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
@@ -221,37 +217,40 @@
       <a href="#what-it-is" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">See the framework</a>
     </div>
   </div>
-  <a href="#what-it-is" aria-label="Scroll to explore the framework" style="position:absolute;left:50%;bottom:clamp(18px,2.5vh,30px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:#9FB09B;font-family:'Archivo',sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;text-decoration:none;z-index:6;"><span>Scroll</span><svg width="18" height="11" viewBox="0 0 18 11" fill="none" style="animation:mmScrollCue 1.9s ease-in-out infinite;"><path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </section>
 
 <!-- ASSET STRIP — two opposing marquee rows -->
-<section aria-hidden="true" style="position:sticky;bottom:0;z-index:10;padding:clamp(36px,4vw,52px) 0;overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);border-bottom:1px solid rgba(196,156,78,0.14);">
+<section aria-hidden="true" style="padding:clamp(36px,4vw,52px) 0;overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);border-bottom:1px solid rgba(196,156,78,0.14);">
+  <style>
+    @keyframes mmMarqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes mmMarqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  </style>
   <!-- Row 1: images scroll LEFT → RIGHT (reverse) -->
   <div style="overflow:hidden;margin-bottom:14px;">
     <div style="display:flex;width:max-content;animation:mmMarqR 38s linear infinite;will-change:transform;">
       <div style="display:flex;gap:14px;padding-right:14px;">
-        <img src="/assets/caspian/j5.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/caspian/j8.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/amr/img9.png" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/cases/petra.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/cases/neara.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/bananos/j5.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/amr/img6.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/caspian/j4.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/cases/avitia.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/caspian/j2.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j8.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img9.png" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/petra.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/neara.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/bananos/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img6.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j4.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/avitia.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j2.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
       </div>
       <div aria-hidden="true" style="display:flex;gap:14px;padding-right:14px;">
-        <img src="/assets/caspian/j5.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/caspian/j8.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/amr/img9.png" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/cases/petra.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/cases/neara.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/bananos/j5.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/amr/img6.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/caspian/j4.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/cases/avitia.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/caspian/j2.jpg" alt="" loading="eager" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j8.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img9.png" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/petra.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/neara.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/bananos/j5.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/amr/img6.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j4.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/cases/avitia.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img src="/assets/caspian/j2.jpg" alt="" loading="lazy" style="height:clamp(88px,10vw,140px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
       </div>
     </div>
   </div>
@@ -267,8 +266,6 @@
     </div>
   </div>
 </section>
-
-</div>
 
 <!-- WHAT IS IT -->
 <section id="what-it-is" style="background:#F5EFE2;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
@@ -387,7 +384,7 @@
   <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(32px,4vw,56px);align-items:center;">
     <div>
       <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:18px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>From the Journal</p>
-      <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">Impossible to Ignore is the new standard for global brand distinctiveness</h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">
+      <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">Impossible to Ignore is the new standard for global brand distinctiveness</h2>
       <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:640px;margin-bottom:28px;">The world doesn't need more content — it needs better-trained attention. A Messaging Matrix is the discipline that makes work Impossible to Ignore: clear, convicted, and impossible to confuse with anyone else.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="/impossible-to-ignore-is-the-new-standard-for-global-brand-distinctiveness/" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;">Read the essay →</a>
@@ -405,7 +402,7 @@
 <section id="who" style="background:#F5EFE2;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Who It's For</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every organization at a turning point</h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">
+    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every organization at a turning point</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;">
       <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Founders</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Clarify your story before growth introduces complexity.</p></div>
       <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Growth Companies</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align expanding teams around a common narrative before the message fragments.</p></div>
