@@ -394,5 +394,20 @@
   wire();
 })();
 </script>
+<!-- Force marquee animation on mobile load -->
+<script>
+(function(){
+  function kick(){
+    document.querySelectorAll('[style*="mmMarqR"],[style*="mmMarqL"]').forEach(function(el){
+      el.style.animation='none';
+      void el.offsetWidth; // force reflow
+      el.style.animation='';
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',kick);
+  else kick();
+  window.addEventListener('load',kick);
+})();
+</script>
 </body>
 </html>
