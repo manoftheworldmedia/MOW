@@ -499,14 +499,15 @@
   wire();
 })();
 </script>
-<!-- Force marquee animation on mobile load -->
+<!-- Force marquee animation on load (preserves inline animation) -->
 <script>
 (function(){
   function kick(){
-    document.querySelectorAll('[style*="mmMarqR"],[style*="mmMarqL"]').forEach(function(el){
+    document.querySelectorAll('[style*="mmMarq"]').forEach(function(el){
+      var saved=el.style.animation;        // keep the inline value
       el.style.animation='none';
-      void el.offsetWidth; // force reflow
-      el.style.animation='';
+      void el.offsetWidth;                  // force reflow
+      el.style.animation=saved;             // restore it
     });
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',kick);
