@@ -90,8 +90,13 @@
   <button type="button" data-menuclose aria-label="Close menu" style="position:absolute;top:22px;right:24px;width:44px;height:44px;border-radius:999px;border:1px solid rgba(196,156,78,0.4);background:transparent;color:#EDE6D4;font-size:22px;line-height:1;cursor:pointer;">×</button>
   <a href="/#services" data-i18n="nav_services" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Services</a>
   <a href="/#work" data-i18n="nav_work" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Work</a>
-  <a href="/frameworks/messaging-matrix/" data-i18n="nav_method" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method</a>
-  <a href="/frameworks/executive-communications/" style="font-family:'Bodoni Moda',serif;font-size:26px;color:#9FB09B;padding:6px 10px;">→ Executives</a>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+    <button type="button" data-method-toggle style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">Method <svg data-method-chevron width="20" height="14" viewBox="0 0 20 14" fill="none" style="transition:transform .25s;"><path d="M2 2l8 9 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <div data-method-submenu style="display:none;flex-direction:column;align-items:center;gap:4px;padding-bottom:8px;">
+      <a href="/frameworks/messaging-matrix/" style="font-family:'Bodoni Moda',serif;font-size:24px;color:#C49C4E;padding:6px 10px;">Messaging Matrix</a>
+      <a href="/frameworks/executive-communications/" style="font-family:'Bodoni Moda',serif;font-size:24px;color:#C49C4E;padding:6px 10px;">Executives</a>
+    </div>
+  </div>
   <a href="/news/" data-i18n="nav_blog" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#E2C173;padding:10px;">News</a>
   <a href="/about/" data-i18n="nav_about" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">About</a>
   <a href="/#faq" data-i18n="nav_faq" style="font-family:'Bodoni Moda',serif;font-size:34px;color:#F6F0E1;padding:10px;">FAQs</a>
@@ -176,6 +181,24 @@
   }
   window.addEventListener('scroll',navScroll,{passive:true}); navScroll();
   var n=0;(function init(){apply(cur);if(n++<24)setTimeout(init,140);})();
+})();
+</script>
+<!-- Method mobile submenu toggle -->
+<script>
+(function(){
+  function wire(){
+    var btn=document.querySelector('[data-method-toggle]');
+    var sub=document.querySelector('[data-method-submenu]');
+    var chev=document.querySelector('[data-method-chevron]');
+    if(!btn||!sub){setTimeout(wire,100);return;}
+    var open=false;
+    btn.addEventListener('click',function(e){
+      open=!open;
+      sub.style.display=open?'flex':'none';
+      if(chev)chev.style.transform=open?'rotate(180deg)':'rotate(0deg)';
+    });
+  }
+  wire();
 })();
 </script>
 </body>
