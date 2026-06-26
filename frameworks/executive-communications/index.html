@@ -131,6 +131,8 @@
   @media(min-width:900px){[data-nav]{display:flex!important;}[data-burger]{display:none;}}
   @keyframes navGlow{0%,100%{box-shadow:0 0 10px rgba(124,246,176,0.45);}50%{box-shadow:0 0 22px rgba(124,246,176,0.85);}}
   [data-navcontact].is-on{animation:navGlow 2.4s ease-in-out infinite;}
+  [data-where-grid]{grid-template-columns:repeat(2,1fr);}
+  @media(min-width:760px){[data-where-grid]{grid-template-columns:repeat(5,1fr);}}
   .mm-step{border-top:1px solid rgba(196,156,78,0.22);padding:clamp(24px,3vw,40px) 0;transition:background .3s;}
   .mm-step:hover{background:rgba(196,156,78,0.04);}
   .mm-card{background:rgba(237,230,212,0.035);border:1px solid rgba(196,156,78,0.22);border-radius:18px;padding:clamp(22px,3vw,36px);transition:transform .45s cubic-bezier(.2,.7,.3,1),border-color .45s;}
@@ -352,7 +354,7 @@
   <div style="max-width:1100px;margin:0 auto;">
     <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Where It Shows Up</p>
     <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:clamp(32px,4vw,52px);">Every platform, every audience</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(196,156,78,0.18);border:1px solid rgba(196,156,78,0.18);border-radius:18px;overflow:hidden;">
+    <div data-where-grid style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(196,156,78,0.18);border:1px solid rgba(196,156,78,0.18);border-radius:18px;overflow:hidden;">
       <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Keynote Presentations</p></div>
       <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Investor Relations</p></div>
       <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Media Interviews</p></div>
@@ -388,8 +390,8 @@
   <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(32px,4vw,56px);align-items:center;">
     <div>
       <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:18px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>From the Journal</p>
-      <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">Impossible to Ignore is the new standard for global brand distinctiveness</h2>
-      <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:640px;margin-bottom:28px;">The world doesn't need more content — it needs better-trained attention. A Messaging Matrix is the discipline that makes work Impossible to Ignore: clear, convicted, and impossible to confuse with anyone else.</p>
+      <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">The Architecture of Executive Communication</h2>
+      <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:640px;margin-bottom:28px;">Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="/news/the-architecture-of-executive-communication/" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;">Read the essay →</a>
         <a href="/news/" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Visit the Newsroom</a>
