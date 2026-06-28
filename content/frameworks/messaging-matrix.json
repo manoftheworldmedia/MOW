@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "Messaging Matrix Framework | Man of the World (MOW)",
+    "description": "A Messaging Matrix by Man of the World aligns leadership, marketing, sales, PR, and AI-ready messaging around one clear narrative system."
+  },
+  "hero": {
+    "eyebrow": "The MOW Method",
+    "h1": "Messaging Matrix",
+    "subhead": "The strategic communications framework that aligns leadership, marketing, sales, and reputation around a single narrative.",
+    "body": "A Messaging Matrix organizes an organization's core narrative, positioning, proof points, and audience-specific messages into a single reference system — the foundation for everything from websites and investor decks to media interviews and AI-generated descriptions.",
+    "cta_primary": "Schedule a conversation →",
+    "cta_secondary": "See the framework",
+    "bg_mark": "/assets/mow_mark_gold.png"
+  },
+  "strip": {
+    "word_1": "Messaging Matrix",
+    "word_2": "Brand Strategy",
+    "word_3": "Executive Communications",
+    "word_4": "Absolute Conviction",
+    "word_5": "AI Transformation",
+    "word_6": "GEO · AEO · SEO",
+    "word_7": "Impossible to Ignore",
+    "word_8": "Narrative Architecture"
+  },
+  "img": {
+    "strip_1": "/assets/caspian/j5.jpg",
+    "strip_2": "/assets/caspian/j8.jpg",
+    "strip_3": "/assets/amr/img9.png",
+    "strip_4": "/assets/cases/petra.jpg",
+    "strip_5": "/assets/cases/neara.jpg",
+    "strip_6": "/assets/bananos/j5.jpg",
+    "strip_7": "/assets/amr/img6.jpg",
+    "strip_8": "/assets/caspian/j4.jpg",
+    "strip_9": "/assets/cases/avitia.jpg",
+    "strip_10": "/assets/caspian/j2.jpg",
+    "journal_1": "/assets/cases/avitia.jpg",
+    "journal_2": "/assets/cases/petra.jpg"
+  },
+  "whatis": {
+    "eyebrow": "The Foundation",
+    "h2": "What Is a Messaging Matrix?",
+    "lead": "A Messaging Matrix is a strategic communications framework that organizes an organization's core narrative, audience-specific messages, supporting proof points, and key themes into a single reference system.",
+    "body": "It serves as the foundation for executive communications, public relations, marketing, sales enablement, investor relations, recruiting, customer engagement, websites, presentations, and thought leadership — and now, for how AI systems understand and describe your organization."
+  },
+  "structure": {
+    "eyebrow": "The MOW Messaging Matrix",
+    "h2": "How it's structured",
+    "item_1": {
+      "num": "01",
+      "title": "Vision / Mission",
+      "desc": "The north star that orients every decision, communication, and team."
+    },
+    "item_2": {
+      "num": "02",
+      "title": "Company Ethos",
+      "desc": "The values and cultural DNA that define how you operate and what you stand for."
+    },
+    "item_3": {
+      "num": "03",
+      "title": "Brand Archetypes",
+      "desc": "The character and energy your brand projects — how the world experiences you."
+    },
+    "item_4": {
+      "num": "04",
+      "title": "Brand Pillars",
+      "desc": "The core themes that explain your value to customers, investors, press, and AI."
+    },
+    "item_5": {
+      "num": "05",
+      "title": "Problems",
+      "desc": "The specific challenges your audience faces that only you are positioned to solve."
+    },
+    "item_6": {
+      "num": "06",
+      "title": "Solutions / Unique Value",
+      "desc": "Your distinct approach, capabilities, and the outcomes only you can deliver."
+    },
+    "item_7": {
+      "num": "07",
+      "title": "Home Base",
+      "desc": "The single, organizing idea that ties everything together and anchors your narrative."
+    }
+  },
+  "outcomes": {
+    "eyebrow": "Outcomes",
+    "lead": "A well-built Messaging Matrix creates alignment, sharpens differentiation, accelerates scale, and makes your organization findable — by people and by AI",
+    "item_1": {
+      "title": "Alignment",
+      "desc": "Leadership, marketing, sales, and communications teams speak from the same foundation."
+    },
+    "item_2": {
+      "title": "Differentiation",
+      "desc": "What makes you distinct is expressed consistently, everywhere — not just on a slide."
+    },
+    "item_3": {
+      "title": "Scale",
+      "desc": "Content, campaigns, and executive communications become faster to produce and more effective."
+    },
+    "item_4": {
+      "title": "Visibility",
+      "desc": "AI systems, search engines, journalists, investors, and customers encounter a consistent narrative wherever they engage."
+    },
+    "item_5": {
+      "title": "Website & Executive Comms",
+      "desc": "A single strategic foundation drives your site, leadership messaging, keynotes, and investor discussions."
+    },
+    "item_6": {
+      "title": "PR, Sales & SEO / GEO / AEO",
+      "desc": "Stronger media engagement, a more effective sales motion, and an organization that AI accurately understands and describes."
+    }
+  },
+  "journal": {
+    "eyebrow": "From the Journal",
+    "h2": "What is a Messaging Matrix?",
+    "body": "The strategic communications framework that organizes your core narrative, audience-specific messages, proof points, and key themes into a single reference system — the foundation for everything from websites and keynotes to AI-generated descriptions.",
+    "cta_primary": "Read the essay →",
+    "cta_secondary": "Visit the Newsroom"
+  },
+  "who": {
+    "eyebrow": "Who It's For",
+    "h2": "Every organization at a turning point",
+    "item_1": {
+      "title": "Founders",
+      "desc": "Clarify your story before growth introduces complexity."
+    },
+    "item_2": {
+      "title": "Growth Companies",
+      "desc": "Align expanding teams around a common narrative before the message fragments."
+    },
+    "item_3": {
+      "title": "Enterprise",
+      "desc": "Consistency across business units, leadership teams, and stakeholder groups."
+    },
+    "item_4": {
+      "title": "Real Estate & Development",
+      "desc": "Communicate vision, value creation, and long-term impact to governments, partners, and buyers."
+    },
+    "item_5": {
+      "title": "Governments & Institutions",
+      "desc": "Build trust through clear, consistent stakeholder communications."
+    },
+    "item_6": {
+      "title": "Nonprofits",
+      "desc": "Align mission, fundraising, advocacy, and public engagement around a single story."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQs",
+    "h2": "Common questions",
+    "item_1": {
+      "q": "What is a Messaging Matrix?",
+      "a": "A Messaging Matrix is a strategic communications framework that organizes an organization's narrative, audience-specific messages, supporting proof points, and communication priorities into a single system that is used consistently across marketing, sales, PR, executive communications, investor relations, and AI-powered search."
+    },
+    "item_2": {
+      "q": "What's the difference between a Messaging Matrix and brand messaging?",
+      "a": "Brand messaging defines how an organization expresses its identity and values. A Messaging Matrix provides the strategic structure that allows those messages to be used consistently across audiences and channels."
+    },
+    "item_3": {
+      "q": "Can a Messaging Matrix improve AI visibility (GEO/AEO)?",
+      "a": "Yes. AI systems favor organizations with clear narratives, strong entity definition, consistent terminology, and structured content. Messaging Matrices help establish all four — making your organization easier to find, summarize, and reference across Gemini, ChatGPT, Perplexity, and Claude."
+    },
+    "item_4": {
+      "q": "How often should a Messaging Matrix be updated?",
+      "a": "Most organizations revisit their Messaging Matrix annually, or whenever significant strategic, leadership, market, or organizational changes occur."
+    },
+    "item_5": {
+      "q": "Who owns a Messaging Matrix inside an organization?",
+      "a": "Messaging Matrices are typically owned jointly by executive leadership, communications teams, marketing organizations, and brand leaders. At MOW we work to build shared ownership so the matrix is used — not shelved."
+    }
+  },
+  "cta": {
+    "eyebrow": "Build a Stronger Narrative Foundation",
+    "h2": "Every website, keynote, and AI-generated description begins with messaging",
+    "body": "At Man of the World we help organizations clarify what they stand for, communicate it with precision, and build messaging systems that create long-term strategic advantage. The Messaging Matrix is where that work begins.",
+    "cta_1": "Schedule a conversation →",
+    "cta_2": "See our work",
+    "cta_3": "Visit the Newsroom"
+  }
+}
