@@ -1130,6 +1130,1724 @@
           ]
         }
       ]
+    },
+    {
+      "name": "fw_messaging_matrix",
+      "label": "Framework — Messaging Matrix",
+      "icon": "file",
+      "kind": "single",
+      "path": "content/frameworks/messaging-matrix.json",
+      "fields": [
+        {
+          "name": "meta",
+          "label": "Meta",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "hero",
+          "label": "Hero",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h1",
+              "label": "H1",
+              "type": "string"
+            },
+            {
+              "name": "subhead",
+              "label": "Subhead",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Cta primary",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Cta secondary",
+              "type": "string"
+            },
+            {
+              "name": "bg_mark",
+              "label": "Bg mark",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "label": "Strip",
+          "type": "object",
+          "fields": [
+            {
+              "name": "word_1",
+              "label": "Word 1",
+              "type": "string"
+            },
+            {
+              "name": "word_2",
+              "label": "Word 2",
+              "type": "string"
+            },
+            {
+              "name": "word_3",
+              "label": "Word 3",
+              "type": "string"
+            },
+            {
+              "name": "word_4",
+              "label": "Word 4",
+              "type": "string"
+            },
+            {
+              "name": "word_5",
+              "label": "Word 5",
+              "type": "string"
+            },
+            {
+              "name": "word_6",
+              "label": "Word 6",
+              "type": "string"
+            },
+            {
+              "name": "word_7",
+              "label": "Word 7",
+              "type": "string"
+            },
+            {
+              "name": "word_8",
+              "label": "Word 8",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "img",
+          "label": "Img",
+          "type": "object",
+          "fields": [
+            {
+              "name": "strip_1",
+              "label": "Strip 1",
+              "type": "image"
+            },
+            {
+              "name": "strip_2",
+              "label": "Strip 2",
+              "type": "image"
+            },
+            {
+              "name": "strip_3",
+              "label": "Strip 3",
+              "type": "image"
+            },
+            {
+              "name": "strip_4",
+              "label": "Strip 4",
+              "type": "image"
+            },
+            {
+              "name": "strip_5",
+              "label": "Strip 5",
+              "type": "image"
+            },
+            {
+              "name": "strip_6",
+              "label": "Strip 6",
+              "type": "image"
+            },
+            {
+              "name": "strip_7",
+              "label": "Strip 7",
+              "type": "image"
+            },
+            {
+              "name": "strip_8",
+              "label": "Strip 8",
+              "type": "image"
+            },
+            {
+              "name": "strip_9",
+              "label": "Strip 9",
+              "type": "image"
+            },
+            {
+              "name": "strip_10",
+              "label": "Strip 10",
+              "type": "image"
+            },
+            {
+              "name": "journal_1",
+              "label": "Journal 1",
+              "type": "image"
+            },
+            {
+              "name": "journal_2",
+              "label": "Journal 2",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "whatis",
+          "label": "Whatis",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "lead",
+              "label": "Lead",
+              "type": "text"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "structure",
+          "label": "Structure",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_7",
+              "label": "Item 7",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "outcomes",
+          "label": "Outcomes",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "lead",
+              "label": "Lead",
+              "type": "text"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "journal",
+          "label": "Journal",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Cta primary",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Cta secondary",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "who",
+          "label": "Who",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "faq",
+          "label": "Faq",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cta",
+          "label": "Cta",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            },
+            {
+              "name": "cta_1",
+              "label": "Cta 1",
+              "type": "string"
+            },
+            {
+              "name": "cta_2",
+              "label": "Cta 2",
+              "type": "string"
+            },
+            {
+              "name": "cta_3",
+              "label": "Cta 3",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fw_executive_communications",
+      "label": "Framework — Executive Communications",
+      "icon": "file",
+      "kind": "single",
+      "path": "content/frameworks/executive-communications.json",
+      "fields": [
+        {
+          "name": "meta",
+          "label": "Meta",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "hero",
+          "label": "Hero",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h1",
+              "label": "H1",
+              "type": "string"
+            },
+            {
+              "name": "subhead",
+              "label": "Subhead",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Cta primary",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Cta secondary",
+              "type": "string"
+            },
+            {
+              "name": "bg_mark",
+              "label": "Bg mark",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "strip",
+          "label": "Strip",
+          "type": "object",
+          "fields": [
+            {
+              "name": "word_1",
+              "label": "Word 1",
+              "type": "string"
+            },
+            {
+              "name": "word_2",
+              "label": "Word 2",
+              "type": "string"
+            },
+            {
+              "name": "word_3",
+              "label": "Word 3",
+              "type": "string"
+            },
+            {
+              "name": "word_4",
+              "label": "Word 4",
+              "type": "string"
+            },
+            {
+              "name": "word_5",
+              "label": "Word 5",
+              "type": "string"
+            },
+            {
+              "name": "word_6",
+              "label": "Word 6",
+              "type": "string"
+            },
+            {
+              "name": "word_7",
+              "label": "Word 7",
+              "type": "string"
+            },
+            {
+              "name": "word_8",
+              "label": "Word 8",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "img",
+          "label": "Img",
+          "type": "object",
+          "fields": [
+            {
+              "name": "strip_1",
+              "label": "Strip 1",
+              "type": "image"
+            },
+            {
+              "name": "strip_2",
+              "label": "Strip 2",
+              "type": "image"
+            },
+            {
+              "name": "strip_3",
+              "label": "Strip 3",
+              "type": "image"
+            },
+            {
+              "name": "strip_4",
+              "label": "Strip 4",
+              "type": "image"
+            },
+            {
+              "name": "strip_5",
+              "label": "Strip 5",
+              "type": "image"
+            },
+            {
+              "name": "strip_6",
+              "label": "Strip 6",
+              "type": "image"
+            },
+            {
+              "name": "strip_7",
+              "label": "Strip 7",
+              "type": "image"
+            },
+            {
+              "name": "strip_8",
+              "label": "Strip 8",
+              "type": "image"
+            },
+            {
+              "name": "strip_9",
+              "label": "Strip 9",
+              "type": "image"
+            },
+            {
+              "name": "strip_10",
+              "label": "Strip 10",
+              "type": "image"
+            },
+            {
+              "name": "strip_11",
+              "label": "Strip 11",
+              "type": "image"
+            },
+            {
+              "name": "strip_12",
+              "label": "Strip 12",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "whatis",
+          "label": "Whatis",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "body_1",
+              "label": "Body 1",
+              "type": "text"
+            },
+            {
+              "name": "body_2",
+              "label": "Body 2",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "structure",
+          "label": "Structure",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "num",
+                  "label": "Num",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "outcomes",
+          "label": "Outcomes",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "lead",
+              "label": "Lead",
+              "type": "text"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "where",
+          "label": "Where",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "string"
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "string"
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "string"
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "string"
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "string"
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "string"
+            },
+            {
+              "name": "item_7",
+              "label": "Item 7",
+              "type": "string"
+            },
+            {
+              "name": "item_8",
+              "label": "Item 8",
+              "type": "string"
+            },
+            {
+              "name": "item_9",
+              "label": "Item 9",
+              "type": "string"
+            },
+            {
+              "name": "item_10",
+              "label": "Item 10",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "who",
+          "label": "Who",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "journal",
+          "label": "Journal",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Cta primary",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Cta secondary",
+              "type": "string"
+            },
+            {
+              "name": "img_1",
+              "label": "Img 1",
+              "type": "image"
+            },
+            {
+              "name": "img_2",
+              "label": "Img 2",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "who2",
+          "label": "Who2",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "item_6",
+              "label": "Item 6",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "desc",
+                  "label": "Desc",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "faq",
+          "label": "Faq",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "item_1",
+              "label": "Item 1",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_2",
+              "label": "Item 2",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_3",
+              "label": "Item 3",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_4",
+              "label": "Item 4",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "name": "item_5",
+              "label": "Item 5",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "q",
+                  "label": "Q",
+                  "type": "string"
+                },
+                {
+                  "name": "a",
+                  "label": "A",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cta",
+          "label": "Cta",
+          "type": "object",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "h2",
+              "label": "H2",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Body",
+              "type": "text"
+            },
+            {
+              "name": "cta_primary",
+              "label": "Cta primary",
+              "type": "string"
+            },
+            {
+              "name": "cta_secondary",
+              "label": "Cta secondary",
+              "type": "string"
+            },
+            {
+              "name": "cta_tertiary",
+              "label": "Cta tertiary",
+              "type": "string"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -146,7 +146,7 @@
   @keyframes mmMarqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 </style>
 </head>
-<body>
+<body data-cms-page="frameworks/executive-communications">
 
 <!-- NAV -->
 <header data-header style="position:sticky;top:0;z-index:120;transition:background .45s,border-color .45s,backdrop-filter .45s;background:rgba(7,33,26,0.82);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid rgba(196,156,78,0.18);">
@@ -209,7 +209,7 @@
 <!-- HERO -->
 <section style="position:relative;background:#07211A;color:#EDE6D4;padding:clamp(60px,7.5vh,88px) clamp(20px,4vw,56px) 0;overflow:hidden;min-height:100svh;display:flex;flex-direction:column;">
   <div style="position:absolute;top:-8%;right:-4%;width:min(44vw,500px);opacity:0.05;pointer-events:none;">
-    <img src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
+    <img data-cms-img="hero.bg_mark" src="/assets/mow_mark_gold.png" alt="" style="width:100%;display:block;">
   </div>
   <div style="position:absolute;inset:0;background:radial-gradient(circle at 10% 20%, rgba(196,156,78,0.09), transparent 44%);pointer-events:none;"></div>
   <div style="max-width:1100px;margin:auto auto 0;position:relative;width:100%;">
@@ -218,13 +218,13 @@
       <span style="color:#C49C4E;">Frameworks</span><span style="color:rgba(196,156,78,0.4);">›</span>
       <span style="color:#EDE6D4;">Executive Communications</span>
     </nav>
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>The MOW Method</p>
-    <h1 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(38px,5.6vw,76px);line-height:0.96;letter-spacing:-0.02em;color:#F6F0E1;max-width:16ch;">Executive Communications</h1>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,1.9vw,26px);line-height:1.34;color:#D8C9A8;margin-top:18px;max-width:700px;">Helping leaders communicate with clarity, credibility, and conviction.</p>
-    <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:#B7C4B2;margin-top:14px;max-width:660px;">Executive communications is more than writing speeches or preparing for media interviews. It is the discipline of ensuring every message a leader delivers reinforces the organization's strategy, reputation, and long-term objectives — with people and with AI.</p>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="hero.eyebrow">The MOW Method</span></p>
+    <h1 data-cms-text="hero.h1" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(38px,5.6vw,76px);line-height:0.96;letter-spacing:-0.02em;color:#F6F0E1;max-width:16ch;">Executive Communications</h1>
+    <p data-cms-text="hero.subhead" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,1.9vw,26px);line-height:1.34;color:#D8C9A8;margin-top:18px;max-width:700px;">Helping leaders communicate with clarity, credibility, and conviction.</p>
+    <p data-cms-text="hero.body" style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.6;color:#B7C4B2;margin-top:14px;max-width:660px;">Executive communications is more than writing speeches or preparing for media interviews. It is the discipline of ensuring every message a leader delivers reinforces the organization's strategy, reputation, and long-term objectives — with people and with AI.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;">
-      <a href="/#contact" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;">Schedule a conversation →</a>
-      <a href="#what-it-is" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">See the framework</a>
+      <a href="/#contact" data-cms-text="hero.cta_primary" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;">Schedule a conversation →</a>
+      <a href="#what-it-is" data-cms-text="hero.cta_secondary" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">See the framework</a>
     </div>
   </div>
   <!-- ASSET STRIP — two opposing marquee rows, full-bleed, pinned to bottom of hero -->
@@ -234,28 +234,28 @@
   <div style="overflow:hidden;margin-bottom:14px;">
     <div style="display:flex;width:max-content;animation:mmMarqR 38s linear infinite;will-change:transform;">
       <div style="display:flex;gap:14px;padding-right:14px;">
-        <img src="/assets/exec/ep1.jpeg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep2.jpg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep3.jpeg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep4.jpeg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep5.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep6.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep7.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep8.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep9.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep10.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_1" src="/assets/exec/ep1.jpeg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_2" src="/assets/exec/ep2.jpg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_3" src="/assets/exec/ep3.jpeg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_4" src="/assets/exec/ep4.jpeg" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_5" src="/assets/exec/ep5.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_6" src="/assets/exec/ep6.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_7" src="/assets/exec/ep7.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_8" src="/assets/exec/ep8.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_9" src="/assets/exec/ep9.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_10" src="/assets/exec/ep10.png" alt="Peter Weltman on stage — executive presence and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
       </div>
       <div aria-hidden="true" style="display:flex;gap:14px;padding-right:14px;">
-        <img src="/assets/exec/ep5.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep6.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep7.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep8.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep9.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep10.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep11.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep12.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep1.jpeg" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
-        <img src="/assets/exec/ep2.jpg" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_5" src="/assets/exec/ep5.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_6" src="/assets/exec/ep6.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_7" src="/assets/exec/ep7.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_8" src="/assets/exec/ep8.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_9" src="/assets/exec/ep9.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_10" src="/assets/exec/ep10.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_11" src="/assets/exec/ep11.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_12" src="/assets/exec/ep12.png" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_1" src="/assets/exec/ep1.jpeg" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
+        <img data-cms-img="img.strip_2" src="/assets/exec/ep2.jpg" alt="Executive keynote and thought leadership | MOW" loading="lazy" style="height:clamp(74px,8vw,112px);width:auto;border-radius:10px;object-fit:cover;flex-shrink:0;">
       </div>
     </div>
   </div>
@@ -263,10 +263,10 @@
   <div style="overflow:hidden;">
     <div style="display:flex;width:max-content;animation:mmMarqL 32s linear infinite;will-change:transform;align-items:center;">
       <div style="display:flex;align-items:center;gap:clamp(24px,3.5vw,52px);padding-right:clamp(24px,3.5vw,52px);font-family:'Bodoni Moda',serif;font-size:clamp(16px,1.9vw,24px);font-weight:500;color:#DDD6C4;white-space:nowrap;">
-        <span>Messaging Matrix</span><span style="color:#C49C4E;">✦</span><span>Brand Strategy</span><span style="color:#C49C4E;">✦</span><span>Executive Communications</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Absolute Conviction</span><span style="color:#C49C4E;">✦</span><span>AI Transformation</span><span style="color:#C49C4E;">✦</span><span>GEO · AEO · SEO</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Impossible to Ignore</span><span style="color:#C49C4E;">✦</span><span>Narrative Architecture</span><span style="color:#C49C4E;">✦</span>
+        <span data-cms-text="strip.word_1">Messaging Matrix</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_2">Brand Strategy</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_3">Executive Communications</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_4" style="font-style:italic;">Absolute Conviction</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_5">AI Transformation</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_6">GEO · AEO · SEO</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_7" style="font-style:italic;">Impossible to Ignore</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_8">Narrative Architecture</span><span style="color:#C49C4E;">✦</span>
       </div>
       <div aria-hidden="true" style="display:flex;align-items:center;gap:clamp(24px,3.5vw,52px);padding-right:clamp(24px,3.5vw,52px);font-family:'Bodoni Moda',serif;font-size:clamp(16px,1.9vw,24px);font-weight:500;color:#DDD6C4;white-space:nowrap;">
-        <span>Messaging Matrix</span><span style="color:#C49C4E;">✦</span><span>Brand Strategy</span><span style="color:#C49C4E;">✦</span><span>Executive Communications</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Absolute Conviction</span><span style="color:#C49C4E;">✦</span><span>AI Transformation</span><span style="color:#C49C4E;">✦</span><span>GEO · AEO · SEO</span><span style="color:#C49C4E;">✦</span><span style="font-style:italic;">Impossible to Ignore</span><span style="color:#C49C4E;">✦</span><span>Narrative Architecture</span><span style="color:#C49C4E;">✦</span>
+        <span data-cms-text="strip.word_1">Messaging Matrix</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_2">Brand Strategy</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_3">Executive Communications</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_4" style="font-style:italic;">Absolute Conviction</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_5">AI Transformation</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_6">GEO · AEO · SEO</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_7" style="font-style:italic;">Impossible to Ignore</span><span style="color:#C49C4E;">✦</span><span data-cms-text="strip.word_8">Narrative Architecture</span><span style="color:#C49C4E;">✦</span>
       </div>
     </div>
   </div>
@@ -276,48 +276,48 @@
 <!-- WHAT IS IT -->
 <section id="what-it-is" style="background:#F5EFE2;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>The Foundation</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:22px;">What Is Executive Communications?</h2>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,1.9vw,26px);line-height:1.54;color:#2A2A22;margin-bottom:20px;">Executive communications is the strategic planning, development, and delivery of communications for organizational leaders. It aligns vision, messaging, reputation, leadership presence, and business objectives into a consistent narrative that scales across audiences and platforms.</p>
-    <p style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.66;color:#4A4639;">Whether addressing employees, investors, customers, government officials, media, or AI-powered search — effective executive communication creates trust before it creates attention.</p>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="whatis.eyebrow">The Foundation</span></p>
+    <h2 data-cms-text="whatis.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:22px;">What Is Executive Communications?</h2>
+    <p data-cms-text="whatis.body_1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,1.9vw,26px);line-height:1.54;color:#2A2A22;margin-bottom:20px;">Executive communications is the strategic planning, development, and delivery of communications for organizational leaders. It aligns vision, messaging, reputation, leadership presence, and business objectives into a consistent narrative that scales across audiences and platforms.</p>
+    <p data-cms-text="whatis.body_2" style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.66;color:#4A4639;">Whether addressing employees, investors, customers, government officials, media, or AI-powered search — effective executive communication creates trust before it creates attention.</p>
   </div>
 </section>
 
 <!-- HOW IT'S STRUCTURED -->
 <section id="framework" style="background:#07211A;color:#EDE6D4;padding:clamp(64px,8vw,104px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>The MOW Executive Framework</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:clamp(32px,4vw,52px);">How it's structured</h2>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="structure.eyebrow">The MOW Executive Framework</span></p>
+    <h2 data-cms-text="structure.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:clamp(32px,4vw,52px);">How it's structured</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(196,156,78,0.18);border:1px solid rgba(196,156,78,0.18);border-radius:18px;overflow:hidden;">
       <div style="background:#06201A;padding:clamp(18px,2.4vw,32px);">
-        <div style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">01</div>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Messaging Matrix</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">One strategic communications system for every audience.</p>
+        <div data-cms-text="structure.item_1.num" style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">01</div>
+        <h3 data-cms-text="structure.item_1.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Messaging Matrix</h3>
+        <p data-cms-text="structure.item_1.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">One strategic communications system for every audience.</p>
       </div>
       <div style="background:#06201A;padding:clamp(18px,2.4vw,32px);">
-        <div style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">02</div>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Home Base</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">The central idea the leader returns to in every conversation.</p>
+        <div data-cms-text="structure.item_2.num" style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">02</div>
+        <h3 data-cms-text="structure.item_2.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Home Base</h3>
+        <p data-cms-text="structure.item_2.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">The central idea the leader returns to in every conversation.</p>
       </div>
       <div style="background:#06201A;padding:clamp(18px,2.4vw,32px);">
-        <div style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">03</div>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Red Line</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">The strategic thread connecting every communication.</p>
+        <div data-cms-text="structure.item_3.num" style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">03</div>
+        <h3 data-cms-text="structure.item_3.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Red Line</h3>
+        <p data-cms-text="structure.item_3.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">The strategic thread connecting every communication.</p>
       </div>
       <div style="background:#06201A;padding:clamp(18px,2.4vw,32px);">
-        <div style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">04</div>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Executive Positioning</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">What the leader becomes known for.</p>
+        <div data-cms-text="structure.item_4.num" style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">04</div>
+        <h3 data-cms-text="structure.item_4.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Executive Positioning</h3>
+        <p data-cms-text="structure.item_4.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">What the leader becomes known for.</p>
       </div>
       <div style="background:#06201A;padding:clamp(18px,2.4vw,32px);">
-        <div style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">05</div>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Thought Leadership</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">Authority built through consistent ideas, not isolated content.</p>
+        <div data-cms-text="structure.item_5.num" style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">05</div>
+        <h3 data-cms-text="structure.item_5.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Thought Leadership</h3>
+        <p data-cms-text="structure.item_5.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">Authority built through consistent ideas, not isolated content.</p>
       </div>
       <div style="background:#06201A;padding:clamp(18px,2.4vw,32px);">
-        <div style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">06</div>
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Activation</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">Speeches, interviews, decks, podcasts, investor relations, media, and AI — all reinforcing the same narrative.</p>
+        <div data-cms-text="structure.item_6.num" style="font-family:'Bodoni Moda',serif;font-size:clamp(26px,2.6vw,38px);color:#C49C4E;font-style:italic;line-height:1;margin-bottom:14px;">06</div>
+        <h3 data-cms-text="structure.item_6.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(16px,1.5vw,20px);color:#F6F0E1;margin-bottom:8px;">Activation</h3>
+        <p data-cms-text="structure.item_6.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(12px,0.95vw,13.5px);line-height:1.55;color:#9FB09B;">Speeches, interviews, decks, podcasts, investor relations, media, and AI — all reinforcing the same narrative.</p>
       </div>
     </div>
   </div>
@@ -326,24 +326,24 @@
 <!-- WHAT IT CREATES -->
 <section id="what-it-creates" style="background:#EFE8D9;color:#1A1712;padding:clamp(72px,10vw,120px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Outcomes</p>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,3.2vw,44px);line-height:1.28;color:#11281E;max-width:820px;margin-bottom:clamp(44px,5vw,72px);">Organizations are remembered through the words of their leaders — when those words are clear, consistent, and convicted, trust follows</p>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="outcomes.eyebrow">Outcomes</span></p>
+    <p data-cms-text="outcomes.lead" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,3.2vw,44px);line-height:1.28;color:#11281E;max-width:820px;margin-bottom:clamp(44px,5vw,72px);">Organizations are remembered through the words of their leaders — when those words are clear, consistent, and convicted, trust follows</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
       <div style="padding:clamp(22px,2.6vw,36px) clamp(22px,2.6vw,36px) clamp(22px,2.6vw,36px) 0;border-top:1px solid rgba(26,23,18,0.18);">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Leadership Alignment</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Executives communicate from one strategic narrative — not six different versions.</p>
+        <h3 data-cms-text="outcomes.item_1.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Leadership Alignment</h3>
+        <p data-cms-text="outcomes.item_1.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Executives communicate from one strategic narrative — not six different versions.</p>
       </div>
       <div style="padding:clamp(22px,2.6vw,36px) 0 clamp(22px,2.6vw,36px) clamp(22px,2.6vw,36px);border-top:1px solid rgba(26,23,18,0.18);border-left:1px solid rgba(26,23,18,0.18);">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Confidence</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Leaders spend less time searching for words and more time leading.</p>
+        <h3 data-cms-text="outcomes.item_2.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Confidence</h3>
+        <p data-cms-text="outcomes.item_2.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Leaders spend less time searching for words and more time leading.</p>
       </div>
       <div style="padding:clamp(22px,2.6vw,36px) clamp(22px,2.6vw,36px) clamp(22px,2.6vw,36px) 0;border-top:1px solid rgba(26,23,18,0.18);">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Trust</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Stakeholders encounter consistent messaging across every interaction — interview, email, keynote, or press release.</p>
+        <h3 data-cms-text="outcomes.item_3.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Trust</h3>
+        <p data-cms-text="outcomes.item_3.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Stakeholders encounter consistent messaging across every interaction — interview, email, keynote, or press release.</p>
       </div>
       <div style="padding:clamp(22px,2.6vw,36px) 0 clamp(22px,2.6vw,36px) clamp(22px,2.6vw,36px);border-top:1px solid rgba(26,23,18,0.18);border-left:1px solid rgba(26,23,18,0.18);">
-        <h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Visibility</h3>
-        <p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Clear communication strengthens reputation across media, search engines, and AI systems.</p>
+        <h3 data-cms-text="outcomes.item_4.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);color:#11281E;margin-bottom:8px;">Visibility</h3>
+        <p data-cms-text="outcomes.item_4.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.05vw,15px);line-height:1.6;color:#4A4639;">Clear communication strengthens reputation across media, search engines, and AI systems.</p>
       </div>
     </div>
   </div>
@@ -352,19 +352,19 @@
 <!-- WHERE IT SHOWS UP -->
 <section id="where" style="background:#07211A;color:#EDE6D4;padding:clamp(64px,8vw,104px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Where It Shows Up</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:clamp(32px,4vw,52px);">Every platform, every audience</h2>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="where.eyebrow">Where It Shows Up</span></p>
+    <h2 data-cms-text="where.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:clamp(32px,4vw,52px);">Every platform, every audience</h2>
     <div data-where-grid style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(196,156,78,0.18);border:1px solid rgba(196,156,78,0.18);border-radius:18px;overflow:hidden;">
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Keynote Presentations</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Investor Relations</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Media Interviews</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Crisis Communications</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Board Communications</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Internal Communications</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Thought Leadership</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">LinkedIn Strategy</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Executive Positioning</p></div>
-      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#E2C173;">AI Search Visibility</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_1" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Keynote Presentations</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_2" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Investor Relations</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_3" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Media Interviews</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_4" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Crisis Communications</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_5" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Board Communications</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_6" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Internal Communications</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_7" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Thought Leadership</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_8" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">LinkedIn Strategy</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_9" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#F6F0E1;">Executive Positioning</p></div>
+      <div style="background:#06201A;padding:clamp(16px,2vw,26px);"><p data-cms-text="where.item_10" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(14px,1.3vw,18px);color:#E2C173;">AI Search Visibility</p></div>
     </div>
   </div>
 </section>
@@ -372,15 +372,15 @@
 <!-- WHO IT'S FOR -->
 <section id="who" style="background:#F5EFE2;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Who It's For</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every leader who needs to be heard</h2>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="who.eyebrow">Who It's For</span></p>
+    <h2 data-cms-text="who.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every leader who needs to be heard</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;">
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">CEOs &amp; Founders</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Build the voice that carries the organization's vision — at every stage.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Executive Leadership Teams</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Align messaging across the C-suite so every leader reinforces the same strategic narrative.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Board Chairs</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Communicate governance, vision, and stewardship with precision and confidence.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Government &amp; Nonprofit Leaders</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Lead public trust through consistent, clear stakeholder communication.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Real Estate &amp; Development</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Communicate vision and value to governments, partners, investors, and the public.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Technology Leaders</h3><p style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Translate complex ideas into clear, credible narratives for every audience.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 data-cms-text="who.item_1.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">CEOs &amp; Founders</h3><p data-cms-text="who.item_1.desc" style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Build the voice that carries the organization's vision — at every stage.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 data-cms-text="who.item_2.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Executive Leadership Teams</h3><p data-cms-text="who.item_2.desc" style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Align messaging across the C-suite so every leader reinforces the same strategic narrative.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 data-cms-text="who.item_3.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Board Chairs</h3><p data-cms-text="who.item_3.desc" style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Communicate governance, vision, and stewardship with precision and confidence.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 data-cms-text="who.item_4.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Government &amp; Nonprofit Leaders</h3><p data-cms-text="who.item_4.desc" style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Lead public trust through consistent, clear stakeholder communication.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 data-cms-text="who.item_5.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Real Estate &amp; Development</h3><p data-cms-text="who.item_5.desc" style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Communicate vision and value to governments, partners, investors, and the public.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(22px,2.6vw,36px);"><h3 data-cms-text="who.item_6.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:20px;color:#11281E;margin-bottom:8px;">Technology Leaders</h3><p data-cms-text="who.item_6.desc" style="font-family:'Archivo',sans-serif;font-size:14px;line-height:1.58;color:#4A4639;">Translate complex ideas into clear, credible narratives for every audience.</p></div>
     </div>
   </div>
 </section>
@@ -389,17 +389,17 @@
 <section style="background:#05190F;color:#EDE6D4;padding:clamp(64px,8vw,104px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(32px,4vw,56px);align-items:center;">
     <div>
-      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:18px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>From the Journal</p>
-      <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">The Architecture of Executive Communication</h2>
-      <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:640px;margin-bottom:28px;">Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.</p>
+      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:18px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="journal.eyebrow">From the Journal</span></p>
+      <h2 data-cms-text="journal.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.06;letter-spacing:-0.012em;color:#F6F0E1;margin-bottom:18px;">The Architecture of Executive Communication</h2>
+      <p data-cms-text="journal.body" style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;max-width:640px;margin-bottom:28px;">Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/news/the-architecture-of-executive-communication/" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;">Read the essay →</a>
-        <a href="/news/" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Visit the Newsroom</a>
+        <a href="/news/the-architecture-of-executive-communication/" data-cms-text="journal.cta_primary" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;">Read the essay →</a>
+        <a href="/news/" data-cms-text="journal.cta_secondary" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:16px 28px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Visit the Newsroom</a>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-      <img src="/assets/exec/ep3.jpeg" alt="Peter Weltman on stage at Volcano Summit — executive presence by MOW" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);">
-      <img src="/assets/exec/ep4.jpeg" alt="MOW CEO Peter Weltman presenting at a major summit" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);margin-top:24px;">
+      <img data-cms-img="journal.img_1" src="/assets/exec/ep3.jpeg" alt="Peter Weltman on stage at Volcano Summit — executive presence by MOW" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);">
+      <img data-cms-img="journal.img_2" src="/assets/exec/ep4.jpeg" alt="MOW CEO Peter Weltman presenting at a major summit" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid rgba(196,156,78,0.25);margin-top:24px;">
     </div>
   </div>
 </section>
@@ -407,15 +407,15 @@
 <!-- WHO IT'S FOR -->
 <section id="who" style="background:#F5EFE2;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Who It's For</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every organization at a turning point</h2>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="who2.eyebrow">Who It's For</span></p>
+    <h2 data-cms-text="who2.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-0.012em;color:#11281E;margin-bottom:clamp(36px,4vw,56px);">Every organization at a turning point</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,23,18,0.14);border:1px solid rgba(26,23,18,0.14);border-radius:18px;overflow:hidden;">
-      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Founders</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Clarify your story before growth introduces complexity.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Growth Companies</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align expanding teams around a common narrative before the message fragments.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Enterprise</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Consistency across business units, leadership teams, and stakeholder groups.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Real Estate &amp; Development</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Communicate vision, value creation, and long-term impact to governments, partners, and buyers.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Governments &amp; Institutions</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Build trust through clear, consistent stakeholder communications.</p></div>
-      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Nonprofits</h3><p style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align mission, fundraising, advocacy, and public engagement around a single story.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 data-cms-text="who2.item_1.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Founders</h3><p data-cms-text="who2.item_1.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Clarify your story before growth introduces complexity.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 data-cms-text="who2.item_2.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Growth Companies</h3><p data-cms-text="who2.item_2.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align expanding teams around a common narrative before the message fragments.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 data-cms-text="who2.item_3.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Enterprise</h3><p data-cms-text="who2.item_3.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Consistency across business units, leadership teams, and stakeholder groups.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 data-cms-text="who2.item_4.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Real Estate &amp; Development</h3><p data-cms-text="who2.item_4.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Communicate vision, value creation, and long-term impact to governments, partners, and buyers.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 data-cms-text="who2.item_5.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Governments &amp; Institutions</h3><p data-cms-text="who2.item_5.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Build trust through clear, consistent stakeholder communications.</p></div>
+      <div style="background:#FBF7EE;padding:clamp(28px,3vw,44px);"><h3 data-cms-text="who2.item_6.title" style="font-family:'Bodoni Moda',serif;font-weight:600;font-size:clamp(18px,1.9vw,22px);color:#11281E;margin-bottom:10px;">Nonprofits</h3><p data-cms-text="who2.item_6.desc" style="font-family:'Archivo',sans-serif;font-size:clamp(13px,1.1vw,15px);line-height:1.6;color:#4A4639;">Align mission, fundraising, advocacy, and public engagement around a single story.</p></div>
     </div>
   </div>
 </section>
@@ -423,28 +423,28 @@
 <!-- FAQ -->
 <section id="faq" style="background:#EFE8D9;color:#1A1712;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
   <div style="max-width:860px;margin:0 auto;">
-    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>FAQs</p>
-    <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,4vw,52px);line-height:1.04;color:#11281E;margin-bottom:clamp(28px,3vw,44px);">Common questions</h2>
+    <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#9C7A2E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="faq.eyebrow">FAQs</span></p>
+    <h2 data-cms-text="faq.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(28px,4vw,52px);line-height:1.04;color:#11281E;margin-bottom:clamp(28px,3vw,44px);">Common questions</h2>
     <div>
       <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;">
-        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;">What is executive communications?<span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
-        <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">Executive communications is the strategic discipline of helping leaders communicate clearly, consistently, and credibly across every audience — employees, investors, customers, media, and AI-powered search.</p>
+        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;"><span data-cms-text="faq.item_1.q">What is executive communications?</span><span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
+        <p data-cms-text="faq.item_1.a" style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">Executive communications is the strategic discipline of helping leaders communicate clearly, consistently, and credibly across every audience — employees, investors, customers, media, and AI-powered search.</p>
       </details>
       <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;">
-        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;">What does an executive communications consultant do?<span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
-        <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">An executive communications consultant helps leaders develop messaging systems, refine their public narrative, prepare for media and investor interactions, build thought leadership platforms, and ensure their communications support organizational strategy.</p>
+        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;"><span data-cms-text="faq.item_2.q">What does an executive communications consultant do?</span><span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
+        <p data-cms-text="faq.item_2.a" style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">An executive communications consultant helps leaders develop messaging systems, refine their public narrative, prepare for media and investor interactions, build thought leadership platforms, and ensure their communications support organizational strategy.</p>
       </details>
       <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;">
-        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;">How is executive communications different from public relations?<span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
-        <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">Public relations focuses on managing an organization's external reputation. Executive communications focuses on developing the messaging systems, positioning, and communication skills of individual leaders — though the two disciplines are deeply connected.</p>
+        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;"><span data-cms-text="faq.item_3.q">How is executive communications different from public relations?</span><span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
+        <p data-cms-text="faq.item_3.a" style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">Public relations focuses on managing an organization's external reputation. Executive communications focuses on developing the messaging systems, positioning, and communication skills of individual leaders — though the two disciplines are deeply connected.</p>
       </details>
       <details style="border-top:1px solid rgba(26,23,18,0.18);padding:8px 0;">
-        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;">How does executive communications improve organizational reputation?<span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
-        <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">Consistent, clear executive communication builds trust with every stakeholder group. When leaders deliver aligned messages across media, investor relations, internal communications, and public appearances, the organization is perceived as credible, stable, and led with intention.</p>
+        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;"><span data-cms-text="faq.item_4.q">How does executive communications improve organizational reputation?</span><span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
+        <p data-cms-text="faq.item_4.a" style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">Consistent, clear executive communication builds trust with every stakeholder group. When leaders deliver aligned messages across media, investor relations, internal communications, and public appearances, the organization is perceived as credible, stable, and led with intention.</p>
       </details>
       <details style="border-top:1px solid rgba(26,23,18,0.18);border-bottom:1px solid rgba(26,23,18,0.18);padding:8px 0;">
-        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;">How does executive communications improve AI visibility?<span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
-        <p style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">When executives communicate consistently around defined themes and proof points, those patterns are recognized by AI systems and search engines — making the leader, and the organization, easier to find, summarize, and recommend on Gemini, ChatGPT, Perplexity, and Claude.</p>
+        <summary style="font-family:'Bodoni Moda',serif;font-size:clamp(18px,1.9vw,24px);color:#11281E;padding:18px 40px 18px 0;position:relative;"><span data-cms-text="faq.item_5.q">How does executive communications improve AI visibility?</span><span class="mm-faqplus" style="position:absolute;right:0;top:18px;font-family:'Archivo',sans-serif;color:#C49C4E;font-size:22px;">+</span></summary>
+        <p data-cms-text="faq.item_5.a" style="font-family:'Archivo',sans-serif;font-size:15px;line-height:1.68;color:#4A4639;padding:0 40px 20px 0;">When executives communicate consistently around defined themes and proof points, those patterns are recognized by AI systems and search engines — making the leader, and the organization, easier to find, summarize, and recommend on Gemini, ChatGPT, Perplexity, and Claude.</p>
       </details>
     </div>
   </div>
@@ -454,13 +454,13 @@
 <section style="background:#07211A;color:#EDE6D4;padding:clamp(80px,10vw,136px) clamp(20px,4vw,56px);">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="max-width:720px;">
-      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span>Communicate Like Leadership Matters</p>
-      <h2 style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.8vw,68px);line-height:0.96;letter-spacing:-0.02em;color:#F6F0E1;margin-bottom:22px;">Organizations are remembered through the words of their leaders</h2>
-      <p style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;margin-bottom:32px;">Man of the World helps executives develop messaging systems that create clarity, trust, influence, and long-term strategic advantage.</p>
+      <p style="font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:#C49C4E;margin-bottom:22px;display:flex;align-items:center;gap:14px;"><span style="width:34px;height:1px;background:#C49C4E;display:inline-block;"></span><span data-cms-text="cta.eyebrow">Communicate Like Leadership Matters</span></p>
+      <h2 data-cms-text="cta.h2" style="font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(32px,4.8vw,68px);line-height:0.96;letter-spacing:-0.02em;color:#F6F0E1;margin-bottom:22px;">Organizations are remembered through the words of their leaders</h2>
+      <p data-cms-text="cta.body" style="font-family:'Archivo',sans-serif;font-size:16px;line-height:1.66;color:#B7C4B2;margin-bottom:32px;">Man of the World helps executives develop messaging systems that create clarity, trust, influence, and long-term strategic advantage.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/#contact" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;">Schedule a conversation →</a>
-        <a href="/frameworks/messaging-matrix/" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Messaging Matrix</a>
-        <a href="/news/" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Visit the Newsroom</a>
+        <a href="/#contact" data-cms-text="cta.cta_primary" style="display:inline-flex;align-items:center;gap:10px;background:#C49C4E;color:#07211A;font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;">Schedule a conversation →</a>
+        <a href="/frameworks/messaging-matrix/" data-cms-text="cta.cta_secondary" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Messaging Matrix</a>
+        <a href="/news/" data-cms-text="cta.cta_tertiary" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);">Visit the Newsroom</a>
       </div>
     </div>
   </div>
@@ -517,5 +517,6 @@
   window.addEventListener('load',kick);
 })();
 </script>
+<script src="/assets/cms-page.js" defer></script>
 </body>
 </html>
