@@ -147,6 +147,41 @@
               "name": "contact_title",
               "label": "Contact — title",
               "type": "string"
+            },
+            {
+              "name": "nav_services",
+              "label": "Nav — Services",
+              "type": "string"
+            },
+            {
+              "name": "nav_work",
+              "label": "Nav — Work",
+              "type": "string"
+            },
+            {
+              "name": "nav_method",
+              "label": "Nav — Method",
+              "type": "string"
+            },
+            {
+              "name": "nav_blog",
+              "label": "Nav — News",
+              "type": "string"
+            },
+            {
+              "name": "nav_about",
+              "label": "Nav — About",
+              "type": "string"
+            },
+            {
+              "name": "nav_faq",
+              "label": "Nav — FAQs",
+              "type": "string"
+            },
+            {
+              "name": "nav_contact",
+              "label": "Nav — Contact",
+              "type": "string"
             }
           ]
         },
@@ -261,6 +296,41 @@
               "name": "contact_title",
               "label": "Contact — title",
               "type": "string"
+            },
+            {
+              "name": "nav_services",
+              "label": "Nav — Services",
+              "type": "string"
+            },
+            {
+              "name": "nav_work",
+              "label": "Nav — Work",
+              "type": "string"
+            },
+            {
+              "name": "nav_method",
+              "label": "Nav — Method",
+              "type": "string"
+            },
+            {
+              "name": "nav_blog",
+              "label": "Nav — News",
+              "type": "string"
+            },
+            {
+              "name": "nav_about",
+              "label": "Nav — About",
+              "type": "string"
+            },
+            {
+              "name": "nav_faq",
+              "label": "Nav — FAQs",
+              "type": "string"
+            },
+            {
+              "name": "nav_contact",
+              "label": "Nav — Contact",
+              "type": "string"
             }
           ]
         },
@@ -374,6 +444,41 @@
             {
               "name": "contact_title",
               "label": "Contact — title",
+              "type": "string"
+            },
+            {
+              "name": "nav_services",
+              "label": "Nav — Services",
+              "type": "string"
+            },
+            {
+              "name": "nav_work",
+              "label": "Nav — Work",
+              "type": "string"
+            },
+            {
+              "name": "nav_method",
+              "label": "Nav — Method",
+              "type": "string"
+            },
+            {
+              "name": "nav_blog",
+              "label": "Nav — News",
+              "type": "string"
+            },
+            {
+              "name": "nav_about",
+              "label": "Nav — About",
+              "type": "string"
+            },
+            {
+              "name": "nav_faq",
+              "label": "Nav — FAQs",
+              "type": "string"
+            },
+            {
+              "name": "nav_contact",
+              "label": "Nav — Contact",
               "type": "string"
             }
           ]

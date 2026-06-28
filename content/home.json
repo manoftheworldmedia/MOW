@@ -23,7 +23,14 @@
     "faq_eyebrow": "Questions",
     "faq_title": "FAQs",
     "contact_eyebrow": "Start a Conversation",
-    "contact_title": "Make bold unforgettable"
+    "contact_title": "Make bold unforgettable",
+    "nav_services": "Services",
+    "nav_work": "Work",
+    "nav_method": "Method",
+    "nav_blog": "News",
+    "nav_about": "About",
+    "nav_faq": "FAQs",
+    "nav_contact": "Contact"
   },
   "fa": {
     "hero_eyebrow": "گشودنِ ایمانِ مطلق",
@@ -45,7 +52,14 @@
     "faq_eyebrow": "پرسش‌ها",
     "faq_title": "پرسش‌های پرتکرار",
     "contact_eyebrow": "آغاز یک گفت‌وگو",
-    "contact_title": "جسارت را فراموش‌نشدنی کن"
+    "contact_title": "جسارت را فراموش‌نشدنی کن",
+    "nav_services": "خدمات",
+    "nav_work": "کارها",
+    "nav_method": "روش",
+    "nav_blog": "اخبار",
+    "nav_about": "درباره",
+    "nav_faq": "پرسش‌ها",
+    "nav_contact": "تماس"
   },
   "es": {
     "hero_eyebrow": "Liberando Convicción Absoluta",
@@ -67,7 +81,14 @@
     "faq_eyebrow": "Preguntas",
     "faq_title": "Preguntas frecuentes",
     "contact_eyebrow": "Inicia una Conversación",
-    "contact_title": "Haz lo audaz inolvidable"
+    "contact_title": "Haz lo audaz inolvidable",
+    "nav_services": "Servicios",
+    "nav_work": "Trabajo",
+    "nav_method": "Método",
+    "nav_blog": "Noticias",
+    "nav_about": "Acerca",
+    "nav_faq": "Preguntas",
+    "nav_contact": "Contacto"
   },
   "images": {
     "img1": "assets/mow_mark_white.png",
