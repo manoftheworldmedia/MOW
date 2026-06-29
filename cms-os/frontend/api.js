@@ -42,6 +42,8 @@ export const api = {
   stagedDiff: (pid, path) => req('POST', `/api/projects/${pid}/staged/diff`, { path }),
   publish: (pid, message) => req('POST', `/api/projects/${pid}/publish`, { message }),
 
+  uploadMedia: (pid, payload) => req('POST', `/api/projects/${pid}/media/upload`, payload),
+
   revisions: (pid, path) => req('GET', `/api/projects/${pid}/revisions${path ? `?path=${encodeURIComponent(path)}` : ''}`),
   rollback: (pid, path, sha) => req('POST', `/api/projects/${pid}/rollback`, { path, sha }),
 

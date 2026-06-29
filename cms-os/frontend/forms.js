@@ -26,7 +26,7 @@ export function h(tag, attrs = {}, ...children) {
 }
 
 export class SchemaForm {
-  constructor(schema, value, { onChange, mediaBase = '', languages = [], sourceLang = 'en', sourceLangLabel = '', onTranslate = null, onError = null } = {}) {
+  constructor(schema, value, { onChange, mediaBase = '', languages = [], sourceLang = 'en', sourceLangLabel = '', onTranslate = null, onError = null, onUpload = null } = {}) {
     this.schema = schema;
     this.value = clone(value) || {};
     this.onChange = onChange || (() => {});
@@ -36,6 +36,7 @@ export class SchemaForm {
     this.sourceLangLabel = sourceLangLabel || (sourceLang || '').toUpperCase();
     this.onTranslate = onTranslate;
     this.onError = onError;
+    this.onUpload = onUpload;
     this.fieldEls = new Map(); // path -> wrapper element (for error highlighting)
   }
 
@@ -226,9 +227,32 @@ export class SchemaForm {
           ? h('img', { class: 'thumb', src, onerror: function () { this.style.display = 'none'; } })
           : h('div', { class: 'thumb empty' }, '🖼');
         const inp = h('input', { type: 'text', value: cur || '', placeholder: 'assets/…' });
-        inp.addEventListener('input', () => { set(inp.value); if (cur !== inp.value) { thumb.src = this.mediaBase + inp.value; } });
+        inp.addEventListener('input', () => {
+          set(inp.value); if (cur !== inp.value) { thumb.style.display = ''; thumb.src = this.mediaBase + inp.value; }
+        });
         box.appendChild(thumb);
         box.appendChild(h('div', { style: 'flex:1' }, inp));
+        if (this.onUpload) {
+          const folder = field.ui?.uploadFolder || 'uploads';
+          const fileInp = h('input', { type: 'file', accept: 'image/*', style: 'display:none' });
+          const btn = h('button', { type: 'button', class: 'btn btn-sm' }, '⬆ Upload');
+          btn.addEventListener('click', () => fileInp.click());
+          fileInp.addEventListener('change', async () => {
+            const file = fileInp.files[0];
+            if (!file) return;
+            btn.disabled = true; btn.textContent = 'Uploading…';
+            try {
+              const uploadedPath = await this.onUpload(file, folder);
+              inp.value = uploadedPath; set(uploadedPath);
+              thumb.style.display = ''; thumb.src = this.mediaBase + uploadedPath;
+            } catch (e) {
+              window.toast ? window.toast('Upload failed: ' + e.message, 'error') : alert('Upload failed: ' + e.message);
+            } finally {
+              btn.disabled = false; btn.textContent = '⬆ Upload'; fileInp.value = '';
+            }
+          });
+          box.appendChild(h('div', { style: 'display:flex;align-items:center' }, fileInp, btn));
+        }
         return box;
       }
       default: {
