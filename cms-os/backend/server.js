@@ -167,6 +167,27 @@ router.post('/api/projects/:id/content/:name/stage', async (ctx) => {
   return { ok: true, staged: store.listStaged(p.id) };
 });
 
+// ================= MEDIA =================
+// Upload an image straight to the repo (Contents API single-file commit).
+// Editors+ only. Body: { folder, filename, dataUrl } — dataUrl is a
+// "data:<mime>;base64,<payload>" string from FileReader.readAsDataURL.
+router.post('/api/projects/:id/media/upload', async (ctx) => {
+  const user = requireAuth(ctx, 'editor'); const p = requireProject(ctx);
+  const { folder, filename, dataUrl } = ctx.body || {};
+  if (!filename || !dataUrl) { const e = new Error('Provide { filename, dataUrl }.'); e.status = 400; throw e; }
+  const m = /^data:([\w/.+-]+);base64,(.+)$/.exec(dataUrl);
+  if (!m) { const e = new Error('dataUrl must be a base64 data: URL.'); e.status = 400; throw e; }
+  const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, '-');
+  const dest = (folder || 'uploads').replace(/^\/+|\/+$/g, '') + '/' + safeName;
+  const gh = projects.clientFor(p);
+  const result = await gh.commitBinaryFile({
+    path: dest, base64Content: m[2],
+    message: `Upload image: ${dest}`,
+    author: user ? { name: user.name || user.email, email: user.email } : null,
+  });
+  return { ok: true, path: dest, sha: result.sha };
+});
+
 // ================= STAGING / PUBLISH =================
 router.get('/api/projects/:id/staged', (ctx) => {
   requireAuth(ctx); const p = requireProject(ctx);
