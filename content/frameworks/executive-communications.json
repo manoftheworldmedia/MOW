@@ -1,26 +1,90 @@
 {
   "meta": {
-    "title": "Executive Communications Strategy | Man of the World",
-    "description": "Executive communications strategy for CEOs and leadership teams. Man of the World helps executives clarify their message, strengthen their reputation, and lead with conviction."
+    "title": {
+      "en": "Executive Communications Strategy | Man of the World",
+      "fa": "Executive Communications Strategy | Man of the World",
+      "es": "Executive Communications Strategy | Man of the World"
+    },
+    "description": {
+      "en": "Executive communications strategy for CEOs and leadership teams. Man of the World helps executives clarify their message, strengthen their reputation, and lead with conviction.",
+      "fa": "Executive communications strategy for CEOs and leadership teams. Man of the World helps executives clarify their message, strengthen their reputation, and lead with conviction.",
+      "es": "Executive communications strategy for CEOs and leadership teams. Man of the World helps executives clarify their message, strengthen their reputation, and lead with conviction."
+    }
   },
   "hero": {
-    "eyebrow": "The MOW Method",
-    "h1": "Executive Communications",
-    "subhead": "Helping leaders communicate with clarity, credibility, and conviction.",
-    "body": "Executive communications is more than writing speeches or preparing for media interviews. It is the discipline of ensuring every message a leader delivers reinforces the organization's strategy, reputation, and long-term objectives — with people and with AI.",
-    "cta_primary": "Schedule a conversation →",
-    "cta_secondary": "See the framework",
+    "eyebrow": {
+      "en": "The MOW Method",
+      "fa": "The MOW Method",
+      "es": "The MOW Method"
+    },
+    "h1": {
+      "en": "Executive Communications",
+      "fa": "Executive Communications",
+      "es": "Executive Communications"
+    },
+    "subhead": {
+      "en": "Helping leaders communicate with clarity, credibility, and conviction.",
+      "fa": "Helping leaders communicate with clarity, credibility, and conviction.",
+      "es": "Helping leaders communicate with clarity, credibility, and conviction."
+    },
+    "body": {
+      "en": "Executive communications is more than writing speeches or preparing for media interviews. It is the discipline of ensuring every message a leader delivers reinforces the organization's strategy, reputation, and long-term objectives — with people and with AI.",
+      "fa": "Executive communications is more than writing speeches or preparing for media interviews. It is the discipline of ensuring every message a leader delivers reinforces the organization's strategy, reputation, and long-term objectives — with people and with AI.",
+      "es": "Executive communications is more than writing speeches or preparing for media interviews. It is the discipline of ensuring every message a leader delivers reinforces the organization's strategy, reputation, and long-term objectives — with people and with AI."
+    },
+    "cta_primary": {
+      "en": "Schedule a conversation →",
+      "fa": "Schedule a conversation →",
+      "es": "Schedule a conversation →"
+    },
+    "cta_secondary": {
+      "en": "See the framework",
+      "fa": "See the framework",
+      "es": "See the framework"
+    },
     "bg_mark": "/assets/mow_mark_gold.png"
   },
   "strip": {
-    "word_1": "Messaging Matrix",
-    "word_2": "Brand Strategy",
-    "word_3": "Executive Communications",
-    "word_4": "Absolute Conviction",
-    "word_5": "AI Transformation",
-    "word_6": "GEO · AEO · SEO",
-    "word_7": "Impossible to Ignore",
-    "word_8": "Narrative Architecture"
+    "word_1": {
+      "en": "Messaging Matrix",
+      "fa": "Messaging Matrix",
+      "es": "Messaging Matrix"
+    },
+    "word_2": {
+      "en": "Brand Strategy",
+      "fa": "Brand Strategy",
+      "es": "Brand Strategy"
+    },
+    "word_3": {
+      "en": "Executive Communications",
+      "fa": "Executive Communications",
+      "es": "Executive Communications"
+    },
+    "word_4": {
+      "en": "Absolute Conviction",
+      "fa": "Absolute Conviction",
+      "es": "Absolute Conviction"
+    },
+    "word_5": {
+      "en": "AI Transformation",
+      "fa": "AI Transformation",
+      "es": "AI Transformation"
+    },
+    "word_6": {
+      "en": "GEO · AEO · SEO",
+      "fa": "GEO · AEO · SEO",
+      "es": "GEO · AEO · SEO"
+    },
+    "word_7": {
+      "en": "Impossible to Ignore",
+      "fa": "Impossible to Ignore",
+      "es": "Impossible to Ignore"
+    },
+    "word_8": {
+      "en": "Narrative Architecture",
+      "fa": "Narrative Architecture",
+      "es": "Narrative Architecture"
+    }
   },
   "img": {
     "strip_1": "/assets/exec/ep1.jpeg",
@@ -37,174 +101,562 @@
     "strip_12": "/assets/exec/ep12.png"
   },
   "whatis": {
-    "eyebrow": "The Foundation",
-    "h2": "What Is Executive Communications?",
-    "body_1": "Executive communications is the strategic planning, development, and delivery of communications for organizational leaders. It aligns vision, messaging, reputation, leadership presence, and business objectives into a consistent narrative that scales across audiences and platforms.",
-    "body_2": "Whether addressing employees, investors, customers, government officials, media, or AI-powered search — effective executive communication creates trust before it creates attention."
+    "eyebrow": {
+      "en": "The Foundation",
+      "fa": "The Foundation",
+      "es": "The Foundation"
+    },
+    "h2": {
+      "en": "What Is Executive Communications?",
+      "fa": "What Is Executive Communications?",
+      "es": "What Is Executive Communications?"
+    },
+    "body_1": {
+      "en": "Executive communications is the strategic planning, development, and delivery of communications for organizational leaders. It aligns vision, messaging, reputation, leadership presence, and business objectives into a consistent narrative that scales across audiences and platforms.",
+      "fa": "Executive communications is the strategic planning, development, and delivery of communications for organizational leaders. It aligns vision, messaging, reputation, leadership presence, and business objectives into a consistent narrative that scales across audiences and platforms.",
+      "es": "Executive communications is the strategic planning, development, and delivery of communications for organizational leaders. It aligns vision, messaging, reputation, leadership presence, and business objectives into a consistent narrative that scales across audiences and platforms."
+    },
+    "body_2": {
+      "en": "Whether addressing employees, investors, customers, government officials, media, or AI-powered search — effective executive communication creates trust before it creates attention.",
+      "fa": "Whether addressing employees, investors, customers, government officials, media, or AI-powered search — effective executive communication creates trust before it creates attention.",
+      "es": "Whether addressing employees, investors, customers, government officials, media, or AI-powered search — effective executive communication creates trust before it creates attention."
+    }
   },
   "structure": {
-    "eyebrow": "The MOW Executive Framework",
-    "h2": "How it's structured",
+    "eyebrow": {
+      "en": "The MOW Executive Framework",
+      "fa": "The MOW Executive Framework",
+      "es": "The MOW Executive Framework"
+    },
+    "h2": {
+      "en": "How it's structured",
+      "fa": "How it's structured",
+      "es": "How it's structured"
+    },
     "item_1": {
-      "num": "01",
-      "title": "Messaging Matrix",
-      "desc": "One strategic communications system for every audience."
+      "num": {
+        "en": "01",
+        "fa": "01",
+        "es": "01"
+      },
+      "title": {
+        "en": "Messaging Matrix",
+        "fa": "Messaging Matrix",
+        "es": "Messaging Matrix"
+      },
+      "desc": {
+        "en": "One strategic communications system for every audience.",
+        "fa": "One strategic communications system for every audience.",
+        "es": "One strategic communications system for every audience."
+      }
     },
     "item_2": {
-      "num": "02",
-      "title": "Home Base",
-      "desc": "The central idea the leader returns to in every conversation."
+      "num": {
+        "en": "02",
+        "fa": "02",
+        "es": "02"
+      },
+      "title": {
+        "en": "Home Base",
+        "fa": "Home Base",
+        "es": "Home Base"
+      },
+      "desc": {
+        "en": "The central idea the leader returns to in every conversation.",
+        "fa": "The central idea the leader returns to in every conversation.",
+        "es": "The central idea the leader returns to in every conversation."
+      }
     },
     "item_3": {
-      "num": "03",
-      "title": "Red Line",
-      "desc": "The strategic thread connecting every communication."
+      "num": {
+        "en": "03",
+        "fa": "03",
+        "es": "03"
+      },
+      "title": {
+        "en": "Red Line",
+        "fa": "Red Line",
+        "es": "Red Line"
+      },
+      "desc": {
+        "en": "The strategic thread connecting every communication.",
+        "fa": "The strategic thread connecting every communication.",
+        "es": "The strategic thread connecting every communication."
+      }
     },
     "item_4": {
-      "num": "04",
-      "title": "Executive Positioning",
-      "desc": "What the leader becomes known for."
+      "num": {
+        "en": "04",
+        "fa": "04",
+        "es": "04"
+      },
+      "title": {
+        "en": "Executive Positioning",
+        "fa": "Executive Positioning",
+        "es": "Executive Positioning"
+      },
+      "desc": {
+        "en": "What the leader becomes known for.",
+        "fa": "What the leader becomes known for.",
+        "es": "What the leader becomes known for."
+      }
     },
     "item_5": {
-      "num": "05",
-      "title": "Thought Leadership",
-      "desc": "Authority built through consistent ideas, not isolated content."
+      "num": {
+        "en": "05",
+        "fa": "05",
+        "es": "05"
+      },
+      "title": {
+        "en": "Thought Leadership",
+        "fa": "Thought Leadership",
+        "es": "Thought Leadership"
+      },
+      "desc": {
+        "en": "Authority built through consistent ideas, not isolated content.",
+        "fa": "Authority built through consistent ideas, not isolated content.",
+        "es": "Authority built through consistent ideas, not isolated content."
+      }
     },
     "item_6": {
-      "num": "06",
-      "title": "Activation",
-      "desc": "Speeches, interviews, decks, podcasts, investor relations, media, and AI — all reinforcing the same narrative."
+      "num": {
+        "en": "06",
+        "fa": "06",
+        "es": "06"
+      },
+      "title": {
+        "en": "Activation",
+        "fa": "Activation",
+        "es": "Activation"
+      },
+      "desc": {
+        "en": "Speeches, interviews, decks, podcasts, investor relations, media, and AI — all reinforcing the same narrative.",
+        "fa": "Speeches, interviews, decks, podcasts, investor relations, media, and AI — all reinforcing the same narrative.",
+        "es": "Speeches, interviews, decks, podcasts, investor relations, media, and AI — all reinforcing the same narrative."
+      }
     }
   },
   "outcomes": {
-    "eyebrow": "Outcomes",
-    "lead": "Organizations are remembered through the words of their leaders — when those words are clear, consistent, and convicted, trust follows",
+    "eyebrow": {
+      "en": "Outcomes",
+      "fa": "Outcomes",
+      "es": "Outcomes"
+    },
+    "lead": {
+      "en": "Organizations are remembered through the words of their leaders — when those words are clear, consistent, and convicted, trust follows",
+      "fa": "Organizations are remembered through the words of their leaders — when those words are clear, consistent, and convicted, trust follows",
+      "es": "Organizations are remembered through the words of their leaders — when those words are clear, consistent, and convicted, trust follows"
+    },
     "item_1": {
-      "title": "Leadership Alignment",
-      "desc": "Executives communicate from one strategic narrative — not six different versions."
+      "title": {
+        "en": "Leadership Alignment",
+        "fa": "Leadership Alignment",
+        "es": "Leadership Alignment"
+      },
+      "desc": {
+        "en": "Executives communicate from one strategic narrative — not six different versions.",
+        "fa": "Executives communicate from one strategic narrative — not six different versions.",
+        "es": "Executives communicate from one strategic narrative — not six different versions."
+      }
     },
     "item_2": {
-      "title": "Confidence",
-      "desc": "Leaders spend less time searching for words and more time leading."
+      "title": {
+        "en": "Confidence",
+        "fa": "Confidence",
+        "es": "Confidence"
+      },
+      "desc": {
+        "en": "Leaders spend less time searching for words and more time leading.",
+        "fa": "Leaders spend less time searching for words and more time leading.",
+        "es": "Leaders spend less time searching for words and more time leading."
+      }
     },
     "item_3": {
-      "title": "Trust",
-      "desc": "Stakeholders encounter consistent messaging across every interaction — interview, email, keynote, or press release."
+      "title": {
+        "en": "Trust",
+        "fa": "Trust",
+        "es": "Trust"
+      },
+      "desc": {
+        "en": "Stakeholders encounter consistent messaging across every interaction — interview, email, keynote, or press release.",
+        "fa": "Stakeholders encounter consistent messaging across every interaction — interview, email, keynote, or press release.",
+        "es": "Stakeholders encounter consistent messaging across every interaction — interview, email, keynote, or press release."
+      }
     },
     "item_4": {
-      "title": "Visibility",
-      "desc": "Clear communication strengthens reputation across media, search engines, and AI systems."
+      "title": {
+        "en": "Visibility",
+        "fa": "Visibility",
+        "es": "Visibility"
+      },
+      "desc": {
+        "en": "Clear communication strengthens reputation across media, search engines, and AI systems.",
+        "fa": "Clear communication strengthens reputation across media, search engines, and AI systems.",
+        "es": "Clear communication strengthens reputation across media, search engines, and AI systems."
+      }
     }
   },
   "where": {
-    "eyebrow": "Where It Shows Up",
-    "h2": "Every platform, every audience",
-    "item_1": "Keynote Presentations",
-    "item_2": "Investor Relations",
-    "item_3": "Media Interviews",
-    "item_4": "Crisis Communications",
-    "item_5": "Board Communications",
-    "item_6": "Internal Communications",
-    "item_7": "Thought Leadership",
-    "item_8": "LinkedIn Strategy",
-    "item_9": "Executive Positioning",
-    "item_10": "AI Search Visibility"
-  },
-  "who": {
-    "eyebrow": "Who It's For",
-    "h2": "Every leader who needs to be heard",
+    "eyebrow": {
+      "en": "Where It Shows Up",
+      "fa": "Where It Shows Up",
+      "es": "Where It Shows Up"
+    },
+    "h2": {
+      "en": "Every platform, every audience",
+      "fa": "Every platform, every audience",
+      "es": "Every platform, every audience"
+    },
     "item_1": {
-      "title": "CEOs & Founders",
-      "desc": "Build the voice that carries the organization's vision — at every stage."
+      "en": "Keynote Presentations",
+      "fa": "Keynote Presentations",
+      "es": "Keynote Presentations"
     },
     "item_2": {
-      "title": "Executive Leadership Teams",
-      "desc": "Align messaging across the C-suite so every leader reinforces the same strategic narrative."
+      "en": "Investor Relations",
+      "fa": "Investor Relations",
+      "es": "Investor Relations"
     },
     "item_3": {
-      "title": "Board Chairs",
-      "desc": "Communicate governance, vision, and stewardship with precision and confidence."
+      "en": "Media Interviews",
+      "fa": "Media Interviews",
+      "es": "Media Interviews"
     },
     "item_4": {
-      "title": "Government & Nonprofit Leaders",
-      "desc": "Lead public trust through consistent, clear stakeholder communication."
+      "en": "Crisis Communications",
+      "fa": "Crisis Communications",
+      "es": "Crisis Communications"
     },
     "item_5": {
-      "title": "Real Estate & Development",
-      "desc": "Communicate vision and value to governments, partners, investors, and the public."
+      "en": "Board Communications",
+      "fa": "Board Communications",
+      "es": "Board Communications"
     },
     "item_6": {
-      "title": "Technology Leaders",
-      "desc": "Translate complex ideas into clear, credible narratives for every audience."
+      "en": "Internal Communications",
+      "fa": "Internal Communications",
+      "es": "Internal Communications"
+    },
+    "item_7": {
+      "en": "Thought Leadership",
+      "fa": "Thought Leadership",
+      "es": "Thought Leadership"
+    },
+    "item_8": {
+      "en": "LinkedIn Strategy",
+      "fa": "LinkedIn Strategy",
+      "es": "LinkedIn Strategy"
+    },
+    "item_9": {
+      "en": "Executive Positioning",
+      "fa": "Executive Positioning",
+      "es": "Executive Positioning"
+    },
+    "item_10": {
+      "en": "AI Search Visibility",
+      "fa": "AI Search Visibility",
+      "es": "AI Search Visibility"
+    }
+  },
+  "who": {
+    "eyebrow": {
+      "en": "Who It's For",
+      "fa": "Who It's For",
+      "es": "Who It's For"
+    },
+    "h2": {
+      "en": "Every leader who needs to be heard",
+      "fa": "Every leader who needs to be heard",
+      "es": "Every leader who needs to be heard"
+    },
+    "item_1": {
+      "title": {
+        "en": "CEOs & Founders",
+        "fa": "CEOs & Founders",
+        "es": "CEOs & Founders"
+      },
+      "desc": {
+        "en": "Build the voice that carries the organization's vision — at every stage.",
+        "fa": "Build the voice that carries the organization's vision — at every stage.",
+        "es": "Build the voice that carries the organization's vision — at every stage."
+      }
+    },
+    "item_2": {
+      "title": {
+        "en": "Executive Leadership Teams",
+        "fa": "Executive Leadership Teams",
+        "es": "Executive Leadership Teams"
+      },
+      "desc": {
+        "en": "Align messaging across the C-suite so every leader reinforces the same strategic narrative.",
+        "fa": "Align messaging across the C-suite so every leader reinforces the same strategic narrative.",
+        "es": "Align messaging across the C-suite so every leader reinforces the same strategic narrative."
+      }
+    },
+    "item_3": {
+      "title": {
+        "en": "Board Chairs",
+        "fa": "Board Chairs",
+        "es": "Board Chairs"
+      },
+      "desc": {
+        "en": "Communicate governance, vision, and stewardship with precision and confidence.",
+        "fa": "Communicate governance, vision, and stewardship with precision and confidence.",
+        "es": "Communicate governance, vision, and stewardship with precision and confidence."
+      }
+    },
+    "item_4": {
+      "title": {
+        "en": "Government & Nonprofit Leaders",
+        "fa": "Government & Nonprofit Leaders",
+        "es": "Government & Nonprofit Leaders"
+      },
+      "desc": {
+        "en": "Lead public trust through consistent, clear stakeholder communication.",
+        "fa": "Lead public trust through consistent, clear stakeholder communication.",
+        "es": "Lead public trust through consistent, clear stakeholder communication."
+      }
+    },
+    "item_5": {
+      "title": {
+        "en": "Real Estate & Development",
+        "fa": "Real Estate & Development",
+        "es": "Real Estate & Development"
+      },
+      "desc": {
+        "en": "Communicate vision and value to governments, partners, investors, and the public.",
+        "fa": "Communicate vision and value to governments, partners, investors, and the public.",
+        "es": "Communicate vision and value to governments, partners, investors, and the public."
+      }
+    },
+    "item_6": {
+      "title": {
+        "en": "Technology Leaders",
+        "fa": "Technology Leaders",
+        "es": "Technology Leaders"
+      },
+      "desc": {
+        "en": "Translate complex ideas into clear, credible narratives for every audience.",
+        "fa": "Translate complex ideas into clear, credible narratives for every audience.",
+        "es": "Translate complex ideas into clear, credible narratives for every audience."
+      }
     }
   },
   "journal": {
-    "eyebrow": "From the Journal",
-    "h2": "The Architecture of Executive Communication",
-    "body": "Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.",
-    "cta_primary": "Read the essay →",
-    "cta_secondary": "Visit the Newsroom",
+    "eyebrow": {
+      "en": "From the Journal",
+      "fa": "From the Journal",
+      "es": "From the Journal"
+    },
+    "h2": {
+      "en": "The Architecture of Executive Communication",
+      "fa": "The Architecture of Executive Communication",
+      "es": "The Architecture of Executive Communication"
+    },
+    "body": {
+      "en": "Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.",
+      "fa": "Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality.",
+      "es": "Executive communication becomes durable when it is built as a system — a repeatable narrative structure that gives leaders clarity, gives audiences continuity, and still leaves room for personality."
+    },
+    "cta_primary": {
+      "en": "Read the essay →",
+      "fa": "Read the essay →",
+      "es": "Read the essay →"
+    },
+    "cta_secondary": {
+      "en": "Visit the Newsroom",
+      "fa": "Visit the Newsroom",
+      "es": "Visit the Newsroom"
+    },
     "img_1": "/assets/exec/ep3.jpeg",
     "img_2": "/assets/exec/ep4.jpeg"
   },
   "who2": {
-    "eyebrow": "Who It's For",
-    "h2": "Every organization at a turning point",
+    "eyebrow": {
+      "en": "Who It's For",
+      "fa": "Who It's For",
+      "es": "Who It's For"
+    },
+    "h2": {
+      "en": "Every organization at a turning point",
+      "fa": "Every organization at a turning point",
+      "es": "Every organization at a turning point"
+    },
     "item_1": {
-      "title": "Founders",
-      "desc": "Clarify your story before growth introduces complexity."
+      "title": {
+        "en": "Founders",
+        "fa": "Founders",
+        "es": "Founders"
+      },
+      "desc": {
+        "en": "Clarify your story before growth introduces complexity.",
+        "fa": "Clarify your story before growth introduces complexity.",
+        "es": "Clarify your story before growth introduces complexity."
+      }
     },
     "item_2": {
-      "title": "Growth Companies",
-      "desc": "Align expanding teams around a common narrative before the message fragments."
+      "title": {
+        "en": "Growth Companies",
+        "fa": "Growth Companies",
+        "es": "Growth Companies"
+      },
+      "desc": {
+        "en": "Align expanding teams around a common narrative before the message fragments.",
+        "fa": "Align expanding teams around a common narrative before the message fragments.",
+        "es": "Align expanding teams around a common narrative before the message fragments."
+      }
     },
     "item_3": {
-      "title": "Enterprise",
-      "desc": "Consistency across business units, leadership teams, and stakeholder groups."
+      "title": {
+        "en": "Enterprise",
+        "fa": "Enterprise",
+        "es": "Enterprise"
+      },
+      "desc": {
+        "en": "Consistency across business units, leadership teams, and stakeholder groups.",
+        "fa": "Consistency across business units, leadership teams, and stakeholder groups.",
+        "es": "Consistency across business units, leadership teams, and stakeholder groups."
+      }
     },
     "item_4": {
-      "title": "Real Estate & Development",
-      "desc": "Communicate vision, value creation, and long-term impact to governments, partners, and buyers."
+      "title": {
+        "en": "Real Estate & Development",
+        "fa": "Real Estate & Development",
+        "es": "Real Estate & Development"
+      },
+      "desc": {
+        "en": "Communicate vision, value creation, and long-term impact to governments, partners, and buyers.",
+        "fa": "Communicate vision, value creation, and long-term impact to governments, partners, and buyers.",
+        "es": "Communicate vision, value creation, and long-term impact to governments, partners, and buyers."
+      }
     },
     "item_5": {
-      "title": "Governments & Institutions",
-      "desc": "Build trust through clear, consistent stakeholder communications."
+      "title": {
+        "en": "Governments & Institutions",
+        "fa": "Governments & Institutions",
+        "es": "Governments & Institutions"
+      },
+      "desc": {
+        "en": "Build trust through clear, consistent stakeholder communications.",
+        "fa": "Build trust through clear, consistent stakeholder communications.",
+        "es": "Build trust through clear, consistent stakeholder communications."
+      }
     },
     "item_6": {
-      "title": "Nonprofits",
-      "desc": "Align mission, fundraising, advocacy, and public engagement around a single story."
+      "title": {
+        "en": "Nonprofits",
+        "fa": "Nonprofits",
+        "es": "Nonprofits"
+      },
+      "desc": {
+        "en": "Align mission, fundraising, advocacy, and public engagement around a single story.",
+        "fa": "Align mission, fundraising, advocacy, and public engagement around a single story.",
+        "es": "Align mission, fundraising, advocacy, and public engagement around a single story."
+      }
     }
   },
   "faq": {
-    "eyebrow": "FAQs",
-    "h2": "Common questions",
+    "eyebrow": {
+      "en": "FAQs",
+      "fa": "FAQs",
+      "es": "FAQs"
+    },
+    "h2": {
+      "en": "Common questions",
+      "fa": "Common questions",
+      "es": "Common questions"
+    },
     "item_1": {
-      "q": "What is executive communications?",
-      "a": "Executive communications is the strategic discipline of helping leaders communicate clearly, consistently, and credibly across every audience — employees, investors, customers, media, and AI-powered search."
+      "q": {
+        "en": "What is executive communications?",
+        "fa": "What is executive communications?",
+        "es": "What is executive communications?"
+      },
+      "a": {
+        "en": "Executive communications is the strategic discipline of helping leaders communicate clearly, consistently, and credibly across every audience — employees, investors, customers, media, and AI-powered search.",
+        "fa": "Executive communications is the strategic discipline of helping leaders communicate clearly, consistently, and credibly across every audience — employees, investors, customers, media, and AI-powered search.",
+        "es": "Executive communications is the strategic discipline of helping leaders communicate clearly, consistently, and credibly across every audience — employees, investors, customers, media, and AI-powered search."
+      }
     },
     "item_2": {
-      "q": "What does an executive communications consultant do?",
-      "a": "An executive communications consultant helps leaders develop messaging systems, refine their public narrative, prepare for media and investor interactions, build thought leadership platforms, and ensure their communications support organizational strategy."
+      "q": {
+        "en": "What does an executive communications consultant do?",
+        "fa": "What does an executive communications consultant do?",
+        "es": "What does an executive communications consultant do?"
+      },
+      "a": {
+        "en": "An executive communications consultant helps leaders develop messaging systems, refine their public narrative, prepare for media and investor interactions, build thought leadership platforms, and ensure their communications support organizational strategy.",
+        "fa": "An executive communications consultant helps leaders develop messaging systems, refine their public narrative, prepare for media and investor interactions, build thought leadership platforms, and ensure their communications support organizational strategy.",
+        "es": "An executive communications consultant helps leaders develop messaging systems, refine their public narrative, prepare for media and investor interactions, build thought leadership platforms, and ensure their communications support organizational strategy."
+      }
     },
     "item_3": {
-      "q": "How is executive communications different from public relations?",
-      "a": "Public relations focuses on managing an organization's external reputation. Executive communications focuses on developing the messaging systems, positioning, and communication skills of individual leaders — though the two disciplines are deeply connected."
+      "q": {
+        "en": "How is executive communications different from public relations?",
+        "fa": "How is executive communications different from public relations?",
+        "es": "How is executive communications different from public relations?"
+      },
+      "a": {
+        "en": "Public relations focuses on managing an organization's external reputation. Executive communications focuses on developing the messaging systems, positioning, and communication skills of individual leaders — though the two disciplines are deeply connected.",
+        "fa": "Public relations focuses on managing an organization's external reputation. Executive communications focuses on developing the messaging systems, positioning, and communication skills of individual leaders — though the two disciplines are deeply connected.",
+        "es": "Public relations focuses on managing an organization's external reputation. Executive communications focuses on developing the messaging systems, positioning, and communication skills of individual leaders — though the two disciplines are deeply connected."
+      }
     },
     "item_4": {
-      "q": "How does executive communications improve organizational reputation?",
-      "a": "Consistent, clear executive communication builds trust with every stakeholder group. When leaders deliver aligned messages across media, investor relations, internal communications, and public appearances, the organization is perceived as credible, stable, and led with intention."
+      "q": {
+        "en": "How does executive communications improve organizational reputation?",
+        "fa": "How does executive communications improve organizational reputation?",
+        "es": "How does executive communications improve organizational reputation?"
+      },
+      "a": {
+        "en": "Consistent, clear executive communication builds trust with every stakeholder group. When leaders deliver aligned messages across media, investor relations, internal communications, and public appearances, the organization is perceived as credible, stable, and led with intention.",
+        "fa": "Consistent, clear executive communication builds trust with every stakeholder group. When leaders deliver aligned messages across media, investor relations, internal communications, and public appearances, the organization is perceived as credible, stable, and led with intention.",
+        "es": "Consistent, clear executive communication builds trust with every stakeholder group. When leaders deliver aligned messages across media, investor relations, internal communications, and public appearances, the organization is perceived as credible, stable, and led with intention."
+      }
     },
     "item_5": {
-      "q": "How does executive communications improve AI visibility?",
-      "a": "When executives communicate consistently around defined themes and proof points, those patterns are recognized by AI systems and search engines — making the leader, and the organization, easier to find, summarize, and recommend on Gemini, ChatGPT, Perplexity, and Claude."
+      "q": {
+        "en": "How does executive communications improve AI visibility?",
+        "fa": "How does executive communications improve AI visibility?",
+        "es": "How does executive communications improve AI visibility?"
+      },
+      "a": {
+        "en": "When executives communicate consistently around defined themes and proof points, those patterns are recognized by AI systems and search engines — making the leader, and the organization, easier to find, summarize, and recommend on Gemini, ChatGPT, Perplexity, and Claude.",
+        "fa": "When executives communicate consistently around defined themes and proof points, those patterns are recognized by AI systems and search engines — making the leader, and the organization, easier to find, summarize, and recommend on Gemini, ChatGPT, Perplexity, and Claude.",
+        "es": "When executives communicate consistently around defined themes and proof points, those patterns are recognized by AI systems and search engines — making the leader, and the organization, easier to find, summarize, and recommend on Gemini, ChatGPT, Perplexity, and Claude."
+      }
     }
   },
   "cta": {
-    "eyebrow": "Communicate Like Leadership Matters",
-    "h2": "Organizations are remembered through the words of their leaders",
-    "body": "Man of the World helps executives develop messaging systems that create clarity, trust, influence, and long-term strategic advantage.",
-    "cta_primary": "Schedule a conversation →",
-    "cta_secondary": "Messaging Matrix",
-    "cta_tertiary": "Visit the Newsroom"
+    "eyebrow": {
+      "en": "Communicate Like Leadership Matters",
+      "fa": "Communicate Like Leadership Matters",
+      "es": "Communicate Like Leadership Matters"
+    },
+    "h2": {
+      "en": "Organizations are remembered through the words of their leaders",
+      "fa": "Organizations are remembered through the words of their leaders",
+      "es": "Organizations are remembered through the words of their leaders"
+    },
+    "body": {
+      "en": "Man of the World helps executives develop messaging systems that create clarity, trust, influence, and long-term strategic advantage.",
+      "fa": "Man of the World helps executives develop messaging systems that create clarity, trust, influence, and long-term strategic advantage.",
+      "es": "Man of the World helps executives develop messaging systems that create clarity, trust, influence, and long-term strategic advantage."
+    },
+    "cta_primary": {
+      "en": "Schedule a conversation →",
+      "fa": "Schedule a conversation →",
+      "es": "Schedule a conversation →"
+    },
+    "cta_secondary": {
+      "en": "Messaging Matrix",
+      "fa": "Messaging Matrix",
+      "es": "Messaging Matrix"
+    },
+    "cta_tertiary": {
+      "en": "Visit the Newsroom",
+      "fa": "Visit the Newsroom",
+      "es": "Visit the Newsroom"
+    }
   }
 }

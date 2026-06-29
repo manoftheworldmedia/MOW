@@ -5,8 +5,12 @@
      - text:   every [data-cms-text="dotted.key"] -> textContent
      - images: every [data-cms-img="dotted.key"]  -> src   (duplicate marquee
                images share a key, so each is ONE swappable slot)
-   English-only for now; values are looked up by dotted path in the JSON.
-   Best-effort: if the fetch fails, the static HTML is left exactly as-is. */
+
+   TRILINGUAL: a text value may be a plain string OR an object {en,fa,es}. The
+   active language comes from <html lang> and from clicking a [data-langbtn]
+   button (the shared nav toggle); on language change the text re-renders. Image
+   values are shared across languages. Falls back to English for missing
+   translations. Best-effort: on fetch failure the static HTML is left as-is. */
 (function () {
   var page = document.body && document.body.getAttribute('data-cms-page');
   if (!page) return;
@@ -14,6 +18,9 @@
   var live = host.indexOf('mow.media') > -1 || host.indexOf('github.io') > -1 ||
              host === 'localhost' || host === '127.0.0.1';
   if (!live) return;
+
+  var data = null;
+  var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
 
   function get(obj, path) {
     var parts = String(path).split('.'), cur = obj;
@@ -23,38 +30,63 @@
     }
     return cur;
   }
-  function setMeta(sel, attr, val) {
-    var m = document.querySelector(sel);
-    if (m && val != null && val !== '') m.setAttribute(attr, val);
+  function pick(v) {
+    if (v && typeof v === 'object') return v[lang] != null ? v[lang] : v.en;
+    return v;
   }
+  function setMeta(sel, val) {
+    var m = document.querySelector(sel);
+    if (m && val != null && val !== '') m.setAttribute('content', val);
+  }
+
+  function applyText() {
+    if (!data) return;
+    var els = document.querySelectorAll('[data-cms-text]');
+    for (var i = 0; i < els.length; i++) {
+      var v = pick(get(data, els[i].getAttribute('data-cms-text')));
+      if (v != null) {
+        els[i].textContent = v;
+        els[i].style.direction = (lang === 'fa') ? 'rtl' : 'ltr';
+      }
+    }
+    if (data.meta) {
+      var t = pick(data.meta.title), d = pick(data.meta.description);
+      if (t) {
+        document.title = t;
+        setMeta('meta[property="og:title"]', t);
+        setMeta('meta[name="twitter:title"]', t);
+      }
+      if (d) {
+        setMeta('meta[name="description"]', d);
+        setMeta('meta[property="og:description"]', d);
+        setMeta('meta[name="twitter:description"]', d);
+      }
+    }
+  }
+
+  function applyImages() {
+    if (!data) return;
+    var imgs = document.querySelectorAll('[data-cms-img]');
+    for (var j = 0; j < imgs.length; j++) {
+      var iv = get(data, imgs[j].getAttribute('data-cms-img'));
+      if (iv != null && typeof iv === 'string' && iv !== '' &&
+          imgs[j].getAttribute('src') !== iv) {
+        imgs[j].setAttribute('src', iv);
+      }
+    }
+  }
+
+  // Re-render body copy when the shared language toggle is clicked.
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-langbtn]');
+    if (b && data) {
+      var l = b.getAttribute('data-langbtn');
+      if (l && l !== lang) { lang = l; applyText(); }
+    }
+  });
 
   fetch('/content/' + page + '.json', { cache: 'no-store' })
     .then(function (r) { return r.json(); })
-    .then(function (d) {
-      if (d.meta) {
-        if (d.meta.title) {
-          document.title = d.meta.title;
-          setMeta('meta[property="og:title"]', 'content', d.meta.title);
-          setMeta('meta[name="twitter:title"]', 'content', d.meta.title);
-        }
-        if (d.meta.description) {
-          setMeta('meta[name="description"]', 'content', d.meta.description);
-          setMeta('meta[property="og:description"]', 'content', d.meta.description);
-          setMeta('meta[name="twitter:description"]', 'content', d.meta.description);
-        }
-      }
-      var texts = document.querySelectorAll('[data-cms-text]');
-      for (var i = 0; i < texts.length; i++) {
-        var v = get(d, texts[i].getAttribute('data-cms-text'));
-        if (v != null) texts[i].textContent = v;
-      }
-      var imgs = document.querySelectorAll('[data-cms-img]');
-      for (var j = 0; j < imgs.length; j++) {
-        var iv = get(d, imgs[j].getAttribute('data-cms-img'));
-        if (iv != null && iv !== '' && imgs[j].getAttribute('src') !== String(iv)) {
-          imgs[j].setAttribute('src', iv);
-        }
-      }
-    })
+    .then(function (d) { data = d; applyImages(); applyText(); })
     .catch(function () { /* leave static HTML as-is */ });
 })();

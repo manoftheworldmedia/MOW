@@ -3381,12 +3381,52 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "description",
               "label": "Description",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             }
           ]
         },
@@ -3398,32 +3438,152 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h1",
               "label": "H1",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "subhead",
               "label": "Subhead",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "cta_primary",
               "label": "Cta primary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_secondary",
               "label": "Cta secondary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "bg_mark",
@@ -3440,42 +3600,202 @@
             {
               "name": "word_1",
               "label": "Word 1",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_2",
               "label": "Word 2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_3",
               "label": "Word 3",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_4",
               "label": "Word 4",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_5",
               "label": "Word 5",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_6",
               "label": "Word 6",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_7",
               "label": "Word 7",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_8",
               "label": "Word 8",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -3554,22 +3874,102 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "lead",
               "label": "Lead",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             }
           ]
         },
@@ -3581,12 +3981,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -3596,17 +4036,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3618,17 +4118,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3640,17 +4200,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3662,17 +4282,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3684,17 +4364,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3706,17 +4446,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3728,17 +4528,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             }
@@ -3752,12 +4612,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "lead",
               "label": "Lead",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -3767,12 +4667,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3784,12 +4724,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3801,12 +4781,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -3818,12 +4838,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -3835,12 +4895,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -3852,12 +4952,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             }
@@ -3871,27 +5011,127 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "cta_primary",
               "label": "Cta primary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_secondary",
               "label": "Cta secondary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -3903,12 +5143,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -3918,12 +5198,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3935,12 +5255,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3952,12 +5312,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -3969,12 +5369,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -3986,12 +5426,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4003,12 +5483,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             }
@@ -4022,12 +5542,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -4037,12 +5597,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4054,12 +5654,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4071,12 +5711,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4088,12 +5768,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4105,12 +5825,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             }
@@ -4124,32 +5884,152 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "cta_1",
               "label": "Cta 1",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_2",
               "label": "Cta 2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_3",
               "label": "Cta 3",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
@@ -4170,12 +6050,52 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "description",
               "label": "Description",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             }
           ]
         },
@@ -4187,32 +6107,152 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h1",
               "label": "H1",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "subhead",
               "label": "Subhead",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "cta_primary",
               "label": "Cta primary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_secondary",
               "label": "Cta secondary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "bg_mark",
@@ -4229,42 +6269,202 @@
             {
               "name": "word_1",
               "label": "Word 1",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_2",
               "label": "Word 2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_3",
               "label": "Word 3",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_4",
               "label": "Word 4",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_5",
               "label": "Word 5",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_6",
               "label": "Word 6",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_7",
               "label": "Word 7",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "word_8",
               "label": "Word 8",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -4343,22 +6543,102 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "body_1",
               "label": "Body 1",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "body_2",
               "label": "Body 2",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             }
           ]
         },
@@ -4370,12 +6650,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -4385,17 +6705,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4407,17 +6787,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4429,17 +6869,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4451,17 +6951,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4473,17 +7033,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4495,17 +7115,77 @@
                 {
                   "name": "num",
                   "label": "Num",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             }
@@ -4519,12 +7199,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "lead",
               "label": "Lead",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -4534,12 +7254,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4551,12 +7311,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4568,12 +7368,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4585,12 +7425,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             }
@@ -4604,62 +7484,302 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
               "label": "Item 1",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_2",
               "label": "Item 2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_3",
               "label": "Item 3",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_4",
               "label": "Item 4",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_5",
               "label": "Item 5",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_6",
               "label": "Item 6",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_7",
               "label": "Item 7",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_8",
               "label": "Item 8",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_9",
               "label": "Item 9",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_10",
               "label": "Item 10",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -4671,12 +7791,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -4686,12 +7846,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4703,12 +7903,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4720,12 +7960,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4737,12 +8017,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4754,12 +8074,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4771,12 +8131,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             }
@@ -4790,27 +8190,127 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "cta_primary",
               "label": "Cta primary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_secondary",
               "label": "Cta secondary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "img_1",
@@ -4832,12 +8332,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -4847,12 +8387,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4864,12 +8444,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4881,12 +8501,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4898,12 +8558,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4915,12 +8615,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             },
@@ -4932,12 +8672,52 @@
                 {
                   "name": "title",
                   "label": "Title",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "desc",
                   "label": "Desc",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             }
@@ -4951,12 +8731,52 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "item_1",
@@ -4966,12 +8786,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -4983,12 +8843,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -5000,12 +8900,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -5017,12 +8957,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -5034,12 +9014,52 @@
                 {
                   "name": "q",
                   "label": "Q",
-                  "type": "string"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "string"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "string"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
                   "name": "a",
                   "label": "A",
-                  "type": "text"
+                  "type": "object",
+                  "ui": {
+                    "group": "Languages"
+                  },
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "type": "text"
+                    },
+                    {
+                      "name": "fa",
+                      "label": "فارسی (Persian)",
+                      "type": "text"
+                    },
+                    {
+                      "name": "es",
+                      "label": "Español",
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             }
@@ -5053,32 +9073,152 @@
             {
               "name": "eyebrow",
               "label": "Eyebrow",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "h2",
               "label": "H2",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "text"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "text"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "text"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "cta_primary",
               "label": "Cta primary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_secondary",
               "label": "Cta secondary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             },
             {
               "name": "cta_tertiary",
               "label": "Cta tertiary",
-              "type": "string"
+              "type": "object",
+              "ui": {
+                "group": "Languages"
+              },
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "type": "string"
+                },
+                {
+                  "name": "fa",
+                  "label": "فارسی (Persian)",
+                  "type": "string"
+                },
+                {
+                  "name": "es",
+                  "label": "Español",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
