@@ -182,6 +182,751 @@
               "name": "nav_contact",
               "label": "Nav — Contact",
               "type": "string"
+            },
+            {
+              "name": "trusted_label",
+              "label": "Trusted label",
+              "type": "string"
+            },
+            {
+              "name": "trusted_metric",
+              "label": "Trusted metric",
+              "type": "string"
+            },
+            {
+              "name": "partner_nvidia",
+              "label": "Partner nvidia",
+              "type": "string"
+            },
+            {
+              "name": "partner_pg",
+              "label": "Partner pg",
+              "type": "string"
+            },
+            {
+              "name": "partner_3m",
+              "label": "Partner 3m",
+              "type": "string"
+            },
+            {
+              "name": "partner_carta",
+              "label": "Partner carta",
+              "type": "string"
+            },
+            {
+              "name": "partner_socaledison",
+              "label": "Partner socaledison",
+              "type": "string"
+            },
+            {
+              "name": "partner_kpmg",
+              "label": "Partner kpmg",
+              "type": "string"
+            },
+            {
+              "name": "partner_google_latam",
+              "label": "Partner google latam",
+              "type": "string"
+            },
+            {
+              "name": "partner_cnbc",
+              "label": "Partner cnbc",
+              "type": "string"
+            },
+            {
+              "name": "partner_forbes",
+              "label": "Partner forbes",
+              "type": "string"
+            },
+            {
+              "name": "partner_wired",
+              "label": "Partner wired",
+              "type": "string"
+            },
+            {
+              "name": "partner_techcrunch",
+              "label": "Partner techcrunch",
+              "type": "string"
+            },
+            {
+              "name": "partner_inc",
+              "label": "Partner inc",
+              "type": "string"
+            },
+            {
+              "name": "about_body_lead_1",
+              "label": "About body lead 1",
+              "type": "text"
+            },
+            {
+              "name": "about_body_lead_em",
+              "label": "About body lead em",
+              "type": "string"
+            },
+            {
+              "name": "about_body_lead_2",
+              "label": "About body lead 2",
+              "type": "string"
+            },
+            {
+              "name": "about_body_2",
+              "label": "About body 2",
+              "type": "text"
+            },
+            {
+              "name": "about_link_peter",
+              "label": "About link peter",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_1_value",
+              "label": "About stat 1 value",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_1_label",
+              "label": "About stat 1 label",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_2_value",
+              "label": "About stat 2 value",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_2_label",
+              "label": "About stat 2 label",
+              "type": "string"
+            },
+            {
+              "name": "ind_intro_1",
+              "label": "Ind intro 1",
+              "type": "text"
+            },
+            {
+              "name": "ind_intro_em",
+              "label": "Ind intro em",
+              "type": "string"
+            },
+            {
+              "name": "ind_intro_2",
+              "label": "Ind intro 2",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_num",
+              "label": "Svc 1 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_title",
+              "label": "Svc 1 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_desc",
+              "label": "Svc 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_2_num",
+              "label": "Svc 2 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_2_title",
+              "label": "Svc 2 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_2_desc",
+              "label": "Svc 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_3_num",
+              "label": "Svc 3 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_3_title",
+              "label": "Svc 3 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_3_desc",
+              "label": "Svc 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_4_num",
+              "label": "Svc 4 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_4_title",
+              "label": "Svc 4 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_4_desc",
+              "label": "Svc 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_5_num",
+              "label": "Svc 5 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_5_title",
+              "label": "Svc 5 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_5_desc",
+              "label": "Svc 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_6_num",
+              "label": "Svc 6 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_6_title",
+              "label": "Svc 6 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_6_desc",
+              "label": "Svc 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "work_intro",
+              "label": "Work intro",
+              "type": "text"
+            },
+            {
+              "name": "work_caspian_tag_1",
+              "label": "Work caspian tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_tag_2",
+              "label": "Work caspian tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_title",
+              "label": "Work caspian title",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_desc",
+              "label": "Work caspian desc",
+              "type": "text"
+            },
+            {
+              "name": "work_caspian_quote",
+              "label": "Work caspian quote",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_link",
+              "label": "Work caspian link",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_tag_1",
+              "label": "Work amr tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_tag_2",
+              "label": "Work amr tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_title",
+              "label": "Work amr title",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_desc",
+              "label": "Work amr desc",
+              "type": "text"
+            },
+            {
+              "name": "work_amr_quote",
+              "label": "Work amr quote",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_link",
+              "label": "Work amr link",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_tag_1",
+              "label": "Work bananos tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_tag_2",
+              "label": "Work bananos tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_title",
+              "label": "Work bananos title",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_desc",
+              "label": "Work bananos desc",
+              "type": "text"
+            },
+            {
+              "name": "work_bananos_quote",
+              "label": "Work bananos quote",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_link_1",
+              "label": "Work bananos link 1",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_link_2",
+              "label": "Work bananos link 2",
+              "type": "string"
+            },
+            {
+              "name": "work_more_label",
+              "label": "Work more label",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_cat",
+              "label": "Work petra cat",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_title",
+              "label": "Work petra title",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_desc",
+              "label": "Work petra desc",
+              "type": "text"
+            },
+            {
+              "name": "work_avitia_cat",
+              "label": "Work avitia cat",
+              "type": "string"
+            },
+            {
+              "name": "work_avitia_title",
+              "label": "Work avitia title",
+              "type": "string"
+            },
+            {
+              "name": "work_avitia_desc",
+              "label": "Work avitia desc",
+              "type": "text"
+            },
+            {
+              "name": "work_autoalign_cat",
+              "label": "Work autoalign cat",
+              "type": "string"
+            },
+            {
+              "name": "work_autoalign_title",
+              "label": "Work autoalign title",
+              "type": "string"
+            },
+            {
+              "name": "work_autoalign_desc",
+              "label": "Work autoalign desc",
+              "type": "text"
+            },
+            {
+              "name": "work_heyhouston_cat",
+              "label": "Work heyhouston cat",
+              "type": "string"
+            },
+            {
+              "name": "work_heyhouston_title",
+              "label": "Work heyhouston title",
+              "type": "string"
+            },
+            {
+              "name": "work_heyhouston_desc",
+              "label": "Work heyhouston desc",
+              "type": "text"
+            },
+            {
+              "name": "work_neara_cat",
+              "label": "Work neara cat",
+              "type": "string"
+            },
+            {
+              "name": "work_neara_title",
+              "label": "Work neara title",
+              "type": "string"
+            },
+            {
+              "name": "work_neara_desc",
+              "label": "Work neara desc",
+              "type": "text"
+            },
+            {
+              "name": "work_pedrera_cat",
+              "label": "Work pedrera cat",
+              "type": "string"
+            },
+            {
+              "name": "work_pedrera_title",
+              "label": "Work pedrera title",
+              "type": "string"
+            },
+            {
+              "name": "work_pedrera_desc",
+              "label": "Work pedrera desc",
+              "type": "text"
+            },
+            {
+              "name": "work_learn_method",
+              "label": "Work learn method",
+              "type": "string"
+            },
+            {
+              "name": "method_1_num",
+              "label": "Method 1 num",
+              "type": "string"
+            },
+            {
+              "name": "method_1_title",
+              "label": "Method 1 title",
+              "type": "string"
+            },
+            {
+              "name": "method_1_desc",
+              "label": "Method 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_2_num",
+              "label": "Method 2 num",
+              "type": "string"
+            },
+            {
+              "name": "method_2_title",
+              "label": "Method 2 title",
+              "type": "string"
+            },
+            {
+              "name": "method_2_desc",
+              "label": "Method 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_3_num",
+              "label": "Method 3 num",
+              "type": "string"
+            },
+            {
+              "name": "method_3_title",
+              "label": "Method 3 title",
+              "type": "string"
+            },
+            {
+              "name": "method_3_desc",
+              "label": "Method 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_4_num",
+              "label": "Method 4 num",
+              "type": "string"
+            },
+            {
+              "name": "method_4_title",
+              "label": "Method 4 title",
+              "type": "string"
+            },
+            {
+              "name": "method_4_desc",
+              "label": "Method 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_5_num",
+              "label": "Method 5 num",
+              "type": "string"
+            },
+            {
+              "name": "method_5_title",
+              "label": "Method 5 title",
+              "type": "string"
+            },
+            {
+              "name": "method_5_desc",
+              "label": "Method 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_6_num",
+              "label": "Method 6 num",
+              "type": "string"
+            },
+            {
+              "name": "method_6_title",
+              "label": "Method 6 title",
+              "type": "string"
+            },
+            {
+              "name": "method_6_desc",
+              "label": "Method 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "blog_eyebrow",
+              "label": "Blog eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "blog_title",
+              "label": "Blog title",
+              "type": "string"
+            },
+            {
+              "name": "blog_cta",
+              "label": "Blog cta",
+              "type": "string"
+            },
+            {
+              "name": "i2i_lede",
+              "label": "I2i lede",
+              "type": "string"
+            },
+            {
+              "name": "i2i_body",
+              "label": "I2i body",
+              "type": "text"
+            },
+            {
+              "name": "i2i_body_hint",
+              "label": "I2i body hint",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_num",
+              "label": "I2i tenet 1 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_name",
+              "label": "I2i tenet 1 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_desc",
+              "label": "I2i tenet 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_1_note",
+              "label": "I2i tenet 1 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_num",
+              "label": "I2i tenet 2 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_name",
+              "label": "I2i tenet 2 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_desc",
+              "label": "I2i tenet 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_2_note",
+              "label": "I2i tenet 2 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_num",
+              "label": "I2i tenet 3 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_name",
+              "label": "I2i tenet 3 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_desc",
+              "label": "I2i tenet 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_3_note",
+              "label": "I2i tenet 3 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_num",
+              "label": "I2i tenet 4 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_name",
+              "label": "I2i tenet 4 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_desc",
+              "label": "I2i tenet 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_4_note",
+              "label": "I2i tenet 4 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_num",
+              "label": "I2i tenet 5 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_name",
+              "label": "I2i tenet 5 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_desc",
+              "label": "I2i tenet 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_5_note",
+              "label": "I2i tenet 5 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_num",
+              "label": "I2i tenet 6 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_name",
+              "label": "I2i tenet 6 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_desc",
+              "label": "I2i tenet 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_6_note",
+              "label": "I2i tenet 6 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_num",
+              "label": "I2i tenet 7 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_name",
+              "label": "I2i tenet 7 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_name_fa",
+              "label": "I2i tenet 7 name fa",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_desc",
+              "label": "I2i tenet 7 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_7_note",
+              "label": "I2i tenet 7 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_quote",
+              "label": "I2i quote",
+              "type": "text"
+            },
+            {
+              "name": "i2i_essay_link",
+              "label": "I2i essay link",
+              "type": "string"
+            },
+            {
+              "name": "postcard_eyebrow",
+              "label": "Postcard eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "postcard_title",
+              "label": "Postcard title",
+              "type": "string"
+            },
+            {
+              "name": "postcard_body",
+              "label": "Postcard body",
+              "type": "string"
+            },
+            {
+              "name": "postcard_badge",
+              "label": "Postcard badge",
+              "type": "string"
+            },
+            {
+              "name": "postcard_modal_title",
+              "label": "Postcard modal title",
+              "type": "string"
+            },
+            {
+              "name": "postcard_modal_body",
+              "label": "Postcard modal body",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_text",
+              "label": "Postcard share text",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_whatsapp",
+              "label": "Postcard share whatsapp",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_download",
+              "label": "Postcard share download",
+              "type": "string"
+            },
+            {
+              "name": "contact_body",
+              "label": "Contact body",
+              "type": "text"
             }
           ]
         },
@@ -331,6 +1076,751 @@
               "name": "nav_contact",
               "label": "Nav — Contact",
               "type": "string"
+            },
+            {
+              "name": "trusted_label",
+              "label": "Trusted label",
+              "type": "string"
+            },
+            {
+              "name": "trusted_metric",
+              "label": "Trusted metric",
+              "type": "string"
+            },
+            {
+              "name": "partner_nvidia",
+              "label": "Partner nvidia",
+              "type": "string"
+            },
+            {
+              "name": "partner_pg",
+              "label": "Partner pg",
+              "type": "string"
+            },
+            {
+              "name": "partner_3m",
+              "label": "Partner 3m",
+              "type": "string"
+            },
+            {
+              "name": "partner_carta",
+              "label": "Partner carta",
+              "type": "string"
+            },
+            {
+              "name": "partner_socaledison",
+              "label": "Partner socaledison",
+              "type": "string"
+            },
+            {
+              "name": "partner_kpmg",
+              "label": "Partner kpmg",
+              "type": "string"
+            },
+            {
+              "name": "partner_google_latam",
+              "label": "Partner google latam",
+              "type": "string"
+            },
+            {
+              "name": "partner_cnbc",
+              "label": "Partner cnbc",
+              "type": "string"
+            },
+            {
+              "name": "partner_forbes",
+              "label": "Partner forbes",
+              "type": "string"
+            },
+            {
+              "name": "partner_wired",
+              "label": "Partner wired",
+              "type": "string"
+            },
+            {
+              "name": "partner_techcrunch",
+              "label": "Partner techcrunch",
+              "type": "string"
+            },
+            {
+              "name": "partner_inc",
+              "label": "Partner inc",
+              "type": "string"
+            },
+            {
+              "name": "about_body_lead_1",
+              "label": "About body lead 1",
+              "type": "text"
+            },
+            {
+              "name": "about_body_lead_em",
+              "label": "About body lead em",
+              "type": "string"
+            },
+            {
+              "name": "about_body_lead_2",
+              "label": "About body lead 2",
+              "type": "string"
+            },
+            {
+              "name": "about_body_2",
+              "label": "About body 2",
+              "type": "text"
+            },
+            {
+              "name": "about_link_peter",
+              "label": "About link peter",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_1_value",
+              "label": "About stat 1 value",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_1_label",
+              "label": "About stat 1 label",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_2_value",
+              "label": "About stat 2 value",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_2_label",
+              "label": "About stat 2 label",
+              "type": "string"
+            },
+            {
+              "name": "ind_intro_1",
+              "label": "Ind intro 1",
+              "type": "text"
+            },
+            {
+              "name": "ind_intro_em",
+              "label": "Ind intro em",
+              "type": "string"
+            },
+            {
+              "name": "ind_intro_2",
+              "label": "Ind intro 2",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_num",
+              "label": "Svc 1 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_title",
+              "label": "Svc 1 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_desc",
+              "label": "Svc 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_2_num",
+              "label": "Svc 2 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_2_title",
+              "label": "Svc 2 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_2_desc",
+              "label": "Svc 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_3_num",
+              "label": "Svc 3 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_3_title",
+              "label": "Svc 3 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_3_desc",
+              "label": "Svc 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_4_num",
+              "label": "Svc 4 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_4_title",
+              "label": "Svc 4 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_4_desc",
+              "label": "Svc 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_5_num",
+              "label": "Svc 5 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_5_title",
+              "label": "Svc 5 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_5_desc",
+              "label": "Svc 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_6_num",
+              "label": "Svc 6 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_6_title",
+              "label": "Svc 6 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_6_desc",
+              "label": "Svc 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "work_intro",
+              "label": "Work intro",
+              "type": "text"
+            },
+            {
+              "name": "work_caspian_tag_1",
+              "label": "Work caspian tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_tag_2",
+              "label": "Work caspian tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_title",
+              "label": "Work caspian title",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_desc",
+              "label": "Work caspian desc",
+              "type": "text"
+            },
+            {
+              "name": "work_caspian_quote",
+              "label": "Work caspian quote",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_link",
+              "label": "Work caspian link",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_tag_1",
+              "label": "Work amr tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_tag_2",
+              "label": "Work amr tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_title",
+              "label": "Work amr title",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_desc",
+              "label": "Work amr desc",
+              "type": "text"
+            },
+            {
+              "name": "work_amr_quote",
+              "label": "Work amr quote",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_link",
+              "label": "Work amr link",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_tag_1",
+              "label": "Work bananos tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_tag_2",
+              "label": "Work bananos tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_title",
+              "label": "Work bananos title",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_desc",
+              "label": "Work bananos desc",
+              "type": "text"
+            },
+            {
+              "name": "work_bananos_quote",
+              "label": "Work bananos quote",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_link_1",
+              "label": "Work bananos link 1",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_link_2",
+              "label": "Work bananos link 2",
+              "type": "string"
+            },
+            {
+              "name": "work_more_label",
+              "label": "Work more label",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_cat",
+              "label": "Work petra cat",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_title",
+              "label": "Work petra title",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_desc",
+              "label": "Work petra desc",
+              "type": "text"
+            },
+            {
+              "name": "work_avitia_cat",
+              "label": "Work avitia cat",
+              "type": "string"
+            },
+            {
+              "name": "work_avitia_title",
+              "label": "Work avitia title",
+              "type": "string"
+            },
+            {
+              "name": "work_avitia_desc",
+              "label": "Work avitia desc",
+              "type": "text"
+            },
+            {
+              "name": "work_autoalign_cat",
+              "label": "Work autoalign cat",
+              "type": "string"
+            },
+            {
+              "name": "work_autoalign_title",
+              "label": "Work autoalign title",
+              "type": "string"
+            },
+            {
+              "name": "work_autoalign_desc",
+              "label": "Work autoalign desc",
+              "type": "text"
+            },
+            {
+              "name": "work_heyhouston_cat",
+              "label": "Work heyhouston cat",
+              "type": "string"
+            },
+            {
+              "name": "work_heyhouston_title",
+              "label": "Work heyhouston title",
+              "type": "string"
+            },
+            {
+              "name": "work_heyhouston_desc",
+              "label": "Work heyhouston desc",
+              "type": "text"
+            },
+            {
+              "name": "work_neara_cat",
+              "label": "Work neara cat",
+              "type": "string"
+            },
+            {
+              "name": "work_neara_title",
+              "label": "Work neara title",
+              "type": "string"
+            },
+            {
+              "name": "work_neara_desc",
+              "label": "Work neara desc",
+              "type": "text"
+            },
+            {
+              "name": "work_pedrera_cat",
+              "label": "Work pedrera cat",
+              "type": "string"
+            },
+            {
+              "name": "work_pedrera_title",
+              "label": "Work pedrera title",
+              "type": "string"
+            },
+            {
+              "name": "work_pedrera_desc",
+              "label": "Work pedrera desc",
+              "type": "text"
+            },
+            {
+              "name": "work_learn_method",
+              "label": "Work learn method",
+              "type": "string"
+            },
+            {
+              "name": "method_1_num",
+              "label": "Method 1 num",
+              "type": "string"
+            },
+            {
+              "name": "method_1_title",
+              "label": "Method 1 title",
+              "type": "string"
+            },
+            {
+              "name": "method_1_desc",
+              "label": "Method 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_2_num",
+              "label": "Method 2 num",
+              "type": "string"
+            },
+            {
+              "name": "method_2_title",
+              "label": "Method 2 title",
+              "type": "string"
+            },
+            {
+              "name": "method_2_desc",
+              "label": "Method 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_3_num",
+              "label": "Method 3 num",
+              "type": "string"
+            },
+            {
+              "name": "method_3_title",
+              "label": "Method 3 title",
+              "type": "string"
+            },
+            {
+              "name": "method_3_desc",
+              "label": "Method 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_4_num",
+              "label": "Method 4 num",
+              "type": "string"
+            },
+            {
+              "name": "method_4_title",
+              "label": "Method 4 title",
+              "type": "string"
+            },
+            {
+              "name": "method_4_desc",
+              "label": "Method 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_5_num",
+              "label": "Method 5 num",
+              "type": "string"
+            },
+            {
+              "name": "method_5_title",
+              "label": "Method 5 title",
+              "type": "string"
+            },
+            {
+              "name": "method_5_desc",
+              "label": "Method 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_6_num",
+              "label": "Method 6 num",
+              "type": "string"
+            },
+            {
+              "name": "method_6_title",
+              "label": "Method 6 title",
+              "type": "string"
+            },
+            {
+              "name": "method_6_desc",
+              "label": "Method 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "blog_eyebrow",
+              "label": "Blog eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "blog_title",
+              "label": "Blog title",
+              "type": "string"
+            },
+            {
+              "name": "blog_cta",
+              "label": "Blog cta",
+              "type": "string"
+            },
+            {
+              "name": "i2i_lede",
+              "label": "I2i lede",
+              "type": "string"
+            },
+            {
+              "name": "i2i_body",
+              "label": "I2i body",
+              "type": "text"
+            },
+            {
+              "name": "i2i_body_hint",
+              "label": "I2i body hint",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_num",
+              "label": "I2i tenet 1 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_name",
+              "label": "I2i tenet 1 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_desc",
+              "label": "I2i tenet 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_1_note",
+              "label": "I2i tenet 1 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_num",
+              "label": "I2i tenet 2 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_name",
+              "label": "I2i tenet 2 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_desc",
+              "label": "I2i tenet 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_2_note",
+              "label": "I2i tenet 2 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_num",
+              "label": "I2i tenet 3 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_name",
+              "label": "I2i tenet 3 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_desc",
+              "label": "I2i tenet 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_3_note",
+              "label": "I2i tenet 3 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_num",
+              "label": "I2i tenet 4 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_name",
+              "label": "I2i tenet 4 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_desc",
+              "label": "I2i tenet 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_4_note",
+              "label": "I2i tenet 4 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_num",
+              "label": "I2i tenet 5 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_name",
+              "label": "I2i tenet 5 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_desc",
+              "label": "I2i tenet 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_5_note",
+              "label": "I2i tenet 5 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_num",
+              "label": "I2i tenet 6 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_name",
+              "label": "I2i tenet 6 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_desc",
+              "label": "I2i tenet 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_6_note",
+              "label": "I2i tenet 6 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_num",
+              "label": "I2i tenet 7 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_name",
+              "label": "I2i tenet 7 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_name_fa",
+              "label": "I2i tenet 7 name fa",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_desc",
+              "label": "I2i tenet 7 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_7_note",
+              "label": "I2i tenet 7 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_quote",
+              "label": "I2i quote",
+              "type": "text"
+            },
+            {
+              "name": "i2i_essay_link",
+              "label": "I2i essay link",
+              "type": "string"
+            },
+            {
+              "name": "postcard_eyebrow",
+              "label": "Postcard eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "postcard_title",
+              "label": "Postcard title",
+              "type": "string"
+            },
+            {
+              "name": "postcard_body",
+              "label": "Postcard body",
+              "type": "string"
+            },
+            {
+              "name": "postcard_badge",
+              "label": "Postcard badge",
+              "type": "string"
+            },
+            {
+              "name": "postcard_modal_title",
+              "label": "Postcard modal title",
+              "type": "string"
+            },
+            {
+              "name": "postcard_modal_body",
+              "label": "Postcard modal body",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_text",
+              "label": "Postcard share text",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_whatsapp",
+              "label": "Postcard share whatsapp",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_download",
+              "label": "Postcard share download",
+              "type": "string"
+            },
+            {
+              "name": "contact_body",
+              "label": "Contact body",
+              "type": "text"
             }
           ]
         },
@@ -480,6 +1970,751 @@
               "name": "nav_contact",
               "label": "Nav — Contact",
               "type": "string"
+            },
+            {
+              "name": "trusted_label",
+              "label": "Trusted label",
+              "type": "string"
+            },
+            {
+              "name": "trusted_metric",
+              "label": "Trusted metric",
+              "type": "string"
+            },
+            {
+              "name": "partner_nvidia",
+              "label": "Partner nvidia",
+              "type": "string"
+            },
+            {
+              "name": "partner_pg",
+              "label": "Partner pg",
+              "type": "string"
+            },
+            {
+              "name": "partner_3m",
+              "label": "Partner 3m",
+              "type": "string"
+            },
+            {
+              "name": "partner_carta",
+              "label": "Partner carta",
+              "type": "string"
+            },
+            {
+              "name": "partner_socaledison",
+              "label": "Partner socaledison",
+              "type": "string"
+            },
+            {
+              "name": "partner_kpmg",
+              "label": "Partner kpmg",
+              "type": "string"
+            },
+            {
+              "name": "partner_google_latam",
+              "label": "Partner google latam",
+              "type": "string"
+            },
+            {
+              "name": "partner_cnbc",
+              "label": "Partner cnbc",
+              "type": "string"
+            },
+            {
+              "name": "partner_forbes",
+              "label": "Partner forbes",
+              "type": "string"
+            },
+            {
+              "name": "partner_wired",
+              "label": "Partner wired",
+              "type": "string"
+            },
+            {
+              "name": "partner_techcrunch",
+              "label": "Partner techcrunch",
+              "type": "string"
+            },
+            {
+              "name": "partner_inc",
+              "label": "Partner inc",
+              "type": "string"
+            },
+            {
+              "name": "about_body_lead_1",
+              "label": "About body lead 1",
+              "type": "text"
+            },
+            {
+              "name": "about_body_lead_em",
+              "label": "About body lead em",
+              "type": "string"
+            },
+            {
+              "name": "about_body_lead_2",
+              "label": "About body lead 2",
+              "type": "string"
+            },
+            {
+              "name": "about_body_2",
+              "label": "About body 2",
+              "type": "text"
+            },
+            {
+              "name": "about_link_peter",
+              "label": "About link peter",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_1_value",
+              "label": "About stat 1 value",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_1_label",
+              "label": "About stat 1 label",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_2_value",
+              "label": "About stat 2 value",
+              "type": "string"
+            },
+            {
+              "name": "about_stat_2_label",
+              "label": "About stat 2 label",
+              "type": "string"
+            },
+            {
+              "name": "ind_intro_1",
+              "label": "Ind intro 1",
+              "type": "text"
+            },
+            {
+              "name": "ind_intro_em",
+              "label": "Ind intro em",
+              "type": "string"
+            },
+            {
+              "name": "ind_intro_2",
+              "label": "Ind intro 2",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_num",
+              "label": "Svc 1 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_title",
+              "label": "Svc 1 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_1_desc",
+              "label": "Svc 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_2_num",
+              "label": "Svc 2 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_2_title",
+              "label": "Svc 2 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_2_desc",
+              "label": "Svc 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_3_num",
+              "label": "Svc 3 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_3_title",
+              "label": "Svc 3 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_3_desc",
+              "label": "Svc 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_4_num",
+              "label": "Svc 4 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_4_title",
+              "label": "Svc 4 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_4_desc",
+              "label": "Svc 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_5_num",
+              "label": "Svc 5 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_5_title",
+              "label": "Svc 5 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_5_desc",
+              "label": "Svc 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "svc_6_num",
+              "label": "Svc 6 num",
+              "type": "string"
+            },
+            {
+              "name": "svc_6_title",
+              "label": "Svc 6 title",
+              "type": "string"
+            },
+            {
+              "name": "svc_6_desc",
+              "label": "Svc 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "work_intro",
+              "label": "Work intro",
+              "type": "text"
+            },
+            {
+              "name": "work_caspian_tag_1",
+              "label": "Work caspian tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_tag_2",
+              "label": "Work caspian tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_title",
+              "label": "Work caspian title",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_desc",
+              "label": "Work caspian desc",
+              "type": "text"
+            },
+            {
+              "name": "work_caspian_quote",
+              "label": "Work caspian quote",
+              "type": "string"
+            },
+            {
+              "name": "work_caspian_link",
+              "label": "Work caspian link",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_tag_1",
+              "label": "Work amr tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_tag_2",
+              "label": "Work amr tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_title",
+              "label": "Work amr title",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_desc",
+              "label": "Work amr desc",
+              "type": "text"
+            },
+            {
+              "name": "work_amr_quote",
+              "label": "Work amr quote",
+              "type": "string"
+            },
+            {
+              "name": "work_amr_link",
+              "label": "Work amr link",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_tag_1",
+              "label": "Work bananos tag 1",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_tag_2",
+              "label": "Work bananos tag 2",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_title",
+              "label": "Work bananos title",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_desc",
+              "label": "Work bananos desc",
+              "type": "text"
+            },
+            {
+              "name": "work_bananos_quote",
+              "label": "Work bananos quote",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_link_1",
+              "label": "Work bananos link 1",
+              "type": "string"
+            },
+            {
+              "name": "work_bananos_link_2",
+              "label": "Work bananos link 2",
+              "type": "string"
+            },
+            {
+              "name": "work_more_label",
+              "label": "Work more label",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_cat",
+              "label": "Work petra cat",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_title",
+              "label": "Work petra title",
+              "type": "string"
+            },
+            {
+              "name": "work_petra_desc",
+              "label": "Work petra desc",
+              "type": "text"
+            },
+            {
+              "name": "work_avitia_cat",
+              "label": "Work avitia cat",
+              "type": "string"
+            },
+            {
+              "name": "work_avitia_title",
+              "label": "Work avitia title",
+              "type": "string"
+            },
+            {
+              "name": "work_avitia_desc",
+              "label": "Work avitia desc",
+              "type": "text"
+            },
+            {
+              "name": "work_autoalign_cat",
+              "label": "Work autoalign cat",
+              "type": "string"
+            },
+            {
+              "name": "work_autoalign_title",
+              "label": "Work autoalign title",
+              "type": "string"
+            },
+            {
+              "name": "work_autoalign_desc",
+              "label": "Work autoalign desc",
+              "type": "text"
+            },
+            {
+              "name": "work_heyhouston_cat",
+              "label": "Work heyhouston cat",
+              "type": "string"
+            },
+            {
+              "name": "work_heyhouston_title",
+              "label": "Work heyhouston title",
+              "type": "string"
+            },
+            {
+              "name": "work_heyhouston_desc",
+              "label": "Work heyhouston desc",
+              "type": "text"
+            },
+            {
+              "name": "work_neara_cat",
+              "label": "Work neara cat",
+              "type": "string"
+            },
+            {
+              "name": "work_neara_title",
+              "label": "Work neara title",
+              "type": "string"
+            },
+            {
+              "name": "work_neara_desc",
+              "label": "Work neara desc",
+              "type": "text"
+            },
+            {
+              "name": "work_pedrera_cat",
+              "label": "Work pedrera cat",
+              "type": "string"
+            },
+            {
+              "name": "work_pedrera_title",
+              "label": "Work pedrera title",
+              "type": "string"
+            },
+            {
+              "name": "work_pedrera_desc",
+              "label": "Work pedrera desc",
+              "type": "text"
+            },
+            {
+              "name": "work_learn_method",
+              "label": "Work learn method",
+              "type": "string"
+            },
+            {
+              "name": "method_1_num",
+              "label": "Method 1 num",
+              "type": "string"
+            },
+            {
+              "name": "method_1_title",
+              "label": "Method 1 title",
+              "type": "string"
+            },
+            {
+              "name": "method_1_desc",
+              "label": "Method 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_2_num",
+              "label": "Method 2 num",
+              "type": "string"
+            },
+            {
+              "name": "method_2_title",
+              "label": "Method 2 title",
+              "type": "string"
+            },
+            {
+              "name": "method_2_desc",
+              "label": "Method 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_3_num",
+              "label": "Method 3 num",
+              "type": "string"
+            },
+            {
+              "name": "method_3_title",
+              "label": "Method 3 title",
+              "type": "string"
+            },
+            {
+              "name": "method_3_desc",
+              "label": "Method 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_4_num",
+              "label": "Method 4 num",
+              "type": "string"
+            },
+            {
+              "name": "method_4_title",
+              "label": "Method 4 title",
+              "type": "string"
+            },
+            {
+              "name": "method_4_desc",
+              "label": "Method 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_5_num",
+              "label": "Method 5 num",
+              "type": "string"
+            },
+            {
+              "name": "method_5_title",
+              "label": "Method 5 title",
+              "type": "string"
+            },
+            {
+              "name": "method_5_desc",
+              "label": "Method 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "method_6_num",
+              "label": "Method 6 num",
+              "type": "string"
+            },
+            {
+              "name": "method_6_title",
+              "label": "Method 6 title",
+              "type": "string"
+            },
+            {
+              "name": "method_6_desc",
+              "label": "Method 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "blog_eyebrow",
+              "label": "Blog eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "blog_title",
+              "label": "Blog title",
+              "type": "string"
+            },
+            {
+              "name": "blog_cta",
+              "label": "Blog cta",
+              "type": "string"
+            },
+            {
+              "name": "i2i_lede",
+              "label": "I2i lede",
+              "type": "string"
+            },
+            {
+              "name": "i2i_body",
+              "label": "I2i body",
+              "type": "text"
+            },
+            {
+              "name": "i2i_body_hint",
+              "label": "I2i body hint",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_num",
+              "label": "I2i tenet 1 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_name",
+              "label": "I2i tenet 1 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_1_desc",
+              "label": "I2i tenet 1 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_1_note",
+              "label": "I2i tenet 1 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_num",
+              "label": "I2i tenet 2 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_name",
+              "label": "I2i tenet 2 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_2_desc",
+              "label": "I2i tenet 2 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_2_note",
+              "label": "I2i tenet 2 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_num",
+              "label": "I2i tenet 3 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_name",
+              "label": "I2i tenet 3 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_3_desc",
+              "label": "I2i tenet 3 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_3_note",
+              "label": "I2i tenet 3 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_num",
+              "label": "I2i tenet 4 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_name",
+              "label": "I2i tenet 4 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_4_desc",
+              "label": "I2i tenet 4 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_4_note",
+              "label": "I2i tenet 4 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_num",
+              "label": "I2i tenet 5 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_name",
+              "label": "I2i tenet 5 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_5_desc",
+              "label": "I2i tenet 5 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_5_note",
+              "label": "I2i tenet 5 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_num",
+              "label": "I2i tenet 6 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_name",
+              "label": "I2i tenet 6 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_6_desc",
+              "label": "I2i tenet 6 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_6_note",
+              "label": "I2i tenet 6 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_num",
+              "label": "I2i tenet 7 num",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_name",
+              "label": "I2i tenet 7 name",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_name_fa",
+              "label": "I2i tenet 7 name fa",
+              "type": "string"
+            },
+            {
+              "name": "i2i_tenet_7_desc",
+              "label": "I2i tenet 7 desc",
+              "type": "text"
+            },
+            {
+              "name": "i2i_tenet_7_note",
+              "label": "I2i tenet 7 note",
+              "type": "string"
+            },
+            {
+              "name": "i2i_quote",
+              "label": "I2i quote",
+              "type": "text"
+            },
+            {
+              "name": "i2i_essay_link",
+              "label": "I2i essay link",
+              "type": "string"
+            },
+            {
+              "name": "postcard_eyebrow",
+              "label": "Postcard eyebrow",
+              "type": "string"
+            },
+            {
+              "name": "postcard_title",
+              "label": "Postcard title",
+              "type": "string"
+            },
+            {
+              "name": "postcard_body",
+              "label": "Postcard body",
+              "type": "string"
+            },
+            {
+              "name": "postcard_badge",
+              "label": "Postcard badge",
+              "type": "string"
+            },
+            {
+              "name": "postcard_modal_title",
+              "label": "Postcard modal title",
+              "type": "string"
+            },
+            {
+              "name": "postcard_modal_body",
+              "label": "Postcard modal body",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_text",
+              "label": "Postcard share text",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_whatsapp",
+              "label": "Postcard share whatsapp",
+              "type": "string"
+            },
+            {
+              "name": "postcard_share_download",
+              "label": "Postcard share download",
+              "type": "string"
+            },
+            {
+              "name": "contact_body",
+              "label": "Contact body",
+              "type": "text"
             }
           ]
         },
