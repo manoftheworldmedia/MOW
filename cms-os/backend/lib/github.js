@@ -150,6 +150,27 @@ export class GitHubClient {
   async readFileAt(filePath, sha) {
     return this.readFile(filePath, sha);
   }
+
+  /**
+   * Commit a single binary file (image upload) via the Contents API.
+   * `base64Content` is the raw base64 payload (no data: prefix).
+   * Overwrites if a file already exists at that path.
+   */
+  async commitBinaryFile({ path: filePath, base64Content, message, author }) {
+    const existing = await this._fetch(`${this._base()}/contents/${encodePath(filePath)}?ref=${encodeURIComponent(this.branch)}`);
+    const body = {
+      message,
+      content: base64Content,
+      branch: this.branch,
+      ...(existing && !existing.__notFound ? { sha: existing.sha } : {}),
+      ...(author ? { committer: { name: author.name, email: author.email } } : {}),
+    };
+    const r = await this._fetch(`${this._base()}/contents/${encodePath(filePath)}`, {
+      method: 'PUT',
+      body: JSON.stringify(body),
+    });
+    return { path: filePath, sha: r.content?.sha, url: r.commit?.html_url };
+  }
 }
 
 function encodePath(p) {

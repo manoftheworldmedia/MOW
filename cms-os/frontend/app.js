@@ -293,6 +293,16 @@ function renderEditor(schema, path, value, isDoc = false) {
       return translations;
     },
     onError: (e) => toast('Translate failed: ' + e.message, 'error'),
+    onUpload: async (file, folder) => {
+      const dataUrl = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+      const { path: uploadedPath } = await api.uploadMedia(state.projectId, { folder, filename: file.name, dataUrl });
+      return uploadedPath;
+    },
     onChange: (val) => {
       setSaveStatus('dirty');
       previewPane.update(val);
