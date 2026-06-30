@@ -641,15 +641,51 @@ async function openUsersManager() {
   const { users } = await api.users();
   const body = h('div', {});
   const list = h('div', {});
-  for (const u of users) {
-    list.appendChild(h('div', { class: 'row', style: 'justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-soft)' },
-      h('div', {}, h('strong', {}, u.email), h('div', { class: 'mono muted' }, `${u.role} · ${(u.projects || []).join(', ') || 'no projects'}`)),
-      h('div', { class: 'row' },
-        h('select', { onchange: async (e) => { await api.updateUser(u.id, { role: e.target.value }); toast('Role updated', 'success'); } },
-          ...['viewer', 'editor', 'admin'].map((r) => { const o = h('option', { value: r }, r); if (r === u.role) o.selected = true; return o; })),
-        h('button', { class: 'btn btn-sm btn-danger', onclick: async () => { if (confirm(`Delete ${u.email}?`)) { await api.deleteUser(u.id); modal.close(); openUsersManager(); } } }, 'Delete')),
+
+  function renderUserRow(u, wrap) {
+    wrap.innerHTML = '';
+    wrap.appendChild(h('div', { class: 'row', style: 'justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-soft)' },
+      h('div', {},
+        h('strong', {}, u.email),
+        h('div', { class: 'mono muted', style: 'font-size:12px;margin-top:2px' }, `${u.role} · ${(u.projects || []).join(', ') || 'no projects'}`),
+      ),
+      h('div', { class: 'row', style: 'gap:6px' },
+        h('button', { class: 'btn btn-sm btn-ghost', onclick: () => renderEditRow(u, wrap) }, 'Edit'),
+        h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
+          if (confirm(`Delete ${u.email}?`)) { await api.deleteUser(u.id); modal.close(); openUsersManager(); }
+        } }, 'Delete'),
+      ),
     ));
   }
+
+  function renderEditRow(u, wrap) {
+    wrap.innerHTML = '';
+    const roleEl = h('select', { style: 'width:auto' }, ...['viewer', 'editor', 'admin'].map((r) => { const o = h('option', { value: r }, r); if (r === u.role) o.selected = true; return o; }));
+    const projectsEl = h('input', { type: 'text', value: (u.projects || []).join(', '), placeholder: 'project-ids,comma,separated or *', style: 'flex:1' });
+    const passwordEl = h('input', { type: 'password', placeholder: 'New password (leave blank to keep current)' });
+    wrap.appendChild(h('div', { style: 'padding:10px 0;border-bottom:1px solid var(--border-soft)' },
+      h('strong', {}, u.email),
+      h('div', { class: 'field', style: 'margin-top:8px' }, h('label', {}, 'Role'), roleEl),
+      h('div', { class: 'field' }, h('label', {}, 'Projects'), projectsEl),
+      h('div', { class: 'field' }, h('label', {}, 'New password'), passwordEl),
+      h('div', { class: 'row', style: 'gap:6px;margin-top:10px' },
+        h('button', { class: 'btn btn-sm btn-primary', onclick: async () => {
+          const patch = { role: roleEl.value, projects: projectsEl.value ? projectsEl.value.split(',').map((s) => s.trim()).filter(Boolean) : [] };
+          if (passwordEl.value) patch.password = passwordEl.value;
+          try { const { user: updated } = await api.updateUser(u.id, patch); toast('User updated ✓', 'success'); renderUserRow(updated, wrap); }
+          catch (ex) { toast(ex.message, 'error'); }
+        } }, 'Save changes'),
+        h('button', { class: 'btn btn-sm btn-ghost', onclick: () => renderUserRow(u, wrap) }, 'Cancel'),
+      ),
+    ));
+  }
+
+  for (const u of users) {
+    const wrap = h('div', {});
+    renderUserRow(u, wrap);
+    list.appendChild(wrap);
+  }
+
   body.appendChild(h('h3', { style: 'font-size:13px;margin:0 0 8px' }, 'Team'));
   body.appendChild(list);
   const nf = { email: h('input', { type: 'email', placeholder: 'person@mow.media' }), password: h('input', { type: 'password', placeholder: 'temp password' }),
