@@ -72,6 +72,24 @@ export async function publish(project, { user, message, expectedHead }) {
       }
     } catch { /* schema projection is best-effort — never block a publish */ }
   }
+  // Auto-maintain collection indexes (e.g. content/articles.index.json) for
+  // schemas that declare `index`. Static sites can't list a Git folder at
+  // runtime, so the index file is the source of truth for what the live
+  // front-end renders — it must stay in sync with the folder automatically,
+  // or newly published items silently never appear.
+  const indexedSchemas = new Map();
+  for (const schema of schemas) {
+    if (schema.index && schema.folder && !indexedSchemas.has(schema.name)) indexedSchemas.set(schema.name, schema);
+  }
+  for (const schema of indexedSchemas.values()) {
+    const derived = await buildCollectionIndexFile(schema, { gh, staged, files });
+    if (derived && !emitted.has(derived.path)) {
+      files.push(derived);
+      summary.push(derived.path);
+      emitted.add(derived.path);
+    }
+  }
+
   const commitMessage = buildCommitMessage(message, summary, user);
   const result = await gh.commitFiles({
     files,
@@ -81,6 +99,46 @@ export async function publish(project, { user, message, expectedHead }) {
   });
   clearStage(project.id);
   return { ...result, count: files.length };
+}
+
+/**
+ * Regenerate a collection's index file (e.g. content/articles.index.json) —
+ * a flat array of slugs, sorted, that static front-ends fetch instead of
+ * listing the Git folder. Combines the live folder listing with any
+ * adds/deletes in this publish batch, then sorts by `schema.index.sortBy`.
+ */
+async function buildCollectionIndexFile(schema, { gh, staged, files }) {
+  const { path: indexPath, sortBy, order = 'desc' } = schema.index;
+  const slugOf = (p) => p.slice(schema.folder.length + 1).replace(/\.[^/.]+$/, '');
+
+  const live = await gh.listDir(schema.folder);
+  const ext = '.' + (schema.extension || 'json');
+  const slugs = new Set(live.filter((e) => e.type === 'file' && e.name.endsWith(ext)).map((e) => slugOf(e.path)));
+
+  const batchValues = new Map(); // slug -> value, for items touched in this publish
+  for (let i = 0; i < staged.length; i++) {
+    const entry = staged[i];
+    if (entry.schemaName !== schema.name) continue;
+    const slug = slugOf(entry.path);
+    if (entry.delete) { slugs.delete(slug); continue; }
+    slugs.add(slug);
+    batchValues.set(slug, entry.value);
+  }
+  if (!slugs.size) return { path: indexPath, content: '[]\n' };
+
+  const withSortKey = await Promise.all([...slugs].map(async (slug) => {
+    if (batchValues.has(slug)) return { slug, key: batchValues.get(slug)?.[sortBy] };
+    const file = await gh.readFile(`${schema.folder}/${slug}${ext}`);
+    let value = {};
+    try { value = file ? JSON.parse(file.content) : {}; } catch { /* ignore malformed */ }
+    return { slug, key: value[sortBy] };
+  }));
+  withSortKey.sort((a, b) => {
+    const av = a.key || '', bv = b.key || '';
+    return order === 'asc' ? (av < bv ? -1 : av > bv ? 1 : 0) : (av > bv ? -1 : av < bv ? 1 : 0);
+  });
+
+  return { path: indexPath, content: JSON.stringify(withSortKey.map((x) => x.slug), null, 2) + '\n' };
 }
 
 /** Structured commit message: subject + machine-readable trailer. */
