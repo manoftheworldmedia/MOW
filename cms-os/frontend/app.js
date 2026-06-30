@@ -18,6 +18,11 @@ const state = {
   form: null,
   stagedCount: 0,
   saveStatus: 'idle',  // idle|dirty|saving|saved|error
+  undoStack: [],
+  undoDebounceTimer: null,
+  lastUndoSnapshot: null,
+  editorSchema: null,
+  editorPath: null,
 };
 
 // ---------------- toast ----------------
@@ -41,6 +46,16 @@ window.addEventListener('unhandledrejection', (e) => {
   const msg = e.reason?.message || String(e.reason || '');
   if (isBenignDomError(msg)) return;
   toast(msg || 'Something went wrong', 'error');
+});
+
+// Cmd/Ctrl+Z — form-level undo; skip when focus is inside a text input so native browser undo still works there
+window.addEventListener('keydown', (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'z' && !e.shiftKey) {
+    const tag = document.activeElement?.tagName?.toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || document.activeElement?.isContentEditable) return;
+    e.preventDefault();
+    doUndo();
+  }
 });
 
 // ---------------- boot ----------------
@@ -272,6 +287,7 @@ function renderEditor(schema, path, value, isDoc = false) {
     h('span', { class: 'path' }, path),
     h('div', { class: 'spacer', style: 'flex:1' }),
     saveInd,
+    h('button', { class: 'btn btn-sm btn-ghost', id: 'undo-btn', disabled: true, title: 'Nothing to undo', onclick: doUndo }, '↩ Undo'),
     h('button', { class: 'btn btn-sm', onclick: () => openHistory(path) }, '🕘 History'),
   );
   main.appendChild(head);
@@ -307,11 +323,17 @@ function renderEditor(schema, path, value, isDoc = false) {
       setSaveStatus('dirty');
       previewPane.update(val);
       scheduleSave(schema, path, form);
+      scheduleUndoPush();
     },
   });
   state.form = form;
+  state.editorSchema = schema;
+  state.editorPath = path;
+  state.undoStack = [];
+  state.lastUndoSnapshot = JSON.parse(JSON.stringify(value || {}));
   formPane.appendChild(form.render());
   form.validateAndPaint();
+  updateUndoButton();
 }
 
 function errorPane(ex) {
@@ -381,6 +403,43 @@ function setSaveStatus(status, msg) {
   ind.className = `save-indicator ${status}`;
   const txt = { idle: 'Up to date', dirty: 'Unsaved changes…', saving: 'Saving…', saved: 'Saved to staging', error: msg || 'Validation error' }[status];
   ind.querySelector('.txt').textContent = txt;
+}
+
+// ---------------- undo ----------------
+function scheduleUndoPush() {
+  clearTimeout(state.undoDebounceTimer);
+  const snapshot = state.lastUndoSnapshot;
+  state.undoDebounceTimer = setTimeout(() => {
+    if (snapshot != null) {
+      const top = state.undoStack[state.undoStack.length - 1];
+      if (!top || JSON.stringify(top) !== JSON.stringify(snapshot)) {
+        state.undoStack.push(snapshot);
+        if (state.undoStack.length > 20) state.undoStack.shift();
+      }
+    }
+    state.lastUndoSnapshot = state.form ? JSON.parse(JSON.stringify(state.form.value)) : null;
+    updateUndoButton();
+  }, 800);
+}
+
+function doUndo() {
+  if (!state.undoStack.length || !state.form) return;
+  clearTimeout(state.undoDebounceTimer);
+  const prev = state.undoStack.pop();
+  state.form.value = prev;
+  state.form.rerender();
+  state.lastUndoSnapshot = JSON.parse(JSON.stringify(prev));
+  setSaveStatus('dirty');
+  if (state.editorSchema && state.editorPath) scheduleSave(state.editorSchema, state.editorPath, state.form);
+  updateUndoButton();
+}
+
+function updateUndoButton() {
+  const btn = document.getElementById('undo-btn');
+  if (!btn) return;
+  const count = state.undoStack.length;
+  btn.disabled = count === 0;
+  btn.title = count > 0 ? `Undo (${count} step${count === 1 ? '' : 's'} available)` : 'Nothing to undo';
 }
 
 // ---------------- publish bar ----------------
@@ -592,15 +651,51 @@ async function openUsersManager() {
   const { users } = await api.users();
   const body = h('div', {});
   const list = h('div', {});
-  for (const u of users) {
-    list.appendChild(h('div', { class: 'row', style: 'justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-soft)' },
-      h('div', {}, h('strong', {}, u.email), h('div', { class: 'mono muted' }, `${u.role} · ${(u.projects || []).join(', ') || 'no projects'}`)),
-      h('div', { class: 'row' },
-        h('select', { onchange: async (e) => { await api.updateUser(u.id, { role: e.target.value }); toast('Role updated', 'success'); } },
-          ...['viewer', 'editor', 'admin'].map((r) => { const o = h('option', { value: r }, r); if (r === u.role) o.selected = true; return o; })),
-        h('button', { class: 'btn btn-sm btn-danger', onclick: async () => { if (confirm(`Delete ${u.email}?`)) { await api.deleteUser(u.id); modal.close(); openUsersManager(); } } }, 'Delete')),
+
+  function renderUserRow(u, wrap) {
+    wrap.innerHTML = '';
+    wrap.appendChild(h('div', { class: 'row', style: 'justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-soft)' },
+      h('div', {},
+        h('strong', {}, u.email),
+        h('div', { class: 'mono muted', style: 'font-size:12px;margin-top:2px' }, `${u.role} · ${(u.projects || []).join(', ') || 'no projects'}`),
+      ),
+      h('div', { class: 'row', style: 'gap:6px' },
+        h('button', { class: 'btn btn-sm btn-ghost', onclick: () => renderEditRow(u, wrap) }, 'Edit'),
+        h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
+          if (confirm(`Delete ${u.email}?`)) { await api.deleteUser(u.id); modal.close(); openUsersManager(); }
+        } }, 'Delete'),
+      ),
     ));
   }
+
+  function renderEditRow(u, wrap) {
+    wrap.innerHTML = '';
+    const roleEl = h('select', { style: 'width:auto' }, ...['viewer', 'editor', 'admin'].map((r) => { const o = h('option', { value: r }, r); if (r === u.role) o.selected = true; return o; }));
+    const projectsEl = h('input', { type: 'text', value: (u.projects || []).join(', '), placeholder: 'project-ids,comma,separated or *', style: 'flex:1' });
+    const passwordEl = h('input', { type: 'password', placeholder: 'New password (leave blank to keep current)' });
+    wrap.appendChild(h('div', { style: 'padding:10px 0;border-bottom:1px solid var(--border-soft)' },
+      h('strong', {}, u.email),
+      h('div', { class: 'field', style: 'margin-top:8px' }, h('label', {}, 'Role'), roleEl),
+      h('div', { class: 'field' }, h('label', {}, 'Projects'), projectsEl),
+      h('div', { class: 'field' }, h('label', {}, 'New password'), passwordEl),
+      h('div', { class: 'row', style: 'gap:6px;margin-top:10px' },
+        h('button', { class: 'btn btn-sm btn-primary', onclick: async () => {
+          const patch = { role: roleEl.value, projects: projectsEl.value ? projectsEl.value.split(',').map((s) => s.trim()).filter(Boolean) : [] };
+          if (passwordEl.value) patch.password = passwordEl.value;
+          try { const { user: updated } = await api.updateUser(u.id, patch); toast('User updated ✓', 'success'); renderUserRow(updated, wrap); }
+          catch (ex) { toast(ex.message, 'error'); }
+        } }, 'Save changes'),
+        h('button', { class: 'btn btn-sm btn-ghost', onclick: () => renderUserRow(u, wrap) }, 'Cancel'),
+      ),
+    ));
+  }
+
+  for (const u of users) {
+    const wrap = h('div', {});
+    renderUserRow(u, wrap);
+    list.appendChild(wrap);
+  }
+
   body.appendChild(h('h3', { style: 'font-size:13px;margin:0 0 8px' }, 'Team'));
   body.appendChild(list);
   const nf = { email: h('input', { type: 'email', placeholder: 'person@mow.media' }), password: h('input', { type: 'password', placeholder: 'temp password' }),

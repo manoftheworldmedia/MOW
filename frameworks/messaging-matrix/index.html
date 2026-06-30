@@ -42,6 +42,7 @@
   [data-burger]{display:flex;}
   @media(min-width:900px){[data-nav]{display:flex!important;}[data-burger]{display:none;}}
   @keyframes navGlow{0%,100%{box-shadow:0 0 10px rgba(124,246,176,0.45);}50%{box-shadow:0 0 22px rgba(124,246,176,0.85);}}
+  @keyframes mmScrollCue{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(5px);opacity:1}}
   [data-navcontact].is-on{animation:navGlow 2.4s ease-in-out infinite;}
   .mm-step{border-top:1px solid rgba(196,156,78,0.22);padding:clamp(24px,3vw,40px) 0;transition:background .3s;}
   .mm-step:hover{background:rgba(196,156,78,0.04);}
@@ -137,8 +138,10 @@
       <a href="#what-it-is" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#EDE6D4;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;padding:17px 32px;border-radius:999px;border:1px solid rgba(237,230,212,0.28);" data-cms-text="hero.cta_secondary">See the framework</a>
     </div>
   </div>
+  <a href="#what-it-is" aria-label="Scroll to explore the framework" style="position:absolute;left:50%;bottom:clamp(18px,2.5vh,30px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:#9FB09B;font-family:'Archivo',sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;text-decoration:none;z-index:6;"><span>Scroll</span><svg width="18" height="11" viewBox="0 0 18 11" fill="none" style="animation:mmScrollCue 1.9s ease-in-out infinite;"><path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   <!-- ASSET STRIP — two opposing marquee rows, pinned to bottom of hero -->
   <div aria-hidden="true" style="margin-top:clamp(28px,4vh,56px);padding:clamp(16px,2vw,26px) 0 clamp(20px,2.4vw,30px);overflow:hidden;background:#05190F;border-top:1px solid rgba(196,156,78,0.14);width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);">
+
 
   <!-- Row 1: images scroll LEFT → RIGHT (reverse) -->
   <div style="overflow:hidden;margin-bottom:12px;">
