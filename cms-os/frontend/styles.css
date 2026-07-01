@@ -160,7 +160,7 @@ textarea.code { font-family: var(--mono); font-size: 12.5px; min-height: 320px; 
 .list-add { align-self: flex-start; }
 
 /* ---------- right action rail / publish ---------- */
-.publish-bar { position: fixed; right: 24px; bottom: 22px; display: flex; align-items: center; gap: 10px;
+.publish-bar { position: fixed; right: 24px; bottom: 22px; z-index: 40; display: flex; align-items: center; gap: 10px;
   background: var(--bg-panel); border: 1px solid var(--border); border-radius: 30px; padding: 8px 8px 8px 18px; box-shadow: var(--shadow); }
 .publish-bar .status { font-size: 12.5px; color: var(--text-dim); }
 .publish-bar .status b { color: var(--text); }
