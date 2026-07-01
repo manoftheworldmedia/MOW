@@ -384,12 +384,14 @@ function scheduleSave(schema, path, form) {
   saveTimer = setTimeout(() => doSave(schema, path, form), 800);
 }
 async function doSave(schema, path, form) {
+  // Stage every edit so the publish bar (push/discard) always appears. Invalid
+  // fields are still highlighted, and publishing is blocked until they're fixed
+  // ("stage freely, validate on publish") — content is only checked at commit.
   const { valid, errors } = form.validateAndPaint();
-  if (!valid) { setSaveStatus('error', `${errors.length} field(s) need attention`); return; }
   setSaveStatus('saving');
   try {
     await api.stage(state.projectId, schema.name, { path, value: form.value });
-    setSaveStatus('saved');
+    setSaveStatus(valid ? 'saved' : 'warn', valid ? '' : `Saved — ${errors.length} field(s) to fix before publishing`);
     await refreshStaged();
   } catch (ex) {
     setSaveStatus('error', ex.message);
@@ -401,7 +403,7 @@ function setSaveStatus(status, msg) {
   const ind = document.getElementById('save-ind');
   if (!ind) return;
   ind.className = `save-indicator ${status}`;
-  const txt = { idle: 'Up to date', dirty: 'Unsaved changes…', saving: 'Saving…', saved: 'Saved to staging', error: msg || 'Validation error' }[status];
+  const txt = { idle: 'Up to date', dirty: 'Unsaved changes…', saving: 'Saving…', saved: 'Saved to staging', warn: msg || 'Saved — has warnings', error: msg || 'Validation error' }[status];
   ind.querySelector('.txt').textContent = txt;
 }
 
@@ -524,6 +526,12 @@ function openPublishModal() {
         } catch (ex) {
           btn.disabled = false; btn.textContent = '↑ Publish now';
           toast('Publish failed: ' + ex.message, 'error', 6000);
+          // List the exact fields blocking the publish so they can be fixed.
+          if (Array.isArray(ex.errors)) {
+            for (const e of ex.errors.slice(0, 8)) {
+              toast(`${(e.path || '').split('/').pop()} → ${e.field || ''}: ${e.message}`, 'error', 8000);
+            }
+          }
         }
       } },
   ]);

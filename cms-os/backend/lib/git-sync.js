@@ -6,6 +6,7 @@ import { clientFor, getSchema } from './projects.js';
 import { listStaged, clearStage } from './store.js';
 import { diff } from '../../shared/schema-engine.js';
 import { buildMenuJsonLdFile } from './menu-schema.js';
+import { validateContent } from './validation.js';
 
 /** Turn a validated content value into the exact file bytes for the repo. */
 export function serialize(schema, value) {
@@ -39,12 +40,21 @@ export async function publish(project, { user, message, expectedHead }) {
   const files = [];
   const summary = [];
   const schemas = [];
+  const problems = [];
   for (const entry of staged) {
     const schema = await getSchema(project, entry.schemaName);
     if (!schema) { const e = new Error(`Unknown schema "${entry.schemaName}".`); e.status = 400; throw e; }
+    // Validation gate: content is staged freely but only VALID content is
+    // committed (Zero Drift). Collect every offending field across all docs.
+    const { valid, errors } = validateContent(schema, entry.value);
+    if (!valid) for (const err of errors) problems.push({ path: entry.path, field: err.path, message: err.message });
     files.push({ path: entry.path, content: serialize(schema, entry.value) });
     summary.push(entry.path);
     schemas.push(schema);
+  }
+  if (problems.length) {
+    const e = new Error(`Can't publish — ${problems.length} field(s) need attention across ${new Set(problems.map((p) => p.path)).size} document(s).`);
+    e.status = 422; e.errors = problems; throw e;
   }
 
   const gh = clientFor(project);

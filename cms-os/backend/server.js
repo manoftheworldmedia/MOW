@@ -159,12 +159,15 @@ router.post('/api/projects/:id/content/:name/stage', async (ctx) => {
   const schema = await projects.getSchema(p, ctx.params.name);
   if (!schema) { const e = new Error('Schema not found.'); e.status = 404; throw e; }
   const filePath = ctx.body?.path || schema.path;
-  const coerced = assertValid(schema, ctx.body?.value);   // throws 422 if invalid
+  // Stage freely: coerce and store even if invalid, so the editor always shows a
+  // push/discard change. Validity is reported back (for UI warnings) and enforced
+  // later at publish — invalid content can never be committed (Zero Drift).
+  const { value: coerced, valid, errors } = validateContent(schema, ctx.body?.value);
   store.stageChange(p.id, {
     path: filePath, schemaName: schema.name, itemId: ctx.body?.itemId || filePath,
     value: coerced, baseSha: ctx.body?.baseSha || null,
   });
-  return { ok: true, staged: store.listStaged(p.id) };
+  return { ok: true, valid, errors, staged: store.listStaged(p.id) };
 });
 
 // ================= MEDIA =================
