@@ -99,14 +99,12 @@
               "name": "seo_title",
               "label": "SEO title (browser tab + Google)",
               "type": "string",
-              "required": true,
               "maxLength": 70
             },
             {
               "name": "seo_description",
               "label": "SEO description (Google snippet)",
               "type": "text",
-              "required": true,
               "maxLength": 320
             },
             {
@@ -117,8 +115,7 @@
             {
               "name": "hero_title",
               "label": "Hero — headline",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_subhead",
@@ -149,14 +146,12 @@
               "name": "seo_title",
               "label": "SEO title (browser tab + Google)",
               "type": "string",
-              "required": true,
               "maxLength": 70
             },
             {
               "name": "seo_description",
               "label": "SEO description (Google snippet)",
               "type": "text",
-              "required": true,
               "maxLength": 320
             },
             {
@@ -167,8 +162,7 @@
             {
               "name": "hero_title",
               "label": "Hero — headline",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_subhead",
@@ -253,8 +247,7 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "excerpt",
@@ -264,8 +257,7 @@
             {
               "name": "body",
               "label": "Body",
-              "type": "richtext",
-              "required": true
+              "type": "richtext"
             }
           ]
         },
@@ -280,8 +272,7 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "excerpt",
@@ -291,8 +282,7 @@
             {
               "name": "body",
               "label": "Body",
-              "type": "richtext",
-              "required": true
+              "type": "richtext"
             }
           ]
         }
@@ -357,14 +347,12 @@
             {
               "name": "question",
               "label": "Question",
-              "type": "string",
-              "required": false
+              "type": "string"
             },
             {
               "name": "answer",
               "label": "Answer",
-              "type": "richtext",
-              "required": false
+              "type": "richtext"
             }
           ]
         },
@@ -379,14 +367,12 @@
             {
               "name": "question",
               "label": "Question",
-              "type": "string",
-              "required": false
+              "type": "string"
             },
             {
               "name": "answer",
               "label": "Answer",
-              "type": "richtext",
-              "required": false
+              "type": "richtext"
             }
           ]
         }
@@ -440,14 +426,12 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "richtext",
-              "required": true
+              "type": "richtext"
             }
           ]
         },
@@ -462,14 +446,12 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "body",
               "label": "Body",
-              "type": "richtext",
-              "required": true
+              "type": "richtext"
             }
           ]
         }
@@ -554,8 +536,7 @@
             {
               "name": "name",
               "label": "Name",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "description",
@@ -575,8 +556,7 @@
             {
               "name": "name",
               "label": "Name",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "description",

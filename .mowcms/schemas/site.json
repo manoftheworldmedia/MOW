@@ -941,26 +941,22 @@
             {
               "name": "hero_eyebrow",
               "label": "Hero — eyebrow (small label)",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_h1a",
               "label": "Hero — headline (white words)",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_h1b",
               "label": "Hero — headline (gold word)",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_subhead",
               "label": "Hero — paragraph",
-              "type": "text",
-              "required": true
+              "type": "text"
             },
             {
               "name": "hero_cta_primary",
@@ -1835,26 +1831,22 @@
             {
               "name": "hero_eyebrow",
               "label": "Hero — eyebrow (small label)",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_h1a",
               "label": "Hero — headline (white words)",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_h1b",
               "label": "Hero — headline (gold word)",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "hero_subhead",
               "label": "Hero — paragraph",
-              "type": "text",
-              "required": true
+              "type": "text"
             },
             {
               "name": "hero_cta_primary",
@@ -3142,8 +3134,7 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "subtitle",
@@ -3189,8 +3180,7 @@
             {
               "name": "title",
               "label": "Title",
-              "type": "string",
-              "required": true
+              "type": "string"
             },
             {
               "name": "subtitle",
